@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "electronics-engineering-ai999x: an offline, verified electronics engineering solver"
+authors:
+  - family-names: Farabi
+    given-names: Ibnul Jaif
+    affiliation: AI999X
+version: 1.0.0
+license: Apache-2.0
+url: "https://huggingface.co/AI999X/electronics-engineering-ai999x"
+repository-code: "https://huggingface.co/AI999X/electronics-engineering-ai999x"
+keywords:
+  - electronics engineering
+  - semiconductors
+  - diodes
+  - bjt
+  - mosfet
+  - amplifiers
+  - op-amp
+  - active filters
+  - oscillators
+  - adc
+  - dac
+  - 555 timer
