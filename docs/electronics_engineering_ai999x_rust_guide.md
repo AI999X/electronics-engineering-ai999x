@@ -1,4 +1,4 @@
-# electronics-engineering: the Electronics Engineering program — user guide
+# electronics-engineering: the Electronics Engineering program, user guide
 
 **electronics-engineering-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Electronics Engineering covers semiconductors and pn junctions, diode circuits a
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Electronics Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-electronics-engineering-1.4.0-windows-x86_64.zip |
-| Desktop app: Electronics Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-electronics-engineering-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Electronics Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-electronics-engineering-1.5.0-windows-x86_64.zip |
+| Desktop app: Electronics Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-electronics-engineering-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Electronics Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-electronics-engineering-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-electronics-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Electronics Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-electronics-engineering-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-electronics-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-electronics-engineering-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-electronics-engineering-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-electronics-engineering-1.4.0-linux-x86_64.tar.gz
-./ai999x-electronics-engineering-1.4.0-linux-x86_64/ai999x-electronics-engineering
+tar xzf ai999x-electronics-engineering-1.5.0-linux-x86_64.tar.gz
+./ai999x-electronics-engineering-1.5.0-linux-x86_64/ai999x-electronics-engineering
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `electronics-engineering` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 electronics-engineering --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 electronics-engineering --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ electronics-engineering --version
-electronics-engineering-ai999x 1.0.0 (Rust build, ax-engine 0.1.0)
+electronics-engineering-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
 ### 2.2 Find a capability
@@ -203,29 +203,7 @@ $ electronics-engineering solve elx_bjt_voltage_divider_bias "VCC=12 V" "R1=47 k
 NEEDS_INPUT: elx_bjt_voltage_divider_bias needs VBE (base-emitter voltage). Example: solve('elx_bjt_voltage_divider_bias', VCC='12 V', R1='47000 ohm', R2='10000 ohm', RC='2200 ohm', RE='470 ohm', beta=150, VBE='0.7 V').
 ```
 
-### 2.8 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ electronics-engineering figures elx_bjt_voltage_divider_bias "VCC=12 V" "R1=47 kohm" "R2=10 kohm" "RC=2.2 kohm" "RE=470 ohm" beta=150.0 "VBE=0.7 V" --out .
-[
-  {
-    "slug": "elx-bjt-voltage-divider-bias-live-1",
-    "title": "Collector current as emitter resistor varies",
-    "caption": "Collector current as RE runs from 240.9 to 822.5 ohm, every other input as you entered it (34 solutions). Marked: your RE = 470 ohm gives IC = 0.002661. Your inputs: VCC = 12 V, R1 = 47 kohm, R2 = 10 kohm, RC = 2.2 kohm, RE = 470 ohm, beta = 150.0, VBE = 0.7 V.",
-    "file": ".\\elx-bjt-voltage-divider-bias-live-1.svg"
-  },
-  {
-    "slug": "elx-bjt-voltage-divider-bias-live-2",
-    "title": "Collector current as lower divider resistor (base to ground) varies",
-    "caption": "Collector current as R2 runs from 3.036 to 16.43 kohm, every other input as you entered it (26 solutions). Marked: your R2 = 10 kohm gives IC = 0.002661. Your inputs: VCC = 12 V, R1 = 47 kohm, R2 = 10 kohm, RC = 2.2 kohm, RE = 470 ohm, beta = 150.0, VBE = 0.7 V.",
-    "file": ".\\elx-bjt-voltage-divider-bias-live-2.svg"
-  }
-]
-```
-
-### 2.9 Many questions at once
+### 2.8 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | electronics-engineering batch
 
@@ -298,24 +276,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `electronics-engineering figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ electronics-engineering figures elx_bjt_voltage_divider_bias "VCC=12 V" "R1=47 kohm" "R2=10 kohm" "RC=2.2 kohm" "RE=470 ohm" beta=150.0 "VBE=0.7 V" --out .
-[
-  {
-    "slug": "elx-bjt-voltage-divider-bias-live-1",
-    "title": "Collector current as emitter resistor varies",
-    "caption": "Collector current as RE runs from 240.9 to 822.5 ohm, every other input as you entered it (34 solutions). Marked: your RE = 470 ohm gives IC = 0.002661. Your inputs: VCC = 12 V, R1 = 47 kohm, R2 = 10 kohm, RC = 2.2 kohm, RE = 470 ohm, beta = 150.0, VBE = 0.7 V.",
-    "file": ".\\elx-bjt-voltage-divider-bias-live-1.svg"
-  },
-  {
-    "slug": "elx-bjt-voltage-divider-bias-live-2",
-    "title": "Collector current as lower divider resistor (base to ground) varies",
-    "caption": "Collector current as R2 runs from 3.036 to 16.43 kohm, every other input as you entered it (26 solutions). Marked: your R2 = 10 kohm gives IC = 0.002661. Your inputs: VCC = 12 V, R1 = 47 kohm, R2 = 10 kohm, RC = 2.2 kohm, RE = 470 ohm, beta = 150.0, VBE = 0.7 V.",
-    "file": ".\\elx-bjt-voltage-divider-bias-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `electronics_engineering_ai999x.wasm` (https://www.ai999x.com/compute/rust/electronics_engineering_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -339,7 +299,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="elx_butterworth_section_q"></a>
 
-#### Butterworth filter: Q of each second-order section — `elx_butterworth_section_q`
+#### Butterworth filter: Q of each second-order section, `elx_butterworth_section_q`
 
 The quality factors of the cascaded second-order sections of an n-th order Butterworth filter (all at the cutoff frequency), and whether a first-order section is needed.
 
@@ -349,11 +309,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | filter order | — |
-| `Q_max` | out | largest section Q | — |
-| `Q` | out | section Q values, ascending | — |
-| `sections` | out | number of second-order sections | — |
-| `first_order` | out | 1 if a first-order section is needed | — |
+| `n` | in | filter order | - |
+| `Q_max` | out | largest section Q | - |
+| `Q` | out | section Q values, ascending | - |
+| `sections` | out | number of second-order sections | - |
+| `first_order` | out | 1 if a first-order section is needed | - |
 
 **Applies when:** 2 <= n <= 20.
 
@@ -367,11 +327,11 @@ first_order = 0
   assumes: 2 <= n <= 20
 ```
 
-In the worked example, n = 4 go through the equation above and give Q_max = 1.306562965, Q = [0.5411961001, 1.306562965], sections = 2, first_order = 0. It applies only when 2 <= n <= 20: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the quality factors for each second-order section in a cascaded Butterworth filter of order 4. The resulting values, listed as [0.541196, 1.30656], indicate how sharply each stage peaks near the cutoff frequency. A higher Q implies greater sensitivity to component tolerances and potential instability. The number of stages is given by 2, while 0 signals whether an additional single-pole stage is necessary to complete the design when the filter order is odd.
 
 <a id="elx_filter_order"></a>
 
-#### Butterworth or Chebyshev low-pass filter order — `elx_filter_order`
+#### Butterworth or Chebyshev low-pass filter order, `elx_filter_order`
 
 The minimum order of a Butterworth or Chebyshev type I low-pass filter meeting a passband edge with at most Ap dB attenuation and a stopband edge with at least As dB.
 
@@ -381,12 +341,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `ftype` | in | butterworth or chebyshev (type I) | — |
+| `ftype` | in | butterworth or chebyshev (type I) | - |
 | `fp` | in | passband edge | Hz |
 | `fs` | in | stopband edge | Hz |
-| `Ap` | in | maximum passband attenuation (ripple) in dB | — |
-| `As` | in | minimum stopband attenuation in dB | — |
-| `n` | out | minimum filter order | — |
+| `Ap` | in | maximum passband attenuation (ripple) in dB | - |
+| `As` | in | minimum stopband attenuation in dB | - |
+| `n` | out | minimum filter order | - |
 
 **Applies when:** fs > fp; As > Ap > 0.
 
@@ -402,11 +362,11 @@ n = 6
   assumes: fs > fp; As > Ap > 0
 ```
 
-In the worked example, ftype = Butterworth, fp = 1000 Hz, fs = 2500 Hz, Ap = 1, As = 40 go through the equation above and give n = 6. It applies only when fs > fp; As > Ap > 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the minimum order required for a low-pass filter to meet specific attenuation constraints. Using the passband edge of 1000 Hz and stopband edge of 2500 Hz, along with maximum passband ripple of 1 and minimum stopband attenuation of 40, the result indicates that a filter of order 6 is necessary to satisfy these specifications.
 
 <a id="elx_chebyshev_sections"></a>
 
-#### Chebyshev type I filter: section Q and frequencies — `elx_chebyshev_sections`
+#### Chebyshev type I filter: section Q and frequencies, `elx_chebyshev_sections`
 
 The quality factors and natural frequencies (relative to the passband edge) of the second-order sections of an n-th order Chebyshev type I low-pass filter with a given passband ripple, and the real pole of an odd order.
 
@@ -416,13 +376,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | filter order | — |
-| `ripple` | in | passband ripple in dB | — |
-| `Q_max` | out | largest section Q | — |
-| `Q` | out | section Q values, ascending | — |
-| `f0_ratio` | out | section natural frequencies / passband edge, in the same order | — |
-| `sections` | out | number of second-order sections | — |
-| `real_pole` | out | real pole / passband edge (0 for even n) | — |
+| `n` | in | filter order | - |
+| `ripple` | in | passband ripple in dB | - |
+| `Q_max` | out | largest section Q | - |
+| `Q` | out | section Q values, ascending | - |
+| `f0_ratio` | out | section natural frequencies / passband edge, in the same order | - |
+| `sections` | out | number of second-order sections | - |
+| `real_pole` | out | real pole / passband edge (0 for even n) | - |
 
 **Applies when:** 2 <= n <= 16; 0.001 dB <= ripple <= 6 dB.
 
@@ -438,11 +398,11 @@ real_pole = 0
   assumes: 2 <= n <= 16; 0.001 dB <= ripple <= 6 dB
 ```
 
-In the worked example, n = 4, ripple = 0.5 go through the equation above and give Q_max = 2.940554174, Q = [0.7051102368, 2.940554174], f0_ratio = [0.5970023951, 1.031270401], sections = 2. It applies only when 2 <= n <= 16; 0.001 dB <= ripple <= 6 dB: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the internal characteristics of a Chebyshev Type I low-pass filter based on its order 4 and passband ripple 0.5. It computes the quality factors for each second-order section, yielding values in [0.70511, 2.94055], along with their natural frequency ratios [0.597002, 1.03127]. The result indicates that there are 2 such sections. If the order is odd, a real pole exists at ratio 0; otherwise, this value is zero. These parameters describe how the filter distributes gain and phase response across its stages.
 
 <a id="elx_sallen_key_equal_component_design"></a>
 
-#### Equal-component Sallen-Key low-pass design — `elx_sallen_key_equal_component_design`
+#### Equal-component Sallen-Key low-pass design, `elx_sallen_key_equal_component_design`
 
 The resistor value and amplifier gain of an equal-component (R1 = R2 = R, C1 = C2 = C) Sallen-Key low-pass filter for a cutoff frequency and Q, with the non-inverting gain ratio Rf/Rg = K - 1.
 
@@ -453,11 +413,11 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `fc` | in | natural (cutoff) frequency | Hz |
-| `Q` | in | quality factor (0.7071 for Butterworth) | — |
+| `Q` | in | quality factor (0.7071 for Butterworth) | - |
 | `C` | in | chosen capacitor value | F |
 | `R` | out | resistor value | ohm |
-| `K` | out | amplifier gain | — |
-| `Rf_over_Rg` | out | gain resistor ratio Rf/Rg | — |
+| `K` | out | amplifier gain | - |
+| `Rf_over_Rg` | out | gain resistor ratio Rf/Rg | - |
 
 **Applies when:** 0.5 <= Q <= 20.
 
@@ -473,11 +433,11 @@ Rf_over_Rg = 0.5857728751
   assumes: 0.5 <= Q <= 20
 ```
 
-In the worked example, fc = 1000 Hz, Q = 0.7071, C = 10 nF go through the equation above and give R = 15915.49431 ohm, K = 1.585772875, Rf_over_Rg = 0.5857728751. It applies only when 0.5 <= Q <= 20: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the component values for an equal-component Sallen-Key low-pass filter. Given a cutoff frequency of 1000 Hz, a quality factor of 0.7071, and a chosen capacitor value of 10 nF, the required resistance is computed as 15915.5 ohm. The necessary non-inverting amplifier gain is found to be 1.58577, which dictates that the feedback resistor should be 0.585773 times the ground resistor to achieve the desired response.
 
 <a id="elx_first_order_active_lowpass"></a>
 
-#### First-order active low-pass filter (inverting) — `elx_first_order_active_lowpass`
+#### First-order active low-pass filter (inverting), `elx_first_order_active_lowpass`
 
 The passband gain -Rf/R1, the cutoff frequency 1/(2 pi Rf C) and the gain at a frequency of an inverting op-amp low-pass filter with C across the feedback resistor.
 
@@ -491,10 +451,10 @@ $$
 | `Rf` | in | feedback resistor | ohm |
 | `C` | in | capacitor across Rf | F |
 | `f` | in | frequency of interest | Hz |
-| `H0` | out | passband gain | — |
+| `H0` | out | passband gain | - |
 | `fc` | out | cutoff frequency | Hz |
-| `gain_f` | out | gain magnitude at f | — |
-| `gain_dB` | out | gain at f in dB | — |
+| `gain_f` | out | gain magnitude at f | - |
+| `gain_dB` | out | gain at f in dB | - |
 
 **Applies when:** ideal op-amp.
 
@@ -512,11 +472,11 @@ gain_dB = 16.99392806
   assumes: ideal op-amp
 ```
 
-In the worked example, R1 = 10000 ohm, Rf = 100000 ohm, C = 1.59 nF, f = 1000 Hz go through the equation above and give H0 = -10, fc = 1000.974485 Hz, gain_f = 7.074510619, gain_dB = 16.99392806. It applies only when ideal op-amp: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the characteristics of an inverting active low-pass filter. Using the input resistor value of 10000 ohm ohms, the feedback resistor of 100000 ohm ohms, and the capacitor of 1.59 nF farads, this gives the DC passband gain as -10. The cutoff frequency, where the signal power drops by half, is found to be 1000.97 Hz Hz. At the specific frequency of interest, 1000 Hz Hz, the linear gain magnitude is 7.07451, which corresponds to 16.9939 decibels.
 
 <a id="elx_mfb_bandpass"></a>
 
-#### Multiple-feedback (MFB) band-pass filter — `elx_mfb_bandpass`
+#### Multiple-feedback (MFB) band-pass filter: `elx_mfb_bandpass`
 
 The centre frequency, quality factor, -3 dB bandwidth and peak (inverting) gain of a multiple-feedback band-pass filter.
 
@@ -532,9 +492,9 @@ $$
 | `C1` | in | capacitor from the middle node to the inverting input | F |
 | `C2` | in | capacitor from the middle node to the output | F |
 | `f0` | out | centre frequency | Hz |
-| `Q` | out | quality factor | — |
+| `Q` | out | quality factor | - |
 | `BW` | out | -3 dB bandwidth | Hz |
-| `H_peak` | out | gain at the centre frequency | — |
+| `H_peak` | out | gain at the centre frequency | - |
 
 **Applies when:** ideal op-amp.
 
@@ -557,7 +517,7 @@ In the worked example, R1 = 15900 ohm, R2 = 1330 ohm, R3 = 31800 ohm, C1 = 10 nF
 
 <a id="elx_mfb_lowpass"></a>
 
-#### Multiple-feedback (MFB) low-pass filter — `elx_mfb_lowpass`
+#### Multiple-feedback (MFB) low-pass filter: `elx_mfb_lowpass`
 
 The natural frequency, quality factor and inverting passband gain -R2/R1 of a second-order multiple-feedback low-pass filter.
 
@@ -573,8 +533,8 @@ $$
 | `C1` | in | capacitor from the middle node to ground | F |
 | `C2` | in | capacitor from the inverting input to the output | F |
 | `f0` | out | natural frequency | Hz |
-| `Q` | out | quality factor | — |
-| `H0` | out | passband gain | — |
+| `Q` | out | quality factor | - |
+| `H0` | out | passband gain | - |
 
 **Applies when:** ideal op-amp.
 
@@ -592,11 +552,11 @@ H0 = -1
   assumes: ideal op-amp
 ```
 
-In the worked example, R1 = 10000 ohm, R2 = 10000 ohm, R3 = 5000 ohm, C1 = 47 nF, C2 = 4.7 nF go through the equation above and give f0 = 1514.38839 Hz, Q = 1.118033989, H0 = -1. It applies only when ideal op-amp: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the key characteristics of a second-order multiple-feedback low-pass filter using ideal op-amp assumptions. Based on the input resistor, feedback resistor, middle node resistor, and two capacitors, it computes the natural frequency, which sets the cutoff point, the quality factor, which describes the resonance peak sharpness, and the inverting passband gain. The resulting natural frequency is 1514.39 Hz, the quality factor is 1.11803, and the passband gain is -1.
 
 <a id="elx_sallen_key_highpass"></a>
 
-#### Sallen-Key high-pass filter: f0, Q and gain — `elx_sallen_key_highpass`
+#### Sallen-Key high-pass filter: f0, Q and gain, `elx_sallen_key_highpass`
 
 The natural frequency, quality factor and high-frequency gain of a second-order Sallen-Key high-pass filter with any components and amplifier gain K.
 
@@ -610,10 +570,10 @@ $$
 | `C2` | in | second series capacitor | F |
 | `R1` | in | resistor from the middle node to the output (feedback) | ohm |
 | `R2` | in | resistor from the amplifier input to ground | ohm |
-| `K` | in | amplifier gain | — |
+| `K` | in | amplifier gain | - |
 | `f0` | out | natural frequency | Hz |
-| `Q` | out | quality factor | — |
-| `H_inf` | out | high-frequency gain | — |
+| `Q` | out | quality factor | - |
+| `H_inf` | out | high-frequency gain | - |
 
 **Applies when:** stable: R1 (C1 + C2) + R2 C2 (1 - K) > 0.
 
@@ -631,11 +591,11 @@ H_inf = 1
   assumes: stable: R1 (C1 + C2) + R2 C2 (1 - K) > 0
 ```
 
-In the worked example, C1 = 10 nF, C2 = 10 nF, R1 = 11250 ohm, R2 = 22500 ohm, K = 1 go through the equation above and give f0 = 1000.351462 Hz, Q = 0.7071067812, H_inf = 1. It applies only when stable: R1 (C1 + C2) + R2 C2 (1 - K) > 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the key performance metrics for a second-order Sallen-Key high-pass filter based on its passive components and amplifier configuration. Using the input values of 10 nF for the first series capacitor, 10 nF for the second series capacitor, 11250 ohm for the feedback resistor, 22500 ohm for the ground resistor, and 1 for the amplifier gain, the model computes the natural frequency as 1000.35 Hz, which defines where the filter begins to pass higher frequencies effectively. The resulting quality factor 0.707107 indicates the sharpness of the resonance peak near that frequency, while the high-frequency gain 1 represents the amplification level applied to signals well above the cutoff point.
 
 <a id="elx_sallen_key_lowpass"></a>
 
-#### Sallen-Key low-pass filter: f0, Q and gain — `elx_sallen_key_lowpass`
+#### Sallen-Key low-pass filter: f0, Q and gain, `elx_sallen_key_lowpass`
 
 The natural frequency, quality factor, passband gain and the gain at f0 (K Q) of a second-order Sallen-Key low-pass filter with any components and amplifier gain K.
 
@@ -649,11 +609,11 @@ $$
 | `R2` | in | second series resistor | ohm |
 | `C1` | in | capacitor from the middle node to the output (feedback) | F |
 | `C2` | in | capacitor from the amplifier input to ground | F |
-| `K` | in | amplifier gain (1 for a unity-gain buffer) | — |
+| `K` | in | amplifier gain (1 for a unity-gain buffer) | - |
 | `f0` | out | natural frequency | Hz |
-| `Q` | out | quality factor | — |
-| `H0` | out | passband gain | — |
-| `peak_gain` | out | gain at f0, K Q | — |
+| `Q` | out | quality factor | - |
+| `H0` | out | passband gain | - |
+| `peak_gain` | out | gain at f0, K Q | - |
 
 **Applies when:** stable: R1 C2 + R2 C2 + R1 C1 (1 - K) > 0; ideal amplifier.
 
@@ -672,13 +632,13 @@ peak_gain = 0.7071067812
   assumes: stable: R1 C2 + R2 C2 + R1 C1 (1 - K) > 0; ideal amplifier
 ```
 
-In the worked example, R1 = 10000 ohm, R2 = 10000 ohm, C1 = 20 nF, C2 = 10 nF, K = 1 go through the equation above and give f0 = 1125.395395 Hz, Q = 0.7071067812, H0 = 1, peak_gain = 0.7071067812. It applies only when stable: R1 C2 + R2 C2 + R1 C1 (1 - K) > 0; ideal amplifier: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the key characteristics of a second-order Sallen-Key low-pass filter. Using the input resistors and capacitors along with the amplifier gain, it computes the natural frequency 1125.4 Hz where the filter response begins to roll off. The quality factor 0.707107 indicates the sharpness of the resonance peak near that frequency. The passband gain 1 represents the amplification level at frequencies well below the cutoff. Finally, the peak gain 0.707107 shows the maximum amplitude at the natural frequency.
 
 ### BJT (16)
 
 <a id="elx_transition_frequency"></a>
 
-#### BJT beta cutoff and transition frequency fT — `elx_transition_frequency`
+#### BJT beta cutoff and transition frequency fT, `elx_transition_frequency`
 
 The beta cutoff frequency f_beta and the unity-current-gain (transition) frequency fT = gm/(2 pi (Cpi + Cmu)) of a bipolar transistor from its hybrid-pi capacitances.
 
@@ -689,7 +649,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `gm` | in | transconductance | S |
-| `beta` | in | low-frequency current gain | — |
+| `beta` | in | low-frequency current gain | - |
 | `Cpi` | in | base-emitter capacitance | F |
 | `Cmu` | in | base-collector capacitance | F |
 | `r_pi` | out | r_pi = beta/gm | ohm |
@@ -715,7 +675,7 @@ In the worked example, gm = 40 mS, beta = 100, Cpi = 10 pF, Cmu = 2 pF go throug
 
 <a id="elx_bjt_cascode"></a>
 
-#### BJT cascode: output resistance, transconductance and gain — `elx_bjt_cascode`
+#### BJT cascode: output resistance, transconductance and gain, `elx_bjt_cascode`
 
 The output resistance, the short-circuit transconductance and the voltage gain into a load of a cascode (common emitter driving common base) of two identical transistors at the same bias current.
 
@@ -726,7 +686,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `IC` | in | bias current of both transistors | A |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VT` | in | thermal voltage | V |
 | `VA` | in | Early voltage | V |
 | `RL` | in | load resistance | ohm |
@@ -734,7 +694,7 @@ $$
 | `r_o` | out | output resistance of each | ohm |
 | `Rout` | out | output resistance of the cascode | ohm |
 | `Gm` | out | short-circuit transconductance | S |
-| `Av` | out | voltage gain into RL | — |
+| `Av` | out | voltage gain into RL | - |
 
 **Applies when:** identical transistors, base of the upper one at signal ground.
 
@@ -754,11 +714,11 @@ Av = -35947.88859
   assumes: identical transistors, base of the upper one at signal ground
 ```
 
-In the worked example, IC = 1 mA, beta = 100, VT = 25 mV, VA = 100 V, RL = 1000000 ohm go through the equation above and give gm = 0.04 S, r_o = 100000 ohm, Rout = 9858536.585 ohm, Gm = 0.03959426027 S. It applies only when identical transistors, base of the upper one at signal ground: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a BJT cascode amplifier consisting of two identical transistors biased at the same current. It computes the small-signal parameters, starting with the individual transistor transconductance of 0.04 S and output resistance of 100000 ohm. These values are combined to find the total output resistance of the stack, which is 9.85854e+06 ohm, and the effective short-circuit transconductance, calculated as 0.0395943 S. Finally, the overall voltage gain into the load resistor is found to be -35947.9. This result indicates how effectively the circuit converts input voltage to output voltage while providing high isolation between input and output.
 
 <a id="elx_bjt_collector_feedback_bias"></a>
 
-#### BJT collector-feedback bias: Q-point — `elx_bjt_collector_feedback_bias`
+#### BJT collector-feedback bias: Q-point, `elx_bjt_collector_feedback_bias`
 
 The Q-point of a transistor biased by a resistor from collector to base (collector feedback), with an optional emitter resistor.
 
@@ -771,7 +731,7 @@ $$
 | `VCC` | in | supply voltage | V |
 | `RC` | in | collector resistor (carries IC + IB) | ohm |
 | `RF` | in | feedback resistor, collector to base | ohm |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VBE` | in | base-emitter voltage | V |
 | `RE` | in | emitter resistor (default 0) (optional) | ohm |
 | `IB` | out | base current | A |
@@ -798,11 +758,11 @@ VCE = 4.130721558 V
   assumes: active region: VCE >= 0.2 V
 ```
 
-In the worked example, VCC = 10 V, RC = 4700 ohm, RF = 250000 ohm, beta = 90, VBE = 0.7 V go through the equation above and give IB = 1.372288623e-05 A, IC = 0.001235059761 A, IE = 0.001248782647 A, VC = 4.130721558 V. It applies only when active region: VCE >= 0.2 V: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the quiescent operating point for a bipolar junction transistor using collector-feedback bias. The base current, calculated as 1.37229e-05 A, flows through the feedback resistor and sets the emitter current to 0.00124878 A. This current causes a voltage drop across the collector resistor, yielding a collector voltage of 4.13072 V. The final collector-emitter voltage is 4.13072 V, which indicates whether the transistor remains in the active region.
 
 <a id="elx_current_mirror"></a>
 
-#### BJT current mirror with finite beta — `elx_current_mirror`
+#### BJT current mirror with finite beta: `elx_current_mirror`
 
 The reference current and the output current of a basic two-transistor current mirror with a resistor to the supply, including the base-current error Iout = Iref beta/(beta + 2).
 
@@ -815,10 +775,10 @@ $$
 | `VCC` | in | supply voltage | V |
 | `R` | in | reference resistor | ohm |
 | `VBE` | in | base-emitter voltage | V |
-| `beta` | in | current gain of each (matched) transistor | — |
+| `beta` | in | current gain of each (matched) transistor | - |
 | `Iref` | out | current in the reference resistor | A |
 | `Iout` | out | output (mirrored) current | A |
-| `ratio` | out | Iout/Iref | — |
+| `ratio` | out | Iout/Iref | - |
 
 **Applies when:** matched transistors, Early effect neglected.
 
@@ -835,11 +795,11 @@ ratio = 0.9803921569
   assumes: matched transistors, Early effect neglected
 ```
 
-In the worked example, VCC = 10 V, R = 9300 ohm, VBE = 0.7 V, beta = 100 go through the equation above and give Iref = 0.001 A, Iout = 0.0009803921569 A, ratio = 0.9803921569. It applies only when matched transistors, Early effect neglected: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a basic two-transistor BJT current mirror. First, the reference current 0.001 A is found by subtracting the base-emitter voltage 0.7 V from the supply voltage 10 V and dividing by the resistor 9300 ohm. Then, the actual output current 0.000980392 A is derived by applying the finite beta correction factor to the reference current. The resulting ratio 0.980392 indicates how closely the mirror replicates the input current, with values less than one reflecting the error caused by base currents.
 
 <a id="elx_differential_pair"></a>
 
-#### BJT differential pair: differential and common-mode gain, CMRR — `elx_differential_pair`
+#### BJT differential pair: differential and common-mode gain, CMRR, `elx_differential_pair`
 
 The differential gain (differential and single-ended output), the common-mode gain and the common-mode rejection ratio of a resistively loaded BJT differential pair with a tail current source of finite resistance.
 
@@ -850,17 +810,17 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `I_tail` | in | tail (bias) current | A |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VT` | in | thermal voltage | V |
 | `RC` | in | collector resistor of each side | ohm |
 | `REE` | in | output resistance of the tail current source | ohm |
 | `IC` | out | collector current of each transistor | A |
 | `gm` | out | transconductance of each | S |
-| `Ad_diff` | out | differential gain, differential output | — |
-| `Ad_se` | out | differential gain, single-ended output | — |
-| `Acm` | out | common-mode gain, single-ended output | — |
-| `CMRR` | out | \|Ad_se/Acm\| | — |
-| `CMRR_dB` | out | CMRR in dB | — |
+| `Ad_diff` | out | differential gain, differential output | - |
+| `Ad_se` | out | differential gain, single-ended output | - |
+| `Acm` | out | common-mode gain, single-ended output | - |
+| `CMRR` | out | \|Ad_se/Acm\| | - |
+| `CMRR_dB` | out | CMRR in dB | - |
 
 **Applies when:** matched transistors, r_o neglected.
 
@@ -882,11 +842,11 @@ CMRR_dB = 66.02277111
   assumes: matched transistors, r_o neglected
 ```
 
-In the worked example, I_tail = 1 mA, beta = 100, VT = 25 mV, RC = 10000 ohm, REE = 100000 ohm go through the equation above and give IC = 0.000495049505 A, gm = 0.0198019802 S, Ad_diff = -198.019802, Ad_se = -99.00990099. It applies only when matched transistors, r_o neglected: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a bipolar junction transistor differential pair. Using the tail current of 1 mA and collector resistors of 10000 ohm, each transistor carries a collector current of 0.00049505 A with a transconductance of 0.019802 S. The resulting differential voltage gain is -198.02 for double-ended output or -99.0099 for single-ended, while the common-mode gain is suppressed to -0.0494926. The ratio of these gains yields a common-mode rejection ratio of 2000.5, indicating how well the circuit rejects noise common to both inputs.
 
 <a id="elx_bjt_emitter_bias"></a>
 
-#### BJT dual-supply emitter bias: Q-point — `elx_bjt_emitter_bias`
+#### BJT dual-supply emitter bias: Q-point, `elx_bjt_emitter_bias`
 
 The Q-point of a transistor with its base returned to ground through RB and its emitter returned to a negative supply -VEE through RE (emitter bias).
 
@@ -901,7 +861,7 @@ $$
 | `RB` | in | base resistor to ground | ohm |
 | `RC` | in | collector resistor | ohm |
 | `RE` | in | emitter resistor to -VEE | ohm |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VBE` | in | base-emitter voltage | V |
 | `IB` | out | base current | A |
 | `IC` | out | collector current | A |
@@ -933,11 +893,11 @@ VCE = 6.505882353 V
   assumes: VEE > VBE; active region: VCE >= 0.2 V
 ```
 
-In the worked example, VCC = 10 V, VEE = 10 V, RB = 10000 ohm, RC = 4700 ohm, RE = 10000 ohm, beta = 100, VBE = 0.7 V go through the equation above and give IB = 9.117647059e-06 A, IC = 0.0009117647059 A, IE = 0.0009208823529 A, VB = -0.09117647059 V. It applies only when VEE > VBE; active region: VCE >= 0.2 V: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the quiescent operating point of a bipolar junction transistor in an emitter bias configuration. Using the supply voltages, resistor values, and transistor gain, the emitter current is found to be 0.000920882 A. This current establishes the base voltage at -0.0911765 V and the collector voltage at 5.71471 V, defining the DC conditions for signal amplification.
 
 <a id="elx_bjt_fixed_bias"></a>
 
-#### BJT fixed (base-resistor) bias: Q-point — `elx_bjt_fixed_bias`
+#### BJT fixed (base-resistor) bias: Q-point, `elx_bjt_fixed_bias`
 
 The quiescent base and collector currents and the collector-emitter voltage of a common-emitter stage biased by a single base resistor from the supply.
 
@@ -950,7 +910,7 @@ $$
 | `VCC` | in | supply voltage | V |
 | `RB` | in | base resistor | ohm |
 | `RC` | in | collector resistor | ohm |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VBE` | in | base-emitter voltage (about 0.7 V) | V |
 | `IB` | out | base current | A |
 | `IC` | out | collector current | A |
@@ -974,11 +934,11 @@ VCE = 6.710638298 V
   assumes: active region: VCE >= 0.2 V (otherwise refused as saturated)
 ```
 
-In the worked example, VCC = 12 V, RB = 470000 ohm, RC = 2200 ohm, beta = 100, VBE = 0.7 V go through the equation above and give IB = 2.404255319e-05 A, IC = 0.002404255319 A, IE = 0.002428297872 A, VCE = 6.710638298 V. It applies only when active region: VCE >= 0.2 V (otherwise refused as saturated): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the DC operating point, or Q-point, for a bipolar junction transistor configured with fixed bias. The base current 2.40426e-05 A is derived from the supply voltage 12 V minus the base-emitter drop 0.7 V, divided by the base resistor 470000 ohm. This base current sets the collector current 0.00240426 A through the transistor's current gain 100. Consequently, the voltage at the collector relative to the emitter, 6.71064 V, is found by subtracting the voltage drop across the collector resistor 2200 ohm from the supply voltage. A stable Q-point ensures the amplifier operates in the active region.
 
 <a id="elx_bjt_small_signal_parameters"></a>
 
-#### BJT small-signal (hybrid-pi) parameters — `elx_bjt_small_signal_parameters`
+#### BJT small-signal (hybrid-pi) parameters: `elx_bjt_small_signal_parameters`
 
 The transconductance gm, the input resistance r_pi, the emitter resistance r_e, the output resistance r_o (Early voltage) and the intrinsic gain of a bipolar transistor at its bias current.
 
@@ -989,14 +949,14 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `IC` | in | collector bias current | A |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VT` | in | thermal voltage (25 or 26 mV) | V |
 | `VA` | in | Early voltage | V |
 | `gm` | out | transconductance | S |
 | `r_pi` | out | base input resistance r_pi | ohm |
 | `r_e` | out | emitter resistance r_e | ohm |
 | `r_o` | out | output resistance | ohm |
-| `A0` | out | intrinsic voltage gain gm r_o | — |
+| `A0` | out | intrinsic voltage gain gm r_o | - |
 
 **Applies when:** IC, beta, VT, VA > 0; active region.
 
@@ -1015,11 +975,11 @@ A0 = 4000
   assumes: IC, beta, VT, VA > 0; active region
 ```
 
-In the worked example, IC = 1 mA, beta = 100, VT = 25 mV, VA = 100 V go through the equation above and give gm = 0.04 S, r_pi = 2500 ohm, r_e = 24.75247525 ohm, r_o = 100000 ohm. It applies only when IC, beta, VT, VA > 0; active region: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the small-signal hybrid-pi parameters for a bipolar junction transistor operating in the active region. By using the collector bias current 1 mA, current gain 100, thermal voltage 25 mV, and Early voltage 100 V, this gives key performance metrics. The transconductance 0.04 S indicates how effectively the base-emitter voltage controls the collector current. The base input resistance 2500 ohm represents the impedance seen looking into the base terminal. The emitter resistance 24.7525 ohm and output resistance 100000 ohm characterize internal resistances, while the intrinsic voltage gain 4000 reflects the maximum amplification capability of the device without external loading.
 
 <a id="elx_bjt_current_relations"></a>
 
-#### BJT terminal currents from beta — `elx_bjt_current_relations`
+#### BJT terminal currents from beta: `elx_bjt_current_relations`
 
 The collector and emitter currents and the common-base current gain alpha of a bipolar transistor in the active region from its base current and beta.
 
@@ -1030,10 +990,10 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `IB` | in | base current | A |
-| `beta` | in | common-emitter current gain (hFE) | — |
+| `beta` | in | common-emitter current gain (hFE) | - |
 | `IC` | out | collector current | A |
 | `IE` | out | emitter current | A |
-| `alpha` | out | alpha = beta/(beta + 1) | — |
+| `alpha` | out | alpha = beta/(beta + 1) | - |
 
 **Applies when:** IB > 0, beta > 0; active region.
 
@@ -1048,11 +1008,11 @@ alpha = 0.9900990099
   assumes: IB > 0, beta > 0; active region
 ```
 
-In the worked example, IB = 20 uA, beta = 100 go through the equation above and give IC = 0.002 A, IE = 0.00202 A, alpha = 0.9900990099. It applies only when IB > 0, beta > 0; active region: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the collector current, emitter current, and common-base current gain for a bipolar junction transistor operating in the active region. Using the provided base current of 20 uA and the current gain factor of 100, the model computes the resulting currents and the derived alpha value. The collector current 0.002 A represents the main output flow controlled by the base, while the emitter current 0.00202 A reflects the total current entering the device. The parameter alpha 0.990099 indicates the fraction of emitter current that reaches the collector.
 
 <a id="elx_bjt_voltage_divider_bias"></a>
 
-#### BJT voltage-divider bias: exact Q-point — `elx_bjt_voltage_divider_bias`
+#### BJT voltage-divider bias: exact Q-point, `elx_bjt_voltage_divider_bias`
 
 The Q-point (base, collector and emitter currents, node voltages and VCE) of a common-emitter stage with a base voltage divider and an emitter resistor, by the exact Thevenin analysis (base current included).
 
@@ -1067,7 +1027,7 @@ $$
 | `R2` | in | lower divider resistor (base to ground) | ohm |
 | `RC` | in | collector resistor | ohm |
 | `RE` | in | emitter resistor | ohm |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VBE` | in | base-emitter voltage | V |
 | `VTH` | out | Thevenin voltage of the divider | V |
 | `RTH` | out | Thevenin resistance of the divider | ohm |
@@ -1103,11 +1063,11 @@ VCE = 4.886902724 V
   assumes: VTH > VBE; active region: VCE >= 0.2 V
 ```
 
-In the worked example, VCC = 12 V, R1 = 47000 ohm, R2 = 10000 ohm, RC = 2200 ohm, RE = 470 ohm, beta = 150, VBE = 0.7 V go through the equation above and give VTH = 2.105263158 V, RTH = 8245.614035 ohm, IB = 1.773972436e-05 A, IC = 0.002660958654 A. It applies only when VTH > VBE; active region: VCE >= 0.2 V: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the exact quiescent operating point of a bipolar junction transistor in a common-emitter configuration with voltage-divider bias. By replacing the base resistors with their Thevenin equivalent, the base current is 1.77397e-05 A, which leads to a collector current of 0.00266096 A and an emitter current of 0.0026787 A. Consequently, the base voltage is 1.95899 V, the emitter voltage is 1.25899 V, and the collector voltage is 6.14589 V, resulting in a final collector-emitter voltage of 4.8869 V.
 
 <a id="elx_common_base_amplifier"></a>
 
-#### Common-base amplifier — `elx_common_base_amplifier`
+#### Common-base amplifier: `elx_common_base_amplifier`
 
 The voltage gain (emitter to collector and source to load), the low input resistance and the output resistance of a common-base stage (hybrid-pi model, r_o neglected).
 
@@ -1118,16 +1078,16 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `IC` | in | collector bias current | A |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VT` | in | thermal voltage | V |
 | `RC` | in | collector resistor | ohm |
 | `RL` | in | load resistor | ohm |
 | `RE` | in | emitter bias resistor | ohm |
 | `Rsig` | in | source resistance | ohm |
-| `Av` | out | voltage gain emitter to output | — |
+| `Av` | out | voltage gain emitter to output | - |
 | `Rin` | out | input resistance (RE \|\| r_e) | ohm |
 | `Rout` | out | output resistance (RC) | ohm |
-| `Gv` | out | overall gain from the source | — |
+| `Gv` | out | overall gain from the source | - |
 
 **Applies when:** r_o neglected; base at signal ground.
 
@@ -1148,11 +1108,11 @@ Gv = 33.05785124
   assumes: r_o neglected; base at signal ground
 ```
 
-In the worked example, IC = 1 mA, beta = 100, VT = 25 mV, RC = 5000 ohm, RL = 5000 ohm, RE = 10000 ohm, Rsig = 50 ohm go through the equation above and give Av = 100, Rin = 24.69135802 ohm, Rout = 5000 ohm, Gv = 33.05785124. It applies only when r_o neglected; base at signal ground: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a common-base amplifier stage using the hybrid-pi model. The intrinsic emitter resistance is derived from the bias current, resulting in an input resistance of 24.6914 ohm, which is the parallel combination of the external emitter resistor and this intrinsic value. The voltage gain from the emitter to the collector is calculated as 100, driven by the transconductance and the parallel load at the collector. The overall source-to-load gain is 33.0579, accounting for signal loss across the source resistance. The output resistance looking into the collector is 5000 ohm, typically dominated by the collector resistor when neglecting the transistor's internal output resistance.
 
 <a id="elx_common_collector_amplifier"></a>
 
-#### Common-collector (emitter-follower) amplifier — `elx_common_collector_amplifier`
+#### Common-collector (emitter-follower) amplifier, `elx_common_collector_amplifier`
 
 The voltage gain, input resistance and output resistance of an emitter follower, including the source resistance reflected into the emitter (hybrid-pi model, r_o neglected).
 
@@ -1163,16 +1123,16 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `IC` | in | collector bias current | A |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VT` | in | thermal voltage | V |
 | `RE` | in | emitter resistor | ohm |
 | `RL` | in | load resistor | ohm |
 | `RB` | in | bias resistance at the base | ohm |
 | `Rsig` | in | source resistance | ohm |
-| `Av` | out | voltage gain base to output | — |
+| `Av` | out | voltage gain base to output | - |
 | `Rin` | out | input resistance | ohm |
 | `Rout` | out | output resistance | ohm |
-| `Gv` | out | overall gain from the source | — |
+| `Gv` | out | overall gain from the source | - |
 
 **Applies when:** r_o neglected.
 
@@ -1193,11 +1153,11 @@ Gv = 0.7639939486
   assumes: r_o neglected
 ```
 
-In the worked example, IC = 5 mA, beta = 100, VT = 25 mV, RE = 1000 ohm, RL = 1000 ohm, RB = 100000 ohm, Rsig = 10000 ohm go through the equation above and give Av = 0.9901960784, Rin = 33774.83444 ohm, Rout = 86.7242088 ohm, Gv = 0.7639939486. It applies only when r_o neglected: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a common-collector amplifier, also known as an emitter follower. Using the collector bias current, thermal voltage, and circuit resistances, it computes the voltage gain from base to output, which is 0.990196, and the overall source-to-load gain, which is 0.763994. It also finds the input resistance, 33774.8 ohm, and the output resistance, 86.7242 ohm. These values indicate how effectively the stage buffers the signal and drives the load.
 
 <a id="elx_common_emitter_amplifier"></a>
 
-#### Common-emitter amplifier: gain, input and output resistance — `elx_common_emitter_amplifier`
+#### Common-emitter amplifier: gain, input and output resistance, `elx_common_emitter_amplifier`
 
 The voltage gain (base to collector and source to load), the input and output resistances of a common-emitter stage with an optional unbypassed emitter resistance, from the bias current (hybrid-pi model, r_o neglected).
 
@@ -1208,7 +1168,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `IC` | in | collector bias current | A |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `VT` | in | thermal voltage | V |
 | `RC` | in | collector resistor | ohm |
 | `RL` | in | load resistor | ohm |
@@ -1217,10 +1177,10 @@ $$
 | `Rsig` | in | source resistance | ohm |
 | `gm` | out | transconductance | S |
 | `r_pi` | out | r_pi | ohm |
-| `Av` | out | voltage gain base to output | — |
+| `Av` | out | voltage gain base to output | - |
 | `Rin` | out | input resistance (including RB) | ohm |
 | `Rout` | out | output resistance (RC) | ohm |
-| `Gv` | out | overall gain from the source voltage | — |
+| `Gv` | out | overall gain from the source voltage | - |
 
 **Applies when:** r_o neglected; coupling and bypass capacitors short at signal frequency.
 
@@ -1248,7 +1208,7 @@ In the worked example, IC = 1 mA, beta = 100, VT = 25 mV, RC = 5000 ohm, RL = 10
 
 <a id="elx_miller_high_cutoff"></a>
 
-#### Common-emitter high-frequency cutoff: Miller effect and open-circuit time constants — `elx_miller_high_cutoff`
+#### Common-emitter high-frequency cutoff: Miller effect and open-circuit time constants, `elx_miller_high_cutoff`
 
 The Miller capacitance, the upper -3 dB frequency of a common-emitter (or common-source) stage by the Miller approximation, and the open-circuit time-constant estimate that also counts the output side of Cmu.
 
@@ -1264,7 +1224,7 @@ $$
 | `Cmu` | in | feedback capacitance Cmu (Cgd) | F |
 | `RLp` | in | total load at the collector (RC \|\| RL \|\| r_o) | ohm |
 | `Rsigp` | in | source resistance seen at the base (Rsig \|\| RB) | ohm |
-| `A_mid` | out | gain across Cmu, -gm RL' | — |
+| `A_mid` | out | gain across Cmu, -gm RL' | - |
 | `C_M` | out | Miller capacitance | F |
 | `R_pi_eq` | out | resistance seen by Cpi (r_pi \|\| Rsig') | ohm |
 | `f_H_miller` | out | upper cutoff, Miller approximation | Hz |
@@ -1291,11 +1251,11 @@ f_H_octc = 1017428.86 Hz
   assumes: mid-band gain unchanged by the capacitors; dominant-pole estimate
 ```
 
-In the worked example, gm = 40 mS, r_pi = 2500 ohm, Cpi = 10 pF, Cmu = 2 pF, RLp = 2500 ohm, Rsigp = 1000 ohm go through the equation above and give A_mid = -100, C_M = 2.02e-10 F, R_pi_eq = 714.2857143 ohm, f_H_miller = 1051023.209 Hz. It applies only when mid-band gain unchanged by the capacitors; dominant-pole estimate: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the high-frequency response of a common-emitter amplifier stage. It first computes the mid-band gain -100 and the Miller capacitance 2.02e-10 F, which represents the feedback capacitor multiplied by one plus the magnitude of the gain. Using these values, the upper three-decibel cutoff frequency via the Miller approximation is found to be 1.05102e+06 Hz. Additionally, the open-circuit time constant method provides a more comprehensive estimate of 1.56429e-07 s seconds, resulting in a cutoff frequency of 1.01743e+06 Hz. This approach helps predict bandwidth limitations caused by internal transistor capacitances.
 
 <a id="elx_low_frequency_cutoff"></a>
 
-#### Common-emitter low-frequency cutoff by short-circuit time constants — `elx_low_frequency_cutoff`
+#### Common-emitter low-frequency cutoff by short-circuit time constants, `elx_low_frequency_cutoff`
 
 The resistance seen by each coupling and bypass capacitor of a common-emitter amplifier and the lower -3 dB frequency estimated as the sum of the short-circuit pole frequencies (r_o neglected).
 
@@ -1308,7 +1268,7 @@ $$
 | `Rsig` | in | source resistance | ohm |
 | `RB` | in | bias resistance at the base (R1 \|\| R2) | ohm |
 | `r_pi` | in | r_pi | ohm |
-| `beta` | in | current gain | — |
+| `beta` | in | current gain | - |
 | `RE` | in | emitter resistor (bypassed by CE) | ohm |
 | `RC` | in | collector resistor | ohm |
 | `RL` | in | load resistor | ohm |
@@ -1348,11 +1308,11 @@ f_L = 54.15292673 Hz
   assumes: short-circuit time-constant estimate; r_o neglected
 ```
 
-In the worked example, Rsig = 1000 ohm, RB = 20000 ohm, r_pi = 2500 ohm, beta = 100, RE = 1000 ohm, RC = 5000 ohm, RL = 10000 ohm, C1 = 10 uF, C2 = 10 uF, CE = 100 uF go through the equation above and give R_C1 = 3222.222222 ohm, R_CE = 33.05219968 ohm, R_C2 = 15000 ohm, f_C1 = 4.939291337 Hz. It applies only when short-circuit time-constant estimate; r_o neglected: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the low-frequency response of a common-emitter amplifier using the short-circuit time constant method. The resistance seen by the input coupling capacitor is 3222.22 ohm, while the emitter bypass capacitor sees 33.0522 ohm and the output coupling capacitor sees 15000 ohm. These resistances, combined with their respective capacitance values, yield individual pole frequencies of 4.93929 Hz, 48.1526 Hz, and 1.06103 Hz. Summing these poles provides an approximation for the overall lower cutoff frequency of 54.1529 Hz, which indicates where the gain drops to half power.
 
 <a id="elx_wilson_current_mirror"></a>
 
-#### Wilson current mirror output current — `elx_wilson_current_mirror`
+#### Wilson current mirror output current: `elx_wilson_current_mirror`
 
 The output current of a three-transistor Wilson current mirror and its small base-current error, 2/(beta^2 + 2 beta + 2).
 
@@ -1363,10 +1323,10 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `Iref` | in | reference current | A |
-| `beta` | in | current gain of each matched transistor | — |
+| `beta` | in | current gain of each matched transistor | - |
 | `Iout` | out | output current | A |
-| `ratio` | out | Iout/Iref | — |
-| `error` | out | relative error 1 - Iout/Iref | — |
+| `ratio` | out | Iout/Iref | - |
+| `error` | out | relative error 1 - Iout/Iref | - |
 
 **Applies when:** matched transistors, Early effect neglected.
 
@@ -1381,13 +1341,13 @@ error = 0.0001960399922
   assumes: matched transistors, Early effect neglected
 ```
 
-In the worked example, Iref = 1 mA, beta = 100 go through the equation above and give Iout = 0.00099980396 A, ratio = 0.99980396, error = 0.0001960399922. It applies only when matched transistors, Early effect neglected: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the output current and transfer ratio of a three-transistor Wilson current mirror. Given a reference current of 1 mA and a transistor beta of 100, the model computes the output current as 0.000999804 A. The resulting transfer ratio is 0.999804, indicating that the circuit exhibits a relative error of 0.00019604 due to base current losses. This error term quantifies the deviation from ideal unity gain, showing how closely the output mirrors the input.
 
 ### CMOS (2)
 
 <a id="elx_cmos_propagation_delay"></a>
 
-#### CMOS gate propagation delay (switch-resistor model) — `elx_cmos_propagation_delay`
+#### CMOS gate propagation delay (switch-resistor model), `elx_cmos_propagation_delay`
 
 The high-to-low and low-to-high propagation delays (50 % points) and their average for a CMOS gate modelled as switched equivalent resistances driving a load capacitance.
 
@@ -1418,11 +1378,11 @@ tp = 1.039720771e-09 s
   assumes: step input, RC switch model
 ```
 
-In the worked example, Rn = 10000 ohm, Rp = 20000 ohm, CL = 100 fF go through the equation above and give tpHL = 6.931471806e-10 s, tpLH = 1.386294361e-09 s, tp = 1.039720771e-09 s. It applies only when step input, RC switch model: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the propagation delays for a CMOS gate using a switch-resistor model. It computes the time required for the output to transition from high to low, denoted as 6.93147e-10 s, and from low to high, denoted as 1.38629e-09 s. These values are derived from the equivalent on-resistances of the pull-down network 10000 ohm and pull-up network 20000 ohm, combined with the load capacitance 100 fF. The average propagation delay 1.03972e-09 s represents the typical switching speed of the gate under these conditions.
 
 <a id="elx_cmos_switching_threshold"></a>
 
-#### CMOS inverter switching threshold VM — `elx_cmos_switching_threshold`
+#### CMOS inverter switching threshold VM: `elx_cmos_switching_threshold`
 
 The switching threshold of a CMOS inverter (input = output, both transistors saturated) from the supply, the two threshold voltages and the two transconductance parameters.
 
@@ -1437,7 +1397,7 @@ $$
 | `Vtp` | in | magnitude of the PMOS threshold | V |
 | `kn` | in | NMOS mu_n Cox W/L | A/V^2 |
 | `kp` | in | PMOS mu_p Cox W/L | A/V^2 |
-| `r` | out | sqrt(kp/kn) | — |
+| `r` | out | sqrt(kp/kn) | - |
 | `VM` | out | switching threshold | V |
 
 **Applies when:** Vtn + |Vtp| < VDD; lambda neglected.
@@ -1455,13 +1415,13 @@ VM = 1.25 V
   assumes: Vtn + |Vtp| < VDD; lambda neglected
 ```
 
-In the worked example, VDD = 2.5 V, Vtn = 0.4 V, Vtp = 0.4 V, kn = 0.1 mA/V^2, kp = 0.1 mA/V^2 go through the equation above and give r = 1, VM = 1.25 V. It applies only when Vtn + |Vtp| < VDD; lambda neglected: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the CMOS inverter switching threshold, denoted as VM. The result of 1.25 V volts represents the input voltage level at which the output equals the input, assuming both transistors operate in saturation. This value is derived from the supply voltage 2.5 V, the NMOS threshold 0.4 V, the PMOS threshold magnitude 0.4 V, and the ratio of their conduction strengths defined by r = 1. A balanced inverter typically aims for a threshold near half the supply voltage to maximize noise margins.
 
 ### Data converters (9)
 
 <a id="elx_adc_code"></a>
 
-#### ADC output code, LSB and quantisation error — `elx_adc_code`
+#### ADC output code, LSB and quantisation error, `elx_adc_code`
 
 The output code (decimal and binary) of an ideal unipolar truncating n-bit ADC for an input voltage, the LSB size, the voltage the code represents and the quantisation error.
 
@@ -1473,9 +1433,9 @@ $$
 |---|---|---|---|
 | `Vin` | in | analog input | V |
 | `Vref` | in | reference (full-scale) voltage | V |
-| `n` | in | resolution in bits | — |
-| `code` | out | output code (decimal) | — |
-| `bits` | out | output code in binary | — |
+| `n` | in | resolution in bits | - |
+| `code` | out | output code (decimal) | - |
+| `bits` | out | output code in binary | - |
 | `LSB` | out | LSB = Vref/2^n | V |
 | `V_code` | out | voltage of the code | V |
 | `error` | out | quantisation error Vin - code LSB | V |
@@ -1495,11 +1455,11 @@ error = 0.01640625 V
   assumes: 0 <= Vin <= Vref; 1 <= n <= 16
 ```
 
-In the worked example, Vin = 3.2 V, Vref = 5 V, n = 8 go through the equation above and give code = 163, bits = 10100011, LSB = 0.01953125 V, V_code = 3.18359375 V. It applies only when 0 <= Vin <= Vref; 1 <= n <= 16: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the digital output of an ideal n-bit analog-to-digital converter. The output code, shown here as 163, is derived by truncating the scaled input voltage. Each step in this quantization process corresponds to the least significant bit value, calculated as 0.0195312 V. Consequently, the specific binary representation 10100011 indicates that the converter maps the input range into discrete levels, where the nominal voltage associated with this code is 3.18359 V. The difference between the actual input and this nominal value constitutes the quantization error.
 
 <a id="elx_adc_quantization_snr"></a>
 
-#### ADC quantisation SNR with oversampling — `elx_adc_quantization_snr`
+#### ADC quantisation SNR with oversampling: `elx_adc_quantization_snr`
 
 The signal-to-quantisation-noise ratio of an ideal n-bit converter for a sine input (6.02 n + 1.76 dB at full scale), with an oversampling ratio and a reduced amplitude, and the in-band noise in LSB.
 
@@ -1509,12 +1469,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | resolution in bits | — |
-| `OSR` | in | oversampling ratio (default 1) (optional) | — |
-| `A_frac` | in | sine amplitude as a fraction of full scale (default 1) (optional) | — |
-| `SNR_dB` | out | signal-to-quantisation-noise ratio, dB | — |
-| `noise_rms_lsb` | out | in-band noise rms in LSB | — |
-| `SNR_full_scale_dB` | out | full-scale SNR without oversampling, dB | — |
+| `n` | in | resolution in bits | - |
+| `OSR` | in | oversampling ratio (default 1) (optional) | - |
+| `A_frac` | in | sine amplitude as a fraction of full scale (default 1) (optional) | - |
+| `SNR_dB` | out | signal-to-quantisation-noise ratio, dB | - |
+| `noise_rms_lsb` | out | in-band noise rms in LSB | - |
+| `SNR_full_scale_dB` | out | full-scale SNR without oversampling, dB | - |
 
 **Applies when:** uniform quantisation noise, white over Nyquist; OSR >= 1.
 
@@ -1527,11 +1487,11 @@ SNR_full_scale_dB = 74.00811155
   assumes: uniform quantisation noise, white over Nyquist; OSR >= 1
 ```
 
-In the worked example, n = 12 go through the equation above and give SNR_dB = 74.00811155, noise_rms_lsb = 0.2886751346, SNR_full_scale_dB = 74.00811155. It applies only when uniform quantisation noise, white over Nyquist; OSR >= 1: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** The signal-to-quantisation-noise ratio is 74.0081 dB, with an in-band noise level of 0.288675 LSB.
 
 <a id="elx_dac_binary_weighted"></a>
 
-#### Binary-weighted resistor DAC — `elx_dac_binary_weighted`
+#### Binary-weighted resistor DAC: `elx_dac_binary_weighted`
 
 The output voltage and summing current of a binary-weighted resistor DAC with an inverting op-amp (MSB resistor R, each lower bit doubling it) and the largest resistor needed.
 
@@ -1541,8 +1501,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | resolution in bits | — |
-| `code` | in | input code (decimal) | — |
+| `n` | in | resolution in bits | - |
+| `code` | in | input code (decimal) | - |
 | `Vref` | in | reference voltage | V |
 | `R` | in | MSB resistor | ohm |
 | `Rf` | in | feedback resistor | ohm |
@@ -1564,11 +1524,11 @@ R_LSB = 80000 ohm
   assumes: ideal switches and op-amp
 ```
 
-In the worked example, n = 4, code = 10, Vref = 5 V, R = 10000 ohm, Rf = 5000 ohm go through the equation above and give Vout = -3.125 V, I_total = 0.000625 A, R_LSB = 80000 ohm. It applies only when ideal switches and op-amp: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the analog output voltage for a binary-weighted resistor digital-to-analog converter. By applying the input code to switches connected to resistors that double in value for each less significant bit, the circuit generates a proportional current at the summing node. The operational amplifier converts this current into a voltage using the feedback resistor. The resulting output voltage is -3.125 V, which reflects the magnitude of the digital input relative to the reference voltage 5 V. The total current flowing into the virtual ground is 0.000625 A, and the largest resistor required for the least significant bit is 80000 ohm.
 
 <a id="elx_dac_output"></a>
 
-#### DAC output voltage (R-2R or any binary DAC) — `elx_dac_output`
+#### DAC output voltage (R-2R or any binary DAC), `elx_dac_output`
 
 The output voltage of an ideal n-bit unipolar DAC for a code, Vout = Vref D/2^n, its step size and its full-scale output.
 
@@ -1578,8 +1538,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | resolution in bits | — |
-| `code` | in | input code (decimal) | — |
+| `n` | in | resolution in bits | - |
+| `code` | in | input code (decimal) | - |
 | `Vref` | in | reference voltage | V |
 | `Vout` | out | output voltage | V |
 | `LSB` | out | step size Vref/2^n | V |
@@ -1597,11 +1557,11 @@ V_full_scale = 4.98046875 V
   assumes: 0 <= code <= 2^n - 1
 ```
 
-In the worked example, n = 8, code = 200, Vref = 5 V go through the equation above and give Vout = 3.90625 V, LSB = 0.01953125 V, V_full_scale = 4.98046875 V. It applies only when 0 <= code <= 2^n - 1: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the analog output voltage produced by an ideal n-bit digital-to-analog converter. Using the input code 200 and reference voltage 5 V, the resulting output is 3.90625 V. The resolution defines the smallest change in voltage, known as the least significant bit or LSB, which equals 0.0195312 V. The maximum possible output for this architecture, corresponding to the all-ones binary code, is 4.98047 V. These values characterize the performance limits and granularity of the conversion process.
 
 <a id="elx_dual_slope_adc"></a>
 
-#### Dual-slope integrating ADC — `elx_dual_slope_adc`
+#### Dual-slope integrating ADC: `elx_dual_slope_adc`
 
 The fixed integration time, the de-integration time and count, and the peak integrator voltage of a dual-slope ADC.
 
@@ -1613,13 +1573,13 @@ $$
 |---|---|---|---|
 | `Vin` | in | input voltage (magnitude) | V |
 | `Vref` | in | reference voltage (magnitude) | V |
-| `N1` | in | fixed count of the integration phase | — |
+| `N1` | in | fixed count of the integration phase | - |
 | `fclk` | in | clock frequency | Hz |
 | `R` | in | integrator resistor | ohm |
 | `C` | in | integrator capacitor | F |
 | `T1` | out | integration time N1/fclk | s |
 | `T2` | out | de-integration time | s |
-| `N2` | out | count of the de-integration phase (unrounded) | — |
+| `N2` | out | count of the de-integration phase (unrounded) | - |
 | `V_peak` | out | peak integrator output | V |
 
 **Applies when:** 0 < Vin <= Vref.
@@ -1639,11 +1599,11 @@ V_peak = 0.5 V
   assumes: 0 < Vin <= Vref
 ```
 
-In the worked example, Vin = 0.5 V, Vref = 1 V, N1 = 1000, fclk = 100000 Hz, R = 100000 ohm, C = 0.1 uF go through the equation above and give T1 = 0.01 s, T2 = 0.005 s, N2 = 500, V_peak = 0.5 V. It applies only when 0 < Vin <= Vref: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the timing and voltage characteristics of a dual-slope analog-to-digital converter. The fixed integration phase lasts for 0.01 s, which depends on the clock frequency and the initial count. During this phase, the integrator output rises to a peak value of 0.5 V. In the subsequent de-integration phase, the input voltage ratio dictates that the counter reaches 500 before the integrator returns to zero, establishing the digital result.
 
 <a id="elx_adc_enob"></a>
 
-#### Effective number of bits (ENOB) from SINAD — `elx_adc_enob`
+#### Effective number of bits (ENOB) from SINAD, `elx_adc_enob`
 
 The effective number of bits of a converter from its measured SINAD (IEEE 1241: ENOB = (SINAD - 1.76)/6.02) and the bits lost against its nominal resolution.
 
@@ -1653,10 +1613,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `SINAD` | in | signal to noise and distortion ratio in dB | — |
-| `n` | in | nominal resolution in bits | — |
-| `ENOB` | out | effective number of bits | — |
-| `bits_lost` | out | n - ENOB | — |
+| `SINAD` | in | signal to noise and distortion ratio in dB | - |
+| `n` | in | nominal resolution in bits | - |
+| `ENOB` | out | effective number of bits | - |
+| `bits_lost` | out | n - ENOB | - |
 
 **Applies when:** full-scale sine test.
 
@@ -1669,11 +1629,11 @@ bits_lost = 2
   assumes: full-scale sine test
 ```
 
-In the worked example, SINAD = 74, n = 14 go through the equation above and give ENOB = 12, bits_lost = 2. It applies only when full-scale sine test: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the actual performance of an analog-to-digital converter using its measured signal to noise and distortion ratio. By applying the standard formula, the effective number of bits is 12. This value represents the true dynamic range achieved during a full-scale sine wave test. When compared to the nominal resolution of 14 bits, the difference reveals that 2 bits of theoretical precision are compromised by noise and non-linear distortions in the system.
 
 <a id="elx_sample_hold_droop"></a>
 
-#### Sample-and-hold droop — `elx_sample_hold_droop`
+#### Sample-and-hold droop: `elx_sample_hold_droop`
 
 The droop rate I/C of a sample-and-hold capacitor discharged by a leakage current, the droop over a hold time (in volts and LSB) and the longest hold that keeps the droop within half an LSB of an n-bit converter.
 
@@ -1687,10 +1647,10 @@ $$
 | `C` | in | hold capacitor | F |
 | `t_hold` | in | hold time | s |
 | `Vref` | in | converter full scale | V |
-| `n` | in | converter resolution in bits | — |
+| `n` | in | converter resolution in bits | - |
 | `droop_rate` | out | droop rate I/C | V/s |
 | `droop` | out | droop over the hold time | V |
-| `droop_lsb` | out | droop in LSB | — |
+| `droop_lsb` | out | droop in LSB | - |
 | `t_max_half_lsb` | out | longest hold for half an LSB | s |
 
 **Applies when:** constant leakage current.
@@ -1709,11 +1669,11 @@ t_max_half_lsb = 0.0006103515625 s
   assumes: constant leakage current
 ```
 
-In the worked example, I_leak = 1 nA, C = 1 nF, t_hold = 10 us, Vref = 5 V, n = 12 go through the equation above and give droop_rate = 1 V/s, droop = 1e-05 V, droop_lsb = 0.008192, t_max_half_lsb = 0.0006103515625 s. It applies only when constant leakage current: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines how quickly the voltage on the sample-and-hold capacitor falls due to leakage current. The droop rate, given as 1 V/s, is derived by dividing the leakage current by the capacitance. Over the specified hold time, this results in a total voltage loss of 1e-05 V. This value represents the error introduced into the signal before it is converted, which can be compared against the least significant bit size of the converter to assess accuracy.
 
 <a id="elx_aperture_jitter_snr"></a>
 
-#### SNR limit from sampling-clock (aperture) jitter — `elx_aperture_jitter_snr`
+#### SNR limit from sampling-clock (aperture) jitter, `elx_aperture_jitter_snr`
 
 The SNR limit -20 log10(2 pi f tj) set by rms sampling-clock jitter for a full-scale sine, combined with the quantisation SNR of an n-bit converter into a total SNR and effective bits.
 
@@ -1725,11 +1685,11 @@ $$
 |---|---|---|---|
 | `f` | in | input frequency | Hz |
 | `tj` | in | rms clock jitter | s |
-| `n` | in | converter resolution in bits | — |
-| `SNR_jitter_dB` | out | jitter-limited SNR, dB | — |
-| `SNR_quant_dB` | out | quantisation SNR, dB | — |
-| `SNR_total_dB` | out | combined SNR, dB | — |
-| `ENOB_total` | out | effective bits of the combination | — |
+| `n` | in | converter resolution in bits | - |
+| `SNR_jitter_dB` | out | jitter-limited SNR, dB | - |
+| `SNR_quant_dB` | out | quantisation SNR, dB | - |
+| `SNR_total_dB` | out | combined SNR, dB | - |
+| `ENOB_total` | out | effective bits of the combination | - |
 
 **Applies when:** full-scale sine; jitter and quantisation noise uncorrelated.
 
@@ -1745,11 +1705,11 @@ ENOB_total = 10.34039326
   assumes: full-scale sine; jitter and quantisation noise uncorrelated
 ```
 
-In the worked example, f = 100000000 Hz, tj = 1 ps, n = 14 go through the equation above and give SNR_jitter_dB = 64.03640263, SNR_quant_dB = 86.04931138, SNR_total_dB = 64.00916741, ENOB_total = 10.34039326. It applies only when full-scale sine; jitter and quantisation noise uncorrelated: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the system performance by combining the noise limits imposed by sampling clock jitter and quantization. The jitter-limited signal-to-noise ratio is computed as 64.0364 dB based on the input frequency and rms clock jitter. Simultaneously, the quantization signal-to-noise ratio is established at 86.0493 dB for the converter resolution. Since these noise sources are uncorrelated, their powers add to produce a combined signal-to-noise ratio of 64.0092 dB, which translates to an effective number of bits of 10.3404.
 
 <a id="elx_sar_conversion"></a>
 
-#### Successive-approximation (SAR) ADC conversion — `elx_sar_conversion`
+#### Successive-approximation (SAR) ADC conversion, `elx_sar_conversion`
 
 The bit-by-bit trial voltages, the final code (decimal and binary) and the DAC voltage of an ideal n-bit successive-approximation ADC converting an input.
 
@@ -1761,12 +1721,12 @@ $$
 |---|---|---|---|
 | `Vin` | in | analog input | V |
 | `Vref` | in | reference voltage | V |
-| `n` | in | resolution in bits | — |
-| `code` | out | final code | — |
-| `bits` | out | final code in binary | — |
-| `trials` | out | trial DAC voltages, MSB first (V) | — |
+| `n` | in | resolution in bits | - |
+| `code` | out | final code | - |
+| `bits` | out | final code in binary | - |
+| `trials` | out | trial DAC voltages, MSB first (V) | - |
 | `V_dac` | out | DAC voltage of the final code | V |
-| `cycles` | out | comparison cycles | — |
+| `cycles` | out | comparison cycles | - |
 
 **Applies when:** 0 <= Vin < Vref.
 
@@ -1783,13 +1743,13 @@ cycles = 4
   assumes: 0 <= Vin < Vref
 ```
 
-In the worked example, Vin = 3.2 V, Vref = 5 V, n = 4 go through the equation above and give code = 10, bits = 1010, trials = [2.5, 3.75, 3.125, 3.4375], V_dac = 3.125 V. It applies only when 0 <= Vin < Vref: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the digital output of an ideal successive approximation register analog-to-digital converter. It processes the input voltage 3.2 V against the reference voltage 5 V over 4 resolution steps. The algorithm iteratively tests bit values, starting from the most significant bit, comparing the trial DAC voltage against the input. The final result is the digital code 10, represented in binary as 1010, along with the specific sequence of trial voltages [2.5, 3.75, 3.125, 3.4375] used during conversion. The settled DAC voltage corresponding to this code is 3.125 V, achieved after 4 comparison cycles.
 
 ### Diodes (8)
 
 <a id="elx_capacitor_filter_ripple"></a>
 
-#### Capacitor-input filter: ripple voltage and DC output — `elx_capacitor_filter_ripple`
+#### Capacitor-input filter: ripple voltage and DC output, `elx_capacitor_filter_ripple`
 
 The peak-to-peak ripple, the DC output, the RMS ripple and the ripple factor of a rectifier with a smoothing capacitor and resistive load (small-ripple approximation).
 
@@ -1803,12 +1763,12 @@ $$
 | `f` | in | line frequency | Hz |
 | `RL` | in | load resistance | ohm |
 | `C` | in | filter capacitance | F |
-| `circuit` | in | half-wave or full-wave rectification | — |
+| `circuit` | in | half-wave or full-wave rectification | - |
 | `f_ripple` | out | ripple frequency | Hz |
 | `Vr` | out | peak-to-peak ripple | V |
 | `Vdc` | out | DC output voltage | V |
 | `Vr_rms` | out | RMS ripple | V |
-| `ripple_factor` | out | ripple factor | — |
+| `ripple_factor` | out | ripple factor | - |
 
 **Applies when:** Vr < Vp (small ripple).
 
@@ -1828,11 +1788,11 @@ ripple_factor = 0.004851682934
   assumes: Vr < Vp (small ripple)
 ```
 
-In the worked example, Vp = 16.3 V, f = 60 Hz, RL = 500 ohm, C = 1000 uF, circuit = full-wave go through the equation above and give f_ripple = 120 Hz, Vr = 0.2716666667 V, Vdc = 16.16416667 V, Vr_rms = 0.07842341156 V. It applies only when Vr < Vp (small ripple): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a capacitor-input filter in a rectifier circuit. It computes the peak-to-peak ripple voltage, which is found to be 0.271667 V, and the resulting average direct current output voltage, calculated as 16.1642 V. These values indicate how effectively the smoothing capacitor reduces the pulsating nature of the rectified signal, with the ripple frequency being 120 Hz. The root mean square ripple is 0.0784234 V, providing a measure of the AC component's power relative to the DC level.
 
 <a id="elx_shockley_diode_current"></a>
 
-#### Diode current from the Shockley equation — `elx_shockley_diode_current`
+#### Diode current from the Shockley equation: `elx_shockley_diode_current`
 
 The current of a pn-junction diode at a terminal voltage from its saturation current, ideality factor and temperature (forward or reverse).
 
@@ -1843,7 +1803,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `Is` | in | saturation current | A |
-| `n` | in | ideality (emission) factor, 1 to 2 | — |
+| `n` | in | ideality (emission) factor, 1 to 2 | - |
 | `VD` | in | diode voltage (negative for reverse bias) | V |
 | `T` | in | junction temperature | K |
 | `ID` | out | diode current | A |
@@ -1863,11 +1823,11 @@ VT = 0.02585199979 V
   assumes: Is, n, T > 0
 ```
 
-In the worked example, Is = 1e-14 A, n = 1, VD = 0.65 V, T = 300 K go through the equation above and give ID = 0.0008308438348 A, VT = 0.02585199979 V. It applies only when Is, n, T > 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the current flowing through a pn-junction diode using the Shockley equation. It takes the saturation current, ideality factor, applied voltage, and temperature to compute the resulting diode current and the intermediate thermal voltage. For the given inputs, the calculated diode current is 0.000830844 A and the thermal voltage is 0.025852 V, representing the expected behavior of the junction under these specific electrical and thermal conditions.
 
 <a id="elx_diode_voltage"></a>
 
-#### Diode voltage for a given current — `elx_diode_voltage`
+#### Diode voltage for a given current: `elx_diode_voltage`
 
 The voltage across a pn-junction diode carrying a given current (the inverse of the Shockley equation).
 
@@ -1879,7 +1839,7 @@ $$
 |---|---|---|---|
 | `ID` | in | diode current | A |
 | `Is` | in | saturation current | A |
-| `n` | in | ideality factor | — |
+| `n` | in | ideality factor | - |
 | `T` | in | junction temperature | K |
 | `VD` | out | diode voltage | V |
 | `VT` | out | thermal voltage | V |
@@ -1898,11 +1858,11 @@ VT = 0.02585199979 V
   assumes: ID > -Is; Is, n, T > 0
 ```
 
-In the worked example, ID = 0.001 A, Is = 1e-14 A, n = 1, T = 300 K go through the equation above and give VD = 0.6547907227 V, VT = 0.02585199979 V. It applies only when ID > -Is; Is, n, T > 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the voltage drop across a pn-junction diode, resulting in 0.654791 V, based on an input current of 0.001 A, a saturation current of 1e-14 A, an ideality factor of 1, and a junction temperature of 300 K Kelvin. The thermal voltage used in this computation is 0.025852 V. This value represents the specific operating point where the diode conducts the given current under these physical conditions.
 
 <a id="elx_led_series_resistor"></a>
 
-#### LED series (current-limiting) resistor — `elx_led_series_resistor`
+#### LED series (current-limiting) resistor: `elx_led_series_resistor`
 
 The current-limiting resistor for one LED or a string of LEDs in series at a chosen forward current, and the power in the resistor and in the LEDs.
 
@@ -1915,7 +1875,7 @@ $$
 | `Vs` | in | supply voltage | V |
 | `Vf` | in | forward voltage of one LED | V |
 | `If` | in | LED forward current | A |
-| `n` | in | number of LEDs in series (default 1) (optional) | — |
+| `n` | in | number of LEDs in series (default 1) (optional) | - |
 | `R` | out | series resistance | ohm |
 | `P_R` | out | power in the resistor | W |
 | `P_LED` | out | power in the LEDs | W |
@@ -1934,11 +1894,11 @@ P_LED = 0.04 W
   assumes: Vs > n Vf; If > 0
 ```
 
-In the worked example, Vs = 5 V, Vf = 2 V, If = 20 mA go through the equation above and give R = 150 ohm, P_R = 0.06 W, P_LED = 0.04 W. It applies only when Vs > n Vf; If > 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** The required series resistance is 150 ohm and the power dissipated in that resistor is 0.06 W.
 
 <a id="elx_diode_operating_point"></a>
 
-#### Operating point of a diode in series with a resistor (exact) — `elx_diode_operating_point`
+#### Operating point of a diode in series with a resistor (exact), `elx_diode_operating_point`
 
 The current and voltage of a forward-biased diode fed from a DC source through a resistor, solving the Shockley equation and Kirchhoff's voltage law together (no constant-drop approximation).
 
@@ -1951,7 +1911,7 @@ $$
 | `VS` | in | source voltage | V |
 | `R` | in | series resistance | ohm |
 | `Is` | in | saturation current | A |
-| `n` | in | ideality factor | — |
+| `n` | in | ideality factor | - |
 | `T` | in | junction temperature | K |
 | `ID` | out | diode current | A |
 | `VD` | out | diode voltage | V |
@@ -1973,11 +1933,11 @@ P_D = 0.002983101461 W
   assumes: VS > 0 (forward bias); R, Is, n, T > 0
 ```
 
-In the worked example, VS = 5 V, R = 1000 ohm, Is = 1e-14 A, n = 1, T = 300 K go through the equation above and give ID = 0.004307456373 A, VD = 0.6925436275 V, P_D = 0.002983101461 W. It applies only when VS > 0 (forward bias); R, Is, n, T > 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the exact operating point of a forward-biased diode connected in series with a resistor to a DC source. By solving Kirchhoff's voltage law alongside the Shockley diode equation, for a source voltage of 5 V, resistance of 1000 ohm, saturation current of 1e-14 A, ideality factor of 1, and temperature of 300 K, the resulting diode current is 0.00430746 A and the diode voltage is 0.692544 V. This method avoids the common constant-voltage-drop approximation, providing a more precise analysis of the circuit behavior.
 
 <a id="elx_rectifier_averages"></a>
 
-#### Rectifier output: average, RMS, ripple factor and PIV — `elx_rectifier_averages`
+#### Rectifier output: average, RMS, ripple factor and PIV, `elx_rectifier_averages`
 
 The DC (average) and RMS output voltage, ripple factor, peak inverse voltage and conduction angle of an unfiltered half-wave, bridge or centre-tapped full-wave rectifier with a constant diode drop (0 V for ideal diodes).
 
@@ -1988,14 +1948,14 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `Vm` | in | peak AC voltage of the (secondary) winding | V |
-| `circuit` | in | half-wave, bridge or center-tapped (Vm per half of the winding) | — |
+| `circuit` | in | half-wave, bridge or center-tapped (Vm per half of the winding) | - |
 | `Von` | in | forward drop of one diode (0 V for ideal diodes) | V |
 | `Vp_out` | out | peak output voltage | V |
 | `Vdc` | out | average output voltage | V |
 | `Vrms` | out | RMS output voltage | V |
-| `ripple_factor` | out | ripple factor (AC rms / DC) | — |
+| `ripple_factor` | out | ripple factor (AC rms / DC) | - |
 | `PIV` | out | peak inverse voltage of a diode | V |
-| `conduction_deg` | out | conduction angle per half cycle, degrees | — |
+| `conduction_deg` | out | conduction angle per half cycle, degrees | - |
 
 **Applies when:** diode drops below Vm; resistive load, no filter.
 
@@ -2014,11 +1974,11 @@ conduction_deg = 180
   assumes: diode drops below Vm; resistive load, no filter
 ```
 
-In the worked example, Vm = 10 V, circuit = half-wave, Von = 0 V go through the equation above and give Vp_out = 10 V, Vdc = 3.183098862 V, Vrms = 5 V, ripple_factor = 1.211363323. It applies only when diode drops below Vm; resistive load, no filter: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the average and RMS output voltages, ripple factor, and peak inverse voltage for a rectifier circuit using inputs such as the peak AC voltage 10 V, the diode forward drop 0 V, and the specific topology half-wave. The resulting average DC voltage is 3.1831 V, while the RMS value is 5 V, indicating the effective heating potential of the output. The peak inverse voltage across the non-conducting diodes is 10 V, which is critical for selecting components that can withstand reverse bias without breaking down.
 
 <a id="elx_zener_series_resistor_design"></a>
 
-#### Zener regulator design: series resistor and Zener rating — `elx_zener_series_resistor_design`
+#### Zener regulator design: series resistor and Zener rating, `elx_zener_series_resistor_design`
 
 The largest series resistance that keeps a Zener regulator in regulation at the lowest input and largest load, and the resulting worst-case Zener current and power (highest input, smallest load) and resistor power.
 
@@ -2057,11 +2017,11 @@ PRs_max = 0.6601896552 W
   assumes: Vin_min > Vz; Vin_max >= Vin_min, IL_max >= IL_min >= 0
 ```
 
-In the worked example, Vin_min = 12 V, Vin_max = 15 V, Vz = 9.1 V, IL_min = 0 mA, IL_max = 50 mA, Iz_min = 5 mA go through the equation above and give Rs_max = 52.72727273 ohm, Iz_max = 0.1118965517 A, Pz_max = 1.018258621 W, PRs_max = 0.6601896552 W. It applies only when Vin_min > Vz; Vin_max >= Vin_min, IL_max >= IL_min >= 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the maximum allowable value for the series resistor, which is 52.7273 ohm, to ensure the Zener diode remains in regulation under the most demanding conditions. Using this resistance, the worst-case Zener current reaches 0.111897 A, leading to a peak power dissipation of 1.01826 W in the diode and 0.66019 W in the resistor. These values are derived from the lowest input voltage, highest load current, and minimum required Zener current, ensuring the circuit functions safely across its operating range.
 
 <a id="elx_zener_regulator"></a>
 
-#### Zener shunt regulator: load voltage and currents — `elx_zener_regulator`
+#### Zener shunt regulator: load voltage and currents, `elx_zener_regulator`
 
 The output voltage and the source, load and Zener currents and the Zener power of a Zener shunt regulator (series resistor, Zener across the load), with an optional Zener resistance.
 
@@ -2099,13 +2059,13 @@ P_z = 0.3545454545 W
   assumes: the Zener must be in breakdown: Vin RL/(Rs + RL) > Vz
 ```
 
-In the worked example, Vin = 20 V, Rs = 220 ohm, Vz = 10 V, RL = 1000 ohm go through the equation above and give Vout = 10 V, I_s = 0.04545454545 A, I_L = 0.01 A, I_z = 0.03545454545 A. It applies only when the Zener must be in breakdown: Vin RL/(Rs + RL) > Vz: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the operating point of a Zener shunt regulator using an input voltage of 20 V, series resistance of 220 ohm, Zener voltage of 10 V, and load resistance of 1000 ohm. The resulting load voltage is 10 V, which is maintained by the Zener diode if it remains in breakdown. The total current drawn from the source through the series resistor is 0.0454545 A, split between the load current of 0.01 A and the Zener current of 0.0354545 A. The Zener dissipates 0.354545 W watts, a critical value for thermal management.
 
 ### MOSFET (6)
 
 <a id="elx_common_source_amplifier"></a>
 
-#### Common-source amplifier with source degeneration and ro — `elx_common_source_amplifier`
+#### Common-source amplifier with source degeneration and ro, `elx_common_source_amplifier`
 
 The voltage gain, input and output resistances and overall gain of a common-source stage, exact with the transistor's output resistance ro and an optional unbypassed source resistor.
 
@@ -2122,10 +2082,10 @@ $$
 | `RS` | in | unbypassed source resistance (0 if bypassed) | ohm |
 | `RG` | in | gate bias resistance | ohm |
 | `Rsig` | in | source resistance | ohm |
-| `Av` | out | voltage gain gate to output | — |
+| `Av` | out | voltage gain gate to output | - |
 | `Rin` | out | input resistance | ohm |
 | `Rout` | out | output resistance (excluding RL) | ohm |
-| `Gv` | out | overall gain from the source | — |
+| `Gv` | out | overall gain from the source | - |
 
 **Applies when:** gm, ro, RD, RL, RG, Rsig > 0; RS >= 0.
 
@@ -2146,11 +2106,11 @@ Gv = -9.42951438
   assumes: gm, ro, RD, RL, RG, Rsig > 0; RS >= 0
 ```
 
-In the worked example, gm = 2 mS, ro = 100000 ohm, RD = 10000 ohm, RL = 10000 ohm, RS = 0 ohm, RG = 1000000 ohm, Rsig = 10000 ohm go through the equation above and give Av = -9.523809524, Rin = 1000000 ohm, Rout = 9090.909091 ohm, Gv = -9.42951438. It applies only when gm, ro, RD, RL, RG, Rsig > 0; RS >= 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the small-signal performance of a common-source amplifier stage that includes transistor output resistance and optional source degeneration. Using the transconductance, internal resistances, and external load values, the model computes the exact voltage gain from gate to drain as -9.52381, the input resistance seen at the gate as 1e+06 ohm, and the output resistance looking into the drain as 9090.91 ohm. The overall gain from the signal source is found to be -9.42951, reflecting the loading effects of the source and bias networks.
 
 <a id="elx_mosfet_drain_current"></a>
 
-#### MOSFET drain current (cutoff, triode, saturation) — `elx_mosfet_drain_current`
+#### MOSFET drain current (cutoff, triode, saturation), `elx_mosfet_drain_current`
 
 The operating region and drain current of an enhancement NMOS transistor by the square law: cutoff, triode or saturation with optional channel-length modulation (use magnitudes for PMOS).
 
@@ -2165,7 +2125,7 @@ $$
 | `VGS` | in | gate-source voltage | V |
 | `VDS` | in | drain-source voltage | V |
 | `lam` | in | channel-length modulation lambda (default 0) (optional) | 1/V |
-| `region` | out | cutoff, triode or saturation | — |
+| `region` | out | cutoff, triode or saturation | - |
 | `ID` | out | drain current | A |
 | `VOV` | out | overdrive VGS - Vt | V |
 | `VDS_sat` | out | saturation voltage | V |
@@ -2186,11 +2146,11 @@ VDS_sat = 2 V
   assumes: kn, Vt > 0; VDS >= 0; long-channel square law
 ```
 
-In the worked example, kn = 2 mA/V^2, Vt = 1 V, VGS = 3 V, VDS = 5 V go through the equation above and give region = saturation, ID = 0.004 A, VOV = 2 V, VDS_sat = 2 V. It applies only when kn, Vt > 0; VDS >= 0; long-channel square law: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the operating state and drain current for an enhancement mode NMOS transistor. By comparing the gate source voltage to the threshold voltage, the overdrive voltage is 2 V. The saturation boundary occurs at 2 V. Since the actual drain source voltage is 5 V, the device falls into the saturation mode. Consequently, the resulting drain current is calculated as 0.004 A, reflecting the square law relationship modified by channel length modulation if applicable.
 
 <a id="elx_mosfet_gm_ro"></a>
 
-#### MOSFET small-signal gm, ro and intrinsic gain — `elx_mosfet_gm_ro`
+#### MOSFET small-signal gm, ro and intrinsic gain, `elx_mosfet_gm_ro`
 
 The overdrive voltage, gate-source voltage, transconductance gm = sqrt(2 kn ID), output resistance ro = 1/(lambda ID) and intrinsic gain of a MOSFET in saturation at a drain current.
 
@@ -2208,7 +2168,7 @@ $$
 | `VGS` | out | gate-source voltage | V |
 | `gm` | out | transconductance | S |
 | `r_o` | out | output resistance | ohm |
-| `A0` | out | intrinsic gain gm r_o | — |
+| `A0` | out | intrinsic gain gm r_o | - |
 
 **Applies when:** saturation; ID taken without the (1 + lambda VDS) factor.
 
@@ -2227,11 +2187,11 @@ A0 = 200
   assumes: saturation; ID taken without the (1 + lambda VDS) factor
 ```
 
-In the worked example, kn = 2 mA/V^2, ID = 1 mA, lam = 0.01 1/V, Vt = 0.7 V go through the equation above and give VOV = 1 V, VGS = 1.7 V, gm = 0.002 S, r_o = 100000 ohm. It applies only when saturation; ID taken without the (1 + lambda VDS) factor: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the small-signal parameters of a MOSFET biased in saturation. Using the drain current 1 mA and process parameter kn, the overdrive voltage VOV is found to be 1 V, leading to a gate-source voltage VGS of 1.7 V. The transconductance gm, representing the change in drain current per unit change in gate voltage, computes to 0.002 S. Simultaneously, the output resistance ro, which models the effect of channel-length modulation via lambda, is calculated as 100000 ohm. The product of these two values yields the intrinsic gain A0 of 200, indicating the maximum voltage amplification capability of the transistor without external load effects.
 
 <a id="elx_mosfet_body_effect"></a>
 
-#### MOSFET threshold voltage with body effect — `elx_mosfet_body_effect`
+#### MOSFET threshold voltage with body effect: `elx_mosfet_body_effect`
 
 The threshold voltage of a MOSFET whose source is above its body, Vt = Vt0 + gamma (sqrt(2 phiF + VSB) - sqrt(2 phiF)).
 
@@ -2242,7 +2202,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `Vt0` | in | zero-bias threshold voltage | V |
-| `gamma` | in | body-effect coefficient in V^0.5 | — |
+| `gamma` | in | body-effect coefficient in V^0.5 | - |
 | `phi2F` | in | surface potential 2 phi_F (about 0.6 to 0.9 V) | V |
 | `VSB` | in | source-body voltage | V |
 | `Vt` | out | threshold voltage | V |
@@ -2266,7 +2226,7 @@ In the worked example, Vt0 = 0.7 V, gamma = 0.4, phi2F = 0.7 V, VSB = 3 V go thr
 
 <a id="elx_mosfet_divider_bias"></a>
 
-#### MOSFET voltage-divider bias with source resistor: Q-point — `elx_mosfet_divider_bias`
+#### MOSFET voltage-divider bias with source resistor: Q-point, `elx_mosfet_divider_bias`
 
 The Q-point (gate voltage, VGS, drain current, node voltages and VDS) of an NMOS stage with a gate divider and a source resistor, solving the square law and the gate loop (the physical root), with a saturation check.
 
@@ -2317,7 +2277,7 @@ In the worked example, VDD = 15 V, R1 = 1000000 ohm, R2 = 500000 ohm, RD = 3300 
 
 <a id="elx_source_follower"></a>
 
-#### Source follower (common drain) — `elx_source_follower`
+#### Source follower (common drain): `elx_source_follower`
 
 The voltage gain, input resistance, output resistance and overall gain of a MOSFET source follower, including ro.
 
@@ -2333,10 +2293,10 @@ $$
 | `RL` | in | load resistor | ohm |
 | `RG` | in | gate bias resistance | ohm |
 | `Rsig` | in | source resistance | ohm |
-| `Av` | out | voltage gain gate to output | — |
+| `Av` | out | voltage gain gate to output | - |
 | `Rin` | out | input resistance | ohm |
 | `Rout` | out | output resistance | ohm |
-| `Gv` | out | overall gain | — |
+| `Gv` | out | overall gain | - |
 
 **Applies when:** drain at signal ground.
 
@@ -2356,13 +2316,13 @@ Gv = 0.6556947085
   assumes: drain at signal ground
 ```
 
-In the worked example, gm = 2 mS, ro = 50000 ohm, RS = 2000 ohm, RL = 2000 ohm, RG = 1000000 ohm, Rsig = 10000 ohm go through the equation above and give Av = 0.6622516556, Rin = 1000000 ohm, Rout = 396.8253968 ohm, Gv = 0.6556947085. It applies only when drain at signal ground: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the small-signal characteristics of a MOSFET configured as a source follower. Using the transconductance, output resistance, source resistor, and load resistor, this gives the effective parallel resistance seen at the source. The voltage gain is found to be 0.662252, which is always slightly less than one because the gain formula divides the product of transconductance and resistance by that product plus one. The input resistance is 1e+06 ohm, primarily set by the gate bias resistor since the gate draws no DC current. The output resistance is calculated as 396.825 ohm, representing the parallel combination of the source resistor, the transistor's internal output resistance, and the inverse of the transconductance. Finally, the overall gain from the signal source to the load is 0.655695, which accounts for the voltage division between the signal source resistance and the amplifier's input resistance.
 
 ### Op-amps (14)
 
 <a id="elx_closed_loop_bandwidth"></a>
 
-#### Closed-loop bandwidth from the gain-bandwidth product — `elx_closed_loop_bandwidth`
+#### Closed-loop bandwidth from the gain-bandwidth product, `elx_closed_loop_bandwidth`
 
 The closed-loop gain, the noise gain 1 + Rf/R1 and the -3 dB bandwidth GBW/(noise gain) of an inverting or non-inverting amplifier built with a single-pole op-amp.
 
@@ -2373,11 +2333,11 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `GBW` | in | gain-bandwidth product (unity-gain frequency) | Hz |
-| `config` | in | inverting or non-inverting amplifier | — |
+| `config` | in | inverting or non-inverting amplifier | - |
 | `Rf` | in | feedback resistor | ohm |
 | `R1` | in | input (or ground) resistor | ohm |
-| `G0` | out | low-frequency closed-loop gain | — |
-| `noise_gain` | out | noise gain 1 + Rf/R1 | — |
+| `G0` | out | low-frequency closed-loop gain | - |
+| `noise_gain` | out | noise gain 1 + Rf/R1 | - |
 | `f_3dB` | out | closed-loop -3 dB bandwidth | Hz |
 
 **Applies when:** single-pole op-amp with open-loop gain much larger than the closed-loop gain.
@@ -2395,11 +2355,11 @@ f_3dB = 100000 Hz
   assumes: single-pole op-amp with open-loop gain much larger than the closed-loop gain
 ```
 
-In the worked example, GBW = 1000000 Hz, config = non-inverting, Rf = 90000 ohm, R1 = 10000 ohm go through the equation above and give G0 = 10, noise_gain = 10, f_3dB = 100000 Hz. It applies only when single-pole op-amp with open-loop gain much larger than the closed-loop gain: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the frequency at which the amplifier's response drops by three decibels. It uses the op-amp's gain-bandwidth product, given as 1e+06 Hz, divided by the circuit's noise gain. The noise gain is calculated as one plus the ratio of the feedback resistor 90000 ohm to the input resistor 10000 ohm. The resulting bandwidth is 100000 Hz. This value indicates how fast the amplifier can respond to changes in the input signal before its gain begins to roll off.
 
 <a id="elx_inverting_amplifier_finite_gain"></a>
 
-#### Inverting amplifier with finite open-loop gain — `elx_inverting_amplifier_finite_gain`
+#### Inverting amplifier with finite open-loop gain, `elx_inverting_amplifier_finite_gain`
 
 The exact closed-loop gain of an inverting amplifier built with an op-amp of finite open-loop gain A0, its relative gain error and output.
 
@@ -2411,12 +2371,12 @@ $$
 |---|---|---|---|
 | `Rf` | in | feedback resistor | ohm |
 | `R1` | in | input resistor | ohm |
-| `A0` | in | open-loop voltage gain (a ratio, not dB) | — |
+| `A0` | in | open-loop voltage gain (a ratio, not dB) | - |
 | `Vin` | in | input voltage | V |
-| `G` | out | closed-loop gain | — |
-| `G_ideal` | out | ideal gain -Rf/R1 | — |
+| `G` | out | closed-loop gain | - |
+| `G_ideal` | out | ideal gain -Rf/R1 | - |
 | `Vout` | out | output voltage | V |
-| `error` | out | relative gain error 1 - G/G_ideal | — |
+| `error` | out | relative gain error 1 - G/G_ideal | - |
 
 **Applies when:** A0 > 0 (ratio); infinite input resistance, zero output resistance.
 
@@ -2434,11 +2394,11 @@ error = 0.009999009999
   assumes: A0 > 0 (ratio); infinite input resistance, zero output resistance
 ```
 
-In the worked example, Rf = 100000 ohm, R1 = 1000 ohm, A0 = 10000, Vin = 0.01 V go through the equation above and give G = -99.000099, G_ideal = -100, Vout = -0.99000099 V, error = 0.009999009999. It applies only when A0 > 0 (ratio); infinite input resistance, zero output resistance: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the precise performance of an inverting amplifier when the operational amplifier's open-loop gain is finite rather than infinite. Using the feedback resistor value 100000 ohm, the input resistor value 1000 ohm, and the open-loop voltage gain ratio 10000, the model computes the actual closed-loop gain as -99.0001. This result is compared against the theoretical ideal gain of -100 to quantify the deviation, yielding a relative gain error of 0.00999901. The output voltage produced by this configuration for an input of 0.01 V is calculated as -0.990001 V.
 
 <a id="elx_inverting_amplifier"></a>
 
-#### Inverting op-amp amplifier — `elx_inverting_amplifier`
+#### Inverting op-amp amplifier: `elx_inverting_amplifier`
 
 The closed-loop gain, output voltage and input resistance of an ideal inverting amplifier.
 
@@ -2451,7 +2411,7 @@ $$
 | `Rf` | in | feedback resistor | ohm |
 | `Rin` | in | input resistor | ohm |
 | `Vin` | in | input voltage | V |
-| `G` | out | closed-loop gain -Rf/Rin | — |
+| `G` | out | closed-loop gain -Rf/Rin | - |
 | `Vout` | out | output voltage | V |
 | `Zin` | out | input resistance | ohm |
 
@@ -2469,11 +2429,11 @@ Zin = 10000 ohm
   assumes: ideal op-amp, output not saturated
 ```
 
-In the worked example, Rf = 100000 ohm, Rin = 10000 ohm, Vin = 0.5 V go through the equation above and give G = -10, Vout = -5 V, Zin = 10000 ohm. It applies only when ideal op-amp, output not saturated: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of an ideal inverting operational amplifier circuit. Using the feedback resistor value of 100000 ohm and the input resistor value of 10000 ohm, the closed-loop gain is found to be -10. When the input voltage is 0.5 V, the resulting output voltage is -5 V. The input resistance seen by the signal source is equal to the input resistor, calculated as 10000 ohm. These values assume the op-amp is operating within its linear region without saturation.
 
 <a id="elx_schmitt_trigger"></a>
 
-#### Inverting Schmitt trigger thresholds — `elx_schmitt_trigger`
+#### Inverting Schmitt trigger thresholds: `elx_schmitt_trigger`
 
 The upper and lower switching thresholds, the hysteresis width and the centre of an inverting op-amp Schmitt trigger whose positive feedback divider (Rf from the output, R1 to a reference) sets the + input.
 
@@ -2510,11 +2470,11 @@ center = 0 V
   assumes: VsatH > VsatL; input on the inverting terminal
 ```
 
-In the worked example, Rf = 90000 ohm, R1 = 10000 ohm, VsatH = 12 V, VsatL = -12 V, Vref = 0 V go through the equation above and give V_TH = 1.2 V, V_TL = -1.2 V, hysteresis = 2.4 V, center = 0 V. It applies only when VsatH > VsatL; input on the inverting terminal: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the switching points for an inverting Schmitt trigger using positive feedback. The upper threshold 1.2 V and lower threshold -1.2 V are derived from the saturation voltages, reference voltage, and resistor divider network. The difference between these thresholds defines the hysteresis band 2.4 V, which prevents rapid output toggling when the input signal contains noise or slowly crosses the decision boundary.
 
 <a id="elx_summing_amplifier"></a>
 
-#### Inverting summing amplifier — `elx_summing_amplifier`
+#### Inverting summing amplifier: `elx_summing_amplifier`
 
 The output of an ideal inverting summing amplifier with several inputs, each through its own resistor, and the feedback current.
 
@@ -2524,8 +2484,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `V` | in | input voltages in volts | — |
-| `R` | in | input resistors in kilohms, one per input | — |
+| `V` | in | input voltages in volts | - |
+| `R` | in | input resistors in kilohms, one per input | - |
 | `Rf` | in | feedback resistor | ohm |
 | `Vout` | out | output voltage | V |
 | `I_f` | out | current through the feedback resistor | A |
@@ -2541,11 +2501,11 @@ I_f = 0.0001 A
   assumes: one resistor per input; ideal op-amp
 ```
 
-In the worked example, V = [1, 2, -0.5], R = [10, 20, 5], Rf = 10000 ohm go through the equation above and give Vout = -1 V, I_f = 0.0001 A. It applies only when one resistor per input; ideal op-amp: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the behavior of an ideal inverting summing amplifier. Using the input voltages [1, 2, -0.5] and their corresponding input resistors [10, 20, 5], along with the feedback resistor 10000 ohm, the circuit produces a specific output voltage -1 V. The result represents the weighted sum of the inputs, inverted by the op-amp action, while the feedback current 0.0001 A reflects the total current flowing through the feedback path.
 
 <a id="elx_negative_feedback"></a>
 
-#### Negative feedback: closed-loop gain and bandwidth extension — `elx_negative_feedback`
+#### Negative feedback: closed-loop gain and bandwidth extension, `elx_negative_feedback`
 
 The closed-loop gain A/(1 + A beta), the loop gain, the desensitivity factor (also in dB) and the extended bandwidth of a single-pole amplifier with negative feedback.
 
@@ -2555,13 +2515,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | open-loop gain (a ratio) | — |
-| `beta` | in | feedback factor (a ratio) | — |
+| `A` | in | open-loop gain (a ratio) | - |
+| `beta` | in | feedback factor (a ratio) | - |
 | `fH` | in | open-loop -3 dB bandwidth | Hz |
-| `Af` | out | closed-loop gain | — |
-| `loop_gain` | out | loop gain A beta | — |
-| `desensitivity` | out | 1 + A beta | — |
-| `desensitivity_dB` | out | amount of feedback in dB | — |
+| `Af` | out | closed-loop gain | - |
+| `loop_gain` | out | loop gain A beta | - |
+| `desensitivity` | out | 1 + A beta | - |
+| `desensitivity_dB` | out | amount of feedback in dB | - |
 | `fH_closed` | out | closed-loop bandwidth | Hz |
 
 **Applies when:** single-pole open-loop response; frequency-independent beta.
@@ -2580,11 +2540,11 @@ fH_closed = 101000 Hz
   assumes: single-pole open-loop response; frequency-independent beta
 ```
 
-In the worked example, A = 10000, beta = 0.01, fH = 1000 Hz go through the equation above and give Af = 99.00990099, loop_gain = 100, desensitivity = 101, desensitivity_dB = 40.08642748. It applies only when single-pole open-loop response; frequency-independent beta: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a single-pole amplifier with negative feedback. Using an open-loop gain of 10000, a feedback factor of 0.01, and an open-loop bandwidth of 1000 Hz Hz, it computes the resulting closed-loop gain as 99.0099. The loop gain is 100, leading to a desensitivity factor of 101, which represents 40.0864 dB of feedback. Consequently, the -3 dB bandwidth increases to 101000 Hz Hz, demonstrating the classic trade-off where reduced gain yields wider frequency response.
 
 <a id="elx_noninverting_amplifier"></a>
 
-#### Non-inverting op-amp amplifier — `elx_noninverting_amplifier`
+#### Non-inverting op-amp amplifier: `elx_noninverting_amplifier`
 
 The closed-loop gain 1 + Rf/Rg and the output voltage of an ideal non-inverting amplifier.
 
@@ -2597,7 +2557,7 @@ $$
 | `Rf` | in | feedback resistor | ohm |
 | `Rg` | in | resistor from the inverting input to ground | ohm |
 | `Vin` | in | input voltage | V |
-| `G` | out | closed-loop gain | — |
+| `G` | out | closed-loop gain | - |
 | `Vout` | out | output voltage | V |
 
 **Applies when:** ideal op-amp.
@@ -2613,11 +2573,11 @@ Vout = 3 V
   assumes: ideal op-amp
 ```
 
-In the worked example, Rf = 90000 ohm, Rg = 10000 ohm, Vin = 0.3 V go through the equation above and give G = 10, Vout = 3 V. It applies only when ideal op-amp: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a non-inverting operational amplifier configuration. Using the feedback resistor value 90000 ohm and the resistor to ground 10000 ohm, the closed-loop gain 10 is derived as one plus the ratio of these resistances. This gain factor is then applied to the input signal 0.3 V to calculate the resulting output voltage 3 V. The positive sign indicates that the output signal maintains the same phase relationship as the input, while the magnitude reflects the amplification level set by the external resistor network.
 
 <a id="elx_difference_amplifier"></a>
 
-#### Op-amp difference amplifier (with resistor mismatch) — `elx_difference_amplifier`
+#### Op-amp difference amplifier (with resistor mismatch), `elx_difference_amplifier`
 
 The output of a one-op-amp difference amplifier with any four resistors, and its differential and common-mode gains (the common-mode gain is zero only when R4/R3 = R2/R1).
 
@@ -2634,8 +2594,8 @@ $$
 | `V1` | in | voltage at the inverting side | V |
 | `V2` | in | voltage at the non-inverting side | V |
 | `Vout` | out | output voltage | V |
-| `Ad` | out | differential gain (per volt of V2 - V1) | — |
-| `Acm` | out | common-mode gain | — |
+| `Ad` | out | differential gain (per volt of V2 - V1) | - |
+| `Acm` | out | common-mode gain | - |
 
 **Applies when:** ideal op-amp.
 
@@ -2654,11 +2614,11 @@ Acm = 0
   assumes: ideal op-amp
 ```
 
-In the worked example, R1 = 10000 ohm, R2 = 100000 ohm, R3 = 10000 ohm, R4 = 100000 ohm, V1 = 1 V, V2 = 1.2 V go through the equation above and give Vout = 2 V, Ad = 10, Acm = 0. It applies only when ideal op-amp: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the behavior of an operational amplifier configured as a difference amplifier. Using the input voltages 1 V and 1.2 V along with the four resistors 10000 ohm, 100000 ohm, 10000 ohm, and 100000 ohm, the circuit produces an output of 2 V. The result highlights the impact of resistor mismatch, yielding a differential gain of 10 and a non-zero common-mode gain of 0, which indicates that the circuit does not perfectly reject signals common to both inputs.
 
 <a id="elx_opamp_differentiator"></a>
 
-#### Op-amp differentiator: gain and output amplitude — `elx_opamp_differentiator`
+#### Op-amp differentiator: gain and output amplitude, `elx_opamp_differentiator`
 
 The gain |H| = 2 pi f R C of an ideal inverting differentiator at a frequency and the peak output for a sinusoidal input of given amplitude.
 
@@ -2672,9 +2632,9 @@ $$
 | `C` | in | input capacitor | F |
 | `A` | in | peak input amplitude | V |
 | `f` | in | input frequency | Hz |
-| `gain` | out | gain magnitude | — |
+| `gain` | out | gain magnitude | - |
 | `Vout_peak` | out | peak output voltage | V |
-| `gain_dB` | out | gain in dB | — |
+| `gain_dB` | out | gain in dB | - |
 
 **Applies when:** ideal op-amp (no high-frequency limiting).
 
@@ -2691,11 +2651,11 @@ gain_dB = -4.036402633
   assumes: ideal op-amp (no high-frequency limiting)
 ```
 
-In the worked example, R = 10000 ohm, C = 10 nF, A = 1 V, f = 1000 Hz go through the equation above and give gain = 0.6283185307, Vout_peak = 0.6283185307 V, gain_dB = -4.036402633. It applies only when ideal op-amp (no high-frequency limiting): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the frequency response of an ideal inverting operational amplifier differentiator. Using the feedback resistor value of 10000 ohm, the input capacitor value of 10 nF, and the input signal frequency of 1000 Hz, the system computes the dimensionless gain magnitude as 0.628319. For a sinusoidal input with a peak amplitude of 1 V, the resulting peak output voltage is found to be 0.628319 V. The gain expressed in decibels is -4.0364. These values indicate how much the circuit amplifies the input signal at the specified frequency, assuming the op-amp operates within its linear range without high-frequency limitations.
 
 <a id="elx_opamp_integrator"></a>
 
-#### Op-amp integrator: output ramp and unity-gain frequency — `elx_opamp_integrator`
+#### Op-amp integrator: output ramp and unity-gain frequency, `elx_opamp_integrator`
 
 The output of an ideal inverting integrator after a time with a constant input, its ramp rate, and the frequency at which its gain is one.
 
@@ -2729,11 +2689,11 @@ f_unity = 15.91549431 Hz
   assumes: ideal op-amp, output not saturated
 ```
 
-In the worked example, R = 10000 ohm, C = 1 uF, Vin = 0.5 V, t = 2 ms go through the equation above and give Vout = -0.1 V, slope = -50 V/s, f_unity = 15.91549431 Hz. It applies only when ideal op-amp, output not saturated: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the behavior of an ideal inverting integrator. Given a constant input voltage, the output ramps linearly over time, resulting in a final voltage of -0.1 V and a rate of change of -50 V/s. The circuit's gain drops to one at the unity gain frequency of 15.9155 Hz, which is determined solely by the resistor and capacitor values.
 
 <a id="elx_opamp_dc_offset"></a>
 
-#### Op-amp output offset from input offset voltage and bias currents — `elx_opamp_dc_offset`
+#### Op-amp output offset from input offset voltage and bias currents, `elx_opamp_dc_offset`
 
 The DC output error of an inverting or non-inverting amplifier (input grounded) caused by the input offset voltage and the input bias and offset currents, and the compensating resistor that cancels the bias-current error.
 
@@ -2772,11 +2732,11 @@ Rp_optimal = 9090.909091 ohm
   assumes: currents flow into the inputs; IB- = IB + Ios/2, IB+ = IB - Ios/2
 ```
 
-In the worked example, Vos = 2 mV, IB = 100 nA, Ios = 10 nA, Rf = 100000 ohm, R1 = 10000 ohm, Rp = 0 ohm go through the equation above and give Vout_Vos = 0.022 V, Vout_bias = 0.0105 V, Vout_total = 0.0325 V, Rp_optimal = 9090.909091 ohm. It applies only when currents flow into the inputs; IB- = IB + Ios/2, IB+ = IB - Ios/2: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the DC output error for an operational amplifier circuit with grounded inputs, caused by input offset voltage and bias currents. The result separates the error into two parts: the component due to the input offset voltage, which is amplified by the non-inverting gain factor, and the component due to the bias currents flowing through the feedback and compensation resistors. The optimal compensation resistor value, calculated as the parallel combination of the input and feedback resistors, is 9090.91 ohm, which minimizes the bias current error if the currents are equal.
 
 <a id="elx_two_pole_phase_margin"></a>
 
-#### Phase margin of a two-pole amplifier with feedback — `elx_two_pole_phase_margin`
+#### Phase margin of a two-pole amplifier with feedback, `elx_two_pole_phase_margin`
 
 The loop-gain crossover frequency and the phase margin of an amplifier with two real poles and a frequency-independent feedback factor, and its closed-loop DC gain.
 
@@ -2786,13 +2746,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A0` | in | DC open-loop gain (a ratio) | — |
+| `A0` | in | DC open-loop gain (a ratio) | - |
 | `f1` | in | first pole frequency | Hz |
 | `f2` | in | second pole frequency | Hz |
-| `beta` | in | feedback factor | — |
+| `beta` | in | feedback factor | - |
 | `f_c` | out | loop-gain crossover frequency | Hz |
-| `PM_deg` | out | phase margin in degrees | — |
-| `Af` | out | closed-loop DC gain | — |
+| `PM_deg` | out | phase margin in degrees | - |
+| `Af` | out | closed-loop DC gain | - |
 
 **Applies when:** A0 beta > 1; two real left-half-plane poles.
 
@@ -2813,7 +2773,7 @@ In the worked example, A0 = 100000, f1 = 10 Hz, f2 = 1000000 Hz, beta = 0.1 go t
 
 <a id="elx_slew_rate_limit"></a>
 
-#### Slew-rate limit: full-power bandwidth — `elx_slew_rate_limit`
+#### Slew-rate limit: full-power bandwidth, `elx_slew_rate_limit`
 
 The full-power bandwidth SR/(2 pi Vp) of an op-amp, the largest undistorted amplitude at a frequency, the slope a sine wave needs and whether it is slew-limited.
 
@@ -2829,7 +2789,7 @@ $$
 | `f_max` | out | full-power bandwidth at Vp | Hz |
 | `Vp_max` | out | largest undistorted amplitude at f | V |
 | `slope_needed` | out | maximum slope of the sine, 2 pi f Vp | V/s |
-| `limited` | out | slew-limited or not slew-limited | — |
+| `limited` | out | slew-limited or not slew-limited | - |
 
 **Applies when:** sinusoidal output.
 
@@ -2846,11 +2806,11 @@ limited = slew-limited
   assumes: sinusoidal output
 ```
 
-In the worked example, SR = 0.5 V/us, Vp = 10 V, f = 20000 Hz go through the equation above and give f_max = 7957.747155 Hz, Vp_max = 3.978873577 V, slope_needed = 1256637.061 V/s, limited = slew-limited. It applies only when sinusoidal output: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the maximum frequency at which an operational amplifier can produce a sinusoidal output with a specific peak amplitude without being limited by its slew rate. By comparing the required slope for the signal, calculated as two pi times frequency times peak voltage, against the device's inherent slew rate, the full-power bandwidth is 7957.75 Hz. If the operating frequency exceeds this value, the output waveform will distort because the amplifier cannot change its output voltage fast enough to follow the input signal.
 
 <a id="elx_instrumentation_amplifier"></a>
 
-#### Three-op-amp instrumentation amplifier — `elx_instrumentation_amplifier`
+#### Three-op-amp instrumentation amplifier: `elx_instrumentation_amplifier`
 
 The gain and output of the classic three-op-amp instrumentation amplifier: input stage gain 1 + 2 R1/RG times the difference stage gain R3/R2.
 
@@ -2866,8 +2826,8 @@ $$
 | `R3` | in | feedback and ground resistors of the difference stage | ohm |
 | `V1` | in | input at the inverting side | V |
 | `V2` | in | input at the non-inverting side | V |
-| `G` | out | differential gain | — |
-| `G_stage1` | out | gain of the input stage | — |
+| `G` | out | differential gain | - |
+| `G_stage1` | out | gain of the input stage | - |
 | `Vout` | out | output voltage | V |
 
 **Applies when:** ideal op-amps, matched resistors.
@@ -2887,13 +2847,13 @@ Vout = 0.51 V
   assumes: ideal op-amps, matched resistors
 ```
 
-In the worked example, R1 = 25000 ohm, RG = 1000 ohm, R2 = 10000 ohm, R3 = 10000 ohm, V1 = 1 V, V2 = 1.01 V go through the equation above and give G = 51, G_stage1 = 51, Vout = 0.51 V. It applies only when ideal op-amps, matched resistors: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the performance of a three-op-amp instrumentation amplifier. The input stage, composed of two buffers and a gain-setting resistor, provides a first-stage gain of 51. This is multiplied by the second-stage difference amplifier ratio to yield a total differential gain of 51. When applied to the voltage difference between the non-inverting input 1.01 V and the inverting input 1 V, the final output voltage is computed as 0.51 V.
 
 ### Oscillators (9)
 
 <a id="elx_555_astable"></a>
 
-#### 555 timer astable: frequency and duty cycle — `elx_555_astable`
+#### 555 timer astable: frequency and duty cycle, `elx_555_astable`
 
 The high and low times, period, frequency and duty cycle of a 555 timer in astable mode with resistors RA and RB and timing capacitor C.
 
@@ -2910,7 +2870,7 @@ $$
 | `t_low` | out | output low time | s |
 | `T` | out | period | s |
 | `f` | out | frequency | Hz |
-| `duty` | out | duty cycle (fraction high) | — |
+| `duty` | out | duty cycle (fraction high) | - |
 
 **Applies when:** thresholds Vcc/3 and 2Vcc/3.
 
@@ -2928,11 +2888,11 @@ duty = 0.5238095238
   assumes: thresholds Vcc/3 and 2Vcc/3
 ```
 
-In the worked example, RA = 1000 ohm, RB = 10000 ohm, C = 10 uF go through the equation above and give t_high = 0.07624618986 s, t_low = 0.06931471806 s, T = 0.1455609079 s, f = 6.869976385 Hz. It applies only when thresholds Vcc/3 and 2Vcc/3: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the timing characteristics of a 555 timer configured in astable mode. Using the resistor values 1000 ohm and 10000 ohm, along with the capacitor value 10 uF, this gives the high time 0.0762462 s, low time 0.0693147 s, period 0.145561 s, frequency 6.86998 Hz, and duty cycle 0.52381. These values define how long the output stays high versus low, which is critical for applications like clock signals or pulse width modulation.
 
 <a id="elx_555_monostable"></a>
 
-#### 555 timer monostable pulse width — `elx_555_monostable`
+#### 555 timer monostable pulse width, `elx_555_monostable`
 
 The output pulse width T = ln 3 R C (about 1.1 R C) of a 555 timer in monostable (one-shot) mode.
 
@@ -2957,11 +2917,11 @@ T = 1.098612289 s
   assumes: threshold at 2Vcc/3; trigger pulse shorter than T
 ```
 
-In the worked example, R = 100000 ohm, C = 10 uF go through the equation above and give T = 1.098612289 s. It applies only when threshold at 2Vcc/3; trigger pulse shorter than T: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the duration of the output pulse, known as the pulse width 1.09861 s, for a 555 timer configured in monostable mode. The result is derived directly from the values of the timing resistor 100000 ohm and the timing capacitor 10 uF using the relationship where the time constant is approximately 1.1 times the product of resistance and capacitance. This value represents how long the output remains high after being triggered.
 
 <a id="elx_colpitts_oscillator"></a>
 
-#### Colpitts oscillator frequency and feedback ratio — `elx_colpitts_oscillator`
+#### Colpitts oscillator frequency and feedback ratio, `elx_colpitts_oscillator`
 
 The oscillation frequency of a Colpitts oscillator from its inductor and the series combination of its two tank capacitors, the feedback fraction C1/C2 and the minimum amplifier gain C2/C1.
 
@@ -2976,8 +2936,8 @@ $$
 | `C2` | in | capacitor across the amplifier input (feedback side) | F |
 | `C_eq` | out | series equivalent capacitance | F |
 | `f0` | out | oscillation frequency | Hz |
-| `beta` | out | feedback fraction C1/C2 | — |
-| `A_min` | out | minimum amplifier gain C2/C1 | — |
+| `beta` | out | feedback fraction C1/C2 | - |
+| `A_min` | out | minimum amplifier gain C2/C1 | - |
 
 **Applies when:** lossless tank, amplifier does not load the tank.
 
@@ -2994,11 +2954,11 @@ A_min = 10
   assumes: lossless tank, amplifier does not load the tank
 ```
 
-In the worked example, L = 100 uH, C1 = 1 nF, C2 = 10 nF go through the equation above and give C_eq = 9.090909091e-10 F, f0 = 527857.2298 Hz, beta = 0.1, A_min = 10. It applies only when lossless tank, amplifier does not load the tank: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the operating characteristics of a Colpitts oscillator based on its tank circuit components. The series equivalent capacitance is found to be 9.09091e-10 F F, which combines with the inductor value of 100 uH H to produce an oscillation frequency of 527857 Hz Hz. The feedback fraction beta is calculated as 0.1, indicating the proportion of output voltage fed back to the input. Consequently, the minimum amplifier gain required to sustain oscillations is determined to be 10, ensuring that the loop gain exceeds unity at the resonant frequency.
 
 <a id="elx_hartley_oscillator"></a>
 
-#### Hartley oscillator frequency — `elx_hartley_oscillator`
+#### Hartley oscillator frequency: `elx_hartley_oscillator`
 
 The oscillation frequency of a Hartley oscillator with a tapped (or two coupled) inductors and a tank capacitor, and the gain ratio (L1 + M)/(L2 + M).
 
@@ -3014,7 +2974,7 @@ $$
 | `C` | in | tank capacitance | F |
 | `L_eq` | out | total inductance L1 + L2 + 2M | H |
 | `f0` | out | oscillation frequency | Hz |
-| `A_min` | out | minimum amplifier gain (L1 + M)/(L2 + M) | — |
+| `A_min` | out | minimum amplifier gain (L1 + M)/(L2 + M) | - |
 
 **Applies when:** series-aiding coils, lossless tank; M <= sqrt(L1 L2).
 
@@ -3031,11 +2991,11 @@ A_min = 5
   assumes: series-aiding coils, lossless tank; M <= sqrt(L1 L2)
 ```
 
-In the worked example, L1 = 100 uH, L2 = 20 uH, M = 0 uH, C = 1 nF go through the equation above and give L_eq = 0.00012 H, f0 = 459440.7462 Hz, A_min = 5. It applies only when series-aiding coils, lossless tank; M <= sqrt(L1 L2): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the operating point of a Hartley oscillator using two coupled inductors and a tank capacitor. The total equivalent inductance, found by summing the individual coil values and twice the mutual inductance, results in 0.00012 H. Using this value with the tank capacitance yields an oscillation frequency of 459441 Hz. Additionally, the feedback ratio dictates that the amplifier must provide a minimum gain of 5 to sustain oscillations.
 
 <a id="elx_opamp_relaxation_oscillator"></a>
 
-#### Op-amp relaxation (astable) oscillator — `elx_opamp_relaxation_oscillator`
+#### Op-amp relaxation (astable) oscillator: `elx_opamp_relaxation_oscillator`
 
 The period and frequency of a square-wave op-amp astable: an RC timing network on the inverting input and positive feedback R1/(R1 + R2) to the non-inverting input, symmetric supplies.
 
@@ -3049,7 +3009,7 @@ $$
 | `C` | in | timing capacitor | F |
 | `R1` | in | resistor from the + input to ground | ohm |
 | `R2` | in | resistor from the output to the + input | ohm |
-| `beta` | out | feedback fraction R1/(R1 + R2) | — |
+| `beta` | out | feedback fraction R1/(R1 + R2) | - |
 | `T` | out | period | s |
 | `f` | out | frequency | Hz |
 
@@ -3068,11 +3028,11 @@ f = 455.1196133 Hz
   assumes: symmetric output levels; ideal comparator action
 ```
 
-In the worked example, R = 10000 ohm, C = 100 nF, R1 = 10000 ohm, R2 = 10000 ohm go through the equation above and give beta = 0.5, T = 0.002197224577 s, f = 455.1196133 Hz. It applies only when symmetric output levels; ideal comparator action: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the oscillation period and frequency of an op-amp astable relaxation oscillator. It uses the timing resistor, capacitor, and feedback network resistors to find the feedback fraction, which dictates the threshold voltages for switching. The resulting period is 0.00219722 s seconds, corresponding to a frequency of 455.12 Hz hertz.
 
 <a id="elx_crystal_oscillator"></a>
 
-#### Quartz crystal: series and parallel resonance, Q — `elx_crystal_oscillator`
+#### Quartz crystal: series and parallel resonance, Q, `elx_crystal_oscillator`
 
 The series and parallel (anti-) resonant frequencies, their spacing and the quality factor of a quartz crystal from its Butterworth-Van Dyke equivalent circuit.
 
@@ -3089,7 +3049,7 @@ $$
 | `fs` | out | series resonance | Hz |
 | `fp` | out | parallel resonance | Hz |
 | `delta_f` | out | fp - fs | Hz |
-| `Q` | out | quality factor | — |
+| `Q` | out | quality factor | - |
 
 **Applies when:** resonances of the lossless circuit; Q from Rm.
 
@@ -3107,11 +3067,11 @@ Q = 79056.9415
   assumes: resonances of the lossless circuit; Q from Rm
 ```
 
-In the worked example, Lm = 0.05 H, Cm = 20 fF, Rm = 20 ohm, C0 = 5 pF go through the equation above and give fs = 5032921.21 Hz, fp = 5042977.007 Hz, delta_f = 10055.79666 Hz, Q = 79056.9415. It applies only when resonances of the lossless circuit; Q from Rm: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the resonant frequencies and quality factor of a quartz crystal using its Butterworth-Van Dyke equivalent circuit parameters. The series resonance frequency, where the motional inductance and capacitance cancel each other out, is found to be 5.03292e+06 Hz. The parallel resonance frequency, occurring when the crystal behaves as an open circuit due to the shunt capacitance, is calculated as 5.04298e+06 Hz. The difference between these two frequencies, known as the bandwidth or spacing, is 10055.8 Hz. Finally, the quality factor, which indicates the sharpness of the resonance and energy storage efficiency relative to dissipation, is determined to be 79056.9 based on the motional resistance.
 
 <a id="elx_rc_phase_shift_oscillator"></a>
 
-#### RC phase-shift oscillator frequency and gain — `elx_rc_phase_shift_oscillator`
+#### RC phase-shift oscillator frequency and gain, `elx_rc_phase_shift_oscillator`
 
 The oscillation frequency of a three-section RC phase-shift oscillator (high-pass ladder: series C, shunt R; or low-pass ladder) and the amplifier gain of 29 it needs.
 
@@ -3123,10 +3083,10 @@ $$
 |---|---|---|---|
 | `R` | in | resistor of each section | ohm |
 | `C` | in | capacitor of each section | F |
-| `ladder` | in | highpass (series C, shunt R) or lowpass (series R, shunt C) | — |
+| `ladder` | in | highpass (series C, shunt R) or lowpass (series R, shunt C) | - |
 | `f0` | out | oscillation frequency | Hz |
-| `A_min` | out | minimum inverting amplifier gain | — |
-| `beta` | out | feedback network attenuation at f0 | — |
+| `A_min` | out | minimum inverting amplifier gain | - |
+| `beta` | out | feedback network attenuation at f0 | - |
 
 **Applies when:** unloaded ladder (driven by a voltage source, feeding a high impedance).
 
@@ -3142,11 +3102,11 @@ beta = 0.03448275862
   assumes: unloaded ladder (driven by a voltage source, feeding a high impedance)
 ```
 
-In the worked example, R = 10000 ohm, C = 10 nF, ladder = high-pass go through the equation above and give f0 = 649.7473344 Hz, A_min = 29, beta = 0.03448275862. It applies only when unloaded ladder (driven by a voltage source, feeding a high impedance): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the operating point for an RC phase-shift oscillator using three identical sections. Given a resistance of 10000 ohm and capacitance of 10 nF, the network produces a total phase shift of one hundred eighty degrees at the frequency 649.747 Hz. To sustain stable oscillations, the amplifier must provide a voltage gain magnitude of at least 29, which corresponds to a feedback factor of 0.0344828. This result assumes an ideal unloaded ladder configuration where loading effects from the amplifier input or output are negligible.
 
 <a id="elx_pll_loop_dynamics"></a>
 
-#### Type-2 PLL with active PI loop filter: natural frequency and damping — `elx_pll_loop_dynamics`
+#### Type-2 PLL with active PI loop filter: natural frequency and damping, `elx_pll_loop_dynamics`
 
 The natural frequency and damping factor of a second-order (type-2) phase-locked loop with phase-detector gain Kd, VCO gain Ko and an active PI loop filter F(s) = (1 + s tau2)/(s tau1).
 
@@ -3156,13 +3116,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Kd` | in | phase-detector gain in V/rad | — |
-| `Ko` | in | VCO gain in rad/(s V) | — |
+| `Kd` | in | phase-detector gain in V/rad | - |
+| `Ko` | in | VCO gain in rad/(s V) | - |
 | `tau1` | in | integrator time constant R1 C | s |
 | `tau2` | in | zero time constant R2 C | s |
 | `wn` | out | natural frequency | rad/s |
 | `fn` | out | natural frequency in Hz | Hz |
-| `zeta` | out | damping factor | — |
+| `zeta` | out | damping factor | - |
 
 **Applies when:** linear phase model, ideal integrator.
 
@@ -3179,11 +3139,11 @@ zeta = 0.5
   assumes: linear phase model, ideal integrator
 ```
 
-In the worked example, Kd = 0.5, Ko = 20000, tau1 = 10 ms, tau2 = 1 ms go through the equation above and give wn = 1000 rad/s, fn = 159.1549431 Hz, zeta = 0.5. It applies only when linear phase model, ideal integrator: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the dynamic response characteristics of a second-order phase-locked loop. Using the phase detector gain, VCO gain, and filter time constants, the system's natural frequency is found to be 159.155 Hz Hz. The corresponding damping factor is calculated as 0.5, which indicates how oscillatory or stable the lock acquisition process will be.
 
 <a id="elx_wien_bridge_oscillator"></a>
 
-#### Wien-bridge oscillator frequency and required gain — `elx_wien_bridge_oscillator`
+#### Wien-bridge oscillator frequency and required gain, `elx_wien_bridge_oscillator`
 
 The oscillation frequency of a Wien-bridge oscillator (series R1 C1, parallel R2 C2) and the non-inverting gain it needs (3 for equal components).
 
@@ -3198,9 +3158,9 @@ $$
 | `R2` | in | parallel-arm resistor | ohm |
 | `C2` | in | parallel-arm capacitor | F |
 | `f0` | out | oscillation frequency | Hz |
-| `beta` | out | feedback fraction at f0 | — |
-| `A_min` | out | required amplifier gain | — |
-| `Rf_over_Rg` | out | gain resistor ratio | — |
+| `beta` | out | feedback fraction at f0 | - |
+| `A_min` | out | required amplifier gain | - |
+| `Rf_over_Rg` | out | gain resistor ratio | - |
 
 **Applies when:** ideal amplifier.
 
@@ -3218,13 +3178,13 @@ Rf_over_Rg = 2
   assumes: ideal amplifier
 ```
 
-In the worked example, R1 = 10000 ohm, C1 = 16 nF, R2 = 10000 ohm, C2 = 16 nF go through the equation above and give f0 = 994.7183943 Hz, beta = 0.3333333333, A_min = 3, Rf_over_Rg = 2. It applies only when ideal amplifier: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the oscillation frequency and the minimum non-inverting amplifier gain required for a Wien-bridge oscillator circuit. Using the series resistor R1, series capacitor C1, parallel resistor R2, and parallel capacitor C2, the system computes the natural frequency where the phase shift is zero. The result shows that for the given components, the oscillator will run at 994.718 Hz, while the feedback network attenuates the signal such that the amplifier must provide a gain of at least 3 to sustain stable oscillations.
 
 ### Power supplies (5)
 
 <a id="elx_adjustable_regulator_output"></a>
 
-#### Adjustable three-terminal regulator output voltage — `elx_adjustable_regulator_output`
+#### Adjustable three-terminal regulator output voltage, `elx_adjustable_regulator_output`
 
 The output voltage of an adjustable three-terminal regulator (LM317 type: reference between OUT and ADJ, R1 from OUT to ADJ, R2 from ADJ to ground), including the adjust-pin current.
 
@@ -3254,11 +3214,11 @@ I_R1 = 0.005208333333 A
   assumes: regulator in regulation (input high enough)
 ```
 
-In the worked example, R1 = 240 ohm, R2 = 720 ohm, Vref = 1.25 V go through the equation above and give Vout = 5 V, I_R1 = 0.005208333333 A. It applies only when regulator in regulation (input high enough): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the output voltage of an adjustable three-terminal regulator using the formula involving the internal reference voltage, the ratio of the two external resistors, and the current flowing into the adjustment pin. Given the input values, the resulting output voltage is 5 V. The current through the first resistor is calculated as 0.00520833 A. This result indicates the regulated voltage level available at the output terminal when the regulator is operating within its specified range.
 
 <a id="elx_heat_sink_temperatures"></a>
 
-#### Heat-sink thermal path: junction, case and sink temperatures — `elx_heat_sink_temperatures`
+#### Heat-sink thermal path: junction, case and sink temperatures, `elx_heat_sink_temperatures`
 
 The junction, case and heat-sink temperatures of a power device dissipating P through junction-to-case, case-to-sink (interface) and sink-to-ambient thermal resistances.
 
@@ -3276,7 +3236,7 @@ $$
 | `Tj` | out | junction temperature | K |
 | `Tc` | out | case temperature | K |
 | `Ts` | out | sink temperature | K |
-| `Tj_C` | out | junction temperature in degC | — |
+| `Tj_C` | out | junction temperature in degC | - |
 | `theta_ja` | out | total junction-to-ambient resistance | K/W |
 
 **Applies when:** steady state, series thermal path.
@@ -3297,11 +3257,11 @@ theta_ja = 5 K/W
   assumes: steady state, series thermal path
 ```
 
-In the worked example, P = 15 W, Ta = 25 degC, theta_jc = 1.5 K/W, theta_cs = 0.5 K/W, theta_sa = 3 K/W go through the equation above and give Tj = 373.15 K, Tc = 350.65 K, Ts = 343.15 K, Tj_C = 100. It applies only when steady state, series thermal path: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the steady-state temperatures at the semiconductor junction, case, and heat sink. It starts with the ambient temperature 25 degC and adds the voltage drop equivalent caused by the power dissipation 15 W flowing through the series thermal resistances. The junction-to-case resistance 1.5 K/W, case-to-sink resistance 0.5 K/W, and sink-to-ambient resistance 3 K/W are summed to find the total path resistance. The resulting junction temperature 373.15 K indicates how hot the active silicon region becomes, while the case temperature 350.65 K and sink temperature 343.15 K show the gradient along the cooling path. The total junction-to-ambient resistance 5 K/W summarizes the entire thermal impedance of the assembly.
 
 <a id="elx_linear_regulator_efficiency"></a>
 
-#### Linear regulator dissipation and efficiency — `elx_linear_regulator_efficiency`
+#### Linear regulator dissipation and efficiency, `elx_linear_regulator_efficiency`
 
 The input and output power, the dissipation in the pass element and the efficiency of a linear (series) regulator including its quiescent current.
 
@@ -3318,8 +3278,8 @@ $$
 | `P_in` | out | input power | W |
 | `P_out` | out | output power | W |
 | `P_diss` | out | dissipation in the regulator | W |
-| `efficiency` | out | efficiency | — |
-| `efficiency_pct` | out | efficiency in per cent | — |
+| `efficiency` | out | efficiency | - |
+| `efficiency_pct` | out | efficiency in per cent | - |
 
 **Applies when:** Vin > Vout.
 
@@ -3338,11 +3298,11 @@ efficiency_pct = 41.25412541
   assumes: Vin > Vout
 ```
 
-In the worked example, Vin = 12 V, Vout = 5 V, Iload = 500 mA, Iq = 5 mA go through the equation above and give P_in = 6.06 W, P_out = 2.5 W, P_diss = 3.56 W, efficiency = 0.4125412541. It applies only when Vin > Vout: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the power dissipation and efficiency of a linear regulator. The input power is derived from the product of the input voltage and the sum of the load current and quiescent current, while output power equals the regulated voltage multiplied by the load current. The difference between these values represents the heat generated within the device, shown here as 3.56 W. The resulting efficiency ratio indicates how effectively the input energy is converted to useful output power.
 
 <a id="elx_heat_sink_required"></a>
 
-#### Required heat-sink thermal resistance — `elx_heat_sink_required`
+#### Required heat-sink thermal resistance: `elx_heat_sink_required`
 
 The largest sink-to-ambient thermal resistance (and total junction-to-ambient resistance) that keeps a device dissipating P below its maximum junction temperature.
 
@@ -3375,11 +3335,11 @@ theta_sa_max = 4 K/W
   assumes: a positive result (otherwise no heat sink suffices)
 ```
 
-In the worked example, P = 20 W, Ta = 40 degC, Tj_max = 150 degC, theta_jc = 1 K/W, theta_cs = 0.5 K/W go through the equation above and give theta_ja_max = 5.5 K/W, theta_sa_max = 4 K/W. It applies only when a positive result (otherwise no heat sink suffices): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the largest heat-sink thermal resistance required to keep a device within safe operating limits. By taking the difference between the maximum junction temperature of 150 degC and the ambient temperature of 40 degC, then dividing by the power dissipation of 20 W, this gives the total junction-to-ambient budget. Subtracting the junction-to-case resistance of 1 K/W and the case-to-sink resistance of 0.5 K/W yields the final limit for the heat sink itself, which must be no greater than 4 K/W. If this value is positive, it indicates that a suitable heat sink exists; if negative, even an ideal heat sink would fail to prevent overheating.
 
 <a id="elx_series_pass_regulator"></a>
 
-#### Zener-referenced series-pass (emitter-follower) regulator — `elx_series_pass_regulator`
+#### Zener-referenced series-pass (emitter-follower) regulator, `elx_series_pass_regulator`
 
 The output voltage, load, base, Zener and resistor currents and the pass-transistor dissipation of a regulator in which a Zener diode biased through Rs sets the base of an emitter-follower pass transistor.
 
@@ -3393,7 +3353,7 @@ $$
 | `Vz` | in | Zener voltage | V |
 | `Rs` | in | Zener bias resistor | ohm |
 | `RL` | in | load resistance | ohm |
-| `beta` | in | current gain of the pass transistor | — |
+| `beta` | in | current gain of the pass transistor | - |
 | `VBE` | in | base-emitter voltage | V |
 | `Vout` | out | output voltage Vz - VBE | V |
 | `I_L` | out | load current | A |
@@ -3422,13 +3382,13 @@ P_Q = 0.5248514851 W
   assumes: Vin > Vz > VBE; the Zener stays in breakdown (Iz > 0)
 ```
 
-In the worked example, Vin = 15 V, Vz = 10 V, Rs = 1000 ohm, RL = 100 ohm, beta = 100, VBE = 0.7 V go through the equation above and give Vout = 9.3 V, I_L = 0.093 A, I_B = 0.0009207920792 A, I_z = 0.004079207921 A. It applies only when Vin > Vz > VBE; the Zener stays in breakdown (Iz > 0): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the operating point of a Zener-referenced series-pass regulator. The output voltage, set at 9.3 V, is derived by subtracting the base-emitter drop from the Zener voltage. Currents are calculated based on the input voltage 15 V and component values, yielding a load current of 0.093 A and a Zener current of 0.00407921 A. The power dissipated by the pass transistor is found to be 0.524851 W, which depends on the voltage difference between the input and output multiplied by the collector current.
 
 ### Semiconductors (9)
 
 <a id="elx_builtin_potential"></a>
 
-#### Built-in potential of a pn junction — `elx_builtin_potential`
+#### Built-in potential of a pn junction: `elx_builtin_potential`
 
 The built-in (contact) potential of an abrupt pn junction from the doping on each side, the intrinsic concentration and the temperature.
 
@@ -3457,11 +3417,11 @@ Vbi = 0.7528794135 V
   assumes: NA, ND >= 100 ni; non-degenerate, complete ionisation
 ```
 
-In the worked example, NA = 1e+17 cm^-3, ND = 1e+16 cm^-3, ni = 1.5e+10 cm^-3, T = 300 K go through the equation above and give Vbi = 0.7528794135 V. It applies only when NA, ND >= 100 ni; non-degenerate, complete ionisation: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the built-in potential of an abrupt pn junction using the formula Vbi equals kT over q times the natural log of NA ND divided by ni squared. The result, 0.752879 V, represents the voltage barrier that forms across the depletion region due to charge diffusion. It depends on the acceptor concentration 1e+17 cm^-3 on the p-side, the donor concentration 1e+16 cm^-3 on the n-side, the intrinsic carrier concentration 1.5e+10 cm^-3, and the absolute temperature 300 K. This potential balances the drift current caused by the electric field against the diffusion current caused by concentration gradients.
 
 <a id="elx_semiconductor_conductivity"></a>
 
-#### Conductivity and resistivity of a semiconductor — `elx_semiconductor_conductivity`
+#### Conductivity and resistivity of a semiconductor, `elx_semiconductor_conductivity`
 
 The conductivity sigma = q (n mu_n + p mu_p) and the resistivity of a semiconductor from its electron and hole concentrations and mobilities.
 
@@ -3477,7 +3437,7 @@ $$
 | `mu_p` | in | hole mobility | m^2/(V*s) |
 | `sigma` | out | conductivity | 1/(ohm*m) |
 | `rho` | out | resistivity | ohm*m |
-| `rho_ohm_cm` | out | resistivity in ohm cm | — |
+| `rho_ohm_cm` | out | resistivity in ohm cm | - |
 
 **Applies when:** n, p >= 0 (not both zero); mobilities > 0.
 
@@ -3494,11 +3454,11 @@ rho_ohm_cm = 0.4623340055
   assumes: n, p >= 0 (not both zero); mobilities > 0
 ```
 
-In the worked example, n = 1e+16 cm^-3, p = 22500 cm^-3, mu_n = 1350 cm^2/(V*s), mu_p = 480 cm^2/(V*s) go through the equation above and give sigma = 216.2938456 1/(ohm*m), rho = 0.004623340055 ohm*m, rho_ohm_cm = 0.4623340055. It applies only when n, p >= 0 (not both zero); mobilities > 0: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the electrical properties of a semiconductor based on its carrier concentrations and mobilities. Using the electron concentration 1e+16 cm^-3 and hole concentration 22500 cm^-3, along with their respective mobilities 1350 cm^2/(V*s) and 480 cm^2/(V*s), the model computes the total conductivity as 216.294 1/(ohm*m). The reciprocal of this value yields the resistivity 0.00462334 ohm*m, which represents the material's opposition to current flow, also expressed in practical units as 0.462334.
 
 <a id="elx_depletion_width"></a>
 
-#### Depletion width, field and capacitance of an abrupt pn junction — `elx_depletion_width`
+#### Depletion width, field and capacitance of an abrupt pn junction, `elx_depletion_width`
 
 The depletion-region width (and its parts on each side), the peak electric field and the depletion capacitance per area of an abrupt pn junction at a reverse bias (negative VR for a forward bias below Vbi).
 
@@ -3512,9 +3472,9 @@ $$
 | `ND` | in | donor concentration (n side) | 1/m^3 |
 | `Vbi` | in | built-in potential | V |
 | `VR` | in | reverse bias (negative for forward) | V |
-| `eps_r` | in | relative permittivity of the semiconductor (11.7 for silicon) | — |
+| `eps_r` | in | relative permittivity of the semiconductor (11.7 for silicon) | - |
 | `W` | out | depletion width | m |
-| `W_um` | out | depletion width in micrometres | — |
+| `W_um` | out | depletion width in micrometres | - |
 | `xn` | out | width on the n side | m |
 | `xp` | out | width on the p side | m |
 | `Emax` | out | peak electric field (V/m) | N/C |
@@ -3539,11 +3499,11 @@ Cj_area = 0.0001139522976 F/m^2
   assumes: Vbi + VR > 0; abrupt junction, depletion approximation
 ```
 
-In the worked example, NA = 1e+17 cm^-3, ND = 1e+16 cm^-3, Vbi = 0.81 V, VR = 5 V, eps_r = 11.7 go through the equation above and give W = 9.090996814e-07 m, W_um = 0.9090996814, xn = 8.264542558e-07 m, xp = 8.264542558e-08 m. It applies only when Vbi + VR > 0; abrupt junction, depletion approximation: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the physical extent of the charge-free region at the interface between p-type and n-type semiconductor materials. Using the doping concentrations on each side, the built-in potential, and the applied reverse bias, it computes the total depletion width as 9.091e-07 m, which corresponds to 0.9091 micrometres. The result also breaks down this width into the portion extending into the n-side (8.26454e-07 m) and the p-side (8.26454e-08 m). Additionally, it finds the maximum electric field strength within the junction, reported here as 1.27819e+07 N/C, and the capacitance per unit area, given by 0.000113952 F/m^2. These values characterize how the junction stores charge and withstands voltage under the specified conditions.
 
 <a id="elx_drift_current"></a>
 
-#### Drift velocity and drift current in a semiconductor bar — `elx_drift_current`
+#### Drift velocity and drift current in a semiconductor bar, `elx_drift_current`
 
 The electric field, the carrier drift velocity, the drift current density and the current when a voltage is applied along a uniformly doped bar.
 
@@ -3580,11 +3540,11 @@ I = 0.01081469228 A
   assumes: n, mu, L, A > 0; low field (constant mobility)
 ```
 
-In the worked example, n = 1e+16 cm^-3, mu = 1350 cm^2/(V*s), V = 5 V, L = 0.001 m, A = 1e-08 m^2 go through the equation above and give E = 5000 N/C, v_d = 675 m/s, J = 1081469.228 A/m^2, I = 0.01081469228 A. It applies only when n, mu, L, A > 0; low field (constant mobility): outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the electrical behavior of a uniformly doped semiconductor bar under an applied voltage. Starting from the potential difference across the length, this gives the electric field as 5000 N/C. This field drives the carriers to move at a drift velocity of 675 m/s. The resulting current density is 1.08147e+06 A/m^2, which yields a total current of 0.0108147 A flowing through the cross-sectional area.
 
 <a id="elx_einstein_diffusion"></a>
 
-#### Einstein relation and diffusion length — `elx_einstein_diffusion`
+#### Einstein relation and diffusion length: `elx_einstein_diffusion`
 
 The diffusion coefficient D = mu kT/q of carriers from their mobility (Einstein relation) and the diffusion length L = sqrt(D tau) from the minority-carrier lifetime.
 
@@ -3598,9 +3558,9 @@ $$
 | `T` | in | absolute temperature | K |
 | `tau` | in | minority-carrier lifetime | s |
 | `D` | out | diffusion coefficient | m^2/s |
-| `D_cm2` | out | D in cm^2/s | — |
+| `D_cm2` | out | D in cm^2/s | - |
 | `L_diff` | out | diffusion length | m |
-| `L_um` | out | diffusion length in micrometres | — |
+| `L_um` | out | diffusion length in micrometres | - |
 
 **Applies when:** mu, T, tau > 0; non-degenerate material.
 
@@ -3617,11 +3577,11 @@ L_um = 59.07639098
   assumes: mu, T, tau > 0; non-degenerate material
 ```
 
-In the worked example, mu = 1350 cm^2/(V*s), T = 300 K, tau = 1 us go through the equation above and give D = 0.003490019971 m^2/s, D_cm2 = 34.90019971, L_diff = 5.907639098e-05 m, L_um = 59.07639098. It applies only when mu, T, tau > 0; non-degenerate material: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the carrier diffusion coefficient D from mobility mu and temperature T using the Einstein relation, then finds the diffusion length L by combining D with the minority-carrier lifetime tau. The resulting diffusion coefficient is 0.00349002 m^2/s, while the diffusion length is 5.90764e-05 m. These values describe how far carriers spread due to thermal motion over their average lifetime.
 
 <a id="elx_doped_carrier_concentrations"></a>
 
-#### Electron and hole concentrations of doped (compensated) material — `elx_doped_carrier_concentrations`
+#### Electron and hole concentrations of doped (compensated) material, `elx_doped_carrier_concentrations`
 
 The equilibrium electron and hole concentrations of a semiconductor with donors and acceptors, from charge neutrality and the mass-action law (exact, so it also holds for light or compensated doping).
 
@@ -3636,9 +3596,9 @@ $$
 | `ni` | in | intrinsic carrier concentration | 1/m^3 |
 | `n` | out | electron concentration | 1/m^3 |
 | `p` | out | hole concentration | 1/m^3 |
-| `n_cm3` | out | n in cm^-3 | — |
-| `p_cm3` | out | p in cm^-3 | — |
-| `type` | out | n-type, p-type or intrinsic | — |
+| `n_cm3` | out | n in cm^-3 | - |
+| `p_cm3` | out | p in cm^-3 | - |
+| `type` | out | n-type, p-type or intrinsic | - |
 
 **Applies when:** ND, NA >= 0; ni > 0; complete ionisation, non-degenerate.
 
@@ -3656,11 +3616,11 @@ type = n-type
   assumes: ND, NA >= 0; ni > 0; complete ionisation, non-degenerate
 ```
 
-In the worked example, ND = 1e+16 cm^-3, NA = 0 cm^-3, ni = 1.5e+10 cm^-3 go through the equation above and give n = 1e+22 1/m^3, p = 2.25e+10 1/m^3, n_cm3 = 1e+16, p_cm3 = 22500. It applies only when ND, NA >= 0; ni > 0; complete ionisation, non-degenerate: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the equilibrium electron and hole concentrations in a doped semiconductor by solving charge neutrality and the mass-action law simultaneously. Given a donor concentration of 1e+16 cm^-3 and an acceptor concentration of 0 cm^-3, with an intrinsic carrier concentration of 1.5e+10 cm^-3, the resulting electron density is 1e+22 1/m^3 and the hole density is 2.25e+10 1/m^3. These values classify the material as n-type, reflecting whether donors or acceptors dominate the net doping level.
 
 <a id="elx_intrinsic_carrier_concentration"></a>
 
-#### Intrinsic carrier concentration — `elx_intrinsic_carrier_concentration`
+#### Intrinsic carrier concentration: `elx_intrinsic_carrier_concentration`
 
 The intrinsic carrier concentration ni = sqrt(Nc Nv) exp(-Eg/2kT) at a temperature, from the effective densities of states at 300 K (scaled as T^1.5) and the band gap; also the intrinsic level's offset from midgap.
 
@@ -3675,8 +3635,8 @@ $$
 | `Eg` | in | band gap energy | J |
 | `T` | in | absolute temperature | K |
 | `ni` | out | intrinsic carrier concentration | 1/m^3 |
-| `ni_cm3` | out | ni in cm^-3 | — |
-| `Ei_minus_midgap_eV` | out | intrinsic Fermi level above midgap, eV | — |
+| `ni_cm3` | out | ni in cm^-3 | - |
+| `Ei_minus_midgap_eV` | out | intrinsic Fermi level above midgap, eV | - |
 | `Nc_T` | out | Nc at T | 1/m^3 |
 | `Nv_T` | out | Nv at T | 1/m^3 |
 
@@ -3697,11 +3657,11 @@ Nv_T = 1.04e+25 1/m^3
   assumes: Nc, Nv, Eg, T > 0; non-degenerate statistics, band gap independent of T
 ```
 
-In the worked example, Nc = 2.8e+19 cm^-3, Nv = 1.04e+19 cm^-3, Eg = 1.12 eV, T = 300 K go through the equation above and give ni = 6.67589872e+15 1/m^3, ni_cm3 = 6675898720, Ei_minus_midgap_eV = -0.01280189354, Nc_T = 2.8e+25 1/m^3. It applies only when Nc, Nv, Eg, T > 0; non-degenerate statistics, band gap independent of T: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the intrinsic carrier concentration, denoted as ni, for a semiconductor material. It uses the effective densities of states in the conduction and valence bands at room temperature, scaled by the absolute temperature raised to the power of one and a half. The result, 6.6759e+15 1/m^3, represents the equilibrium concentration of electrons and holes in an undoped material. Additionally, the offset of the intrinsic Fermi level from midgap is calculated as -0.0128019, indicating the asymmetry between the band structures.
 
 <a id="elx_junction_capacitance"></a>
 
-#### Junction (depletion) capacitance versus bias — `elx_junction_capacitance`
+#### Junction (depletion) capacitance versus bias, `elx_junction_capacitance`
 
 The depletion capacitance of a pn junction at a reverse bias from its zero-bias value, the built-in potential and the grading coefficient (1/2 abrupt, 1/3 linearly graded), as used for varactors.
 
@@ -3714,9 +3674,9 @@ $$
 | `Cj0` | in | zero-bias junction capacitance | F |
 | `Vbi` | in | built-in potential | V |
 | `VR` | in | reverse bias (negative for forward) | V |
-| `m` | in | grading coefficient (0.5 abrupt, 0.33 linearly graded) | — |
+| `m` | in | grading coefficient (0.5 abrupt, 0.33 linearly graded) | - |
 | `Cj` | out | junction capacitance | F |
-| `ratio` | out | Cj/Cj0 | — |
+| `ratio` | out | Cj/Cj0 | - |
 
 **Applies when:** 0 < m < 1; VR > -Vbi.
 
@@ -3732,11 +3692,11 @@ ratio = 0.3611575593
   assumes: 0 < m < 1; VR > -Vbi
 ```
 
-In the worked example, Cj0 = 2 pF, Vbi = 0.75 V, VR = 5 V, m = 0.5 go through the equation above and give Cj = 7.223151185e-13 F, ratio = 0.3611575593. It applies only when 0 < m < 1; VR > -Vbi: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the depletion capacitance of a pn junction under reverse bias using the grading coefficient and built-in potential. Starting with the zero-bias junction capacitance of 2 pF, the model applies the voltage dependence defined by the reverse bias 5 V and the built-in potential 0.75 V. The resulting junction capacitance is 7.22315e-13 F, indicating that the capacitance has changed by a factor of 0.361158 compared to its initial state.
 
 <a id="elx_thermal_voltage"></a>
 
-#### Thermal voltage kT/q — `elx_thermal_voltage`
+#### Thermal voltage kT/q: `elx_thermal_voltage`
 
 The thermal voltage VT = kT/q at an absolute temperature (about 25.85 mV at 300 K), the voltage scale of every diode and transistor equation.
 
@@ -3748,7 +3708,7 @@ $$
 |---|---|---|---|
 | `T` | in | absolute temperature (degC is converted) | K |
 | `VT` | out | thermal voltage | V |
-| `VT_mV` | out | thermal voltage in millivolts | — |
+| `VT_mV` | out | thermal voltage in millivolts | - |
 
 **Applies when:** T > 0 K.
 
@@ -3761,13 +3721,13 @@ VT_mV = 25.85199979
   assumes: T > 0 K
 ```
 
-In the worked example, T = 300 K go through the equation above and give VT = 0.02585199979 V, VT_mV = 25.85199979. It applies only when T > 0 K: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the thermal voltage, a fundamental parameter in semiconductor physics that sets the scale for diode and transistor behavior. It is computed by dividing Boltzmann's constant times the absolute temperature by the elementary charge. At the given temperature of 300 K, the resulting thermal voltage is 0.025852 V, which corresponds to 25.852 when expressed in millivolts.
 
 ### Timing (5)
 
 <a id="elx_cmos_dynamic_power"></a>
 
-#### CMOS dynamic (switching) power — `elx_cmos_dynamic_power`
+#### CMOS dynamic (switching) power: `elx_cmos_dynamic_power`
 
 The dynamic power alpha C VDD^2 f of CMOS logic, the energy drawn from the supply per 0 -> 1 transition, the energy stored on the load and the average supply current.
 
@@ -3777,7 +3737,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | activity factor: probability of a 0 -> 1 transition per clock cycle | — |
+| `alpha` | in | activity factor: probability of a 0 -> 1 transition per clock cycle | - |
 | `C` | in | switched capacitance | F |
 | `VDD` | in | supply voltage | V |
 | `f` | in | clock frequency | Hz |
@@ -3802,11 +3762,11 @@ I_avg = 0.1 A
   assumes: 0 <= alpha <= 1; full-swing switching, short-circuit and leakage power not included
 ```
 
-In the worked example, alpha = 0.1, C = 1000 pF, VDD = 1 V, f = 1000000000 Hz go through the equation above and give P = 0.1 W, E_supply = 1e-09 J, E_stored = 5e-10 J, I_avg = 0.1 A. It applies only when 0 <= alpha <= 1; full-swing switching, short-circuit and leakage power not included: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the CMOS dynamic switching power using the formula P equals alpha times C times VDD squared times f. Given an activity factor of 0.1, a switched capacitance of 1000 pF, a supply voltage of 1 V, and a clock frequency of 1e+09 Hz, the resulting dynamic power is 0.1 W. This value represents the energy drawn from the supply per unit time due to charging and discharging the load capacitance during logic transitions, excluding leakage and short-circuit currents.
 
 <a id="elx_elmore_delay"></a>
 
-#### Elmore delay of an RC ladder (interconnect) — `elx_elmore_delay`
+#### Elmore delay of an RC ladder (interconnect), `elx_elmore_delay`
 
 The Elmore delay to every node of an RC ladder (a driver resistance and wire segments, each followed by a capacitance to ground), the delay at the far end and its 50 % estimate ln 2 tau.
 
@@ -3816,11 +3776,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `R` | in | series resistances in ohms, from the driver outwards | — |
-| `C` | in | node capacitances in picofarads, one after each resistor | — |
+| `R` | in | series resistances in ohms, from the driver outwards | - |
+| `C` | in | node capacitances in picofarads, one after each resistor | - |
 | `tau_D` | out | Elmore delay at the far end | s |
 | `t50` | out | 50 % delay estimate ln 2 tau_D | s |
-| `delays` | out | Elmore delay at each node, seconds | — |
+| `delays` | out | Elmore delay at each node, seconds | - |
 
 **Applies when:** one capacitance per resistor; step input.
 
@@ -3833,11 +3793,11 @@ delays = [4e-11,5.5e-11,6.5e-11]
   assumes: one capacitance per resistor; step input
 ```
 
-In the worked example, R = [100, 50, 50], C = [0.1, 0.1, 0.2] go through the equation above and give tau_D = 6.5e-11 s, t50 = 4.505456674e-11 s, delays = [4e-11, 5.5e-11, 6.5e-11]. It applies only when one capacitance per resistor; step input: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the Elmore delay for an RC ladder network, representing the time it takes for a signal to propagate through series resistances and node capacitances. The primary result, 6.5e-11 s, is the total delay at the final node, derived from the sum of each capacitance multiplied by the resistance shared between that node and the source. A common approximation for the actual switching threshold is provided as 4.50546e-11 s, which equals the natural logarithm of two times the Elmore delay. The intermediate values in [4e-11, 5.5e-11, 6.5e-11] show how the delay accumulates at each step along the interconnect.
 
 <a id="elx_setup_hold_timing"></a>
 
-#### Flip-flop setup and hold slack, maximum clock frequency — `elx_setup_hold_timing`
+#### Flip-flop setup and hold slack, maximum clock frequency, `elx_setup_hold_timing`
 
 The setup slack, hold slack, maximum clock frequency and a verdict for a register-to-register path from clock-to-Q, logic delays, setup and hold times and clock skew (positive when the capture clock is late).
 
@@ -3858,7 +3818,7 @@ $$
 | `setup_slack` | out | setup slack | s |
 | `hold_slack` | out | hold slack | s |
 | `f_max` | out | maximum clock frequency | Hz |
-| `verdict` | out | meets timing, setup violation, hold violation or both | — |
+| `verdict` | out | meets timing, setup violation, hold violation or both | - |
 
 **Applies when:** edge-triggered registers, single clock.
 
@@ -3880,11 +3840,11 @@ verdict = meets timing
   assumes: edge-triggered registers, single clock
 ```
 
-In the worked example, T = 5 ns, tcq = 0.3 ns, tpd = 3.5 ns, tsu = 0.2 ns, tskew = 0.1 ns, tccq = 0.1 ns, tcd = 0.2 ns, th = 0.1 ns go through the equation above and give setup_slack = 1.1e-09 s, hold_slack = 1e-10 s, f_max = 256410256.4 Hz, verdict = meets timing. It applies only when edge-triggered registers, single clock: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines timing margins for a register-to-register path. Setup slack, computed as 1.1e-09 s, indicates how much time remains before data must be stable relative to the clock edge. Hold slack, shown as 1e-10 s, measures the margin preventing new data from overwriting old data too quickly. The maximum operating frequency is derived as 2.5641e+08 Hz, representing the fastest clock rate that satisfies both setup constraints.
 
 <a id="elx_rc_delay_rise_time"></a>
 
-#### RC delay, 10-90 % rise time and bandwidth — `elx_rc_delay_rise_time`
+#### RC delay, 10-90 % rise time and bandwidth, `elx_rc_delay_rise_time`
 
 The time constant, the 50 % delay (ln 2 RC), the 10-90 % rise time (ln 9 RC = 2.2 RC), the -3 dB bandwidth and the rise-time-bandwidth product (0.35) of a first-order RC low-pass.
 
@@ -3900,7 +3860,7 @@ $$
 | `t50` | out | 50 % delay | s |
 | `t_rise` | out | 10-90 % rise time | s |
 | `f_3dB` | out | -3 dB bandwidth | Hz |
-| `tr_times_bw` | out | rise time x bandwidth | — |
+| `tr_times_bw` | out | rise time x bandwidth | - |
 
 **Applies when:** step input, first-order RC.
 
@@ -3921,7 +3881,7 @@ In the worked example, R = 1000 ohm, C = 10 pF go through the equation above and
 
 <a id="elx_metastability_mtbf"></a>
 
-#### Synchronizer metastability MTBF — `elx_metastability_mtbf`
+#### Synchronizer metastability MTBF: `elx_metastability_mtbf`
 
 The mean time between synchronizer failures MTBF = exp(tr/tau)/(T0 fclk fdata) from the resolution time allowed, the flip-flop's time constant and window, and the clock and data rates.
 
@@ -3937,8 +3897,8 @@ $$
 | `fclk` | in | clock frequency | Hz |
 | `fdata` | in | rate of asynchronous data changes | Hz |
 | `MTBF_s` | out | MTBF | s |
-| `MTBF_years` | out | MTBF in years (365.25 days) | — |
-| `log10_MTBF_s` | out | log10 of MTBF in seconds | — |
+| `MTBF_years` | out | MTBF in years (365.25 days) | - |
+| `log10_MTBF_s` | out | log10 of MTBF in seconds | - |
 
 **Applies when:** tr/tau <= 700.
 
@@ -3956,6 +3916,6 @@ log10_MTBF_s = 11.67280927
   assumes: tr/tau <= 700
 ```
 
-In the worked example, tr = 2 ns, tau = 50 ps, T0 = 100 ps, fclk = 500000000 Hz, fdata = 10000000 Hz go through the equation above and give MTBF_s = 4.707705337e+11 s, MTBF_years = 14917.81801, log10_MTBF_s = 11.67280927. It applies only when tr/tau <= 700: outside that it says what is wrong instead of returning a number.
+**What the worked example means:** This calculation determines the mean time between synchronizer failures using the resolution time available, the metastability time constant and window, and the clock and data frequencies. The resulting mean time between failures is 4.70771e+11 s seconds, equivalent to 14917.8 years. This metric indicates how long the circuit is expected to operate before a synchronization error occurs, with higher values representing greater reliability.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.

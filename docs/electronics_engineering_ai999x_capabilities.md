@@ -205,7 +205,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="elx_thermal_voltage"></a>
 
-### Thermal voltage kT/q — `elx_thermal_voltage`
+### Thermal voltage kT/q: `elx_thermal_voltage`
 
 The thermal voltage $VT = kT/q$ at an absolute temperature (about 25.85 mV at 300 K), the voltage scale of every diode and transistor equation.
 
@@ -225,6 +225,10 @@ $$
 - **Method:** $VT = k$ T / q
 - **Assumes:** $T > 0$ K
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![VT (thermal voltage) against T (absolute temperature (degC is converted)) from 150 K to 450 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-thermal-voltage-curve)
+
+*VT (thermal voltage) against T (absolute temperature (degC is converted)) from 150 K to 450 K. 31 points computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, VT = 0.025852 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_thermal_voltage', T=300.0)
@@ -248,7 +252,7 @@ electronics_engineering_ai999x.solve('elx_thermal_voltage', T=350.0)
 
 <a id="elx_intrinsic_carrier_concentration"></a>
 
-### Intrinsic carrier concentration — `elx_intrinsic_carrier_concentration`
+### Intrinsic carrier concentration: `elx_intrinsic_carrier_concentration`
 
 The intrinsic carrier concentration $ni = sqrt$(Nc Nv) exp(-Eg/2kT) at a temperature, from the effective densities of states at 300 K (scaled as T^1.5) and the band gap; also the intrinsic level's offset from midgap.
 
@@ -275,6 +279,10 @@ $$
 - **Assumes:** Nc, Nv, Eg, $T > 0$; non-degenerate statistics, band gap independent of T
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![ni (intrinsic carrier concentration) against T (absolute temperature) from 270 K to 330 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-intrinsic-carrier-concentration-curve)
+
+*ni (intrinsic carrier concentration) against T (absolute temperature) from 270 K to 330 K. One curve for each value of Eg (band gap energy): 1.7944e-19 J, 8.9722e-20 J, 3.5889e-19 J. Other inputs as in the worked example: Nc = 2.8e+25 1/m^3, Nv = 1.04e+25 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, ni = 6.6759e+15 1/m^3.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_intrinsic_carrier_concentration', Nc=2.8e+25, Nv=1.04e+25, Eg=1.7944378300800001e-19, T=300.0)
 # -> ni = 6.6759e+15 1/m^3, ni_cm3 = 6.6759e+09, Ei_minus_midgap_eV = -0.0128019, Nc_T = 2.8e+25 1/m^3, Nv_T = 1.04e+25 1/m^3   (SOLVED)
@@ -296,7 +304,7 @@ electronics_engineering_ai999x.solve('elx_intrinsic_carrier_concentration', Nc=4
 
 <a id="elx_semiconductor_conductivity"></a>
 
-### Conductivity and resistivity of a semiconductor — `elx_semiconductor_conductivity`
+### Conductivity and resistivity of a semiconductor, `elx_semiconductor_conductivity`
 
 The conductivity $\sigma = q$ (n mu_n + p mu_p) and the resistivity of a semiconductor from its electron and hole concentrations and mobilities.
 
@@ -321,6 +329,10 @@ $$
 - **Assumes:** n, $p  \geq  0$ (not both zero); mobilities > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![sigma (conductivity) against n (electron concentration) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-semiconductor-conductivity-curve)
+
+*sigma (conductivity) against n (electron concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. One curve for each value of mu_n (electron mobility): 0.135 m^2/(V*s), 0.0675 m^2/(V*s), 0.27 m^2/(V*s). Other inputs as in the worked example: p = 22500000000.0 1/m^3, mu_p = 0.048 m^2/(V*s). 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1.0000e+22 1/m^3, sigma = 216.294 1/(ohm*m).*
+
 ```python
 electronics_engineering_ai999x.solve('elx_semiconductor_conductivity', n=1e+22, p=22500000000.0, mu_n=0.135, mu_p=0.048)
 # -> sigma = 216.294 1/(ohm*m), rho = 0.00462334 ohm*m, rho_ohm_cm = 0.462334   (SOLVED)
@@ -342,7 +354,7 @@ electronics_engineering_ai999x.solve('elx_semiconductor_conductivity', n=1.5e+16
 
 <a id="elx_drift_current"></a>
 
-### Drift velocity and drift current in a semiconductor bar — `elx_drift_current`
+### Drift velocity and drift current in a semiconductor bar, `elx_drift_current`
 
 The electric field, the carrier drift velocity, the drift current density and the current when a voltage is applied along a uniformly doped bar.
 
@@ -369,6 +381,10 @@ $$
 - **Assumes:** n, mu, L, $A > 0$; low field (constant mobility)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![J (drift current density) against L (bar length) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-drift-current-curve)
+
+*J (drift current density) against L (bar length) from 0.0005 m to 0.0015 m. One curve for each value of n (concentration of the carriers that drift): 1.0000e+22 1/m^3, 5.0000e+21 1/m^3, 2.0000e+22 1/m^3. Other inputs as in the worked example: mu = 0.135 m^2/(V*s), V = 5.0 V, A = 1e-08 m^2. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, L = 0.001 m, J = 1.08147e+06 A/m^2.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_drift_current', n=1e+22, mu=0.135, V=5.0, L=0.001, A=1e-08)
 # -> E = 5000 N/C, v_d = 675 m/s, J = 1.08147e+06 A/m^2, I = 0.0108147 A   (SOLVED)
@@ -390,7 +406,7 @@ electronics_engineering_ai999x.solve('elx_drift_current', n=5e+21, mu=0.048, V=2
 
 <a id="elx_einstein_diffusion"></a>
 
-### Einstein relation and diffusion length — `elx_einstein_diffusion`
+### Einstein relation and diffusion length: `elx_einstein_diffusion`
 
 The diffusion coefficient $D = mu$ kT/q of carriers from their mobility (Einstein relation) and the diffusion length $L = sqrt$(D tau) from the minority-carrier lifetime.
 
@@ -415,6 +431,10 @@ $$
 - **Assumes:** mu, T, $\tau > 0$; non-degenerate material
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![D (diffusion coefficient) against mu (carrier mobility) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-einstein-diffusion-curve)
+
+*D (diffusion coefficient) against mu (carrier mobility) from 0.0675 m^2/(V*s) to 0.2025 m^2/(V*s). One curve for each value of T (absolute temperature): 300 K, 150 K, 600 K. Other inputs as in the worked example: tau = 1e-06 s. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, mu = 0.135 m^2/(V*s), D = 0.00349002 m^2/s.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_einstein_diffusion', mu=0.135, T=300.0, tau=1e-06)
 # -> D = 0.00349002 m^2/s, D_cm2 = 34.9002, L_diff = 5.90764e-05 m, L_um = 59.0764   (SOLVED)
@@ -436,7 +456,7 @@ electronics_engineering_ai999x.solve('elx_einstein_diffusion', mu=0.048, T=300.0
 
 <a id="elx_doped_carrier_concentrations"></a>
 
-### Electron and hole concentrations of doped (compensated) material — `elx_doped_carrier_concentrations`
+### Electron and hole concentrations of doped (compensated) material, `elx_doped_carrier_concentrations`
 
 The equilibrium electron and hole concentrations of a semiconductor with donors and acceptors, from charge neutrality and the mass-action law (exact, so it also holds for light or compensated doping).
 
@@ -462,6 +482,10 @@ $$
 - **Assumes:** ND, $NA  \geq  0$; $ni > 0$; complete ionisation, non-degenerate
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![n (electron concentration) against ND (donor concentration) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-doped-carrier-concentrations-curve)
+
+*n (electron concentration) against ND (donor concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. Outputs with the same unit drawn together: p (hole concentration). Other inputs as in the worked example: NA = 0.0 1/m^3, ni = 1.5e+16 1/m^3. 31 points computed by electronics-engineering-ai999x; marked: the worked example, ND = 1.0000e+22 1/m^3, n = 1.0000e+22 1/m^3.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_doped_carrier_concentrations', ND=1e+22, NA=0.0, ni=1.5e+16)
 # -> n = 1e+22 1/m^3, p = 2.25e+10 1/m^3, n_cm3 = 1e+16, p_cm3 = 22500, type = n-type   (SOLVED)
@@ -483,7 +507,7 @@ electronics_engineering_ai999x.solve('elx_doped_carrier_concentrations', ND=3e+1
 
 <a id="elx_builtin_potential"></a>
 
-### Built-in potential of a pn junction — `elx_builtin_potential`
+### Built-in potential of a pn junction: `elx_builtin_potential`
 
 The built-in (contact) potential of an abrupt pn junction from the doping on each side, the intrinsic concentration and the temperature.
 
@@ -506,6 +530,10 @@ $$
 - **Assumes:** NA, $ND  \geq  100$ ni; non-degenerate, complete ionisation
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vbi (built-in potential) against T (absolute temperature) from 150 K to 450 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-builtin-potential-curve)
+
+*Vbi (built-in potential) against T (absolute temperature) from 150 K to 450 K. One curve for each value of ni (intrinsic carrier concentration): 1.5000e+16 1/m^3, 7.5000e+15 1/m^3, 3.0000e+16 1/m^3. Other inputs as in the worked example: NA = 1e+23 1/m^3, ND = 1e+22 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, Vbi = 0.752879 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_builtin_potential', NA=1e+23, ND=1e+22, ni=1.5e+16, T=300.0)
 # -> Vbi = 0.752879 V   (SOLVED)
@@ -527,7 +555,7 @@ electronics_engineering_ai999x.solve('elx_builtin_potential', NA=1e+24, ND=1e+21
 
 <a id="elx_depletion_width"></a>
 
-### Depletion width, field and capacitance of an abrupt pn junction — `elx_depletion_width`
+### Depletion width, field and capacitance of an abrupt pn junction, `elx_depletion_width`
 
 The depletion-region width (and its parts on each side), the peak electric field and the depletion capacitance per area of an abrupt pn junction at a reverse bias (negative VR for a forward bias below Vbi).
 
@@ -556,6 +584,10 @@ $$
 - **Assumes:** Vbi + VR > 0; abrupt junction, depletion approximation
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![W (depletion width) against ND (donor concentration (n side)) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-depletion-width-curve)
+
+*W (depletion width) against ND (donor concentration (n side)) from 1.0000e+21 1/m^3 to 1.0000e+23 1/m^3 on a logarithmic axis. One curve for each value of eps_r (relative permittivity of the semiconductor (11.7 for silicon)): 11.7, 5.85, 23.4. Other inputs as in the worked example: NA = 1e+23 1/m^3, Vbi = 0.81 V, VR = 5.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ND = 1.0000e+22 1/m^3, W = 9.0910e-07 m.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_depletion_width', NA=1e+23, ND=1e+22, Vbi=0.81, VR=5.0, eps_r=11.7)
 # -> W = 9.091e-07 m, W_um = 0.9091, xn = 8.26454e-07 m, xp = 8.26454e-08 m, Emax = 1.27819e+07 N/C, Cj_area = 0.000113952 F/m^2   (SOLVED)
@@ -577,7 +609,7 @@ electronics_engineering_ai999x.solve('elx_depletion_width', NA=1e+22, ND=1e+22, 
 
 <a id="elx_junction_capacitance"></a>
 
-### Junction (depletion) capacitance versus bias — `elx_junction_capacitance`
+### Junction (depletion) capacitance versus bias, `elx_junction_capacitance`
 
 The depletion capacitance of a pn junction at a reverse bias from its zero-bias value, the built-in potential and the grading coefficient (1/2 abrupt, $1/3$ linearly graded), as used for varactors.
 
@@ -601,6 +633,10 @@ $$
 - **Assumes:** $0 < m < 1$; VR > -Vbi
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Cj (junction capacitance) against m (grading coefficient (0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-junction-capacitance-curve)
+
+*Cj (junction capacitance) against m (grading coefficient (0.5 abrupt, 0.33 linearly graded)) from 0.02 to 0.98. One curve for each value of Cj0 (zero-bias junction capacitance): 2.0000e-12 F, 1.0000e-12 F, 4.0000e-12 F. Other inputs as in the worked example: Vbi = 0.75 V, VR = 5.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, m = 0.5, Cj = 7.2232e-13 F.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_junction_capacitance', Cj0=2e-12, Vbi=0.75, VR=5.0, m=0.5)
 # -> Cj = 7.22315e-13 F, ratio = 0.361158   (SOLVED)
@@ -622,7 +658,7 @@ electronics_engineering_ai999x.solve('elx_junction_capacitance', Cj0=5e-11, Vbi=
 
 <a id="elx_shockley_diode_current"></a>
 
-### Diode current from the Shockley equation — `elx_shockley_diode_current`
+### Diode current from the Shockley equation: `elx_shockley_diode_current`
 
 The current of a pn-junction diode at a terminal voltage from its saturation current, ideality factor and temperature (forward or reverse).
 
@@ -646,6 +682,10 @@ $$
 - **Assumes:** Is, n, $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![ID (diode current) against n (ideality (emission) factor, 1 to 2) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-shockley-diode-current-curve)
+
+*ID (diode current) against n (ideality (emission) factor, 1 to 2) from 0.9 to 1.1. One curve for each value of VD (diode voltage (negative for reverse bias)): 0.65 V, 0.325 V, 1.3 V. Other inputs as in the worked example: Is = 1e-14 A, T = 300.0 K. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1, ID = 0.000830844 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_shockley_diode_current', Is=1e-14, n=1.0, VD=0.65, T=300.0)
 # -> ID = 0.000830844 A, VT = 0.025852 V   (SOLVED)
@@ -667,7 +707,7 @@ electronics_engineering_ai999x.solve('elx_shockley_diode_current', Is=2e-12, n=1
 
 <a id="elx_diode_voltage"></a>
 
-### Diode voltage for a given current — `elx_diode_voltage`
+### Diode voltage for a given current: `elx_diode_voltage`
 
 The voltage across a pn-junction diode carrying a given current (the inverse of the Shockley equation).
 
@@ -691,6 +731,10 @@ $$
 - **Assumes:** $ID > -Is$; Is, n, $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![VD (diode voltage) against n (ideality factor) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-voltage-curve)
+
+*VD (diode voltage) against n (ideality factor) from 0.5 to 1.5. One curve for each value of T (junction temperature): 300 K, 150 K, 600 K. Other inputs as in the worked example: ID = 0.001 A, Is = 1e-14 A. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1, VD = 0.654791 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_diode_voltage', ID=0.001, Is=1e-14, n=1.0, T=300.0)
 # -> VD = 0.654791 V, VT = 0.025852 V   (SOLVED)
@@ -712,7 +756,7 @@ electronics_engineering_ai999x.solve('elx_diode_voltage', ID=0.02, Is=5e-12, n=1
 
 <a id="elx_diode_operating_point"></a>
 
-### Operating point of a diode in series with a resistor (exact) — `elx_diode_operating_point`
+### Operating point of a diode in series with a resistor (exact), `elx_diode_operating_point`
 
 The current and voltage of a forward-biased diode fed from a DC source through a resistor, solving the Shockley equation and Kirchhoff's voltage law together (no constant-drop approximation).
 
@@ -738,6 +782,14 @@ $$
 - **Assumes:** $VS > 0$ (forward bias); R, Is, n, $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![ID (diode current) against VS (source voltage), with Is = 1](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-diode-operating-point-id-vs-vs.svg)
+
+*ID (diode current) against VS (source voltage), with Is = 1.00e-14 A, R = 1000 ohm, T = 300 K, n = 1. 31 points computed by electronics-engineering-ai999x; marked: VS = 5, ID = 0.00430746 A.*
+
+![ID (diode current) against R (series resistance) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-operating-point-curve)
+
+*ID (diode current) against R (series resistance) from 500 ohm to 1500 ohm. One curve for each value of VS (source voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: Is = 1e-14 A, n = 1.0, T = 300.0 K. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 1000 ohm, ID = 0.00430746 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_diode_operating_point', VS=5.0, R=1000.0, Is=1e-14, n=1.0, T=300.0)
 # -> ID = 0.00430746 A, VD = 0.692544 V, P_D = 0.0029831 W   (SOLVED)
@@ -759,7 +811,7 @@ electronics_engineering_ai999x.solve('elx_diode_operating_point', VS=12.0, R=220
 
 <a id="elx_rectifier_averages"></a>
 
-### Rectifier output: average, RMS, ripple factor and PIV — `elx_rectifier_averages`
+### Rectifier output: average, RMS, ripple factor and PIV, `elx_rectifier_averages`
 
 The DC (average) and RMS output voltage, ripple factor, peak inverse voltage and conduction angle of an unfiltered half-wave, bridge or centre-tapped full-wave rectifier with a constant diode drop (0 V for ideal diodes).
 
@@ -786,6 +838,10 @@ $$
 - **Assumes:** diode drops below Vm; resistive load, no filter
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vdc (average output voltage) against Vm (peak AC voltage of the (secondary) winding) from 5 V to 15 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rectifier-averages-curve)
+
+*Vdc (average output voltage) against Vm (peak AC voltage of the (secondary) winding) from 5 V to 15 V. One curve for each value of Von (forward drop of one diode (0 V for ideal diodes)): 0 V, 0.5 V. Other inputs as in the worked example: circuit = half-wave. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vm = 10 V, Vdc = 3.1831 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_rectifier_averages', Vm=10.0, circuit='half-wave', Von=0.0)
 # -> Vp_out = 10 V, Vdc = 3.1831 V, Vrms = 5 V, ripple_factor = 1.21136, PIV = 10 V, conduction_deg = 180   (SOLVED)
@@ -808,7 +864,7 @@ electronics_engineering_ai999x.solve('elx_rectifier_averages', Vm=17.0, circuit=
 
 <a id="elx_capacitor_filter_ripple"></a>
 
-### Capacitor-input filter: ripple voltage and DC output — `elx_capacitor_filter_ripple`
+### Capacitor-input filter: ripple voltage and DC output, `elx_capacitor_filter_ripple`
 
 The peak-to-peak ripple, the DC output, the RMS ripple and the ripple factor of a rectifier with a smoothing capacitor and resistive load (small-ripple approximation).
 
@@ -836,6 +892,10 @@ $$
 - **Assumes:** $Vr < Vp$ (small ripple)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vr (peak-to-peak ripple) against f (line frequency) from 30 Hz to 90 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-capacitor-filter-ripple-curve)
+
+*Vr (peak-to-peak ripple) against f (line frequency) from 30 Hz to 90 Hz. One curve for each value of Vp (peak rectified voltage (after the diode drops)): 16.3 V, 8.15 V, 32.6 V. Other inputs as in the worked example: RL = 500.0 ohm, C = 0.001 F, circuit = full-wave. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, f = 60 Hz, Vr = 0.271667 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_capacitor_filter_ripple', Vp=16.3, f=60.0, RL=500.0, C=0.001, circuit='full-wave')
 # -> f_ripple = 120 Hz, Vr = 0.271667 V, Vdc = 16.1642 V, Vr_rms = 0.0784234 V, ripple_factor = 0.00485168   (SOLVED)
@@ -857,7 +917,7 @@ electronics_engineering_ai999x.solve('elx_capacitor_filter_ripple', Vp=12.0, f=5
 
 <a id="elx_zener_regulator"></a>
 
-### Zener shunt regulator: load voltage and currents — `elx_zener_regulator`
+### Zener shunt regulator: load voltage and currents, `elx_zener_regulator`
 
 The output voltage and the source, load and Zener currents and the Zener power of a Zener shunt regulator (series resistor, Zener across the load), with an optional Zener resistance.
 
@@ -885,6 +945,10 @@ $$
 - **Assumes:** the Zener must be in breakdown: Vin $RL/(Rs + RL) > Vz$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![I_z (Zener current) against Rs (series resistance) from 22 ohm to 2200 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-regulator-curve)
+
+*I_z (Zener current) against Rs (series resistance) from 22 ohm to 2200 ohm on a logarithmic axis. One curve for each value of Vin (input voltage): 20 V, 40 V. Other inputs as in the worked example: Vz = 10.0 V, RL = 1000.0 ohm. 34 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rs = 220 ohm, I_z = 0.0354545 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_zener_regulator', Vin=20.0, Rs=220.0, Vz=10.0, RL=1000.0)
 # -> Vout = 10 V, I_s = 0.0454545 A, I_L = 0.01 A, I_z = 0.0354545 A, P_z = 0.354545 W   (SOLVED)
@@ -907,7 +971,7 @@ electronics_engineering_ai999x.solve('elx_zener_regulator', Vin=15.0, Rs=100.0, 
 
 <a id="elx_zener_series_resistor_design"></a>
 
-### Zener regulator design: series resistor and Zener rating — `elx_zener_series_resistor_design`
+### Zener regulator design: series resistor and Zener rating, `elx_zener_series_resistor_design`
 
 The largest series resistance that keeps a Zener regulator in regulation at the lowest input and largest load, and the resulting worst-case Zener current and power (highest input, smallest load) and resistor power.
 
@@ -935,6 +999,10 @@ $$
 - **Assumes:** Vin_min > Vz; Vin_max >= Vin_min, IL_max >= IL_min >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Rs_max (largest series resistance) against IL_max (largest load current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-series-resistor-design-curve)
+
+*Rs_max (largest series resistance) against IL_max (largest load current) from 0.005 A to 0.5 A on a logarithmic axis. One curve for each value of Vz (Zener voltage): 9.1 V, 4.55 V. Other inputs as in the worked example: Vin_min = 12.0 V, Vin_max = 15.0 V, IL_min = 0.0 A, Iz_min = 0.005 A. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IL_max = 0.05 A, Rs_max = 52.7273 ohm.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_zener_series_resistor_design', Vin_min=12.0, Vin_max=15.0, Vz=9.1, IL_min=0.0, IL_max=0.05, Iz_min=0.005)
 # -> Rs_max = 52.7273 ohm, Iz_max = 0.111897 A, Pz_max = 1.01826 W, PRs_max = 0.66019 W   (SOLVED)
@@ -956,7 +1024,7 @@ electronics_engineering_ai999x.solve('elx_zener_series_resistor_design', Vin_min
 
 <a id="elx_led_series_resistor"></a>
 
-### LED series (current-limiting) resistor — `elx_led_series_resistor`
+### LED series (current-limiting) resistor: `elx_led_series_resistor`
 
 The current-limiting resistor for one LED or a string of LEDs in series at a chosen forward current, and the power in the resistor and in the LEDs.
 
@@ -981,6 +1049,10 @@ $$
 - **Assumes:** $Vs > n$ Vf; $If > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![R (series resistance) against If (LED forward current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-led-series-resistor-curve)
+
+*R (series resistance) against If (LED forward current) from 0.01 A to 0.03 A. One curve for each value of Vs (supply voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: Vf = 2.0 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, If = 0.02 A, R = 150 ohm.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_led_series_resistor', Vs=5.0, Vf=2.0, If=0.02)
 # -> R = 150 ohm, P_R = 0.06 W, P_LED = 0.04 W   (SOLVED)
@@ -1002,7 +1074,7 @@ electronics_engineering_ai999x.solve('elx_led_series_resistor', Vs=12.0, Vf=3.1,
 
 <a id="elx_bjt_current_relations"></a>
 
-### BJT terminal currents from beta — `elx_bjt_current_relations`
+### BJT terminal currents from beta: `elx_bjt_current_relations`
 
 The collector and emitter currents and the common-base current gain alpha of a bipolar transistor in the active region from its base current and beta.
 
@@ -1025,6 +1097,14 @@ $$
 - **Assumes:** $IB > 0$, $\beta > 0$; active region
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![IC (collector current) against IB (base current) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-current-relations-curve)
+
+*IC (collector current) against IB (base current) from 1.0000e-05 A to 3.0000e-05 A. One curve for each value of beta (common-emitter current gain (hFE)): 100, 50, 200. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IB = 2.0000e-05 A, IC = 0.002 A.*
+
+![IC (collector current) over IB (base current) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-current-relations-field)
+
+*IC (collector current) over IB (base current) from 1.0000e-05 A to 3.0000e-05 A and beta (common-emitter current gain (hFE)) from 50 to 150: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 0.0005 A to dark 0.0045 A); iso-lines at IC = 0.001, 0.002, 0.003, 0.004 A. Marked: the worked example, IB = 2.0000e-05 A, beta = 100, IC = 0.002 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_current_relations', IB=2e-05, beta=100.0)
 # -> IC = 0.002 A, IE = 0.00202 A, alpha = 0.990099   (SOLVED)
@@ -1046,7 +1126,7 @@ electronics_engineering_ai999x.solve('elx_bjt_current_relations', IB=5e-05, beta
 
 <a id="elx_bjt_fixed_bias"></a>
 
-### BJT fixed (base-resistor) bias: Q-point — `elx_bjt_fixed_bias`
+### BJT fixed (base-resistor) bias: Q-point, `elx_bjt_fixed_bias`
 
 The quiescent base and collector currents and the collector-emitter voltage of a common-emitter stage biased by a single base resistor from the supply.
 
@@ -1073,6 +1153,10 @@ $$
 - **Assumes:** active region: VCE >= 0.2 V (otherwise refused as saturated)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![IC (collector current) against RB (base resistor) from 235000 ohm to 705000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-fixed-bias-curve)
+
+*IC (collector current) against RB (base resistor) from 235000 ohm to 705000 ohm. One curve for each value of VCC (supply voltage): 12 V, 6 V, 24 V. Other inputs as in the worked example: RC = 2200.0 ohm, beta = 100.0, VBE = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RB = 470000 ohm, IC = 0.00240426 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_fixed_bias', VCC=12.0, RB=470000.0, RC=2200.0, beta=100.0, VBE=0.7)
 # -> IB = 2.40426e-05 A, IC = 0.00240426 A, IE = 0.0024283 A, VCE = 6.71064 V   (SOLVED)
@@ -1095,7 +1179,7 @@ electronics_engineering_ai999x.solve('elx_bjt_fixed_bias', VCC=9.0, RB=820000.0,
 
 <a id="elx_bjt_voltage_divider_bias"></a>
 
-### BJT voltage-divider bias: exact Q-point — `elx_bjt_voltage_divider_bias`
+### BJT voltage-divider bias: exact Q-point, `elx_bjt_voltage_divider_bias`
 
 The Q-point (base, collector and emitter currents, node voltages and VCE) of a common-emitter stage with a base voltage divider and an emitter resistor, by the exact Thevenin analysis (base current included).
 
@@ -1129,6 +1213,10 @@ $$
 - **Assumes:** VTH > VBE; active region: VCE >= 0.2 V
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![IC (collector current) against RE (emitter resistor) from 235 ohm to 705 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-voltage-divider-bias-curve)
+
+*IC (collector current) against RE (emitter resistor) from 235 ohm to 705 ohm. One curve for each value of VCC (supply voltage): 12 V, 6 V, 24 V. Other inputs as in the worked example: R1 = 47000.0 ohm, R2 = 10000.0 ohm, RC = 2200.0 ohm, beta = 150.0, VBE = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RE = 470 ohm, IC = 0.00266096 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_voltage_divider_bias', VCC=12.0, R1=47000.0, R2=10000.0, RC=2200.0, RE=470.0, beta=150.0, VBE=0.7)
 # -> VTH = 2.10526 V, RTH = 8245.61 ohm, IB = 1.77397e-05 A, IC = 0.00266096 A, IE = 0.0026787 A, VB = 1.95899 V, VE = 1.25899 V, VC = 6.14589 V, VCE = 4.8869 V   (SOLVED)
@@ -1150,7 +1238,7 @@ electronics_engineering_ai999x.solve('elx_bjt_voltage_divider_bias', VCC=15.0, R
 
 <a id="elx_bjt_emitter_bias"></a>
 
-### BJT dual-supply emitter bias: Q-point — `elx_bjt_emitter_bias`
+### BJT dual-supply emitter bias: Q-point, `elx_bjt_emitter_bias`
 
 The Q-point of a transistor with its base returned to ground through RB and its emitter returned to a negative supply -VEE through RE (emitter bias).
 
@@ -1182,6 +1270,10 @@ $$
 - **Assumes:** VEE > VBE; active region: VCE >= 0.2 V
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![IE (emitter current) against RE (emitter resistor to -VEE) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-emitter-bias-curve)
+
+*IE (emitter current) against RE (emitter resistor to -VEE) from 5000 ohm to 15000 ohm. One curve for each value of VEE (magnitude of the negative supply): 10 V, 5 V, 20 V. Other inputs as in the worked example: VCC = 10.0 V, RB = 10000.0 ohm, RC = 4700.0 ohm, beta = 100.0, VBE = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RE = 10000 ohm, IE = 0.000920882 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_emitter_bias', VCC=10.0, VEE=10.0, RB=10000.0, RC=4700.0, RE=10000.0, beta=100.0, VBE=0.7)
 # -> IB = 9.11765e-06 A, IC = 0.000911765 A, IE = 0.000920882 A, VB = -0.0911765 V, VE = -0.791176 V, VC = 5.71471 V, VCE = 6.50588 V   (SOLVED)
@@ -1203,7 +1295,7 @@ electronics_engineering_ai999x.solve('elx_bjt_emitter_bias', VCC=12.0, VEE=9.0, 
 
 <a id="elx_bjt_collector_feedback_bias"></a>
 
-### BJT collector-feedback bias: Q-point — `elx_bjt_collector_feedback_bias`
+### BJT collector-feedback bias: Q-point, `elx_bjt_collector_feedback_bias`
 
 The Q-point of a transistor biased by a resistor from collector to base (collector feedback), with an optional emitter resistor.
 
@@ -1232,6 +1324,10 @@ $$
 - **Assumes:** active region: VCE >= 0.2 V
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![IC (collector current) against RC (collector resistor (carries IC + IB)) from 470 ohm to 47000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-collector-feedback-bias-curve)
+
+*IC (collector current) against RC (collector resistor (carries IC + IB)) from 470 ohm to 47000 ohm on a logarithmic axis. One curve for each value of VCC (supply voltage): 10 V, 5 V, 20 V. Other inputs as in the worked example: RF = 250000.0 ohm, beta = 90.0, VBE = 0.7 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RC = 4700 ohm, IC = 0.00123506 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_collector_feedback_bias', VCC=10.0, RC=4700.0, RF=250000.0, beta=90.0, VBE=0.7)
 # -> IB = 1.37229e-05 A, IC = 0.00123506 A, IE = 0.00124878 A, VC = 4.13072 V, VCE = 4.13072 V   (SOLVED)
@@ -1253,7 +1349,7 @@ electronics_engineering_ai999x.solve('elx_bjt_collector_feedback_bias', VCC=12.0
 
 <a id="elx_bjt_small_signal_parameters"></a>
 
-### BJT small-signal (hybrid-pi) parameters — `elx_bjt_small_signal_parameters`
+### BJT small-signal (hybrid-pi) parameters: `elx_bjt_small_signal_parameters`
 
 The transconductance gm, the input resistance r_pi, the emitter resistance r_e, the output resistance r_o (Early voltage) and the intrinsic gain of a bipolar transistor at its bias current.
 
@@ -1280,6 +1376,10 @@ $$
 - **Assumes:** IC, beta, VT, $VA > 0$; active region
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![gm (transconductance) against VT (thermal voltage (25 or 26 mV)) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-small-signal-parameters-curve)
+
+*gm (transconductance) against VT (thermal voltage (25 or 26 mV)) from 0.0125 V to 0.0375 V. One curve for each value of IC (collector bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, VA = 100.0 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, gm = 0.04 S.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_small_signal_parameters', IC=0.001, beta=100.0, VT=0.025, VA=100.0)
 # -> gm = 0.04 S, r_pi = 2500 ohm, r_e = 24.7525 ohm, r_o = 100000 ohm, A0 = 4000   (SOLVED)
@@ -1301,7 +1401,7 @@ electronics_engineering_ai999x.solve('elx_bjt_small_signal_parameters', IC=0.002
 
 <a id="elx_common_emitter_amplifier"></a>
 
-### Common-emitter amplifier: gain, input and output resistance — `elx_common_emitter_amplifier`
+### Common-emitter amplifier: gain, input and output resistance, `elx_common_emitter_amplifier`
 
 The voltage gain (base to collector and source to load), the input and output resistances of a common-emitter stage with an optional unbypassed emitter resistance, from the bias current (hybrid-pi model, r_o neglected).
 
@@ -1333,6 +1433,10 @@ $$
 - **Assumes:** r_o neglected; coupling and bypass capacitors short at signal frequency
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Av (voltage gain base to output) against VT (thermal voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-emitter-amplifier-curve)
+
+*Av (voltage gain base to output) against VT (thermal voltage) from 0.0025 V to 0.25 V on a logarithmic axis. One curve for each value of IC (collector bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, RC = 5000.0 ohm, RL = 10000.0 ohm, RE1 = 0.0 ohm, RB = 20000.0 ohm, Rsig = 1000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, Av = -133.333.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_common_emitter_amplifier', IC=0.001, beta=100.0, VT=0.025, RC=5000.0, RL=10000.0, RE1=0.0, RB=20000.0, Rsig=1000.0)
 # -> gm = 0.04 S, r_pi = 2500 ohm, Av = -133.333, Rin = 2222.22 ohm, Rout = 5000 ohm, Gv = -91.954   (SOLVED)
@@ -1354,7 +1458,7 @@ electronics_engineering_ai999x.solve('elx_common_emitter_amplifier', IC=0.002, b
 
 <a id="elx_common_collector_amplifier"></a>
 
-### Common-collector (emitter-follower) amplifier — `elx_common_collector_amplifier`
+### Common-collector (emitter-follower) amplifier, `elx_common_collector_amplifier`
 
 The voltage gain, input resistance and output resistance of an emitter follower, including the source resistance reflected into the emitter (hybrid-pi model, r_o neglected).
 
@@ -1383,6 +1487,10 @@ $$
 - **Assumes:** r_o neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Av (voltage gain base to output) against IC (collector bias current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-collector-amplifier-curve)
+
+*Av (voltage gain base to output) against IC (collector bias current) from 0.0005 A to 0.05 A on a logarithmic axis. One curve for each value of VT (thermal voltage): 0.025 V, 0.0125 V, 0.05 V. Other inputs as in the worked example: beta = 100.0, RE = 1000.0 ohm, RL = 1000.0 ohm, RB = 100000.0 ohm, Rsig = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IC = 0.005 A, Av = 0.990196.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_common_collector_amplifier', IC=0.005, beta=100.0, VT=0.025, RE=1000.0, RL=1000.0, RB=100000.0, Rsig=10000.0)
 # -> Av = 0.990196, Rin = 33774.8 ohm, Rout = 86.7242 ohm, Gv = 0.763994   (SOLVED)
@@ -1404,7 +1512,7 @@ electronics_engineering_ai999x.solve('elx_common_collector_amplifier', IC=0.001,
 
 <a id="elx_common_base_amplifier"></a>
 
-### Common-base amplifier — `elx_common_base_amplifier`
+### Common-base amplifier: `elx_common_base_amplifier`
 
 The voltage gain (emitter to collector and source to load), the low input resistance and the output resistance of a common-base stage (hybrid-pi model, r_o neglected).
 
@@ -1433,6 +1541,10 @@ $$
 - **Assumes:** r_o neglected; base at signal ground
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Av (voltage gain emitter to output) against VT (thermal voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-base-amplifier-curve)
+
+*Av (voltage gain emitter to output) against VT (thermal voltage) from 0.0125 V to 0.0375 V. One curve for each value of IC (collector bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, RC = 5000.0 ohm, RL = 5000.0 ohm, RE = 10000.0 ohm, Rsig = 50.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, Av = 100.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_common_base_amplifier', IC=0.001, beta=100.0, VT=0.025, RC=5000.0, RL=5000.0, RE=10000.0, Rsig=50.0)
 # -> Av = 100, Rin = 24.6914 ohm, Rout = 5000 ohm, Gv = 33.0579   (SOLVED)
@@ -1454,7 +1566,7 @@ electronics_engineering_ai999x.solve('elx_common_base_amplifier', IC=0.0005, bet
 
 <a id="elx_transition_frequency"></a>
 
-### BJT beta cutoff and transition frequency fT — `elx_transition_frequency`
+### BJT beta cutoff and transition frequency fT, `elx_transition_frequency`
 
 The beta cutoff frequency f_beta and the unity-current-gain (transition) frequency fT = gm/(2 pi (Cpi + Cmu)) of a bipolar transistor from its hybrid-pi capacitances.
 
@@ -1479,6 +1591,10 @@ $$
 - **Assumes:** single-pole h_fe (the feed-forward zero through Cmu neglected)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f_T (transition frequency) against Cpi (base-emitter capacitance) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-transition-frequency-curve)
+
+*f_T (transition frequency) against Cpi (base-emitter capacitance) from 1.0000e-12 F to 1.0000e-10 F on a logarithmic axis. One curve for each value of gm (transconductance): 0.04 S, 0.02 S, 0.08 S. Other inputs as in the worked example: beta = 100.0, Cmu = 2e-12 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Cpi = 1.0000e-11 F, f_T = 5.3052e+08 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_transition_frequency', gm=0.04, beta=100.0, Cpi=1e-11, Cmu=2e-12)
 # -> r_pi = 2500 ohm, f_beta = 5.30516e+06 Hz, f_T = 5.30516e+08 Hz   (SOLVED)
@@ -1500,7 +1616,7 @@ electronics_engineering_ai999x.solve('elx_transition_frequency', gm=0.1, beta=15
 
 <a id="elx_miller_high_cutoff"></a>
 
-### Common-emitter high-frequency cutoff: Miller effect and open-circuit time constants — `elx_miller_high_cutoff`
+### Common-emitter high-frequency cutoff: Miller effect and open-circuit time constants, `elx_miller_high_cutoff`
 
 The Miller capacitance, the upper -3 dB frequency of a common-emitter (or common-source) stage by the Miller approximation, and the open-circuit time-constant estimate that also counts the output side of Cmu.
 
@@ -1530,6 +1646,10 @@ $$
 - **Assumes:** mid-band gain unchanged by the capacitors; dominant-pole estimate
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f_H_octc (upper cutoff, open-circuit time constants) against r_pi (r_pi (use a very large value for a MOSFET)) from 250 ohm to 25000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-miller-high-cutoff-curve)
+
+*f_H_octc (upper cutoff, open-circuit time constants) against r_pi (r_pi (use a very large value for a MOSFET)) from 250 ohm to 25000 ohm on a logarithmic axis. One curve for each value of Cmu (feedback capacitance Cmu (Cgd)): 2.0000e-12 F, 1.0000e-12 F, 4.0000e-12 F. Other inputs as in the worked example: gm = 0.04 S, Cpi = 1e-11 F, RLp = 2500.0 ohm, Rsigp = 1000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, r_pi = 2500 ohm, f_H_octc = 1.01743e+06 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_miller_high_cutoff', gm=0.04, r_pi=2500.0, Cpi=1e-11, Cmu=2e-12, RLp=2500.0, Rsigp=1000.0)
 # -> A_mid = -100, C_M = 2.02e-10 F, R_pi_eq = 714.286 ohm, f_H_miller = 1.05102e+06 Hz, tau_oc = 1.56429e-07 s, f_H_octc = 1.01743e+06 Hz   (SOLVED)
@@ -1551,7 +1671,7 @@ electronics_engineering_ai999x.solve('elx_miller_high_cutoff', gm=0.1, r_pi=1500
 
 <a id="elx_low_frequency_cutoff"></a>
 
-### Common-emitter low-frequency cutoff by short-circuit time constants — `elx_low_frequency_cutoff`
+### Common-emitter low-frequency cutoff by short-circuit time constants, `elx_low_frequency_cutoff`
 
 The resistance seen by each coupling and bypass capacitor of a common-emitter amplifier and the lower -3 dB frequency estimated as the sum of the short-circuit pole frequencies (r_o neglected).
 
@@ -1586,6 +1706,10 @@ $$
 - **Assumes:** short-circuit time-constant estimate; r_o neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f_L (estimated lower cutoff) against CE (emitter bypass capacitor) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-low-frequency-cutoff-curve)
+
+*f_L (estimated lower cutoff) against CE (emitter bypass capacitor) from 1.0000e-05 F to 0.001 F on a logarithmic axis. One curve for each value of beta (current gain): 100, 50, 200. Other inputs as in the worked example: Rsig = 1000.0 ohm, RB = 20000.0 ohm, r_pi = 2500.0 ohm, RE = 1000.0 ohm, RC = 5000.0 ohm, RL = 10000.0 ohm, C1 = 1e-05 F, C2 = 1e-05 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, CE = 0.0001 F, f_L = 54.1529 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_low_frequency_cutoff', Rsig=1000.0, RB=20000.0, r_pi=2500.0, beta=100.0, RE=1000.0, RC=5000.0, RL=10000.0, C1=1e-05, C2=1e-05, CE=0.0001)
 # -> R_C1 = 3222.22 ohm, R_CE = 33.0522 ohm, R_C2 = 15000 ohm, f_C1 = 4.93929 Hz, f_CE = 48.1526 Hz, f_C2 = 1.06103 Hz, f_L = 54.1529 Hz   (SOLVED)
@@ -1607,7 +1731,7 @@ electronics_engineering_ai999x.solve('elx_low_frequency_cutoff', Rsig=600.0, RB=
 
 <a id="elx_current_mirror"></a>
 
-### BJT current mirror with finite beta — `elx_current_mirror`
+### BJT current mirror with finite beta: `elx_current_mirror`
 
 The reference current and the output current of a basic two-transistor current mirror with a resistor to the supply, including the base-current error Iout = Iref $\beta/(\beta + 2)$.
 
@@ -1632,6 +1756,10 @@ $$
 - **Assumes:** matched transistors, Early effect neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Iout (output (mirrored) current) against R (reference resistor) from 4650 ohm to 13950 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-current-mirror-curve)
+
+*Iout (output (mirrored) current) against R (reference resistor) from 4650 ohm to 13950 ohm. One curve for each value of VCC (supply voltage): 10 V, 5 V, 20 V. Other inputs as in the worked example: VBE = 0.7 V, beta = 100.0. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 9300 ohm, Iout = 0.000980392 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_current_mirror', VCC=10.0, R=9300.0, VBE=0.7, beta=100.0)
 # -> Iref = 0.001 A, Iout = 0.000980392 A, ratio = 0.980392   (SOLVED)
@@ -1653,7 +1781,7 @@ electronics_engineering_ai999x.solve('elx_current_mirror', VCC=5.0, R=4300.0, VB
 
 <a id="elx_wilson_current_mirror"></a>
 
-### Wilson current mirror output current — `elx_wilson_current_mirror`
+### Wilson current mirror output current: `elx_wilson_current_mirror`
 
 The output current of a three-transistor Wilson current mirror and its small base-current error, 2/(beta^2 + 2 beta + 2).
 
@@ -1676,6 +1804,14 @@ $$
 - **Assumes:** matched transistors, Early effect neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Iout (output current) against beta (current gain of each matched transistor) from 10 to 1000 on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wilson-current-mirror-curve)
+
+*Iout (output current) against beta (current gain of each matched transistor) from 10 to 1000 on a logarithmic axis. One curve for each value of Iref (reference current): 0.001 A, 0.0005 A, 0.002 A. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, beta = 100, Iout = 0.000999804 A.*
+
+![Iout (output current) over Iref (reference current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wilson-current-mirror-field)
+
+*Iout (output current) over Iref (reference current) from 0.0005 A to 0.0015 A and beta (current gain of each matched transistor) from 10 to 1000 (logarithmic vertical axis): each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 0.000491803 A to dark 0.0015 A); iso-lines at Iout = 6.00e-4, 8.00e-4, 0.001, 0.0012, 0.0014 A. Marked: the worked example, Iref = 0.001 A, beta = 100, Iout = 0.000999804 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_wilson_current_mirror', Iref=0.001, beta=100.0)
 # -> Iout = 0.000999804 A, ratio = 0.999804, error = 0.00019604   (SOLVED)
@@ -1697,7 +1833,7 @@ electronics_engineering_ai999x.solve('elx_wilson_current_mirror', Iref=0.0002, b
 
 <a id="elx_differential_pair"></a>
 
-### BJT differential pair: differential and common-mode gain, CMRR — `elx_differential_pair`
+### BJT differential pair: differential and common-mode gain, CMRR, `elx_differential_pair`
 
 The differential gain (differential and single-ended output), the common-mode gain and the common-mode rejection ratio of a resistively loaded BJT differential pair with a tail current source of finite resistance.
 
@@ -1727,6 +1863,10 @@ $$
 - **Assumes:** matched transistors, r_o neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![CMRR (|Ad_se/Acm|) against VT (thermal voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-differential-pair-curve)
+
+*CMRR (|Ad_se/Acm|) against VT (thermal voltage) from 0.0125 V to 0.0375 V. One curve for each value of I_tail (tail (bias) current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, RC = 10000.0 ohm, REE = 100000.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, CMRR = 2000.5.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_differential_pair', I_tail=0.001, beta=100.0, VT=0.025, RC=10000.0, REE=100000.0)
 # -> IC = 0.00049505 A, gm = 0.019802 S, Ad_diff = -198.02, Ad_se = -99.0099, Acm = -0.0494926, CMRR = 2000.5, CMRR_dB = 66.0228   (SOLVED)
@@ -1748,7 +1888,7 @@ electronics_engineering_ai999x.solve('elx_differential_pair', I_tail=0.002, beta
 
 <a id="elx_bjt_cascode"></a>
 
-### BJT cascode: output resistance, transconductance and gain — `elx_bjt_cascode`
+### BJT cascode: output resistance, transconductance and gain, `elx_bjt_cascode`
 
 The output resistance, the short-circuit transconductance and the voltage gain into a load of a cascode (common emitter driving common base) of two identical transistors at the same bias current.
 
@@ -1776,6 +1916,10 @@ $$
 - **Assumes:** identical transistors, base of the upper one at signal ground
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Rout (output resistance of the cascode) against IC (bias current of both transistors) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-cascode-curve)
+
+*Rout (output resistance of the cascode) against IC (bias current of both transistors) from 0.0005 A to 0.0015 A. One curve for each value of VA (Early voltage): 100 V, 50 V, 200 V. Other inputs as in the worked example: beta = 100.0, VT = 0.025 V, RL = 1000000.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IC = 0.001 A, Rout = 9.85854e+06 ohm.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_cascode', IC=0.001, beta=100.0, VT=0.025, VA=100.0, RL=1000000.0)
 # -> gm = 0.04 S, r_o = 100000 ohm, Rout = 9.85854e+06 ohm, Gm = 0.0395943 S, Av = -35947.9   (SOLVED)
@@ -1797,7 +1941,7 @@ electronics_engineering_ai999x.solve('elx_bjt_cascode', IC=0.0001, beta=200.0, V
 
 <a id="elx_mosfet_drain_current"></a>
 
-### MOSFET drain current (cutoff, triode, saturation) — `elx_mosfet_drain_current`
+### MOSFET drain current (cutoff, triode, saturation), `elx_mosfet_drain_current`
 
 The operating region and drain current of an enhancement NMOS transistor by the square law: cutoff, triode or saturation with optional channel-length modulation (use magnitudes for PMOS).
 
@@ -1824,6 +1968,14 @@ $$
 - **Assumes:** kn, $Vt > 0$; VDS >= 0; long-channel square law
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![cutoff, triode or saturation (region) over VGS (gate-source voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-drain-current-decision)
+
+*cutoff, triode or saturation (region) over VGS (gate-source voltage) from 0.3 V to 30 V and Vt (threshold voltage) from 0.1 V to 10 V (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, cutoff: 192 cells, saturation: 246 cells, triode: 213 cells. Other inputs as in the worked example: kn = 0.002 A/V^2, VDS = 5.0 V. Marked: the worked example, VGS = 3 V, Vt = 1 V → saturation.*
+
+![ID (drain current) against VDS (drain-source voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-drain-current-curve)
+
+*ID (drain current) against VDS (drain-source voltage) from 0.5 V to 50 V on a logarithmic axis. One curve for each value of VGS (gate-source voltage): 3 V, 1.5 V, 6 V. Other inputs as in the worked example: kn = 0.002 A/V^2, Vt = 1.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VDS = 5 V, ID = 0.004 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_drain_current', kn=0.002, Vt=1.0, VGS=3.0, VDS=5.0)
 # -> region = saturation, ID = 0.004 A, VOV = 2 V, VDS_sat = 2 V   (SOLVED)
@@ -1845,7 +1997,7 @@ electronics_engineering_ai999x.solve('elx_mosfet_drain_current', kn=0.001, Vt=0.
 
 <a id="elx_mosfet_gm_ro"></a>
 
-### MOSFET small-signal gm, ro and intrinsic gain — `elx_mosfet_gm_ro`
+### MOSFET small-signal gm, ro and intrinsic gain, `elx_mosfet_gm_ro`
 
 The overdrive voltage, gate-source voltage, transconductance $gm = sqrt$(2 kn ID), output resistance ro = 1/(lambda ID) and intrinsic gain of a MOSFET in saturation at a drain current.
 
@@ -1872,6 +2024,10 @@ $$
 - **Assumes:** saturation; ID taken without the (1 + lambda VDS) factor
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![gm (transconductance) against kn (mu Cox W/L) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-gm-ro-curve)
+
+*gm (transconductance) against kn (mu Cox W/L) from 0.001 A/V^2 to 0.003 A/V^2. One curve for each value of ID (drain bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: lam = 0.01 1/V, Vt = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, kn = 0.002 A/V^2, gm = 0.002 S.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_gm_ro', kn=0.002, ID=0.001, lam=0.01, Vt=0.7)
 # -> VOV = 1 V, VGS = 1.7 V, gm = 0.002 S, r_o = 100000 ohm, A0 = 200   (SOLVED)
@@ -1893,7 +2049,7 @@ electronics_engineering_ai999x.solve('elx_mosfet_gm_ro', kn=0.005, ID=0.0004, la
 
 <a id="elx_mosfet_divider_bias"></a>
 
-### MOSFET voltage-divider bias with source resistor: Q-point — `elx_mosfet_divider_bias`
+### MOSFET voltage-divider bias with source resistor: Q-point, `elx_mosfet_divider_bias`
 
 The Q-point (gate voltage, VGS, drain current, node voltages and VDS) of an NMOS stage with a gate divider and a source resistor, solving the square law and the gate loop (the physical root), with a saturation check.
 
@@ -1925,6 +2081,10 @@ $$
 - **Assumes:** $VG > Vt$; saturation: VDS >= VOV (otherwise refused); lambda neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![ID (drain current) against RS (source resistor (0 allowed)) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-divider-bias-curve)
+
+*ID (drain current) against RS (source resistor (0 allowed)) from 500 ohm to 1500 ohm. One curve for each value of VDD (supply voltage): 15 V, 7.5 V, 30 V. Other inputs as in the worked example: R1 = 1000000.0 ohm, R2 = 500000.0 ohm, RD = 3300.0 ohm, kn = 0.002 A/V^2, Vt = 1.5 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RS = 1000 ohm, ID = 0.00206351 A.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_divider_bias', VDD=15.0, R1=1000000.0, R2=500000.0, RD=3300.0, RS=1000.0, kn=0.002, Vt=1.5)
 # -> VG = 5 V, VGS = 2.93649 V, VOV = 1.43649 V, ID = 0.00206351 A, VS = 2.06351 V, VD = 8.19042 V, VDS = 6.12691 V   (SOLVED)
@@ -1946,7 +2106,7 @@ electronics_engineering_ai999x.solve('elx_mosfet_divider_bias', VDD=12.0, R1=680
 
 <a id="elx_common_source_amplifier"></a>
 
-### Common-source amplifier with source degeneration and ro — `elx_common_source_amplifier`
+### Common-source amplifier with source degeneration and ro, `elx_common_source_amplifier`
 
 The voltage gain, input and output resistances and overall gain of a common-source stage, exact with the transistor's output resistance ro and an optional unbypassed source resistor.
 
@@ -1975,6 +2135,10 @@ $$
 - **Assumes:** gm, ro, RD, RL, RG, Rsig > 0; $RS  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Av (voltage gain gate to output) against ro (transistor output resistance) from 10000 ohm to 1e+06 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-source-amplifier-curve)
+
+*Av (voltage gain gate to output) against ro (transistor output resistance) from 10000 ohm to 1e+06 ohm on a logarithmic axis. One curve for each value of gm (transconductance): 0.002 S, 0.001 S, 0.004 S. Other inputs as in the worked example: RD = 10000.0 ohm, RL = 10000.0 ohm, RS = 0.0 ohm, RG = 1000000.0 ohm, Rsig = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ro = 100000 ohm, Av = -9.52381.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_common_source_amplifier', gm=0.002, ro=100000.0, RD=10000.0, RL=10000.0, RS=0.0, RG=1000000.0, Rsig=10000.0)
 # -> Av = -9.52381, Rin = 1e+06 ohm, Rout = 9090.91 ohm, Gv = -9.42951   (SOLVED)
@@ -1996,7 +2160,7 @@ electronics_engineering_ai999x.solve('elx_common_source_amplifier', gm=0.004, ro
 
 <a id="elx_source_follower"></a>
 
-### Source follower (common drain) — `elx_source_follower`
+### Source follower (common drain): `elx_source_follower`
 
 The voltage gain, input resistance, output resistance and overall gain of a MOSFET source follower, including ro.
 
@@ -2024,6 +2188,10 @@ $$
 - **Assumes:** drain at signal ground
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Av (voltage gain gate to output) against ro (transistor output resistance) from 5000 ohm to 500000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-source-follower-curve)
+
+*Av (voltage gain gate to output) against ro (transistor output resistance) from 5000 ohm to 500000 ohm on a logarithmic axis. One curve for each value of gm (transconductance): 0.002 S, 0.001 S, 0.004 S. Other inputs as in the worked example: RS = 2000.0 ohm, RL = 2000.0 ohm, RG = 1000000.0 ohm, Rsig = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ro = 50000 ohm, Av = 0.662252.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_source_follower', gm=0.002, ro=50000.0, RS=2000.0, RL=2000.0, RG=1000000.0, Rsig=10000.0)
 # -> Av = 0.662252, Rin = 1e+06 ohm, Rout = 396.825 ohm, Gv = 0.655695   (SOLVED)
@@ -2045,7 +2213,7 @@ electronics_engineering_ai999x.solve('elx_source_follower', gm=0.005, ro=20000.0
 
 <a id="elx_mosfet_body_effect"></a>
 
-### MOSFET threshold voltage with body effect — `elx_mosfet_body_effect`
+### MOSFET threshold voltage with body effect: `elx_mosfet_body_effect`
 
 The threshold voltage of a MOSFET whose source is above its body, $Vt = Vt0 + \gamma$ (sqrt(2 phiF + VSB) - sqrt(2 phiF)).
 
@@ -2069,6 +2237,10 @@ $$
 - **Assumes:** VSB >= 0; uniform substrate doping
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vt (threshold voltage) against VSB (source-body voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-body-effect-curve)
+
+*Vt (threshold voltage) against VSB (source-body voltage) from 0.3 V to 30 V on a logarithmic axis. One curve for each value of Vt0 (zero-bias threshold voltage): 0.7 V, 0.35 V, 1.4 V. Other inputs as in the worked example: gamma = 0.4, phi2F = 0.7 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VSB = 3 V, Vt = 1.13475 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_body_effect', Vt0=0.7, gamma=0.4, phi2F=0.7, VSB=3.0)
 # -> Vt = 1.13475 V, dVt = 0.434751 V   (SOLVED)
@@ -2091,7 +2263,7 @@ electronics_engineering_ai999x.solve('elx_mosfet_body_effect', Vt0=0.5, gamma=0.
 
 <a id="elx_cmos_switching_threshold"></a>
 
-### CMOS inverter switching threshold VM — `elx_cmos_switching_threshold`
+### CMOS inverter switching threshold VM: `elx_cmos_switching_threshold`
 
 The switching threshold of a CMOS inverter (input = output, both transistors saturated) from the supply, the two threshold voltages and the two transconductance parameters.
 
@@ -2116,6 +2288,10 @@ $$
 - **Assumes:** Vtn + |Vtp| < VDD; lambda neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![VM (switching threshold) against VDD (supply voltage) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-switching-threshold-curve)
+
+*VM (switching threshold) against VDD (supply voltage) from 1.25 V to 3.75 V. One curve for each value of kn (NMOS mu_n Cox W/L): 0.0001 A/V^2, 5.0000e-05 A/V^2, 0.0002 A/V^2. Other inputs as in the worked example: Vtn = 0.4 V, Vtp = 0.4 V, kp = 0.0001 A/V^2. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VDD = 2.5 V, VM = 1.25 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_cmos_switching_threshold', VDD=2.5, Vtn=0.4, Vtp=0.4, kn=0.0001, kp=0.0001)
 # -> r = 1, VM = 1.25 V   (SOLVED)
@@ -2137,7 +2313,7 @@ electronics_engineering_ai999x.solve('elx_cmos_switching_threshold', VDD=3.3, Vt
 
 <a id="elx_cmos_propagation_delay"></a>
 
-### CMOS gate propagation delay (switch-resistor model) — `elx_cmos_propagation_delay`
+### CMOS gate propagation delay (switch-resistor model), `elx_cmos_propagation_delay`
 
 The high-to-low and low-to-high propagation delays (50 % points) and their average for a CMOS gate modelled as switched equivalent resistances driving a load capacitance.
 
@@ -2161,6 +2337,10 @@ $$
 - **Assumes:** step input, RC switch model
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![tp (average propagation delay) against Rn (equivalent on-resistance of the pull-down network) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-propagation-delay-curve)
+
+*tp (average propagation delay) against Rn (equivalent on-resistance of the pull-down network) from 5000 ohm to 15000 ohm. One curve for each value of CL (load capacitance): 1.0000e-13 F, 5.0000e-14 F, 2.0000e-13 F. Other inputs as in the worked example: Rp = 20000.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rn = 10000 ohm, tp = 1.0397e-09 s.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_cmos_propagation_delay', Rn=10000.0, Rp=20000.0, CL=1e-13)
 # -> tpHL = 6.93147e-10 s, tpLH = 1.38629e-09 s, tp = 1.03972e-09 s   (SOLVED)
@@ -2182,7 +2362,7 @@ electronics_engineering_ai999x.solve('elx_cmos_propagation_delay', Rn=5000.0, Rp
 
 <a id="elx_inverting_amplifier"></a>
 
-### Inverting op-amp amplifier — `elx_inverting_amplifier`
+### Inverting op-amp amplifier: `elx_inverting_amplifier`
 
 The closed-loop gain, output voltage and input resistance of an ideal inverting amplifier.
 
@@ -2206,6 +2386,10 @@ $$
 - **Assumes:** ideal op-amp, output not saturated
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against Rin (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-curve)
+
+*Vout (output voltage) against Rin (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Rf (feedback resistor): 100000 ohm, 50000 ohm, 200000 ohm. Other inputs as in the worked example: Vin = 0.5 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rin = 10000 ohm, Vout = -5 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_inverting_amplifier', Rf=100000.0, Rin=10000.0, Vin=0.5)
 # -> G = -10, Vout = -5 V, Zin = 10000 ohm   (SOLVED)
@@ -2227,7 +2411,7 @@ electronics_engineering_ai999x.solve('elx_inverting_amplifier', Rf=47000.0, Rin=
 
 <a id="elx_noninverting_amplifier"></a>
 
-### Non-inverting op-amp amplifier — `elx_noninverting_amplifier`
+### Non-inverting op-amp amplifier: `elx_noninverting_amplifier`
 
 The closed-loop gain $1 + Rf/Rg$ and the output voltage of an ideal non-inverting amplifier.
 
@@ -2250,6 +2434,10 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against Rg (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-noninverting-amplifier-curve)
+
+*Vout (output voltage) against Rg (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Vin (input voltage): 0.3 V, 0.15 V, 0.6 V. Other inputs as in the worked example: Rf = 90000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rg = 10000 ohm, Vout = 3 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_noninverting_amplifier', Rf=90000.0, Rg=10000.0, Vin=0.3)
 # -> G = 10, Vout = 3 V   (SOLVED)
@@ -2271,7 +2459,7 @@ electronics_engineering_ai999x.solve('elx_noninverting_amplifier', Rf=22000.0, R
 
 <a id="elx_summing_amplifier"></a>
 
-### Inverting summing amplifier — `elx_summing_amplifier`
+### Inverting summing amplifier: `elx_summing_amplifier`
 
 The output of an ideal inverting summing amplifier with several inputs, each through its own resistor, and the feedback current.
 
@@ -2294,6 +2482,10 @@ $$
 - **Assumes:** one resistor per input; ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against Rf (feedback resistor) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-summing-amplifier-curve)
+
+*Vout (output voltage) against Rf (feedback resistor) from 5000 ohm to 15000 ohm. Other inputs as in the worked example: V = [1.0, 2.0, -0.5], R = [10.0, 20.0, 5.0]. 31 points computed by electronics-engineering-ai999x; marked: the worked example, Rf = 10000 ohm, Vout = -1 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_summing_amplifier', V=[1.0, 2.0, -0.5], R=[10.0, 20.0, 5.0], Rf=10000.0)
 # -> Vout = -1 V, I_f = 0.0001 A   (SOLVED)
@@ -2315,7 +2507,7 @@ electronics_engineering_ai999x.solve('elx_summing_amplifier', V=[0.2, 0.4], R=[1
 
 <a id="elx_difference_amplifier"></a>
 
-### Op-amp difference amplifier (with resistor mismatch) — `elx_difference_amplifier`
+### Op-amp difference amplifier (with resistor mismatch), `elx_difference_amplifier`
 
 The output of a one-op-amp difference amplifier with any four resistors, and its differential and common-mode gains (the common-mode gain is zero only when R4/R3 = R2/R1).
 
@@ -2342,6 +2534,10 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against R1 (resistor from V1 to the inverting input) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-difference-amplifier-curve)
+
+*Vout (output voltage) against R1 (resistor from V1 to the inverting input) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of V2 (voltage at the non-inverting side): 1.2 V, 0.6 V, 2.4 V. Other inputs as in the worked example: R2 = 100000.0 ohm, R3 = 10000.0 ohm, R4 = 100000.0 ohm, V1 = 1.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Vout = 2 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_difference_amplifier', R1=10000.0, R2=100000.0, R3=10000.0, R4=100000.0, V1=1.0, V2=1.2)
 # -> Vout = 2 V, Ad = 10, Acm = 0   (SOLVED)
@@ -2363,7 +2559,7 @@ electronics_engineering_ai999x.solve('elx_difference_amplifier', R1=10000.0, R2=
 
 <a id="elx_instrumentation_amplifier"></a>
 
-### Three-op-amp instrumentation amplifier — `elx_instrumentation_amplifier`
+### Three-op-amp instrumentation amplifier: `elx_instrumentation_amplifier`
 
 The gain and output of the classic three-op-amp instrumentation amplifier: input stage gain $1 + 2$ $R_{1}/RG$ times the difference stage gain $R_{3}/R_{2}.$
 
@@ -2390,6 +2586,10 @@ $$
 - **Assumes:** ideal op-amps, matched resistors
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against RG (gain-setting resistor between the buffers) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-instrumentation-amplifier-curve)
+
+*Vout (output voltage) against RG (gain-setting resistor between the buffers) from 500 ohm to 1500 ohm. One curve for each value of V2 (input at the non-inverting side): 1.01 V, 0.505 V, 2.02 V. Other inputs as in the worked example: R1 = 25000.0 ohm, R2 = 10000.0 ohm, R3 = 10000.0 ohm, V1 = 1.0 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RG = 1000 ohm, Vout = 0.51 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_instrumentation_amplifier', R1=25000.0, RG=1000.0, R2=10000.0, R3=10000.0, V1=1.0, V2=1.01)
 # -> G = 51, G_stage1 = 51, Vout = 0.51 V   (SOLVED)
@@ -2411,7 +2611,7 @@ electronics_engineering_ai999x.solve('elx_instrumentation_amplifier', R1=49400.0
 
 <a id="elx_inverting_amplifier_finite_gain"></a>
 
-### Inverting amplifier with finite open-loop gain — `elx_inverting_amplifier_finite_gain`
+### Inverting amplifier with finite open-loop gain, `elx_inverting_amplifier_finite_gain`
 
 The exact closed-loop gain of an inverting amplifier built with an op-amp of finite open-loop gain A0, its relative gain error and output.
 
@@ -2437,6 +2637,10 @@ $$
 - **Assumes:** $A_{0} > 0$ (ratio); infinite input resistance, zero output resistance
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![G (closed-loop gain) against Rf (feedback resistor) from 10000 ohm to 1e+06 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-finite-gain-curve)
+
+*G (closed-loop gain) against Rf (feedback resistor) from 10000 ohm to 1e+06 ohm on a logarithmic axis. One curve for each value of R1 (input resistor): 1000 ohm, 500 ohm, 2000 ohm. Other inputs as in the worked example: A0 = 10000.0, Vin = 0.01 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 100000 ohm, G = -99.0001.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_inverting_amplifier_finite_gain', Rf=100000.0, R1=1000.0, A0=10000.0, Vin=0.01)
 # -> G = -99.0001, G_ideal = -100, Vout = -0.990001 V, error = 0.00999901   (SOLVED)
@@ -2458,7 +2662,7 @@ electronics_engineering_ai999x.solve('elx_inverting_amplifier_finite_gain', Rf=1
 
 <a id="elx_opamp_integrator"></a>
 
-### Op-amp integrator: output ramp and unity-gain frequency — `elx_opamp_integrator`
+### Op-amp integrator: output ramp and unity-gain frequency, `elx_opamp_integrator`
 
 The output of an ideal inverting integrator after a time with a constant input, its ramp rate, and the frequency at which its gain is one.
 
@@ -2484,6 +2688,10 @@ $$
 - **Assumes:** ideal op-amp, output not saturated
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage at t) against R (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-integrator-curve)
+
+*Vout (output voltage at t) against R (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of C (feedback capacitor): 1.0000e-06 F, 5.0000e-07 F, 2.0000e-06 F. Other inputs as in the worked example: Vin = 0.5 V, t = 0.002 s. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, Vout = -0.1 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_integrator', R=10000.0, C=1e-06, Vin=0.5, t=0.002)
 # -> Vout = -0.1 V, slope = -50 V/s, f_unity = 15.9155 Hz   (SOLVED)
@@ -2505,7 +2713,7 @@ electronics_engineering_ai999x.solve('elx_opamp_integrator', R=100000.0, C=1e-07
 
 <a id="elx_opamp_differentiator"></a>
 
-### Op-amp differentiator: gain and output amplitude — `elx_opamp_differentiator`
+### Op-amp differentiator: gain and output amplitude, `elx_opamp_differentiator`
 
 The gain |H| = 2 pi f R C of an ideal inverting differentiator at a frequency and the peak output for a sinusoidal input of given amplitude.
 
@@ -2530,6 +2738,10 @@ $$
 - **Assumes:** ideal op-amp (no high-frequency limiting)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout_peak (peak output voltage) against R (feedback resistor) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-differentiator-curve)
+
+*Vout_peak (peak output voltage) against R (feedback resistor) from 5000 ohm to 15000 ohm. One curve for each value of C (input capacitor): 1.0000e-08 F, 5.0000e-09 F, 2.0000e-08 F. Other inputs as in the worked example: A = 1.0 V, f = 1000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, Vout_peak = 0.628319 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_differentiator', R=10000.0, C=1e-08, A=1.0, f=1000.0)
 # -> gain = 0.628319, Vout_peak = 0.628319 V, gain_dB = -4.0364   (SOLVED)
@@ -2551,7 +2763,7 @@ electronics_engineering_ai999x.solve('elx_opamp_differentiator', R=100000.0, C=1
 
 <a id="elx_closed_loop_bandwidth"></a>
 
-### Closed-loop bandwidth from the gain-bandwidth product — `elx_closed_loop_bandwidth`
+### Closed-loop bandwidth from the gain-bandwidth product, `elx_closed_loop_bandwidth`
 
 The closed-loop gain, the noise gain $1 + Rf/R_{1}$ and the -3 dB bandwidth GBW/(noise gain) of an inverting or non-inverting amplifier built with a single-pole op-amp.
 
@@ -2576,6 +2788,10 @@ $$
 - **Assumes:** single-pole op-amp with open-loop gain much larger than the closed-loop gain
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f_3dB (closed-loop -3 dB bandwidth) against Rf (feedback resistor) from 9000 ohm to 900000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-closed-loop-bandwidth-curve)
+
+*f_3dB (closed-loop -3 dB bandwidth) against Rf (feedback resistor) from 9000 ohm to 900000 ohm on a logarithmic axis. One curve for each value of GBW (gain-bandwidth product (unity-gain frequency)): 1e+06 Hz, 500000 Hz, 2e+06 Hz. Other inputs as in the worked example: config = non-inverting, R1 = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 90000 ohm, f_3dB = 100000 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_closed_loop_bandwidth', GBW=1000000.0, config='non-inverting', Rf=90000.0, R1=10000.0)
 # -> G0 = 10, noise_gain = 10, f_3dB = 100000 Hz   (SOLVED)
@@ -2598,7 +2814,7 @@ electronics_engineering_ai999x.solve('elx_closed_loop_bandwidth', GBW=10000000.0
 
 <a id="elx_slew_rate_limit"></a>
 
-### Slew-rate limit: full-power bandwidth — `elx_slew_rate_limit`
+### Slew-rate limit: full-power bandwidth, `elx_slew_rate_limit`
 
 The full-power bandwidth SR/(2 pi Vp) of an op-amp, the largest undistorted amplitude at a frequency, the slope a sine wave needs and whether it is slew-limited.
 
@@ -2623,6 +2839,14 @@ $$
 - **Assumes:** sinusoidal output
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![slew-limited or not slew-limited (limited) over SR (slew rate) from 50000 V/s to 5e+06 V/s and Vp (peak output amplitude) from 1 V to 100 V (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, not slew-limited: 208 cells, slew-limited: 443 cells](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-slew-rate-limit-decision)
+
+*slew-limited or not slew-limited (limited) over SR (slew rate) from 50000 V/s to 5e+06 V/s and Vp (peak output amplitude) from 1 V to 100 V (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, not slew-limited: 208 cells, slew-limited: 443 cells. Other inputs as in the worked example: f = 20000.0 Hz. Marked: the worked example, SR = 500000 V/s, Vp = 10 V → slew-limited.*
+
+![f_max (full-power bandwidth at Vp) against Vp (peak output amplitude) from 5 V to 15 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-slew-rate-limit-curve)
+
+*f_max (full-power bandwidth at Vp) against Vp (peak output amplitude) from 5 V to 15 V. One curve for each value of SR (slew rate): 500000 V/s, 250000 V/s, 1e+06 V/s. Other inputs as in the worked example: f = 20000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vp = 10 V, f_max = 7957.75 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_slew_rate_limit', SR=500000.0, Vp=10.0, f=20000.0)
 # -> f_max = 7957.75 Hz, Vp_max = 3.97887 V, slope_needed = 1.25664e+06 V/s, limited = slew-limited   (SOLVED)
@@ -2644,7 +2868,7 @@ electronics_engineering_ai999x.solve('elx_slew_rate_limit', SR=13000000.0, Vp=5.
 
 <a id="elx_opamp_dc_offset"></a>
 
-### Op-amp output offset from input offset voltage and bias currents — `elx_opamp_dc_offset`
+### Op-amp output offset from input offset voltage and bias currents, `elx_opamp_dc_offset`
 
 The DC output error of an inverting or non-inverting amplifier (input grounded) caused by the input offset voltage and the input bias and offset currents, and the compensating resistor that cancels the bias-current error.
 
@@ -2672,6 +2896,10 @@ $$
 - **Assumes:** currents flow into the inputs; IB- = IB + Ios/2, IB+ = IB - Ios/2
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout_total (total output error) against R1 (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-dc-offset-curve)
+
+*Vout_total (total output error) against R1 (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Rf (feedback resistor): 100000 ohm, 50000 ohm, 200000 ohm. Other inputs as in the worked example: Vos = 0.002 V, IB = 1e-07 A, Ios = 1e-08 A, Rp = 0.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Vout_total = 0.0325 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_dc_offset', Vos=0.002, IB=1e-07, Ios=1e-08, Rf=100000.0, R1=10000.0, Rp=0.0)
 # -> Vout_Vos = 0.022 V, Vout_bias = 0.0105 V, Vout_total = 0.0325 V, Rp_optimal = 9090.91 ohm   (SOLVED)
@@ -2693,7 +2921,7 @@ electronics_engineering_ai999x.solve('elx_opamp_dc_offset', Vos=0.001, IB=8e-08,
 
 <a id="elx_schmitt_trigger"></a>
 
-### Inverting Schmitt trigger thresholds — `elx_schmitt_trigger`
+### Inverting Schmitt trigger thresholds: `elx_schmitt_trigger`
 
 The upper and lower switching thresholds, the hysteresis width and the centre of an inverting op-amp Schmitt trigger whose positive feedback divider (Rf from the output, R1 to a reference) sets the + input.
 
@@ -2720,6 +2948,10 @@ $$
 - **Assumes:** VsatH > VsatL; input on the inverting terminal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![hysteresis (hysteresis width) against Rf (resistor from the output to the + input) from 9000 ohm to 900000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-schmitt-trigger-curve)
+
+*hysteresis (hysteresis width) against Rf (resistor from the output to the + input) from 9000 ohm to 900000 ohm on a logarithmic axis. One curve for each value of R1 (resistor from the + input to Vref): 10000 ohm, 5000 ohm, 20000 ohm. Other inputs as in the worked example: VsatH = 12.0 V, VsatL = -12.0 V, Vref = 0.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 90000 ohm, hysteresis = 2.4 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_schmitt_trigger', Rf=90000.0, R1=10000.0, VsatH=12.0, VsatL=-12.0, Vref=0.0)
 # -> V_TH = 1.2 V, V_TL = -1.2 V, hysteresis = 2.4 V, center = 0 V   (SOLVED)
@@ -2741,7 +2973,7 @@ electronics_engineering_ai999x.solve('elx_schmitt_trigger', Rf=100000.0, R1=2200
 
 <a id="elx_negative_feedback"></a>
 
-### Negative feedback: closed-loop gain and bandwidth extension — `elx_negative_feedback`
+### Negative feedback: closed-loop gain and bandwidth extension, `elx_negative_feedback`
 
 The closed-loop gain A/(1 + A beta), the loop gain, the desensitivity factor (also in dB) and the extended bandwidth of a single-pole amplifier with negative feedback.
 
@@ -2767,6 +2999,10 @@ $$
 - **Assumes:** single-pole open-loop response; frequency-independent beta
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Af (closed-loop gain) against beta (feedback factor (a ratio)) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-negative-feedback-curve)
+
+*Af (closed-loop gain) against beta (feedback factor (a ratio)) from 0.02 to 0.98. Other inputs as in the worked example: A = 10000.0, fH = 1000.0 Hz. 41 points computed by electronics-engineering-ai999x; marked: the worked example, beta = 0.01, Af = 99.0099.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_negative_feedback', A=10000.0, beta=0.01, fH=1000.0)
 # -> Af = 99.0099, loop_gain = 100, desensitivity = 101, desensitivity_dB = 40.0864, fH_closed = 101000 Hz   (SOLVED)
@@ -2788,7 +3024,7 @@ electronics_engineering_ai999x.solve('elx_negative_feedback', A=200000.0, beta=0
 
 <a id="elx_two_pole_phase_margin"></a>
 
-### Phase margin of a two-pole amplifier with feedback — `elx_two_pole_phase_margin`
+### Phase margin of a two-pole amplifier with feedback, `elx_two_pole_phase_margin`
 
 The loop-gain crossover frequency and the phase margin of an amplifier with two real poles and a frequency-independent feedback factor, and its closed-loop DC gain.
 
@@ -2813,6 +3049,10 @@ $$
 - **Assumes:** A0 $\beta > 1$; two real left-half-plane poles
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![PM_deg (phase margin in degrees) against A0 (DC open-loop gain (a ratio)) from 10000 to 1e+06 on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-two-pole-phase-margin-curve)
+
+*PM_deg (phase margin in degrees) against A0 (DC open-loop gain (a ratio)) from 10000 to 1e+06 on a logarithmic axis. One curve for each value of f1 (first pole frequency): 10 Hz, 5 Hz, 20 Hz. Other inputs as in the worked example: f2 = 1000000.0 Hz, beta = 0.1. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, A0 = 100000, PM_deg = 84.323.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_two_pole_phase_margin', A0=100000.0, f1=10.0, f2=1000000.0, beta=0.1)
 # -> f_c = 99508.5 Hz, PM_deg = 84.323, Af = 9.999   (SOLVED)
@@ -2834,7 +3074,7 @@ electronics_engineering_ai999x.solve('elx_two_pole_phase_margin', A0=20000.0, f1
 
 <a id="elx_first_order_active_lowpass"></a>
 
-### First-order active low-pass filter (inverting) — `elx_first_order_active_lowpass`
+### First-order active low-pass filter (inverting), `elx_first_order_active_lowpass`
 
 The passband gain -Rf/R1, the cutoff frequency 1/(2 pi Rf C) and the gain at a frequency of an inverting op-amp low-pass filter with C across the feedback resistor.
 
@@ -2860,6 +3100,10 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![fc (cutoff frequency) against Rf (feedback resistor) from 50000 ohm to 150000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-first-order-active-lowpass-curve)
+
+*fc (cutoff frequency) against Rf (feedback resistor) from 50000 ohm to 150000 ohm. One curve for each value of C (capacitor across Rf): 1.5900e-09 F, 7.9500e-10 F, 3.1800e-09 F. Other inputs as in the worked example: R1 = 10000.0 ohm, f = 1000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 100000 ohm, fc = 1000.97 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_first_order_active_lowpass', R1=10000.0, Rf=100000.0, C=1.59e-09, f=1000.0)
 # -> H0 = -10, fc = 1000.97 Hz, gain_f = 7.07451, gain_dB = 16.9939   (SOLVED)
@@ -2881,7 +3125,7 @@ electronics_engineering_ai999x.solve('elx_first_order_active_lowpass', R1=4700.0
 
 <a id="elx_sallen_key_lowpass"></a>
 
-### Sallen-Key low-pass filter: f0, Q and gain — `elx_sallen_key_lowpass`
+### Sallen-Key low-pass filter: f0, Q and gain, `elx_sallen_key_lowpass`
 
 The natural frequency, quality factor, passband gain and the gain at f0 (K Q) of a second-order Sallen-Key low-pass filter with any components and amplifier gain K.
 
@@ -2908,6 +3152,14 @@ $$
 - **Assumes:** stable: R1 $C_{2} + R_{2}$ $C_{2} + R_{1}$ C1 $(1 - K) > 0$; ideal amplifier
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Q (quality factor) against R1 (first series resistor), with C1 = 2](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-sallen-key-lowpass-q-vs-r1.svg)
+
+*Q (quality factor) against R1 (first series resistor), with C1 = 2.00e-8 F, C2 = 1.00e-8 F, K = 1, R2 = 10000 ohm. 31 points computed by electronics-engineering-ai999x; marked: R1 = 10000, Q = 0.707107.*
+
+![Q (quality factor) against R1 (first series resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-lowpass-curve)
+
+*Q (quality factor) against R1 (first series resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of K (amplifier gain (1 for a unity-gain buffer)): 1, 0.5, 2. Other inputs as in the worked example: R2 = 10000.0 ohm, C1 = 2e-08 F, C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Q = 0.707107.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_sallen_key_lowpass', R1=10000.0, R2=10000.0, C1=2e-08, C2=1e-08, K=1.0)
 # -> f0 = 1125.4 Hz, Q = 0.707107, H0 = 1, peak_gain = 0.707107   (SOLVED)
@@ -2929,7 +3181,7 @@ electronics_engineering_ai999x.solve('elx_sallen_key_lowpass', R1=15000.0, R2=15
 
 <a id="elx_sallen_key_highpass"></a>
 
-### Sallen-Key high-pass filter: f0, Q and gain — `elx_sallen_key_highpass`
+### Sallen-Key high-pass filter: f0, Q and gain, `elx_sallen_key_highpass`
 
 The natural frequency, quality factor and high-frequency gain of a second-order Sallen-Key high-pass filter with any components and amplifier gain K.
 
@@ -2955,6 +3207,10 @@ $$
 - **Assumes:** stable: R1 $(C_{1} + C_{2}) + R_{2}$ C2 $(1 - K) > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Q (quality factor) against C1 (first series capacitor) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-highpass-curve)
+
+*Q (quality factor) against C1 (first series capacitor) from 1.0000e-09 F to 1.0000e-07 F on a logarithmic axis. One curve for each value of K (amplifier gain): 1, 0.5, 2. Other inputs as in the worked example: C2 = 1e-08 F, R1 = 11250.0 ohm, R2 = 22500.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C1 = 1.0000e-08 F, Q = 0.707107.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_sallen_key_highpass', C1=1e-08, C2=1e-08, R1=11250.0, R2=22500.0, K=1.0)
 # -> f0 = 1000.35 Hz, Q = 0.707107, H_inf = 1   (SOLVED)
@@ -2976,7 +3232,7 @@ electronics_engineering_ai999x.solve('elx_sallen_key_highpass', C1=2.2e-08, C2=2
 
 <a id="elx_mfb_lowpass"></a>
 
-### Multiple-feedback (MFB) low-pass filter — `elx_mfb_lowpass`
+### Multiple-feedback (MFB) low-pass filter: `elx_mfb_lowpass`
 
 The natural frequency, quality factor and inverting passband gain -R2/R1 of a second-order multiple-feedback low-pass filter.
 
@@ -3002,6 +3258,10 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Q (quality factor) against R3 (resistor from the middle node to the inverting input) from 500 ohm to 50000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-lowpass-curve)
+
+*Q (quality factor) against R3 (resistor from the middle node to the inverting input) from 500 ohm to 50000 ohm on a logarithmic axis. One curve for each value of C1 (capacitor from the middle node to ground): 4.7000e-08 F, 2.3500e-08 F, 9.4000e-08 F. Other inputs as in the worked example: R1 = 10000.0 ohm, R2 = 10000.0 ohm, C2 = 4.7e-09 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R3 = 5000 ohm, Q = 1.11803.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_mfb_lowpass', R1=10000.0, R2=10000.0, R3=5000.0, C1=4.7e-08, C2=4.7e-09)
 # -> f0 = 1514.39 Hz, Q = 1.11803, H0 = -1   (SOLVED)
@@ -3023,7 +3283,7 @@ electronics_engineering_ai999x.solve('elx_mfb_lowpass', R1=4700.0, R2=47000.0, R
 
 <a id="elx_mfb_bandpass"></a>
 
-### Multiple-feedback (MFB) band-pass filter — `elx_mfb_bandpass`
+### Multiple-feedback (MFB) band-pass filter: `elx_mfb_bandpass`
 
 The centre frequency, quality factor, -3 dB bandwidth and peak (inverting) gain of a multiple-feedback band-pass filter.
 
@@ -3050,6 +3310,10 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f0 (centre frequency) against R2 (resistor from the middle node to ground) from 133 ohm to 13300 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-bandpass-curve)
+
+*f0 (centre frequency) against R2 (resistor from the middle node to ground) from 133 ohm to 13300 ohm on a logarithmic axis. One curve for each value of R3 (feedback resistor (inverting input to output)): 31800 ohm, 15900 ohm, 63600 ohm. Other inputs as in the worked example: R1 = 15900.0 ohm, C1 = 1e-08 F, C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R2 = 1330 ohm, f0 = 2547.56 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_mfb_bandpass', R1=15900.0, R2=1330.0, R3=31800.0, C1=1e-08, C2=1e-08)
 # -> f0 = 2547.56 Hz, Q = 2.54508, BW = 1000.97 Hz, H_peak = -1   (SOLVED)
@@ -3071,7 +3335,7 @@ electronics_engineering_ai999x.solve('elx_mfb_bandpass', R1=10000.0, R2=470.0, R
 
 <a id="elx_sallen_key_equal_component_design"></a>
 
-### Equal-component Sallen-Key low-pass design — `elx_sallen_key_equal_component_design`
+### Equal-component Sallen-Key low-pass design, `elx_sallen_key_equal_component_design`
 
 The resistor value and amplifier gain of an equal-component (R1 = R2 = R, C1 = C2 = C) Sallen-Key low-pass filter for a cutoff frequency and Q, with the non-inverting gain ratio $Rf/Rg = K - 1.$
 
@@ -3095,6 +3359,10 @@ $$
 - **Assumes:** $0.5  \leq  Q  \leq  20$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![R (resistor value) against fc (natural (cutoff) frequency) from 500 Hz to 1500 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-equal-component-design-curve)
+
+*R (resistor value) against fc (natural (cutoff) frequency) from 500 Hz to 1500 Hz. One curve for each value of C (chosen capacitor value): 1.0000e-08 F, 5.0000e-09 F, 2.0000e-08 F. Other inputs as in the worked example: Q = 0.7071. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, fc = 1000 Hz, R = 15915.5 ohm.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_sallen_key_equal_component_design', fc=1000.0, Q=0.7071, C=1e-08)
 # -> R = 15915.5 ohm, K = 1.58577, Rf_over_Rg = 0.585773   (SOLVED)
@@ -3116,7 +3384,7 @@ electronics_engineering_ai999x.solve('elx_sallen_key_equal_component_design', fc
 
 <a id="elx_filter_order"></a>
 
-### Butterworth or Chebyshev low-pass filter order — `elx_filter_order`
+### Butterworth or Chebyshev low-pass filter order, `elx_filter_order`
 
 The minimum order of a Butterworth or Chebyshev type I low-pass filter meeting a passband edge with at most Ap dB attenuation and a stopband edge with at least As dB.
 
@@ -3139,6 +3407,10 @@ $$
 - **Method:** Butterworth: $n  \geq  log10$($D)/(2$ log10(fs/fp)); Chebyshev: n >= acosh(sqrt D)/acosh(fs/fp), $D = (10^{As/10} - 1)/(10^{Ap/10} - 1)$
 - **Assumes:** $fs > fp$; $As > Ap > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![n (minimum filter order) against fs (stopband edge) from 1250 Hz to 3750 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-filter-order-curve)
+
+*n (minimum filter order) against fs (stopband edge) from 1250 Hz to 3750 Hz. One curve for each value of As (minimum stopband attenuation in dB): 40, 20, 80. Other inputs as in the worked example: ftype = Butterworth, fp = 1000.0 Hz, Ap = 1.0. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, fs = 2500 Hz, n = 6.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_filter_order', ftype='Butterworth', fp=1000.0, fs=2500.0, Ap=1.0, As=40.0)
@@ -3163,7 +3435,7 @@ electronics_engineering_ai999x.solve('elx_filter_order', ftype='Chebyshev', fp=1
 
 <a id="elx_butterworth_section_q"></a>
 
-### Butterworth filter: Q of each second-order section — `elx_butterworth_section_q`
+### Butterworth filter: Q of each second-order section, `elx_butterworth_section_q`
 
 The quality factors of the cascaded second-order sections of an n-th order Butterworth filter (all at the cutoff frequency), and whether a first-order section is needed.
 
@@ -3186,6 +3458,10 @@ $$
 - **Assumes:** $2  \leq  n  \leq  20$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Q_max (largest section Q) against n (filter order) from 1 to 12](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-butterworth-section-q-curve)
+
+*Q_max (largest section Q) against n (filter order) from 1 to 12. 11 points computed by electronics-engineering-ai999x; marked: the worked example, n = 4, Q_max = 1.30656.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_butterworth_section_q', n=4)
 # -> Q_max = 1.30656, Q = [0.541196100146, 1.30656296488], sections = 2, first_order = 0   (SOLVED)
@@ -3207,7 +3483,7 @@ electronics_engineering_ai999x.solve('elx_butterworth_section_q', n=5)
 
 <a id="elx_chebyshev_sections"></a>
 
-### Chebyshev type I filter: section Q and frequencies — `elx_chebyshev_sections`
+### Chebyshev type I filter: section Q and frequencies, `elx_chebyshev_sections`
 
 The quality factors and natural frequencies (relative to the passband edge) of the second-order sections of an n-th order Chebyshev type I low-pass filter with a given passband ripple, and the real pole of an odd order.
 
@@ -3232,6 +3508,14 @@ $$
 - **Assumes:** $2  \leq  n  \leq  16$; 0.001 dB <= ripple <= 6 dB
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![section natural frequencies / passband edge, in the same order (f0_ratio) at each section Q values, ascending (Q), both returned by electronics-engineering-ai999x for the worked example (n = 4, ripple = 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-chebyshev-sections-series)
+
+*section natural frequencies / passband edge, in the same order (f0_ratio) at each section Q values, ascending (Q), both returned by electronics-engineering-ai999x for the worked example (n = 4, ripple = 0.5): 0.70511 → 0.597002; 2.94055 → 1.03127.*
+
+![Q_max (largest section Q) against ripple (passband ripple in dB) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-chebyshev-sections-curve)
+
+*Q_max (largest section Q) against ripple (passband ripple in dB) from 0.05 to 5 on a logarithmic axis. One curve for each value of n (filter order): 4, 2, 8. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ripple = 0.5, Q_max = 2.94055.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_chebyshev_sections', n=4, ripple=0.5)
 # -> Q_max = 2.94055, Q = [0.705110236803, 2.94055417439], f0_ratio = [0.59700239512, 1.03127040148], sections = 2, real_pole = 0   (SOLVED)
@@ -3253,7 +3537,7 @@ electronics_engineering_ai999x.solve('elx_chebyshev_sections', n=3, ripple=1.0)
 
 <a id="elx_rc_phase_shift_oscillator"></a>
 
-### RC phase-shift oscillator frequency and gain — `elx_rc_phase_shift_oscillator`
+### RC phase-shift oscillator frequency and gain, `elx_rc_phase_shift_oscillator`
 
 The oscillation frequency of a three-section RC phase-shift oscillator (high-pass ladder: series C, shunt R; or low-pass ladder) and the amplifier gain of 29 it needs.
 
@@ -3277,6 +3561,14 @@ $$
 - **Assumes:** unloaded ladder (driven by a voltage source, feeding a high impedance)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f0 (oscillation frequency) against R (resistor of each section) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-curve)
+
+*f0 (oscillation frequency) against R (resistor of each section) from 5000 ohm to 15000 ohm. One curve for each value of C (capacitor of each section): 1.0000e-08 F, 5.0000e-09 F, 2.0000e-08 F. Other inputs as in the worked example: ladder = high-pass. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, f0 = 649.747 Hz.*
+
+![f0 (oscillation frequency) over R (resistor of each section) from 5000 ohm to 15000 ohm and C (capacitor of each section) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-field)
+
+*f0 (oscillation frequency) over R (resistor of each section) from 5000 ohm to 15000 ohm and C (capacitor of each section) from 5.0000e-09 F to 1.5000e-08 F: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 288.777 Hz to dark 2598.99 Hz); iso-lines at f0 = 500, 1000, 1500, 2000 Hz. Other inputs as in the worked example: ladder = high-pass. Marked: the worked example, R = 10000 ohm, C = 1.0000e-08 F, f0 = 649.747 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_rc_phase_shift_oscillator', R=10000.0, C=1e-08, ladder='high-pass')
 # -> f0 = 649.747 Hz, A_min = 29, beta = 0.0344828   (SOLVED)
@@ -3298,7 +3590,7 @@ electronics_engineering_ai999x.solve('elx_rc_phase_shift_oscillator', R=4700.0, 
 
 <a id="elx_wien_bridge_oscillator"></a>
 
-### Wien-bridge oscillator frequency and required gain — `elx_wien_bridge_oscillator`
+### Wien-bridge oscillator frequency and required gain, `elx_wien_bridge_oscillator`
 
 The oscillation frequency of a Wien-bridge oscillator (series R1 C1, parallel R2 C2) and the non-inverting gain it needs (3 for equal components).
 
@@ -3324,6 +3616,10 @@ $$
 - **Assumes:** ideal amplifier
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f0 (oscillation frequency) against R1 (series-arm resistor) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wien-bridge-oscillator-curve)
+
+*f0 (oscillation frequency) against R1 (series-arm resistor) from 5000 ohm to 15000 ohm. One curve for each value of C1 (series-arm capacitor): 1.6000e-08 F, 8.0000e-09 F, 3.2000e-08 F. Other inputs as in the worked example: R2 = 10000.0 ohm, C2 = 1.6e-08 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, f0 = 994.718 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_wien_bridge_oscillator', R1=10000.0, C1=1.6e-08, R2=10000.0, C2=1.6e-08)
 # -> f0 = 994.718 Hz, beta = 0.333333, A_min = 3, Rf_over_Rg = 2   (SOLVED)
@@ -3345,7 +3641,7 @@ electronics_engineering_ai999x.solve('elx_wien_bridge_oscillator', R1=22000.0, C
 
 <a id="elx_colpitts_oscillator"></a>
 
-### Colpitts oscillator frequency and feedback ratio — `elx_colpitts_oscillator`
+### Colpitts oscillator frequency and feedback ratio, `elx_colpitts_oscillator`
 
 The oscillation frequency of a Colpitts oscillator from its inductor and the series combination of its two tank capacitors, the feedback fraction $C_{1}/C_{2}$ and the minimum amplifier gain $C_{2}/C_{1}.$
 
@@ -3370,6 +3666,10 @@ $$
 - **Assumes:** lossless tank, amplifier does not load the tank
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f0 (oscillation frequency) against C1 (capacitor across the amplifier output) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-colpitts-oscillator-curve)
+
+*f0 (oscillation frequency) against C1 (capacitor across the amplifier output) from 1.0000e-10 F to 1.0000e-08 F on a logarithmic axis. One curve for each value of L (tank inductance): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C1 = 1.0000e-09 F, f0 = 527857 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_colpitts_oscillator', L=0.0001, C1=1e-09, C2=1e-08)
 # -> C_eq = 9.09091e-10 F, f0 = 527857 Hz, beta = 0.1, A_min = 10   (SOLVED)
@@ -3391,7 +3691,7 @@ electronics_engineering_ai999x.solve('elx_colpitts_oscillator', L=1e-05, C1=4.7e
 
 <a id="elx_hartley_oscillator"></a>
 
-### Hartley oscillator frequency — `elx_hartley_oscillator`
+### Hartley oscillator frequency: `elx_hartley_oscillator`
 
 The oscillation frequency of a Hartley oscillator with a tapped (or two coupled) inductors and a tank capacitor, and the gain ratio $(L_{1} + M)/(L_{2} + M)$.
 
@@ -3416,6 +3716,10 @@ $$
 - **Assumes:** series-aiding coils, lossless tank; $M  \leq  sqrt$(L1 L2)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f0 (oscillation frequency) against C (tank capacitance) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-hartley-oscillator-curve)
+
+*f0 (oscillation frequency) against C (tank capacitance) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of L1 (inductance of the output-side coil): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: L2 = 2e-05 H, M = 0.0 H. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, f0 = 459441 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_hartley_oscillator', L1=0.0001, L2=2e-05, M=0.0, C=1e-09)
 # -> L_eq = 0.00012 H, f0 = 459441 Hz, A_min = 5   (SOLVED)
@@ -3437,7 +3741,7 @@ electronics_engineering_ai999x.solve('elx_hartley_oscillator', L1=5e-05, L2=1e-0
 
 <a id="elx_crystal_oscillator"></a>
 
-### Quartz crystal: series and parallel resonance, Q — `elx_crystal_oscillator`
+### Quartz crystal: series and parallel resonance, Q, `elx_crystal_oscillator`
 
 The series and parallel (anti-) resonant frequencies, their spacing and the quality factor of a quartz crystal from its Butterworth-Van Dyke equivalent circuit.
 
@@ -3463,6 +3767,10 @@ $$
 - **Assumes:** resonances of the lossless circuit; Q from Rm
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![fs (series resonance) against Lm (motional inductance) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-crystal-oscillator-curve)
+
+*fs (series resonance) against Lm (motional inductance) from 0.025 H to 0.075 H. One curve for each value of Cm (motional capacitance): 2.0000e-14 F, 1.0000e-14 F, 4.0000e-14 F. Other inputs as in the worked example: Rm = 20.0 ohm, C0 = 5e-12 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Lm = 0.05 H, fs = 5.03292e+06 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_crystal_oscillator', Lm=0.05, Cm=2e-14, Rm=20.0, C0=5e-12)
 # -> fs = 5.03292e+06 Hz, fp = 5.04298e+06 Hz, delta_f = 10055.8 Hz, Q = 79056.9   (SOLVED)
@@ -3484,7 +3792,7 @@ electronics_engineering_ai999x.solve('elx_crystal_oscillator', Lm=0.26, Cm=2.5e-
 
 <a id="elx_opamp_relaxation_oscillator"></a>
 
-### Op-amp relaxation (astable) oscillator — `elx_opamp_relaxation_oscillator`
+### Op-amp relaxation (astable) oscillator: `elx_opamp_relaxation_oscillator`
 
 The period and frequency of a square-wave op-amp astable: an RC timing network on the inverting input and positive feedback $R_{1}/(R_{1} + R_{2})$ to the non-inverting input, symmetric supplies.
 
@@ -3509,6 +3817,10 @@ $$
 - **Assumes:** symmetric output levels; ideal comparator action
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f (frequency) against R1 (resistor from the + input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-relaxation-oscillator-curve)
+
+*f (frequency) against R1 (resistor from the + input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of R (timing resistor (output to inverting input)): 10000 ohm, 5000 ohm, 20000 ohm. Other inputs as in the worked example: C = 1e-07 F, R2 = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, f = 455.12 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_relaxation_oscillator', R=10000.0, C=1e-07, R1=10000.0, R2=10000.0)
 # -> beta = 0.5, T = 0.00219722 s, f = 455.12 Hz   (SOLVED)
@@ -3530,7 +3842,7 @@ electronics_engineering_ai999x.solve('elx_opamp_relaxation_oscillator', R=47000.
 
 <a id="elx_555_astable"></a>
 
-### 555 timer astable: frequency and duty cycle — `elx_555_astable`
+### 555 timer astable: frequency and duty cycle, `elx_555_astable`
 
 The high and low times, period, frequency and duty cycle of a 555 timer in astable mode with resistors RA and RB and timing capacitor C.
 
@@ -3556,6 +3868,14 @@ $$
 - **Assumes:** thresholds Vcc/3 and 2Vcc/3
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![f (frequency) against RA (resistor from Vcc to the discharge pin), with C = 1](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-555-astable-f-vs-ra.svg)
+
+*f (frequency) against RA (resistor from Vcc to the discharge pin), with C = 1.00e-5 F, RB = 10000 ohm. 31 points computed by electronics-engineering-ai999x; marked: RA = 1000, f = 6.86998 Hz.*
+
+![f (frequency) against RB (resistor from discharge to threshold/trigger) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-astable-curve)
+
+*f (frequency) against RB (resistor from discharge to threshold/trigger) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of C (timing capacitor): 1.0000e-05 F, 5.0000e-06 F, 2.0000e-05 F. Other inputs as in the worked example: RA = 1000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RB = 10000 ohm, f = 6.86998 Hz.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_555_astable', RA=1000.0, RB=10000.0, C=1e-05)
 # -> t_high = 0.0762462 s, t_low = 0.0693147 s, T = 0.145561 s, f = 6.86998 Hz, duty = 0.52381   (SOLVED)
@@ -3577,7 +3897,7 @@ electronics_engineering_ai999x.solve('elx_555_astable', RA=4700.0, RB=4700.0, C=
 
 <a id="elx_555_monostable"></a>
 
-### 555 timer monostable pulse width — `elx_555_monostable`
+### 555 timer monostable pulse width, `elx_555_monostable`
 
 The output pulse width $T = ln$ 3 R C (about 1.1 R C) of a 555 timer in monostable (one-shot) mode.
 
@@ -3597,6 +3917,14 @@ $$
 - **Method:** $T = ln$ 3 R C
 - **Assumes:** threshold at 2Vcc/3; trigger pulse shorter than T
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![T (pulse width) against R (timing resistor) from 50000 ohm to 150000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-monostable-curve)
+
+*T (pulse width) against R (timing resistor) from 50000 ohm to 150000 ohm. One curve for each value of C (timing capacitor): 1.0000e-05 F, 5.0000e-06 F, 2.0000e-05 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 100000 ohm, T = 1.09861 s.*
+
+![T (pulse width) over R (timing resistor) from 50000 ohm to 150000 ohm and C (timing capacitor) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-monostable-field)
+
+*T (pulse width) over R (timing resistor) from 50000 ohm to 150000 ohm and C (timing capacitor) from 5.0000e-06 F to 1.5000e-05 F: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 0.274653 s to dark 2.47188 s); iso-lines at T = 0.5, 1, 1.5, 2 s. Marked: the worked example, R = 100000 ohm, C = 1.0000e-05 F, T = 1.09861 s.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_555_monostable', R=100000.0, C=1e-05)
@@ -3619,7 +3947,7 @@ electronics_engineering_ai999x.solve('elx_555_monostable', R=47000.0, C=1e-06)
 
 <a id="elx_pll_loop_dynamics"></a>
 
-### Type-2 PLL with active PI loop filter: natural frequency and damping — `elx_pll_loop_dynamics`
+### Type-2 PLL with active PI loop filter: natural frequency and damping, `elx_pll_loop_dynamics`
 
 The natural frequency and damping factor of a second-order (type-2) phase-locked loop with phase-detector gain Kd, VCO gain Ko and an active PI loop filter F($s) = (1 + s$ $tau2)/(s$ tau1).
 
@@ -3644,6 +3972,10 @@ $$
 - **Assumes:** linear phase model, ideal integrator
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![zeta (damping factor) against tau1 (integrator time constant R1 C) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-pll-loop-dynamics-curve)
+
+*zeta (damping factor) against tau1 (integrator time constant R1 C) from 0.005 s to 0.015 s. One curve for each value of tau2 (zero time constant R2 C): 0.001 s, 0.0005 s, 0.002 s. Other inputs as in the worked example: Kd = 0.5, Ko = 20000.0. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, tau1 = 0.01 s, zeta = 0.5.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_pll_loop_dynamics', Kd=0.5, Ko=20000.0, tau1=0.01, tau2=0.001)
 # -> wn = 1000 rad/s, fn = 159.155 Hz, zeta = 0.5   (SOLVED)
@@ -3665,7 +3997,7 @@ electronics_engineering_ai999x.solve('elx_pll_loop_dynamics', Kd=1.0, Ko=100000.
 
 <a id="elx_adc_code"></a>
 
-### ADC output code, LSB and quantisation error — `elx_adc_code`
+### ADC output code, LSB and quantisation error, `elx_adc_code`
 
 The output code (decimal and binary) of an ideal unipolar truncating n-bit ADC for an input voltage, the LSB size, the voltage the code represents and the quantisation error.
 
@@ -3691,6 +4023,14 @@ $$
 - **Assumes:** 0 <= Vin <= Vref; $1  \leq  n  \leq  16$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![code (output code (decimal)) against Vin (analog input), with Vref = 5 V, n = 8](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-adc-code-code-vs-vin.svg)
+
+*code (output code (decimal)) against Vin (analog input), with Vref = 5 V, n = 8. 31 points computed by electronics-engineering-ai999x; marked: Vin = 3.2, code = 163.*
+
+![code (output code (decimal)) against n (resolution in bits) from 1 to 16, logarithmic output axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-code-curve)
+
+*code (output code (decimal)) against n (resolution in bits) from 1 to 16, logarithmic output axis. Other inputs as in the worked example: Vin = 3.2 V, Vref = 5.0 V. 16 points computed by electronics-engineering-ai999x; marked: the worked example, n = 8, code = 163.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_adc_code', Vin=3.2, Vref=5.0, n=8)
 # -> code = 163, bits = 10100011, LSB = 0.0195312 V, V_code = 3.18359 V, error = 0.0164063 V   (SOLVED)
@@ -3712,7 +4052,7 @@ electronics_engineering_ai999x.solve('elx_adc_code', Vin=1.234, Vref=2.5, n=12)
 
 <a id="elx_adc_quantization_snr"></a>
 
-### ADC quantisation SNR with oversampling — `elx_adc_quantization_snr`
+### ADC quantisation SNR with oversampling: `elx_adc_quantization_snr`
 
 The signal-to-quantisation-noise ratio of an ideal n-bit converter for a sine input (6.02 $n + 1.76$ dB at full scale), with an oversampling ratio and a reduced amplitude, and the in-band noise in LSB.
 
@@ -3736,6 +4076,10 @@ $$
 - **Assumes:** uniform quantisation noise, white over Nyquist; OSR >= 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![SNR_dB (signal-to-quantisation-noise ratio, dB) against n (resolution in bits) from 1 to 24](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-quantization-snr-curve)
+
+*SNR_dB (signal-to-quantisation-noise ratio, dB) against n (resolution in bits) from 1 to 24. 24 points computed by electronics-engineering-ai999x; marked: the worked example, n = 12, SNR_dB = 74.0081.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_adc_quantization_snr', n=12)
 # -> SNR_dB = 74.0081, noise_rms_lsb = 0.288675, SNR_full_scale_dB = 74.0081   (SOLVED)
@@ -3757,7 +4101,7 @@ electronics_engineering_ai999x.solve('elx_adc_quantization_snr', n=10, OSR=16.0,
 
 <a id="elx_adc_enob"></a>
 
-### Effective number of bits (ENOB) from SINAD — `elx_adc_enob`
+### Effective number of bits (ENOB) from SINAD, `elx_adc_enob`
 
 The effective number of bits of a converter from its measured SINAD (IEEE 1241: ENOB = (SINAD - 1.76)/6.02) and the bits lost against its nominal resolution.
 
@@ -3778,6 +4122,10 @@ $$
 - **Method:** ENOB = (SINAD - 1.76)/6.02
 - **Assumes:** full-scale sine test
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![ENOB (effective number of bits) against SINAD (signal to noise and distortion ratio in dB) from 37 to 111](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-enob-curve)
+
+*ENOB (effective number of bits) against SINAD (signal to noise and distortion ratio in dB) from 37 to 111. Other inputs as in the worked example: n = 14. 31 points computed by electronics-engineering-ai999x; marked: the worked example, SINAD = 74, ENOB = 12.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_adc_enob', SINAD=74.0, n=14)
@@ -3800,7 +4148,7 @@ electronics_engineering_ai999x.solve('elx_adc_enob', SINAD=62.5, n=12)
 
 <a id="elx_aperture_jitter_snr"></a>
 
-### SNR limit from sampling-clock (aperture) jitter — `elx_aperture_jitter_snr`
+### SNR limit from sampling-clock (aperture) jitter, `elx_aperture_jitter_snr`
 
 The SNR limit -20 log10(2 pi f tj) set by rms sampling-clock jitter for a full-scale sine, combined with the quantisation SNR of an n-bit converter into a total SNR and effective bits.
 
@@ -3825,6 +4173,10 @@ $$
 - **Assumes:** full-scale sine; jitter and quantisation noise uncorrelated
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![SNR_jitter_dB (jitter-limited SNR, dB) against f (input frequency) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-aperture-jitter-snr-curve)
+
+*SNR_jitter_dB (jitter-limited SNR, dB) against f (input frequency) from 1.0000e+07 Hz to 1.0000e+09 Hz on a logarithmic axis. One curve for each value of tj (rms clock jitter): 1.0000e-12 s, 5.0000e-13 s, 2.0000e-12 s. Other inputs as in the worked example: n = 14. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, f = 1.0000e+08 Hz, SNR_jitter_dB = 64.0364.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_aperture_jitter_snr', f=100000000.0, tj=1e-12, n=14)
 # -> SNR_jitter_dB = 64.0364, SNR_quant_dB = 86.0493, SNR_total_dB = 64.0092, ENOB_total = 10.3404   (SOLVED)
@@ -3846,7 +4198,7 @@ electronics_engineering_ai999x.solve('elx_aperture_jitter_snr', f=10000000.0, tj
 
 <a id="elx_dac_output"></a>
 
-### DAC output voltage (R-2R or any binary DAC) — `elx_dac_output`
+### DAC output voltage (R-2R or any binary DAC), `elx_dac_output`
 
 The output voltage of an ideal n-bit unipolar DAC for a code, Vout = Vref $D/2^{n}$, its step size and its full-scale output.
 
@@ -3870,6 +4222,10 @@ $$
 - **Assumes:** 0 <= code <= 2^n - 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against code (input code (decimal)) from 1 to 400 on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-output-curve)
+
+*Vout (output voltage) against code (input code (decimal)) from 1 to 400 on a logarithmic axis. One curve for each value of Vref (reference voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: n = 8. 32 points per curve computed by electronics-engineering-ai999x; marked: the worked example, code = 200, Vout = 3.90625 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_dac_output', n=8, code=200, Vref=5.0)
 # -> Vout = 3.90625 V, LSB = 0.0195312 V, V_full_scale = 4.98047 V   (SOLVED)
@@ -3891,7 +4247,7 @@ electronics_engineering_ai999x.solve('elx_dac_output', n=4, code=11, Vref=10.0)
 
 <a id="elx_dac_binary_weighted"></a>
 
-### Binary-weighted resistor DAC — `elx_dac_binary_weighted`
+### Binary-weighted resistor DAC: `elx_dac_binary_weighted`
 
 The output voltage and summing current of a binary-weighted resistor DAC with an inverting op-amp (MSB resistor R, each lower bit doubling it) and the largest resistor needed.
 
@@ -3917,6 +4273,10 @@ $$
 - **Assumes:** ideal switches and op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against R (MSB resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-binary-weighted-curve)
+
+*Vout (output voltage) against R (MSB resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Vref (reference voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: n = 4, code = 10, Rf = 5000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, Vout = -3.125 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_dac_binary_weighted', n=4, code=10, Vref=5.0, R=10000.0, Rf=5000.0)
 # -> Vout = -3.125 V, I_total = 0.000625 A, R_LSB = 80000 ohm   (SOLVED)
@@ -3938,7 +4298,7 @@ electronics_engineering_ai999x.solve('elx_dac_binary_weighted', n=8, code=129, V
 
 <a id="elx_sar_conversion"></a>
 
-### Successive-approximation (SAR) ADC conversion — `elx_sar_conversion`
+### Successive-approximation (SAR) ADC conversion, `elx_sar_conversion`
 
 The bit-by-bit trial voltages, the final code (decimal and binary) and the DAC voltage of an ideal n-bit successive-approximation ADC converting an input.
 
@@ -3964,6 +4324,14 @@ $$
 - **Assumes:** 0 <= Vin < Vref
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![trial DAC voltages, MSB first (V) (trials) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (4 values, first 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sar-conversion-series)
+
+*trial DAC voltages, MSB first (V) (trials) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (4 values, first 2.5, last 3.4375, largest 3.75). Inputs: Vin = 3.2 V, Vref = 5.0 V, n = 4.*
+
+![code (final code) against Vref (reference voltage) from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sar-conversion-curve)
+
+*code (final code) against Vref (reference voltage) from 2.5 V to 7.5 V. One curve for each value of n (resolution in bits): 4, 2, 8. Other inputs as in the worked example: Vin = 3.2 V. 26 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vref = 5 V, code = 10.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_sar_conversion', Vin=3.2, Vref=5.0, n=4)
 # -> code = 10, bits = 1010, trials = [2.5, 3.75, 3.125, 3.4375], V_dac = 3.125 V, cycles = 4   (SOLVED)
@@ -3985,7 +4353,7 @@ electronics_engineering_ai999x.solve('elx_sar_conversion', Vin=1.7, Vref=3.3, n=
 
 <a id="elx_dual_slope_adc"></a>
 
-### Dual-slope integrating ADC — `elx_dual_slope_adc`
+### Dual-slope integrating ADC: `elx_dual_slope_adc`
 
 The fixed integration time, the de-integration time and count, and the peak integrator voltage of a dual-slope ADC.
 
@@ -4013,6 +4381,10 @@ $$
 - **Assumes:** 0 < Vin <= Vref
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![T2 (de-integration time) against fclk (clock frequency) from 50000 Hz to 150000 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dual-slope-adc-curve)
+
+*T2 (de-integration time) against fclk (clock frequency) from 50000 Hz to 150000 Hz. One curve for each value of N1 (fixed count of the integration phase): 1000, 500, 2000. Other inputs as in the worked example: Vin = 0.5 V, Vref = 1.0 V, R = 100000.0 ohm, C = 1e-07 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, fclk = 100000 Hz, T2 = 0.005 s.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_dual_slope_adc', Vin=0.5, Vref=1.0, N1=1000, fclk=100000.0, R=100000.0, C=1e-07)
 # -> T1 = 0.01 s, T2 = 0.005 s, N2 = 500, V_peak = 0.5 V   (SOLVED)
@@ -4034,7 +4406,7 @@ electronics_engineering_ai999x.solve('elx_dual_slope_adc', Vin=1.234, Vref=2.0, 
 
 <a id="elx_sample_hold_droop"></a>
 
-### Sample-and-hold droop — `elx_sample_hold_droop`
+### Sample-and-hold droop: `elx_sample_hold_droop`
 
 The droop rate I/C of a sample-and-hold capacitor discharged by a leakage current, the droop over a hold time (in volts and LSB) and the longest hold that keeps the droop within half an LSB of an n-bit converter.
 
@@ -4061,6 +4433,10 @@ $$
 - **Assumes:** constant leakage current
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![droop (droop over the hold time) against C (hold capacitor) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sample-hold-droop-curve)
+
+*droop (droop over the hold time) against C (hold capacitor) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of I_leak (leakage (bias) current): 1.0000e-09 A, 5.0000e-10 A, 2.0000e-09 A. Other inputs as in the worked example: t_hold = 1e-05 s, Vref = 5.0 V, n = 12. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, droop = 1.0000e-05 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_sample_hold_droop', I_leak=1e-09, C=1e-09, t_hold=1e-05, Vref=5.0, n=12)
 # -> droop_rate = 1 V/s, droop = 1e-05 V, droop_lsb = 0.008192, t_max_half_lsb = 0.000610352 s   (SOLVED)
@@ -4082,7 +4458,7 @@ electronics_engineering_ai999x.solve('elx_sample_hold_droop', I_leak=5e-11, C=1e
 
 <a id="elx_rc_delay_rise_time"></a>
 
-### RC delay, 10-90 % rise time and bandwidth — `elx_rc_delay_rise_time`
+### RC delay, 10-90 % rise time and bandwidth, `elx_rc_delay_rise_time`
 
 The time constant, the 50 % delay (ln 2 RC), the $10-90$ % rise time (ln 9 $RC = 2.2$ RC), the -3 dB bandwidth and the rise-time-bandwidth product (0.35) of a first-order RC low-pass.
 
@@ -4107,6 +4483,14 @@ $$
 - **Assumes:** step input, first-order RC
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![t_rise (10-90 % rise time) against R (resistance) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-delay-rise-time-curve)
+
+*t_rise (10-90 % rise time) against R (resistance) from 500 ohm to 1500 ohm. One curve for each value of C (capacitance): 1.0000e-11 F, 5.0000e-12 F, 2.0000e-11 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 1000 ohm, t_rise = 2.1972e-08 s.*
+
+![t_rise (10-90 % rise time) over R (resistance) from 500 ohm to 1500 ohm and C (capacitance) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-delay-rise-time-field)
+
+*t_rise (10-90 % rise time) over R (resistance) from 500 ohm to 1500 ohm and C (capacitance) from 5.0000e-12 F to 1.5000e-11 F: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 5.4931e-09 s to dark 4.9438e-08 s); iso-lines at t_rise = 1.00e-8, 2.00e-8, 3.00e-8, 4.00e-8 s. Marked: the worked example, R = 1000 ohm, C = 1.0000e-11 F, t_rise = 2.1972e-08 s.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_rc_delay_rise_time', R=1000.0, C=1e-11)
 # -> tau = 1e-08 s, t50 = 6.93147e-09 s, t_rise = 2.19722e-08 s, f_3dB = 1.59155e+07 Hz, tr_times_bw = 0.349699   (SOLVED)
@@ -4128,7 +4512,7 @@ electronics_engineering_ai999x.solve('elx_rc_delay_rise_time', R=50.0, C=1e-10)
 
 <a id="elx_elmore_delay"></a>
 
-### Elmore delay of an RC ladder (interconnect) — `elx_elmore_delay`
+### Elmore delay of an RC ladder (interconnect), `elx_elmore_delay`
 
 The Elmore delay to every node of an RC ladder (a driver resistance and wire segments, each followed by a capacitance to ground), the delay at the far end and its 50 % estimate ln 2 tau.
 
@@ -4151,6 +4535,10 @@ $$
 - **Assumes:** one capacitance per resistor; step input
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Elmore delay at each node, seconds (delays) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (3 values, first 4](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-elmore-delay-series)
+
+*Elmore delay at each node, seconds (delays) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (3 values, first 4.0000e-11, last 6.5000e-11, largest 6.5000e-11). Inputs: R = [100.0, 50.0, 50.0], C = [0.1, 0.1, 0.2].*
+
 ```python
 electronics_engineering_ai999x.solve('elx_elmore_delay', R=[100.0, 50.0, 50.0], C=[0.1, 0.1, 0.2])
 # -> tau_D = 6.5e-11 s, t50 = 4.50546e-11 s, delays = [4e-11, 5.5e-11, 6.5e-11]   (SOLVED)
@@ -4172,7 +4560,7 @@ electronics_engineering_ai999x.solve('elx_elmore_delay', R=[1000.0, 200.0], C=[0
 
 <a id="elx_cmos_dynamic_power"></a>
 
-### CMOS dynamic (switching) power — `elx_cmos_dynamic_power`
+### CMOS dynamic (switching) power: `elx_cmos_dynamic_power`
 
 The dynamic power alpha C VDD^2 f of CMOS logic, the energy drawn from the supply per 0 -> 1 transition, the energy stored on the load and the average supply current.
 
@@ -4198,6 +4586,10 @@ $$
 - **Assumes:** $0  \leq  \alpha  \leq  1$; full-swing switching, short-circuit and leakage power not included
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![P (dynamic power) against VDD (supply voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-dynamic-power-curve)
+
+*P (dynamic power) against VDD (supply voltage) from 0.5 V to 1.5 V. One curve for each value of C (switched capacitance): 1.0000e-09 F, 5.0000e-10 F, 2.0000e-09 F. Other inputs as in the worked example: alpha = 0.1, f = 1000000000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VDD = 1 V, P = 0.1 W.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_cmos_dynamic_power', alpha=0.1, C=1e-09, VDD=1.0, f=1000000000.0)
 # -> P = 0.1 W, E_supply = 1e-09 J, E_stored = 5e-10 J, I_avg = 0.1 A   (SOLVED)
@@ -4219,7 +4611,7 @@ electronics_engineering_ai999x.solve('elx_cmos_dynamic_power', alpha=0.25, C=5e-
 
 <a id="elx_setup_hold_timing"></a>
 
-### Flip-flop setup and hold slack, maximum clock frequency — `elx_setup_hold_timing`
+### Flip-flop setup and hold slack, maximum clock frequency, `elx_setup_hold_timing`
 
 The setup slack, hold slack, maximum clock frequency and a verdict for a register-to-register path from clock-to-Q, logic delays, setup and hold times and clock skew (positive when the capture clock is late).
 
@@ -4249,6 +4641,14 @@ $$
 - **Assumes:** edge-triggered registers, single clock
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![meets timing, setup violation, hold violation or both (verdict) over T (clock period) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-decision)
+
+*meets timing, setup violation, hold violation or both (verdict) over T (clock period) from 5.0000e-10 s to 5.0000e-08 s and tcq (maximum clock-to-Q delay) from 3.0000e-11 s to 3.0000e-09 s (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, meets timing: 349 cells, setup violation: 302 cells. Other inputs as in the worked example: tpd = 3.5e-09 s, tsu = 2e-10 s, tskew = 1e-10 s, tccq = 1e-10 s, tcd = 2e-10 s, th = 1e-10 s. Marked: the worked example, T = 5.0000e-09 s, tcq = 3.0000e-10 s → meets timing.*
+
+![setup_slack (setup slack) against T (clock period) from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-curve)
+
+*setup_slack (setup slack) against T (clock period) from 2.5000e-09 s to 7.5000e-09 s. One curve for each value of tpd (maximum logic delay): 3.5000e-09 s, 1.7500e-09 s, 7.0000e-09 s. Other inputs as in the worked example: tcq = 3e-10 s, tsu = 2e-10 s, tskew = 1e-10 s, tccq = 1e-10 s, tcd = 2e-10 s, th = 1e-10 s. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 5.0000e-09 s, setup_slack = 1.1000e-09 s.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_setup_hold_timing', T=5e-09, tcq=3e-10, tpd=3.5e-09, tsu=2e-10, tskew=1e-10, tccq=1e-10, tcd=2e-10, th=1e-10)
 # -> setup_slack = 1.1e-09 s, hold_slack = 1e-10 s, f_max = 2.5641e+08 Hz, verdict = meets timing   (SOLVED)
@@ -4270,7 +4670,7 @@ electronics_engineering_ai999x.solve('elx_setup_hold_timing', T=2e-09, tcq=2e-10
 
 <a id="elx_metastability_mtbf"></a>
 
-### Synchronizer metastability MTBF — `elx_metastability_mtbf`
+### Synchronizer metastability MTBF: `elx_metastability_mtbf`
 
 The mean time between synchronizer failures MTBF = exp($tr/\tau)/(T_{0}$ fclk fdata) from the resolution time allowed, the flip-flop's time constant and window, and the clock and data rates.
 
@@ -4296,6 +4696,10 @@ $$
 - **Assumes:** $tr/\tau  \leq  700$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![log10_MTBF_s (log10 of MTBF in seconds) against tau (metastability time constant) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-metastability-mtbf-curve)
+
+*log10_MTBF_s (log10 of MTBF in seconds) against tau (metastability time constant) from 5.0000e-12 s to 5.0000e-10 s on a logarithmic axis. One curve for each value of tr (resolution time available): 2.0000e-09 s, 1.0000e-09 s, 4.0000e-09 s. Other inputs as in the worked example: T0 = 1e-10 s, fclk = 500000000.0 Hz, fdata = 10000000.0 Hz. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, tau = 5.0000e-11 s, log10_MTBF_s = 11.6728.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_metastability_mtbf', tr=2e-09, tau=5e-11, T0=1e-10, fclk=500000000.0, fdata=10000000.0)
 # -> MTBF_s = 4.70771e+11 s, MTBF_years = 14917.8, log10_MTBF_s = 11.6728   (SOLVED)
@@ -4317,7 +4721,7 @@ electronics_engineering_ai999x.solve('elx_metastability_mtbf', tr=1e-09, tau=2e-
 
 <a id="elx_linear_regulator_efficiency"></a>
 
-### Linear regulator dissipation and efficiency — `elx_linear_regulator_efficiency`
+### Linear regulator dissipation and efficiency, `elx_linear_regulator_efficiency`
 
 The input and output power, the dissipation in the pass element and the efficiency of a linear (series) regulator including its quiescent current.
 
@@ -4344,6 +4748,10 @@ $$
 - **Assumes:** Vin > Vout
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![P_diss (dissipation in the regulator) against Vin (input voltage) from 6 V to 18 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-linear-regulator-efficiency-curve)
+
+*P_diss (dissipation in the regulator) against Vin (input voltage) from 6 V to 18 V. One curve for each value of Iload (load current): 0.5 A, 0.25 A, 1 A. Other inputs as in the worked example: Vout = 5.0 V, Iq = 0.005 A. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vin = 12 V, P_diss = 3.56 W.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_linear_regulator_efficiency', Vin=12.0, Vout=5.0, Iload=0.5, Iq=0.005)
 # -> P_in = 6.06 W, P_out = 2.5 W, P_diss = 3.56 W, efficiency = 0.412541, efficiency_pct = 41.2541   (SOLVED)
@@ -4365,7 +4773,7 @@ electronics_engineering_ai999x.solve('elx_linear_regulator_efficiency', Vin=5.0,
 
 <a id="elx_adjustable_regulator_output"></a>
 
-### Adjustable three-terminal regulator output voltage — `elx_adjustable_regulator_output`
+### Adjustable three-terminal regulator output voltage, `elx_adjustable_regulator_output`
 
 The output voltage of an adjustable three-terminal regulator (LM317 type: reference between OUT and ADJ, R1 from OUT to ADJ, R2 from ADJ to ground), including the adjust-pin current.
 
@@ -4389,6 +4797,10 @@ $$
 - **Assumes:** regulator in regulation (input high enough)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage) against R1 (resistor from OUT to ADJ) from 24 ohm to 2400 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adjustable-regulator-output-curve)
+
+*Vout (output voltage) against R1 (resistor from OUT to ADJ) from 24 ohm to 2400 ohm on a logarithmic axis. One curve for each value of Vref (internal reference (1.25 V for the LM317 type)): 1.25 V, 0.625 V, 2.5 V. Other inputs as in the worked example: R2 = 720.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 240 ohm, Vout = 5 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_adjustable_regulator_output', R1=240.0, R2=720.0, Vref=1.25)
 # -> Vout = 5 V, I_R1 = 0.00520833 A   (SOLVED)
@@ -4410,7 +4822,7 @@ electronics_engineering_ai999x.solve('elx_adjustable_regulator_output', R1=240.0
 
 <a id="elx_series_pass_regulator"></a>
 
-### Zener-referenced series-pass (emitter-follower) regulator — `elx_series_pass_regulator`
+### Zener-referenced series-pass (emitter-follower) regulator, `elx_series_pass_regulator`
 
 The output voltage, load, base, Zener and resistor currents and the pass-transistor dissipation of a regulator in which a Zener diode biased through Rs sets the base of an emitter-follower pass transistor.
 
@@ -4440,6 +4852,10 @@ $$
 - **Assumes:** Vin > Vz > VBE; the Zener stays in breakdown $(Iz > 0)$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Vout (output voltage Vz - VBE) against Vz (Zener voltage) from 5 V to 15 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-series-pass-regulator-curve)
+
+*Vout (output voltage Vz - VBE) against Vz (Zener voltage) from 5 V to 15 V. One curve for each value of VBE (base-emitter voltage): 0.7 V, 0.35 V, 1.4 V. Other inputs as in the worked example: Vin = 15.0 V, Rs = 1000.0 ohm, RL = 100.0 ohm, beta = 100.0. 27 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vz = 10 V, Vout = 9.3 V.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_series_pass_regulator', Vin=15.0, Vz=10.0, Rs=1000.0, RL=100.0, beta=100.0, VBE=0.7)
 # -> Vout = 9.3 V, I_L = 0.093 A, I_B = 0.000920792 A, I_z = 0.00407921 A, I_Rs = 0.005 A, P_Q = 0.524851 W   (SOLVED)
@@ -4461,7 +4877,7 @@ electronics_engineering_ai999x.solve('elx_series_pass_regulator', Vin=20.0, Vz=1
 
 <a id="elx_heat_sink_temperatures"></a>
 
-### Heat-sink thermal path: junction, case and sink temperatures — `elx_heat_sink_temperatures`
+### Heat-sink thermal path: junction, case and sink temperatures, `elx_heat_sink_temperatures`
 
 The junction, case and heat-sink temperatures of a power device dissipating P through junction-to-case, case-to-sink (interface) and sink-to-ambient thermal resistances.
 
@@ -4489,6 +4905,10 @@ $$
 - **Assumes:** steady state, series thermal path
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Tj (junction temperature) against P (power dissipated) from 7](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-temperatures-curve)
+
+*Tj (junction temperature) against P (power dissipated) from 7.5 W to 22.5 W. One curve for each value of Ta (ambient temperature): 298.15 K, 149.075 K, 596.3 K. Other inputs as in the worked example: theta_jc = 1.5 K/W, theta_cs = 0.5 K/W, theta_sa = 3.0 K/W. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, P = 15 W, Tj = 373.15 K.*
+
 ```python
 electronics_engineering_ai999x.solve('elx_heat_sink_temperatures', P=15.0, Ta=298.15, theta_jc=1.5, theta_cs=0.5, theta_sa=3.0)
 # -> Tj = 373.15 K, Tc = 350.65 K, Ts = 343.15 K, Tj_C = 100, theta_ja = 5 K/W   (SOLVED)
@@ -4511,7 +4931,7 @@ electronics_engineering_ai999x.solve('elx_heat_sink_temperatures', P=40.0, Ta=31
 
 <a id="elx_heat_sink_required"></a>
 
-### Required heat-sink thermal resistance — `elx_heat_sink_required`
+### Required heat-sink thermal resistance: `elx_heat_sink_required`
 
 The largest sink-to-ambient thermal resistance (and total junction-to-ambient resistance) that keeps a device dissipating P below its maximum junction temperature.
 
@@ -4535,6 +4955,10 @@ $$
 - **Method:** theta_sa = (Tj,max - Ta)/P - theta_jc - theta_cs
 - **Assumes:** a positive result (otherwise no heat sink suffices)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![theta_sa_max (largest sink-to-ambient resistance) against P (power dissipated) from 2 W to 200 W on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-required-curve)
+
+*theta_sa_max (largest sink-to-ambient resistance) against P (power dissipated) from 2 W to 200 W on a logarithmic axis. One curve for each value of Tj_max (maximum junction temperature): 423.15 K, 846.3 K. Other inputs as in the worked example: Ta = 313.15 K, theta_jc = 1.0 K/W, theta_cs = 0.5 K/W. 32 points per curve computed by electronics-engineering-ai999x; marked: the worked example, P = 20 W, theta_sa_max = 4 K/W.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_heat_sink_required', P=20.0, Ta=313.15, Tj_max=423.15, theta_jc=1.0, theta_cs=0.5)

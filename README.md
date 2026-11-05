@@ -1,16 +1,16 @@
-# electronics-engineering-ai999x — offline, verified electronics engineering solver with step-by-step answers
+# electronics-engineering-ai999x: offline, verified electronics engineering solver with step-by-step answers
 
 [![tests](https://github.com/AI999X/electronics-engineering-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/electronics-engineering-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/electronics-engineering-ai999x)](https://pypi.org/project/electronics-engineering-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/electronics-engineering-ai999x)
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/electronics-engineering-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/electronics-engineering-ai999x/)** · **[Guides](https://huggingface.co/AI999X/electronics-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/electronics-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.5.0
 
-Field: **Engineering** · Tasks: Question Answering, Sentence Similarity, Feature Extraction
+Field: **Engineering** · Tasks: Question Answering
 
-electronics-engineering-ai999x is an offline, deterministic Python solver that answers electronics engineering questions with verified results from 92 certified capabilities, gives 561 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
+electronics-engineering-ai999x is an offline, deterministic electronics engineering solver written in Rust: a desktop app, a command-line program, a browser module and a Python package. It answers electronics engineering questions with verified results from 92 certified capabilities, gives 561 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
-**electronics-engineering-ai999x** is a compact, deterministic electronics engineering engine for Python. It reads a question in plain English (or a typed call), picks a certified electronics engineering capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
+**electronics-engineering-ai999x** reads a question in plain English (or a typed call), picks a certified electronics engineering capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions, or a refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
 
@@ -20,13 +20,13 @@ electronics-engineering-ai999x is an offline, deterministic Python solver that a
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Electronics Engineering desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-electronics-engineering-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-electronics-engineering-1.4.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
-| **Command line** (`electronics-engineering`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
-| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#try) |
+| **AI999X Electronics Engineering desktop app** 1.5.0 | Windows, Linux. This model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-electronics-engineering-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-electronics-engineering-1.5.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.5.0 | Windows, Linux. Every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz) |
+| **Command line** (`electronics-engineering`) | Windows, Linux. One program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device. Nothing to install | [Compute on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install electronics-engineering-ai999x` |
 
-Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -37,11 +37,11 @@ Download **AI999X Electronics Engineering** for your system (above), unpack it a
 Linux, from a terminal:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-electronics-engineering-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-electronics-engineering-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-electronics-engineering-1.4.0-linux-x86_64.tar.gz
-./ai999x-electronics-engineering-1.4.0-linux-x86_64/ai999x-electronics-engineering
+tar xzf ai999x-electronics-engineering-1.5.0-linux-x86_64.tar.gz
+./ai999x-electronics-engineering-1.5.0-linux-x86_64/ai999x-electronics-engineering
 ```
 
 ### Command line
@@ -49,30 +49,30 @@ tar xzf ai999x-electronics-engineering-1.4.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 electronics-engineering --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 electronics-engineering --version
 ```
 
 Every command below was run as shown; the text under it is what the program printed.
 
-**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+**What a capability needs**: The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
 ```console
 $ electronics-engineering info elx_bjt_voltage_divider_bias
@@ -96,7 +96,7 @@ BJT voltage-divider bias: exact Q-point
   out  VCE      collector-emitter voltage [V]
 ```
 
-**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+**Solve**: Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
 ```console
 $ electronics-engineering solve elx_bjt_voltage_divider_bias "VCC=12 V" "R1=47 kohm" "R2=10 kohm" "RC=2.2 kohm" "RE=470 ohm" beta=150.0 "VBE=0.7 V"
@@ -120,7 +120,7 @@ VCE = 4.886902724 V
   assumes: VTH > VBE; active region: VCE >= 0.2 V
 ```
 
-**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | electronics-engineering batch
+**Many questions at once**: One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | electronics-engineering batch
 
 `cases.jsonl`:
 
@@ -178,6 +178,8 @@ print(a.values or (a.value, a.unit))
 
 Browser: [open this capability on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#cap-elx_butterworth_section_q) and press **Compute in your browser**.
 
+_What this means:_ This calculation determines the quality factors for each second-order section in a cascaded Butterworth filter of order 4. The resulting values, listed as [0.541196, 1.30656], indicate how sharply each stage peaks near the cutoff frequency. A higher Q implies greater sensitivity to component tolerances and potential instability. The number of stages is given by 2, while 0 signals whether an additional single-pole stage is necessary to complete the design when the filter order is odd.
+
 ### Butterworth or Chebyshev low-pass filter order
 
 The minimum order of a Butterworth or Chebyshev type I low-pass filter meeting a passband edge with at most Ap dB attenuation and a stopband edge with at least As dB.
@@ -206,6 +208,8 @@ print(a.values or (a.value, a.unit))
 ```
 
 Browser: [open this capability on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#cap-elx_filter_order) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the minimum order required for a low-pass filter to meet specific attenuation constraints. Using the passband edge of 1000 Hz and stopband edge of 2500 Hz, along with maximum passband ripple of 1 and minimum stopband attenuation of 40, the result indicates that a filter of order 6 is necessary to satisfy these specifications.
 
 ### Chebyshev type I filter: section Q and frequencies
 
@@ -236,6 +240,8 @@ print(a.values or (a.value, a.unit))
 
 Browser: [open this capability on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#cap-elx_chebyshev_sections) and press **Compute in your browser**.
 
+_What this means:_ This calculation determines the internal characteristics of a Chebyshev Type I low-pass filter based on its order 4 and passband ripple 0.5. It computes the quality factors for each second-order section, yielding values in [0.70511, 2.94055], along with their natural frequency ratios [0.597002, 1.03127]. The result indicates that there are 2 such sections. If the order is odd, a real pole exists at ratio 0; otherwise, this value is zero. These parameters describe how the filter distributes gain and phase response across its stages.
+
 ### Equal-component Sallen-Key low-pass design
 
 The resistor value and amplifier gain of an equal-component (R1 = R2 = R, C1 = C2 = C) Sallen-Key low-pass filter for a cutoff frequency and Q, with the non-inverting gain ratio Rf/Rg = K - 1.
@@ -265,20 +271,22 @@ print(a.values or (a.value, a.unit))
 
 Browser: [open this capability on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#cap-elx_sallen_key_equal_component_design) and press **Compute in your browser**.
 
+_What this means:_ This calculation determines the component values for an equal-component Sallen-Key low-pass filter. Given a cutoff frequency of 1000 Hz, a quality factor of 0.7071, and a chosen capacitor value of 10 nF, the required resistance is computed as 15915.5 ohm. The necessary non-inverting amplifier gain is found to be 1.58577, which dictates that the feedback resistor should be 0.585773 times the ground resistor to achieve the desired response.
+
 ## Documentation
 
-- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_rust_guide.md)
-- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_capabilities.md)
-- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
-- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/electronics-engineering-ai999x/
+- **Rust user guide**: the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_rust_guide.md)
+- **Python guide**: every capability with a Python example: [PDF](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_capabilities.md)
+- **Desktop app & command line**: downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page**: compute in your browser, every capability explained: https://www.ai999x.com/models/electronics-engineering-ai999x/
 
 ## Highlights
 
 - **Verified, not generated.** Every answer is computed by a certified electronics engineering capability and checked (substituted back, dimension-checked or compared with an independent computation) before it is returned.
-- **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 561 documented answers is reproduced exactly on every tested platform.
+- **Zero wrong answers by design.** Seven explicit outcomes (SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR), never a silent guess. Every one of its 561 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
-- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `electronics-engineering` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `electronics-engineering` command line for Windows and Linux, and WebAssembly on the model page, no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** semiconductors, diode and transistor circuits, amplifiers, active filters, oscillators, data converters, timing and power supplies.
 
@@ -286,7 +294,7 @@ Browser: [open this capability on the model page](https://www.ai999x.com/models/
 
 | Property | Value |
 |---|---|
-| Package | `electronics-engineering-ai999x` 1.1.0 (import `electronics_engineering_ai999x`) |
+| Package | `electronics-engineering-ai999x` 1.5.0 (import `electronics_engineering_ai999x`) |
 | Type | Deterministic neuro-symbolic electronics engineering engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 92 certified procedures |
 | Knowledge pack | version 1.0.0 |
@@ -320,14 +328,14 @@ electronics_engineering.ask("Who created you?").message
 # -> electronics-engineering-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `electronics-engineering-ai999x "<question>"`; for the native program use `electronics-engineering` (above). The outputs above were produced by running this exact code on electronics-engineering-ai999x 1.1.0.
+The Python package also installs a Python command, `electronics-engineering-ai999x "<question>"`; for the native program use `electronics-engineering` (above). The outputs above were produced by running this exact code on electronics-engineering-ai999x 1.5.0.
 
 ## How every answer is verified
 
-1. **Reading** — the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
-2. **Planning** — only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
-3. **Computing** — exact symbolic or high-precision numeric evaluation.
-4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
+1. **Reading**: the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
+2. **Planning**: only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
+3. **Computing**: exact symbolic or high-precision numeric evaluation.
+4. **Checking**: dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
@@ -413,25 +421,25 @@ Every point was computed by `electronics-engineering-ai999x`.
 
 **Sallen-Key low-pass filter: f0, Q and gain**
 
-![Sallen-Key low-pass filter: f0, Q and gain — computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-sallen-key-lowpass-q-vs-r1.svg)
+![Sallen-Key low-pass filter: f0, Q and gain, computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-sallen-key-lowpass-q-vs-r1.svg)
 
 _Q (quality factor) against R1 (first series resistor), with C1 = 2.00e-8 F, C2 = 1.00e-8 F, K = 1, R2 = 10000 ohm. 31 points computed by electronics-engineering-ai999x; marked: R1 = 10000, Q = 0.707107._
 
 **ADC output code, LSB and quantisation error**
 
-![ADC output code, LSB and quantisation error — computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-adc-code-code-vs-vin.svg)
+![ADC output code, LSB and quantisation error, computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-adc-code-code-vs-vin.svg)
 
 _code (output code (decimal)) against Vin (analog input), with Vref = 5 V, n = 8. 31 points computed by electronics-engineering-ai999x; marked: Vin = 3.2, code = 163._
 
 **Operating point of a diode in series with a resistor (exact)**
 
-![Operating point of a diode in series with a resistor (exact) — computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-diode-operating-point-id-vs-vs.svg)
+![Operating point of a diode in series with a resistor (exact), computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-diode-operating-point-id-vs-vs.svg)
 
 _ID (diode current) against VS (source voltage), with Is = 1.00e-14 A, R = 1000 ohm, T = 300 K, n = 1. 31 points computed by electronics-engineering-ai999x; marked: VS = 5, ID = 0.00430746 A._
 
 **555 timer astable: frequency and duty cycle**
 
-![555 timer astable: frequency and duty cycle — computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-555-astable-f-vs-ra.svg)
+![555 timer astable: frequency and duty cycle, computed by electronics-engineering-ai999x](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-555-astable-f-vs-ra.svg)
 
 _f (frequency) against RA (resistor from Vcc to the discharge pin), with C = 1.00e-5 F, RB = 10000 ohm. 31 points computed by electronics-engineering-ai999x; marked: RA = 1000, f = 6.86998 Hz._
 
@@ -446,22 +454,22 @@ _f (frequency) against RA (resistor from Vcc to the discharge pin), with C = 1.0
 ## Out of scope
 
 - Open-ended explanation, essay writing or tutoring dialogue: it is a solver, not a chatbot.
-- Questions outside its certified electronics engineering capabilities, and any question whose stated numbers it cannot all use — it refuses with the reason instead.
+- Questions outside its certified electronics engineering capabilities, and any question whose stated numbers it cannot all use: it refuses with the reason instead.
 - High-stakes engineering, medical or legal decisions without independent review.
 
 ## Limitations
 
 - It answers what its certified capabilities cover (semiconductors, diode and transistor circuits, amplifiers, active filters, oscillators, data converters, timing and power supplies); anything else is refused with a reason.
-- `ask()` reads documented question forms and common phrasings; unusual wording may be refused — use `solve()` for guaranteed results.
+- `ask()` reads documented question forms and common phrasings; unusual wording may be refused; use `solve()` for guaranteed results.
 - Results are as correct as the certified relations and their stated conditions; a certified relation is a checked model, not a claim about every physical situation.
 
 ## Citation
 
 ```bibtex
-@software{electronics_engineering_ai999x_1_1_0,
+@software{electronics_engineering_ai999x_1_5_0,
   title  = {electronics-engineering-ai999x: an offline, verified electronics engineering solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.1.0},
+  year   = {2026}, version = {1.5.0},
   url    = {https://huggingface.co/AI999X/electronics-engineering-ai999x}
 }
 ```
@@ -478,4 +486,15 @@ Created and engineered by **Ibnul Jaif Farabi** · **[AI999X](https://huggingfac
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/electronics-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v<version>`; the wheel is attached to each [GitHub release](https://github.com/AI999X/electronics-engineering-ai999x/releases). The optional ONNX models (formula graphs and, where measured, a decision model) are on [Hugging Face](https://huggingface.co/AI999X/electronics-engineering-ai999x/tree/main/onnx).
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/electronics-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v1.5.0`; the [GitHub release](https://github.com/AI999X/electronics-engineering-ai999x/releases/tag/v1.5.0) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+
+## Build the program from source
+
+`rust/` holds the Rust source of the `electronics-engineering` command-line program and browser module: the AI999X engine (`rust/ax-engine`), this model (`rust/electronics-engineering`) and its data (`rust/models/electronics_engineering/pack.json`). With Rust 1.80 or later:
+
+```bash
+cd rust
+cargo build --release -p electronics-engineering-ai999x
+./target/release/electronics-engineering --help
+cargo test -p electronics-engineering-ai999x
+```
