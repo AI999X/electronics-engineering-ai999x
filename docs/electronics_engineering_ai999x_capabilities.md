@@ -281,7 +281,7 @@ $$
 
 ![ni (intrinsic carrier concentration) against T (absolute temperature) from 270 K to 330 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-intrinsic-carrier-concentration-curve)
 
-*ni (intrinsic carrier concentration) against T (absolute temperature) from 270 K to 330 K. One curve for each value of Eg (band gap energy): 1.7944e-19 J, 8.9722e-20 J, 3.5889e-19 J. Other inputs as in the worked example: Nc = 2.8e+25 1/m^3, Nv = 1.04e+25 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, ni = 6.6759e+15 1/m^3.*
+*ni (intrinsic carrier concentration) against T (absolute temperature) from 270 K to 330 K. One curve for each value of Eg (band gap energy): 1.7944e-19 J, 8.9722e-20 J, 3.5889e-19 J. Other inputs as in the worked example: Nc = 2.7999999999999997e+25 1/m^3, Nv = 1.04e+25 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, ni = 6.6759e+15 1/m^3.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_intrinsic_carrier_concentration', Nc=2.8e+25, Nv=1.04e+25, Eg=1.7944378300800001e-19, T=300.0)
@@ -331,7 +331,7 @@ $$
 
 ![sigma (conductivity) against n (electron concentration) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-semiconductor-conductivity-curve)
 
-*sigma (conductivity) against n (electron concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. One curve for each value of mu_n (electron mobility): 0.135 m^2/(V*s), 0.0675 m^2/(V*s), 0.27 m^2/(V*s). Other inputs as in the worked example: p = 22500000000.0 1/m^3, mu_p = 0.048 m^2/(V*s). 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1.0000e+22 1/m^3, sigma = 216.294 1/(ohm*m).*
+*sigma (conductivity) against n (electron concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. One curve for each value of mu_n (electron mobility): 0.135 m^2/(V*s), 0.0675 m^2/(V*s), 0.27 m^2/(V*s). Other inputs as in the worked example: p = 22499999999.999996 1/m^3, mu_p = 0.048 m^2/(V*s). 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1.0000e+22 1/m^3, sigma = 216.294 1/(ohm*m).*
 
 ```python
 electronics_engineering_ai999x.solve('elx_semiconductor_conductivity', n=1e+22, p=22500000000.0, mu_n=0.135, mu_p=0.048)
@@ -484,7 +484,7 @@ $$
 
 ![n (electron concentration) against ND (donor concentration) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-doped-carrier-concentrations-curve)
 
-*n (electron concentration) against ND (donor concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. Outputs with the same unit drawn together: p (hole concentration). Other inputs as in the worked example: NA = 0.0 1/m^3, ni = 1.5e+16 1/m^3. 31 points computed by electronics-engineering-ai999x; marked: the worked example, ND = 1.0000e+22 1/m^3, n = 1.0000e+22 1/m^3.*
+*n (electron concentration) against ND (donor concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. Outputs with the same unit drawn together: p (hole concentration). Other inputs as in the worked example: NA = 0.0 1/m^3, ni = 1.4999999999999998e+16 1/m^3. 31 points computed by electronics-engineering-ai999x; marked: the worked example, ND = 1.0000e+22 1/m^3, n = 1.0000e+22 1/m^3.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_doped_carrier_concentrations', ND=1e+22, NA=0.0, ni=1.5e+16)
@@ -532,7 +532,7 @@ $$
 
 ![Vbi (built-in potential) against T (absolute temperature) from 150 K to 450 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-builtin-potential-curve)
 
-*Vbi (built-in potential) against T (absolute temperature) from 150 K to 450 K. One curve for each value of ni (intrinsic carrier concentration): 1.5000e+16 1/m^3, 7.5000e+15 1/m^3, 3.0000e+16 1/m^3. Other inputs as in the worked example: NA = 1e+23 1/m^3, ND = 1e+22 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, Vbi = 0.752879 V.*
+*Vbi (built-in potential) against T (absolute temperature) from 150 K to 450 K. One curve for each value of ni (intrinsic carrier concentration): 1.5000e+16 1/m^3, 7.5000e+15 1/m^3, 3.0000e+16 1/m^3. Other inputs as in the worked example: NA = 1e+23 1/m^3, ND = 9.999999999999998e+21 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, Vbi = 0.752879 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_builtin_potential', NA=1e+23, ND=1e+22, ni=1.5e+16, T=300.0)
@@ -1708,7 +1708,7 @@ $$
 
 ![f_L (estimated lower cutoff) against CE (emitter bypass capacitor) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-low-frequency-cutoff-curve)
 
-*f_L (estimated lower cutoff) against CE (emitter bypass capacitor) from 1.0000e-05 F to 0.001 F on a logarithmic axis. One curve for each value of beta (current gain): 100, 50, 200. Other inputs as in the worked example: Rsig = 1000.0 ohm, RB = 20000.0 ohm, r_pi = 2500.0 ohm, RE = 1000.0 ohm, RC = 5000.0 ohm, RL = 10000.0 ohm, C1 = 1e-05 F, C2 = 1e-05 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, CE = 0.0001 F, f_L = 54.1529 Hz.*
+*f_L (estimated lower cutoff) against CE (emitter bypass capacitor) from 1.0000e-05 F to 0.001 F on a logarithmic axis. One curve for each value of beta (current gain): 100, 50, 200. Other inputs as in the worked example: Rsig = 1000.0 ohm, RB = 20000.0 ohm, r_pi = 2500.0 ohm, RE = 1000.0 ohm, RC = 5000.0 ohm, RL = 10000.0 ohm, C1 = 9.999999999999999e-06 F, C2 = 9.999999999999999e-06 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, CE = 1.0000e-04 F, f_L = 54.1529 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_low_frequency_cutoff', Rsig=1000.0, RB=20000.0, r_pi=2500.0, beta=100.0, RE=1000.0, RC=5000.0, RL=10000.0, C1=1e-05, C2=1e-05, CE=0.0001)
@@ -2898,7 +2898,7 @@ $$
 
 ![Vout_total (total output error) against R1 (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-dc-offset-curve)
 
-*Vout_total (total output error) against R1 (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Rf (feedback resistor): 100000 ohm, 50000 ohm, 200000 ohm. Other inputs as in the worked example: Vos = 0.002 V, IB = 1e-07 A, Ios = 1e-08 A, Rp = 0.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Vout_total = 0.0325 V.*
+*Vout_total (total output error) against R1 (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Rf (feedback resistor): 100000 ohm, 50000 ohm, 200000 ohm. Other inputs as in the worked example: Vos = 0.002 V, IB = 1.0000000000000001e-07 A, Ios = 1e-08 A, Rp = 0.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Vout_total = 0.0325 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_dc_offset', Vos=0.002, IB=1e-07, Ios=1e-08, Rf=100000.0, R1=10000.0, Rp=0.0)
@@ -3260,7 +3260,7 @@ $$
 
 ![Q (quality factor) against R3 (resistor from the middle node to the inverting input) from 500 ohm to 50000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-lowpass-curve)
 
-*Q (quality factor) against R3 (resistor from the middle node to the inverting input) from 500 ohm to 50000 ohm on a logarithmic axis. One curve for each value of C1 (capacitor from the middle node to ground): 4.7000e-08 F, 2.3500e-08 F, 9.4000e-08 F. Other inputs as in the worked example: R1 = 10000.0 ohm, R2 = 10000.0 ohm, C2 = 4.7e-09 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R3 = 5000 ohm, Q = 1.11803.*
+*Q (quality factor) against R3 (resistor from the middle node to the inverting input) from 500 ohm to 50000 ohm on a logarithmic axis. One curve for each value of C1 (capacitor from the middle node to ground): 4.7000e-08 F, 2.3500e-08 F, 9.4000e-08 F. Other inputs as in the worked example: R1 = 10000.0 ohm, R2 = 10000.0 ohm, C2 = 4.700000000000001e-09 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R3 = 5000 ohm, Q = 1.11803.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_mfb_lowpass', R1=10000.0, R2=10000.0, R3=5000.0, C1=4.7e-08, C2=4.7e-09)
@@ -3668,7 +3668,7 @@ $$
 
 ![f0 (oscillation frequency) against C1 (capacitor across the amplifier output) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-colpitts-oscillator-curve)
 
-*f0 (oscillation frequency) against C1 (capacitor across the amplifier output) from 1.0000e-10 F to 1.0000e-08 F on a logarithmic axis. One curve for each value of L (tank inductance): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C1 = 1.0000e-09 F, f0 = 527857 Hz.*
+*f0 (oscillation frequency) against C1 (capacitor across the amplifier output) from 1.0000e-10 F to 1.0000e-08 F on a logarithmic axis. One curve for each value of L (tank inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C1 = 1.0000e-09 F, f0 = 527857 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_colpitts_oscillator', L=0.0001, C1=1e-09, C2=1e-08)
@@ -3718,7 +3718,7 @@ $$
 
 ![f0 (oscillation frequency) against C (tank capacitance) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-hartley-oscillator-curve)
 
-*f0 (oscillation frequency) against C (tank capacitance) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of L1 (inductance of the output-side coil): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: L2 = 2e-05 H, M = 0.0 H. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, f0 = 459441 Hz.*
+*f0 (oscillation frequency) against C (tank capacitance) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of L1 (inductance of the output-side coil): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: L2 = 1.9999999999999998e-05 H, M = 0.0 H. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, f0 = 459441 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_hartley_oscillator', L1=0.0001, L2=2e-05, M=0.0, C=1e-09)
@@ -3819,7 +3819,7 @@ $$
 
 ![f (frequency) against R1 (resistor from the + input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-relaxation-oscillator-curve)
 
-*f (frequency) against R1 (resistor from the + input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of R (timing resistor (output to inverting input)): 10000 ohm, 5000 ohm, 20000 ohm. Other inputs as in the worked example: C = 1e-07 F, R2 = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, f = 455.12 Hz.*
+*f (frequency) against R1 (resistor from the + input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of R (timing resistor (output to inverting input)): 10000 ohm, 5000 ohm, 20000 ohm. Other inputs as in the worked example: C = 1.0000000000000001e-07 F, R2 = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, f = 455.12 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_relaxation_oscillator', R=10000.0, C=1e-07, R1=10000.0, R2=10000.0)
@@ -4435,7 +4435,7 @@ $$
 
 ![droop (droop over the hold time) against C (hold capacitor) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sample-hold-droop-curve)
 
-*droop (droop over the hold time) against C (hold capacitor) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of I_leak (leakage (bias) current): 1.0000e-09 A, 5.0000e-10 A, 2.0000e-09 A. Other inputs as in the worked example: t_hold = 1e-05 s, Vref = 5.0 V, n = 12. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, droop = 1.0000e-05 V.*
+*droop (droop over the hold time) against C (hold capacitor) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of I_leak (leakage (bias) current): 1.0000e-09 A, 5.0000e-10 A, 2.0000e-09 A. Other inputs as in the worked example: t_hold = 9.999999999999999e-06 s, Vref = 5.0 V, n = 12. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, droop = 1.0000e-05 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_sample_hold_droop', I_leak=1e-09, C=1e-09, t_hold=1e-05, Vref=5.0, n=12)
@@ -4643,11 +4643,11 @@ $$
 
 ![meets timing, setup violation, hold violation or both (verdict) over T (clock period) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-decision)
 
-*meets timing, setup violation, hold violation or both (verdict) over T (clock period) from 5.0000e-10 s to 5.0000e-08 s and tcq (maximum clock-to-Q delay) from 3.0000e-11 s to 3.0000e-09 s (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, meets timing: 349 cells, setup violation: 302 cells. Other inputs as in the worked example: tpd = 3.5e-09 s, tsu = 2e-10 s, tskew = 1e-10 s, tccq = 1e-10 s, tcd = 2e-10 s, th = 1e-10 s. Marked: the worked example, T = 5.0000e-09 s, tcq = 3.0000e-10 s → meets timing.*
+*meets timing, setup violation, hold violation or both (verdict) over T (clock period) from 5.0000e-10 s to 5.0000e-08 s and tcq (maximum clock-to-Q delay) from 3.0000e-11 s to 3.0000e-09 s (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, meets timing: 349 cells, setup violation: 302 cells. Other inputs as in the worked example: tpd = 3.5000000000000003e-09 s, tsu = 2.0000000000000003e-10 s, tskew = 1.0000000000000002e-10 s, tccq = 1.0000000000000002e-10 s, tcd = 2.0000000000000003e-10 s, th = 1.0000000000000002e-10 s. Marked: the worked example, T = 5.0000e-09 s, tcq = 3.0000e-10 s → meets timing.*
 
 ![setup_slack (setup slack) against T (clock period) from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-curve)
 
-*setup_slack (setup slack) against T (clock period) from 2.5000e-09 s to 7.5000e-09 s. One curve for each value of tpd (maximum logic delay): 3.5000e-09 s, 1.7500e-09 s, 7.0000e-09 s. Other inputs as in the worked example: tcq = 3e-10 s, tsu = 2e-10 s, tskew = 1e-10 s, tccq = 1e-10 s, tcd = 2e-10 s, th = 1e-10 s. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 5.0000e-09 s, setup_slack = 1.1000e-09 s.*
+*setup_slack (setup slack) against T (clock period) from 2.5000e-09 s to 7.5000e-09 s. One curve for each value of tpd (maximum logic delay): 3.5000e-09 s, 1.7500e-09 s, 7.0000e-09 s. Other inputs as in the worked example: tcq = 3e-10 s, tsu = 2.0000000000000003e-10 s, tskew = 1.0000000000000002e-10 s, tccq = 1.0000000000000002e-10 s, tcd = 2.0000000000000003e-10 s, th = 1.0000000000000002e-10 s. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 5.0000e-09 s, setup_slack = 1.1000e-09 s.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_setup_hold_timing', T=5e-09, tcq=3e-10, tpd=3.5e-09, tsu=2e-10, tskew=1e-10, tccq=1e-10, tcd=2e-10, th=1e-10)
