@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "electronics-engineering-ai999x"
-version = "1.5.0"
+version = "1.6.0"
 description = "Offline electronics engineering solver: semiconductors and pn junctions, diode circuits and rectifiers, BJT and MOSFET biasing and amplifiers, op-amp circuits, active filters, oscillators and 555 timers, ADCs and DACs, digital timing and power supplies, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
