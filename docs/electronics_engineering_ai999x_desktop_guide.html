@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Electronics Engineering: desktop app user guide</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+@page{size:A4;margin:16mm 15mm}
+body{font-family:"Segoe UI",Arial,sans-serif;font-size:10.5pt;line-height:1.45;color:#1b1f24;max-width:880px;margin:auto}
+h1{font-size:22pt;border-bottom:2px solid #2b5c8a;padding-bottom:4px;margin-top:28px;page-break-before:always}
+h1:first-of-type{page-break-before:avoid}
+h2{font-size:15pt;color:#2b5c8a;margin-top:22px;page-break-after:avoid}
+h3{font-size:12pt;margin-top:16px;page-break-after:avoid}
+pre{background:#f4f6f8;border:1px solid #dde3e8;border-radius:4px;padding:8px 10px;font-size:8.8pt;white-space:pre-wrap;page-break-inside:avoid}
+code{font-family:Consolas,monospace;font-size:9pt;background:#f4f6f8;padding:0 2px}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;margin:8px 0;font-size:9pt;width:100%;page-break-inside:auto}
+th,td{border:1px solid #cfd6dd;padding:3px 6px;vertical-align:top;text-align:left}
+th{background:#eaf0f5}
+.math{margin:6px 0;overflow-x:auto}
+.badge{display:inline-block;color:#fff;border-radius:3px;padding:0 5px;font-size:8.5pt;white-space:nowrap}
+figure{margin:10px 0;text-align:center;page-break-inside:avoid}figure img{max-width:88%}.svgfig svg{max-width:88%;height:auto}
+figcaption{font-size:9pt;color:#555}
+.pb{page-break-after:always}
+</style></head><body>
+<h1>Electronics Engineering: the desktop app, user guide</h1>
+<p><strong>Electronics Engineering</strong>, desktop app 1.6.5 for Windows and Linux. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p>Electronics Engineering covers semiconductors and pn junctions, diode circuits and rectifiers, BJT and MOSFET biasing and amplifiers, op-amp circuits, active filters, oscillators and 555 timers, ADCs and DACs, digital timing and power supplies. Its desktop app holds all 92 calculations in 11 topics: pick one, change its inputs and the answer, a live scene and charts follow at once. It runs on your own computer with no network connection and nothing else to install. The pictures in this guide were taken in this app.</p>
+<h2>Contents</h2>
+<ul><li>1. Get it and start it</li><li>2. The window</li><li>3. Compute a calculation</li><li>4. Ask in words</li><li>5. The live scene and the charts</li><li>6. Light and dark</li><li>7. Every calculation</li><li>8. Other ways to use it</li></ul>
+<h2>1. Get it and start it</h2>
+<table><thead><tr><th>system</th><th>download</th></tr></thead><tbody><tr><td>Windows x86-64</td><td>https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-electronics-engineering-1.6.5-windows-x86_64.zip</td></tr><tr><td>Linux x86-64</td><td>https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-electronics-engineering-1.6.5-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Windows: Download ai999x-electronics-engineering-1.6.5-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-electronics-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway.</p>
+<p>Linux:</p>
+<pre><code class="shell">curl -LO https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-electronics-engineering-1.6.5-linux-x86_64.tar.gz
+curl -LO https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-electronics-engineering-1.6.5-linux-x86_64.tar.gz
+./ai999x-electronics-engineering-1.6.5-linux-x86_64/ai999x-electronics-engineering</code></pre>
+<p>Checksums of every download: https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/SHA256SUMS. Install steps for every app: https://www.ai999x.com/desktop-cli/</p>
+<h2>2. The window</h2>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/hero.webp"><figcaption>The Electronics Engineering app, opened on BJT voltage-divider bias: exact Q-point with its worked example.</figcaption></figure>
+<p>On the left, a search box and the topics with their calculations. In the middle, the chosen calculation: its answer at the top, then the live scene (or its charts), what the answer means and the formula. On the right, its inputs, each with a slider where that makes sense, and the Compute and Reset buttons. At the bottom, a box for a question in words.</p>
+<h2>3. Compute a calculation</h2>
+<p>Open BJT › BJT voltage-divider bias: exact Q-point (or type part of its name in the search box). It opens with a worked example filled in: “BJT voltage-divider bias: VCC = 12 V, R1 = 47000 ohm, R2 = 10000 ohm, RC = 2200 ohm, RE = 470 ohm, beta = 150, VBE = 0.7 V” The answer: VTH = 2.105263158 V, RTH = 8245.614035 ohm, IB = 1.773972436e-05 A, IC = 0.002660958654 A.</p>
+<p>Change any input (type a number with its unit, or drag its slider) and the answer, the scene and the charts follow; Compute recomputes after typing, Reset brings back the worked example. An input outside the range the formula holds for is refused with the reason, never answered with a guessed number.</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-1.webp"><figcaption>BJT voltage-divider bias: exact Q-point: the live scene of the worked example.</figcaption></figure>
+<h2>4. Ask in words</h2>
+<p>Type a question as you would say it: the app reads the quantities and their units, picks the calculation and fills in its form.</p>
+<p>When a question names a quantity the app cannot place, it says what is missing instead of guessing.</p>
+<h2>5. The live scene and the charts</h2>
+<p>Every calculation draws a scene from its answer: it moves as an input changes. The Charts button shows charts that vary one input around your values; Enlarge opens one in a large view. Scenes from other topics:</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-2.webp"><figcaption>Sallen-Key low-pass filter: f0, Q and gain</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-3.webp"><figcaption>555 timer astable: frequency and duty cycle</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-4.webp"><figcaption>Operating point of a diode in series with a resistor (exact)</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-5.webp"><figcaption>CMOS gate propagation delay (switch-resistor model)</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-6.webp"><figcaption>ADC output code, LSB and quantisation error</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-7.webp"><figcaption>Common-source amplifier with source degeneration and ro</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/scene-8.webp"><figcaption>Closed-loop bandwidth from the gain-bandwidth product</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/chart-1.webp"><figcaption>BJT voltage-divider bias: exact Q-point: a chart, enlarged.</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/chart-2.webp"><figcaption>Sallen-Key low-pass filter: f0, Q and gain: a chart, enlarged.</figcaption></figure>
+<h2>6. Light and dark</h2>
+<p>The app follows a light or a dark theme (the switch is in its top bar).</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=electronics-engineering-ai999x/hero-dark.webp"><figcaption>The Electronics Engineering app in the dark theme.</figcaption></figure>
+<h2>7. Every calculation</h2>
+<p>92 calculations in 11 topics; each has its own entry on the model&#x27;s page (https://www.ai999x.com/models/electronics-engineering-ai999x/) with its formula, worked example and charts.</p>
+<table><thead><tr><th>topic</th><th>calculations</th></tr></thead><tbody><tr><td>Active filters</td><td>Butterworth filter: Q of each second-order section, Butterworth or Chebyshev low-pass filter order, Chebyshev type I filter: section Q and frequencies, Equal-component Sallen-Key low-pass design, First-order active low-pass filter (inverting), Multiple-feedback (MFB) band-pass filter, Multiple-feedback (MFB) low-pass filter, Sallen-Key high-pass filter: f0, Q and gain, Sallen-Key low-pass filter: f0, Q and gain</td></tr><tr><td>BJT</td><td>BJT beta cutoff and transition frequency fT, BJT cascode: output resistance, transconductance and gain, BJT collector-feedback bias: Q-point, BJT current mirror with finite beta, BJT differential pair: differential and common-mode gain, CMRR, BJT dual-supply emitter bias: Q-point, BJT fixed (base-resistor) bias: Q-point, BJT small-signal (hybrid-pi) parameters, BJT terminal currents from beta, BJT voltage-divider bias: exact Q-point, Common-base amplifier, Common-collector (emitter-follower) amplifier, Common-emitter amplifier: gain, input and output resistance, Common-emitter high-frequency cutoff: Miller effect and open-circuit time constants, Common-emitter low-frequency cutoff by short-circuit time constants, Wilson current mirror output current</td></tr><tr><td>CMOS</td><td>CMOS gate propagation delay (switch-resistor model), CMOS inverter switching threshold VM</td></tr><tr><td>Data converters</td><td>ADC output code, LSB and quantisation error, ADC quantisation SNR with oversampling, Binary-weighted resistor DAC, DAC output voltage (R-2R or any binary DAC), Dual-slope integrating ADC, Effective number of bits (ENOB) from SINAD, Sample-and-hold droop, SNR limit from sampling-clock (aperture) jitter, Successive-approximation (SAR) ADC conversion</td></tr><tr><td>Diodes</td><td>Capacitor-input filter: ripple voltage and DC output, Diode current from the Shockley equation, Diode voltage for a given current, LED series (current-limiting) resistor, Operating point of a diode in series with a resistor (exact), Rectifier output: average, RMS, ripple factor and PIV, Zener regulator design: series resistor and Zener rating, Zener shunt regulator: load voltage and currents</td></tr><tr><td>MOSFET</td><td>Common-source amplifier with source degeneration and ro, MOSFET drain current (cutoff, triode, saturation), MOSFET small-signal gm, ro and intrinsic gain, MOSFET threshold voltage with body effect, MOSFET voltage-divider bias with source resistor: Q-point, Source follower (common drain)</td></tr><tr><td>Op-amps</td><td>Closed-loop bandwidth from the gain-bandwidth product, Inverting amplifier with finite open-loop gain, Inverting op-amp amplifier, Inverting Schmitt trigger thresholds, Inverting summing amplifier, Negative feedback: closed-loop gain and bandwidth extension, Non-inverting op-amp amplifier, Op-amp difference amplifier (with resistor mismatch), Op-amp differentiator: gain and output amplitude, Op-amp integrator: output ramp and unity-gain frequency, Op-amp output offset from input offset voltage and bias currents, Phase margin of a two-pole amplifier with feedback, Slew-rate limit: full-power bandwidth, Three-op-amp instrumentation amplifier</td></tr><tr><td>Oscillators</td><td>555 timer astable: frequency and duty cycle, 555 timer monostable pulse width, Colpitts oscillator frequency and feedback ratio, Hartley oscillator frequency, Op-amp relaxation (astable) oscillator, Quartz crystal: series and parallel resonance, Q, RC phase-shift oscillator frequency and gain, Type-2 PLL with active PI loop filter: natural frequency and damping, Wien-bridge oscillator frequency and required gain</td></tr><tr><td>Power supplies</td><td>Adjustable three-terminal regulator output voltage, Heat-sink thermal path: junction, case and sink temperatures, Linear regulator dissipation and efficiency, Required heat-sink thermal resistance, Zener-referenced series-pass (emitter-follower) regulator</td></tr><tr><td>Semiconductors</td><td>Built-in potential of a pn junction, Conductivity and resistivity of a semiconductor, Depletion width, field and capacitance of an abrupt pn junction, Drift velocity and drift current in a semiconductor bar, Einstein relation and diffusion length, Electron and hole concentrations of doped (compensated) material, Intrinsic carrier concentration, Junction (depletion) capacitance versus bias, Thermal voltage kT/q</td></tr><tr><td>Timing</td><td>CMOS dynamic (switching) power, Elmore delay of an RC ladder (interconnect), Flip-flop setup and hold slack, maximum clock frequency, RC delay, 10-90 % rise time and bandwidth, Synchronizer metastability MTBF</td></tr></tbody></table>
+<h2>8. Other ways to use it</h2>
+<p>The same engine runs on the command line (<code>electronics-engineering</code>, its own guide), in Python (<code>pip install electronics-engineering-ai999x</code>, <code>import electronics_engineering_ai999x</code>, its own guide) and in the browser on https://www.ai999x.com/models/electronics-engineering-ai999x/.</p>
+<p>Licence: Apache-2.0 · AI999X · https://www.ai999x.com/models/electronics-engineering-ai999x/</p></body></html>
