@@ -10,8 +10,8 @@ Electronics Engineering covers semiconductors and pn junctions, diode circuits a
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-electronics-engineering-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-electronics-engineering-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `electronics-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-electronics-engineering-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-electronics-engineering-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `electronics-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install electronics-engineering-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -146,92 +146,6 @@ print(a.outcome, a.values)
 # SOLVED {'Vt': 1.13475135185, 'dVt': 0.434751351853}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `electronics-engineering` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ electronics-engineering solve elx_butterworth_section_q n=4
-Q_max = 1.306562965
-Q = [0.541196100146,1.30656296488]
-sections = 2
-first_order = 0
-
-$ electronics-engineering solve elx_transition_frequency "gm=40 mS" beta=100 "Cpi=10 pF" "Cmu=2 pF"
-r_pi = 2500 ohm
-f_beta = 5305164.77 Hz
-f_T = 530516477 Hz
-
-$ electronics-engineering solve elx_cmos_propagation_delay "Rn=10000 ohm" "Rp=20000 ohm" "CL=100 fF"
-tpHL = 6.931471806e-10 s
-tpLH = 1.386294361e-09 s
-tp = 1.039720771e-09 s
-
-$ electronics-engineering solve elx_adc_code "Vin=3.2 V" "Vref=5 V" n=8
-code = 163
-bits = 10100011
-LSB = 0.01953125 V
-V_code = 3.18359375 V
-error = 0.01640625 V
-
-$ electronics-engineering solve elx_capacitor_filter_ripple "Vp=16.3 V" "f=60 Hz" "RL=500 ohm" "C=1000 uF" circuit=full-wave
-f_ripple = 120 Hz
-Vr = 0.2716666667 V
-Vdc = 16.16416667 V
-Vr_rms = 0.07842341156 V
-ripple_factor = 0.004851682934
-
-$ electronics-engineering solve elx_common_source_amplifier "gm=2 mS" "ro=100000 ohm" "RD=10000 ohm" "RL=10000 ohm" "RS=0 ohm" "RG=1000000 ohm" "Rsig=10000 ohm"
-Av = -9.523809524
-Rin = 1000000 ohm
-Rout = 9090.909091 ohm
-Gv = -9.42951438
-
-$ electronics-engineering solve elx_closed_loop_bandwidth "GBW=1000000 Hz" config=non-inverting "Rf=90000 ohm" "R1=10000 ohm"
-G0 = 10
-noise_gain = 10
-f_3dB = 100000 Hz
-
-$ electronics-engineering solve elx_555_astable "RA=1000 ohm" "RB=10000 ohm" "C=10 uF"
-t_high = 0.07624618986 s
-t_low = 0.06931471806 s
-T = 0.1455609079 s
-f = 6.869976385 Hz
-duty = 0.5238095238
-
-$ electronics-engineering solve elx_adjustable_regulator_output "R1=240 ohm" "R2=720 ohm" "Vref=1.25 V"
-Vout = 5 V
-I_R1 = 0.005208333333 A
-
-$ electronics-engineering solve elx_builtin_potential "NA=1e+17 cm^-3" "ND=1e+16 cm^-3" "ni=1.5e+10 cm^-3" "T=300 K"
-Vbi = 0.7528794135 V
-
-$ electronics-engineering solve elx_cmos_dynamic_power alpha=0.1 "C=1000 pF" "VDD=1 V" "f=1000000000 Hz"
-P = 0.1 W
-E_supply = 1e-09 J
-E_stored = 5e-10 J
-I_avg = 0.1 A
-
-$ electronics-engineering solve elx_filter_order ftype=Butterworth "fp=1000 Hz" "fs=2500 Hz" Ap=1 As=40
-n = 6
-
-$ electronics-engineering solve elx_bjt_cascode "IC=1 mA" beta=100 "VT=25 mV" "VA=100 V" "RL=1000000 ohm"
-gm = 0.04 S
-r_o = 100000 ohm
-Rout = 9858536.585 ohm
-Gm = 0.03959426027 S
-Av = -35947.88859
-
-$ electronics-engineering solve elx_cmos_switching_threshold "VDD=2.5 V" "Vtn=0.4 V" "Vtp=0.4 V" "kn=0.1 mA/V^2" "kp=0.1 mA/V^2"
-r = 1
-VM = 1.25 V
-
-$ electronics-engineering solve elx_adc_quantization_snr n=12
-SNR_dB = 74.00811155
-noise_rms_lsb = 0.2886751346
-SNR_full_scale_dB = 74.00811155
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_desktop_guide.md)
@@ -240,13 +154,13 @@ SNR_full_scale_dB = 74.00811155
 
 Every calculation, with its formula, a worked example and its figures: **[Electronics Engineering on ai999x.com](https://www.ai999x.com/models/electronics-engineering-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/electronics-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/electronics-engineering-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/electronics-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/electronics-engineering-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
