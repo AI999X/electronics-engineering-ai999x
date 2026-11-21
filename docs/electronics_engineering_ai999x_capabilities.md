@@ -226,9 +226,9 @@ $$
 - **Assumes:** $T > 0$ K
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![VT (thermal voltage) against T (absolute temperature (degC is converted)) from 150 K to 450 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-thermal-voltage-curve)
+![Thermal voltage as T runs from 260 to 340 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-thermal-voltage-live-1)
 
-*VT (thermal voltage) against T (absolute temperature (degC is converted)) from 150 K to 450 K. 31 points computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, VT = 0.025852 V.*
+*Thermal voltage as T runs from 260 to 340 K, every other input as you entered it (41 solutions). Marked: your T = 300 K gives VT = 25.85 mV. Your inputs: T = 300 K.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_thermal_voltage', T=300.0)
@@ -279,9 +279,13 @@ $$
 - **Assumes:** Nc, Nv, Eg, $T > 0$; non-degenerate statistics, band gap independent of T
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![ni (intrinsic carrier concentration) against T (absolute temperature) from 270 K to 330 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-intrinsic-carrier-concentration-curve)
+![Intrinsic carrier concentration as T runs from 260 to 340 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-intrinsic-carrier-concentration-live-1)
 
-*ni (intrinsic carrier concentration) against T (absolute temperature) from 270 K to 330 K. One curve for each value of Eg (band gap energy): 1.7944e-19 J, 8.9722e-20 J, 3.5889e-19 J. Other inputs as in the worked example: Nc = 2.7999999999999997e+25 1/m^3, Nv = 1.04e+25 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, ni = 6.6759e+15 1/m^3.*
+*Intrinsic carrier concentration as T runs from 260 to 340 K, every other input as you entered it (41 solutions). Marked: your T = 300 K gives ni = 6.676e+15. Your inputs: Nc = 2.8e+19 cm^-3, Nv = 1.04e+19 cm^-3, Eg = 1.12 eV, T = 300 K.*
+
+![Intrinsic carrier concentration as Eg runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-intrinsic-carrier-concentration-live-2)
+
+*Intrinsic carrier concentration as Eg runs from 0.672 to 1.568 eV, every other input as you entered it (29 solutions). Marked: your Eg = 1.12 eV gives ni = 6.676e+15. Your inputs: Nc = 2.8e+19 cm^-3, Nv = 1.04e+19 cm^-3, Eg = 1.12 eV, T = 300 K.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_intrinsic_carrier_concentration', Nc=2.8e+25, Nv=1.04e+25, Eg=1.7944378300800001e-19, T=300.0)
@@ -329,9 +333,13 @@ $$
 - **Assumes:** n, $p  \geq  0$ (not both zero); mobilities > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![sigma (conductivity) against n (electron concentration) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-semiconductor-conductivity-curve)
+![Conductivity as n runs from 6e+15 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-semiconductor-conductivity-live-1)
 
-*sigma (conductivity) against n (electron concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. One curve for each value of mu_n (electron mobility): 0.135 m^2/(V*s), 0.0675 m^2/(V*s), 0.27 m^2/(V*s). Other inputs as in the worked example: p = 22499999999.999996 1/m^3, mu_p = 0.048 m^2/(V*s). 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1.0000e+22 1/m^3, sigma = 216.294 1/(ohm*m).*
+*Conductivity as n runs from 6e+15 to 1.4e+16 cm^-3, every other input as you entered it (37 solutions). Marked: your n = 1e+16 cm^-3 gives σ = 216.3. Your inputs: n = 1e+16 cm^-3, p = 22500 cm^-3, mu_n = 1350 cm^2/(V*s), mu_p = 480 cm^2/(V*s).*
+
+![Conductivity as μ_n runs from 810 to 1890 cm^2/(V*s), every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-semiconductor-conductivity-live-2)
+
+*Conductivity as μ_n runs from 810 to 1890 cm^2/(V*s), every other input as you entered it (29 solutions). Marked: your μ_n = 1350 cm^2/(V*s) gives σ = 216.3. Your inputs: n = 1e+16 cm^-3, p = 22500 cm^-3, mu_n = 1350 cm^2/(V*s), mu_p = 480 cm^2/(V*s).*
 
 ```python
 electronics_engineering_ai999x.solve('elx_semiconductor_conductivity', n=1e+22, p=22500000000.0, mu_n=0.135, mu_p=0.048)
@@ -381,9 +389,13 @@ $$
 - **Assumes:** n, mu, L, $A > 0$; low field (constant mobility)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![J (drift current density) against L (bar length) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-drift-current-curve)
+![Drift current density as n runs from 6e+15 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-drift-current-live-1)
 
-*J (drift current density) against L (bar length) from 0.0005 m to 0.0015 m. One curve for each value of n (concentration of the carriers that drift): 1.0000e+22 1/m^3, 5.0000e+21 1/m^3, 2.0000e+22 1/m^3. Other inputs as in the worked example: mu = 0.135 m^2/(V*s), V = 5.0 V, A = 1e-08 m^2. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, L = 0.001 m, J = 1.08147e+06 A/m^2.*
+*Drift current density as n runs from 6e+15 to 1.4e+16 cm^-3, every other input as you entered it (41 solutions). Marked: your n = 1e+16 cm^-3 gives J = 1.081e+06. Your inputs: n = 1e+16 cm^-3, mu = 1350 cm^2/(V*s), V = 5 V, L = 0.001 m, A = 1e-08 m^2.*
+
+![Drift current density as μ runs from 810 to 1890 cm^2/(V*s), every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-drift-current-live-2)
+
+*Drift current density as μ runs from 810 to 1890 cm^2/(V*s), every other input as you entered it (29 solutions). Marked: your μ = 1350 cm^2/(V*s) gives J = 1.081e+06. Your inputs: n = 1e+16 cm^-3, mu = 1350 cm^2/(V*s), V = 5 V, L = 0.001 m, A = 1e-08 m^2.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_drift_current', n=1e+22, mu=0.135, V=5.0, L=0.001, A=1e-08)
@@ -431,9 +443,13 @@ $$
 - **Assumes:** mu, T, $\tau > 0$; non-degenerate material
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![D (diffusion coefficient) against mu (carrier mobility) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-einstein-diffusion-curve)
+![Diffusion coefficient as μ runs from 810 to 1890 cm^2/(V*s), every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-einstein-diffusion-live-1)
 
-*D (diffusion coefficient) against mu (carrier mobility) from 0.0675 m^2/(V*s) to 0.2025 m^2/(V*s). One curve for each value of T (absolute temperature): 300 K, 150 K, 600 K. Other inputs as in the worked example: tau = 1e-06 s. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, mu = 0.135 m^2/(V*s), D = 0.00349002 m^2/s.*
+*Diffusion coefficient as μ runs from 810 to 1890 cm^2/(V*s), every other input as you entered it (41 solutions). Marked: your μ = 1350 cm^2/(V*s) gives D = 0.00349. Your inputs: mu = 1350 cm^2/(V*s), T = 300 K, tau = 1 us.*
+
+![Diffusion coefficient as T runs from 260 to 340 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-einstein-diffusion-live-2)
+
+*Diffusion coefficient as T runs from 260 to 340 K, every other input as you entered it (29 solutions). Marked: your T = 300 K gives D = 0.00349. Your inputs: mu = 1350 cm^2/(V*s), T = 300 K, tau = 1 us.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_einstein_diffusion', mu=0.135, T=300.0, tau=1e-06)
@@ -482,9 +498,13 @@ $$
 - **Assumes:** ND, $NA  \geq  0$; $ni > 0$; complete ionisation, non-degenerate
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![n (electron concentration) against ND (donor concentration) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-doped-carrier-concentrations-curve)
+![Hole concentration as ni runs from 9e+09 to 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-doped-carrier-concentrations-live-1)
 
-*n (electron concentration) against ND (donor concentration) from 5.0000e+21 1/m^3 to 1.5000e+22 1/m^3. Outputs with the same unit drawn together: p (hole concentration). Other inputs as in the worked example: NA = 0.0 1/m^3, ni = 1.4999999999999998e+16 1/m^3. 31 points computed by electronics-engineering-ai999x; marked: the worked example, ND = 1.0000e+22 1/m^3, n = 1.0000e+22 1/m^3.*
+*Hole concentration as ni runs from 9e+09 to 2.1e+10 cm^-3, every other input as you entered it (41 solutions). Marked: your ni = 1.5e+10 cm^-3 gives p = 2.25e+10. Your inputs: ND = 1e+16 cm^-3, NA = 0 cm^-3, ni = 1.5e+10 cm^-3.*
+
+![Electron concentration as ND runs from 6e+15 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-doped-carrier-concentrations-live-2)
+
+*Electron concentration as ND runs from 6e+15 to 1.4e+16 cm^-3, every other input as you entered it (23 solutions). Marked: your ND = 1e+16 cm^-3 gives n = 1e+22. Your inputs: ND = 1e+16 cm^-3, NA = 0 cm^-3, ni = 1.5e+10 cm^-3.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_doped_carrier_concentrations', ND=1e+22, NA=0.0, ni=1.5e+16)
@@ -530,9 +550,13 @@ $$
 - **Assumes:** NA, $ND  \geq  100$ ni; non-degenerate, complete ionisation
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vbi (built-in potential) against T (absolute temperature) from 150 K to 450 K](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-builtin-potential-curve)
+![Built-in potential as T runs from 260 to 340 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-builtin-potential-live-1)
 
-*Vbi (built-in potential) against T (absolute temperature) from 150 K to 450 K. One curve for each value of ni (intrinsic carrier concentration): 1.5000e+16 1/m^3, 7.5000e+15 1/m^3, 3.0000e+16 1/m^3. Other inputs as in the worked example: NA = 1e+23 1/m^3, ND = 9.999999999999998e+21 1/m^3. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 300 K, Vbi = 0.752879 V.*
+*Built-in potential as T runs from 260 to 340 K, every other input as you entered it (41 solutions). Marked: your T = 300 K gives Vbi = 0.7529. Your inputs: NA = 1e+17 cm^-3, ND = 1e+16 cm^-3, ni = 1.5e+10 cm^-3, T = 300 K.*
+
+![Built-in potential as ni runs from 9e+09 to 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-builtin-potential-live-2)
+
+*Built-in potential as ni runs from 9e+09 to 2.1e+10 cm^-3, every other input as you entered it (29 solutions). Marked: your ni = 1.5e+10 cm^-3 gives Vbi = 0.7529. Your inputs: NA = 1e+17 cm^-3, ND = 1e+16 cm^-3, ni = 1.5e+10 cm^-3, T = 300 K.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_builtin_potential', NA=1e+23, ND=1e+22, ni=1.5e+16, T=300.0)
@@ -584,9 +608,13 @@ $$
 - **Assumes:** Vbi + VR > 0; abrupt junction, depletion approximation
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![W (depletion width) against ND (donor concentration (n side)) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-depletion-width-curve)
+![Depletion width, width on the n side and width on the p side as NA runs from 6e+16 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-depletion-width-live-1)
 
-*W (depletion width) against ND (donor concentration (n side)) from 1.0000e+21 1/m^3 to 1.0000e+23 1/m^3 on a logarithmic axis. One curve for each value of eps_r (relative permittivity of the semiconductor (11.7 for silicon)): 11.7, 5.85, 23.4. Other inputs as in the worked example: NA = 1e+23 1/m^3, Vbi = 0.81 V, VR = 5.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ND = 1.0000e+22 1/m^3, W = 9.0910e-07 m.*
+*Depletion width, width on the n side and width on the p side as NA runs from 6e+16 to 1.4e+17 cm^-3, every other input as you entered it (41 solutions). Marked: your NA = 1e+17 cm^-3 gives W = 0.9091 um. Your inputs: NA = 1e+17 cm^-3, ND = 1e+16 cm^-3, Vbi = 0.81 V, VR = 5 V, eps_r = 11.7.*
+
+![Depletion width, width on the n side and width on the p side as ND runs from 6e+15 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-depletion-width-live-2)
+
+*Depletion width, width on the n side and width on the p side as ND runs from 6e+15 to 1.4e+16 cm^-3, every other input as you entered it (29 solutions). Marked: your ND = 1e+16 cm^-3 gives W = 0.9091 um. Your inputs: NA = 1e+17 cm^-3, ND = 1e+16 cm^-3, Vbi = 0.81 V, VR = 5 V, eps_r = 11.7.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_depletion_width', NA=1e+23, ND=1e+22, Vbi=0.81, VR=5.0, eps_r=11.7)
@@ -633,9 +661,13 @@ $$
 - **Assumes:** $0 < m < 1$; VR > -Vbi
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Cj (junction capacitance) against m (grading coefficient (0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-junction-capacitance-curve)
+![Junction capacitance as Cj0 runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-junction-capacitance-live-1)
 
-*Cj (junction capacitance) against m (grading coefficient (0.5 abrupt, 0.33 linearly graded)) from 0.02 to 0.98. One curve for each value of Cj0 (zero-bias junction capacitance): 2.0000e-12 F, 1.0000e-12 F, 4.0000e-12 F. Other inputs as in the worked example: Vbi = 0.75 V, VR = 5.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, m = 0.5, Cj = 7.2232e-13 F.*
+*Junction capacitance as Cj0 runs from 1.2 to 2.8 pF, every other input as you entered it (41 solutions). Marked: your Cj0 = 2 pF gives Cj = 0.7223 pF. Your inputs: Cj0 = 2 pF, Vbi = 0.75 V, VR = 5 V, m = 0.5.*
+
+![Junction capacitance as m runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-junction-capacitance-live-2)
+
+*Junction capacitance as m runs from 0.125 to 0.875, every other input as you entered it (29 solutions). Marked: your m = 0.5 gives Cj = 0.7223 pF. Your inputs: Cj0 = 2 pF, Vbi = 0.75 V, VR = 5 V, m = 0.5.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_junction_capacitance', Cj0=2e-12, Vbi=0.75, VR=5.0, m=0.5)
@@ -682,9 +714,13 @@ $$
 - **Assumes:** Is, n, $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![ID (diode current) against n (ideality (emission) factor, 1 to 2) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-shockley-diode-current-curve)
+![Diode current as n runs from 1 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-shockley-diode-current-live-1)
 
-*ID (diode current) against n (ideality (emission) factor, 1 to 2) from 0.9 to 1.1. One curve for each value of VD (diode voltage (negative for reverse bias)): 0.65 V, 0.325 V, 1.3 V. Other inputs as in the worked example: Is = 1e-14 A, T = 300.0 K. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1, ID = 0.000830844 A.*
+*Diode current as n runs from 1 to 1.75, every other input as you entered it (41 solutions). Marked: your n = 1 gives ID = 830.8 uA. Your inputs: Is = 1e-14 A, n = 1, VD = 0.65 V, T = 300 K.*
+
+![Diode current as T runs from 260 to 340 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-shockley-diode-current-live-2)
+
+*Diode current as T runs from 260 to 340 K, every other input as you entered it (29 solutions). Marked: your T = 300 K gives ID = 0.8308 mA. Your inputs: Is = 1e-14 A, n = 1, VD = 0.65 V, T = 300 K.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_shockley_diode_current', Is=1e-14, n=1.0, VD=0.65, T=300.0)
@@ -731,9 +767,13 @@ $$
 - **Assumes:** $ID > -Is$; Is, n, $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![VD (diode voltage) against n (ideality factor) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-voltage-curve)
+![Diode voltage as n runs from 1 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-voltage-live-1)
 
-*VD (diode voltage) against n (ideality factor) from 0.5 to 1.5. One curve for each value of T (junction temperature): 300 K, 150 K, 600 K. Other inputs as in the worked example: ID = 0.001 A, Is = 1e-14 A. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, n = 1, VD = 0.654791 V.*
+*Diode voltage as n runs from 1 to 1.75, every other input as you entered it (41 solutions). Marked: your n = 1 gives VD = 0.6548. Your inputs: ID = 0.001 A, Is = 1e-14 A, n = 1, T = 300 K.*
+
+![Diode voltage as T runs from 260 to 340 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-voltage-live-2)
+
+*Diode voltage as T runs from 260 to 340 K, every other input as you entered it (29 solutions). Marked: your T = 300 K gives VD = 0.6548. Your inputs: ID = 0.001 A, Is = 1e-14 A, n = 1, T = 300 K.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_diode_voltage', ID=0.001, Is=1e-14, n=1.0, T=300.0)
@@ -782,13 +822,17 @@ $$
 - **Assumes:** $VS > 0$ (forward bias); R, Is, n, $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![ID (diode current) against VS (source voltage), with Is = 1](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-diode-operating-point-id-vs-vs.svg)
+![Diode current (ID) against source voltage (VS) from 2](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-diode-operating-point-id-vs-vs.svg)
 
-*ID (diode current) against VS (source voltage), with Is = 1.00e-14 A, R = 1000 ohm, T = 300 K, n = 1. 31 points computed by electronics-engineering-ai999x; marked: VS = 5, ID = 0.00430746 A.*
+*Diode current (ID) against source voltage (VS) from 2.5 V to 7.5 V, the other inputs as given: 31 points, each computed by the model. Marked: the inputs given, VS = 5 V, ID = 4.307 mA. In SI units: ID = 0.004307 A. Your inputs: VS = 5 V, R = 1000 ohm, Is = 1e-14 A, n = 1, T = 300 K.*
 
-![ID (diode current) against R (series resistance) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-operating-point-curve)
+![Diode current as VS runs from 3 to 7 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-operating-point-live-1)
 
-*ID (diode current) against R (series resistance) from 500 ohm to 1500 ohm. One curve for each value of VS (source voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: Is = 1e-14 A, n = 1.0, T = 300.0 K. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 1000 ohm, ID = 0.00430746 A.*
+*Diode current as VS runs from 3 to 7 V, every other input as you entered it (41 solutions). Marked: your VS = 5 V gives ID = 4.307 mA. Your inputs: VS = 5 V, R = 1000 ohm, Is = 1e-14 A, n = 1, T = 300 K.*
+
+![Diode current as R runs from 600 to 1400 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-diode-operating-point-live-2)
+
+*Diode current as R runs from 600 to 1400 ohm, every other input as you entered it (29 solutions). Marked: your R = 1000 ohm gives ID = 4.307 mA. Your inputs: VS = 5 V, R = 1000 ohm, Is = 1e-14 A, n = 1, T = 300 K.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_diode_operating_point', VS=5.0, R=1000.0, Is=1e-14, n=1.0, T=300.0)
@@ -838,9 +882,17 @@ $$
 - **Assumes:** diode drops below Vm; resistive load, no filter
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vdc (average output voltage) against Vm (peak AC voltage of the (secondary) winding) from 5 V to 15 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rectifier-averages-curve)
+![Average output voltage as Vm runs from 6 to 14 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rectifier-averages-live-1)
 
-*Vdc (average output voltage) against Vm (peak AC voltage of the (secondary) winding) from 5 V to 15 V. One curve for each value of Von (forward drop of one diode (0 V for ideal diodes)): 0 V, 0.5 V. Other inputs as in the worked example: circuit = half-wave. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vm = 10 V, Vdc = 3.1831 V.*
+*Average output voltage as Vm runs from 6 to 14 V, every other input as you entered it (41 solutions). Marked: your Vm = 10 V gives Vdc = 3.183. Your inputs: Vm = 10 V, circuit = half-wave, Von = 0 V.*
+
+![Average output voltage for every choice of circuit, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rectifier-averages-live-2)
+
+*Average output voltage for every choice of circuit, every other input as you entered it (highlighted: your choice). half-wave: 3.183; bridge: 6.366; center-tapped: 6.366. Your inputs: Vm = 10 V, circuit = half-wave, Von = 0 V.*
+
+![Average output voltage as Von runs from 0 to 1 V, every other input as you entered it (15 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rectifier-averages-live-3)
+
+*Average output voltage as Von runs from 0 to 1 V, every other input as you entered it (15 solutions). Marked: your Von = 0 V gives Vdc = 3.183. Your inputs: Vm = 10 V, circuit = half-wave, Von = 0 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_rectifier_averages', Vm=10.0, circuit='half-wave', Von=0.0)
@@ -892,9 +944,17 @@ $$
 - **Assumes:** $Vr < Vp$ (small ripple)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vr (peak-to-peak ripple) against f (line frequency) from 30 Hz to 90 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-capacitor-filter-ripple-curve)
+![Peak-to-peak ripple and RMS ripple as f runs from 36 to 84 Hz, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-capacitor-filter-ripple-live-1)
 
-*Vr (peak-to-peak ripple) against f (line frequency) from 30 Hz to 90 Hz. One curve for each value of Vp (peak rectified voltage (after the diode drops)): 16.3 V, 8.15 V, 32.6 V. Other inputs as in the worked example: RL = 500.0 ohm, C = 0.001 F, circuit = full-wave. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, f = 60 Hz, Vr = 0.271667 V.*
+*Peak-to-peak ripple and RMS ripple as f runs from 36 to 84 Hz, every other input as you entered it (41 solutions). Marked: your f = 60 Hz gives Vr = 0.2717. Your inputs: Vp = 16.3 V, f = 60 Hz, RL = 500 ohm, C = 0.001 F, circuit = full-wave.*
+
+![Peak-to-peak ripple for every choice of circuit, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-capacitor-filter-ripple-live-2)
+
+*Peak-to-peak ripple for every choice of circuit, every other input as you entered it (highlighted: your choice). half-wave: 0.5433; full-wave: 0.2717. Your inputs: Vp = 16.3 V, f = 60 Hz, RL = 500 ohm, C = 0.001 F, circuit = full-wave.*
+
+![Peak-to-peak ripple and RMS ripple as RL runs from 300 to 700 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-capacitor-filter-ripple-live-3)
+
+*Peak-to-peak ripple and RMS ripple as RL runs from 300 to 700 ohm, every other input as you entered it (29 solutions). Marked: your RL = 500 ohm gives Vr = 0.2717. Your inputs: Vp = 16.3 V, f = 60 Hz, RL = 500 ohm, C = 0.001 F, circuit = full-wave.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_capacitor_filter_ripple', Vp=16.3, f=60.0, RL=500.0, C=0.001, circuit='full-wave')
@@ -945,9 +1005,13 @@ $$
 - **Assumes:** the Zener must be in breakdown: Vin $RL/(Rs + RL) > Vz$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![I_z (Zener current) against Rs (series resistance) from 22 ohm to 2200 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-regulator-curve)
+![Zener current as Vz runs from 6 to 14 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-regulator-live-1)
 
-*I_z (Zener current) against Rs (series resistance) from 22 ohm to 2200 ohm on a logarithmic axis. One curve for each value of Vin (input voltage): 20 V, 40 V. Other inputs as in the worked example: Vz = 10.0 V, RL = 1000.0 ohm. 34 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rs = 220 ohm, I_z = 0.0354545 A.*
+*Zener current as Vz runs from 6 to 14 V, every other input as you entered it (41 solutions). Marked: your Vz = 10 V gives I_z = 35.45 mA. Your inputs: Vin = 20 V, Rs = 220 ohm, Vz = 10 V, RL = 1000 ohm.*
+
+![Zener current and current in the series resistor as Vin runs from 12](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-regulator-live-2)
+
+*Zener current and current in the series resistor as Vin runs from 12.57 to 28 V, every other input as you entered it (28 solutions). Marked: your Vin = 20 V gives I_z = 35.45 mA. Your inputs: Vin = 20 V, Rs = 220 ohm, Vz = 10 V, RL = 1000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_zener_regulator', Vin=20.0, Rs=220.0, Vz=10.0, RL=1000.0)
@@ -999,9 +1063,13 @@ $$
 - **Assumes:** Vin_min > Vz; Vin_max >= Vin_min, IL_max >= IL_min >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rs_max (largest series resistance) against IL_max (largest load current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-series-resistor-design-curve)
+![Worst-case resistor power as Vin_max runs from 12 to 21 V, every other input as you entered it (31 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-series-resistor-design-live-1)
 
-*Rs_max (largest series resistance) against IL_max (largest load current) from 0.005 A to 0.5 A on a logarithmic axis. One curve for each value of Vz (Zener voltage): 9.1 V, 4.55 V. Other inputs as in the worked example: Vin_min = 12.0 V, Vin_max = 15.0 V, IL_min = 0.0 A, Iz_min = 0.005 A. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IL_max = 0.05 A, Rs_max = 52.7273 ohm.*
+*Worst-case resistor power as Vin_max runs from 12 to 21 V, every other input as you entered it (31 solutions). Marked: your Vin_max = 15 V gives PRs_max = 0.6602. Your inputs: Vin_min = 12 V, Vin_max = 15 V, Vz = 9.1 V, IL_min = 0 mA, IL_max = 50 mA, Iz_min = 5 mA.*
+
+![Largest series resistance as Vz runs from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-zener-series-resistor-design-live-2)
+
+*Largest series resistance as Vz runs from 5.46 to 11.96 V, every other input as you entered it (26 solutions). Marked: your Vz = 9.1 V gives Rs_max = 52.73. Your inputs: Vin_min = 12 V, Vin_max = 15 V, Vz = 9.1 V, IL_min = 0 mA, IL_max = 50 mA, Iz_min = 5 mA.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_zener_series_resistor_design', Vin_min=12.0, Vin_max=15.0, Vz=9.1, IL_min=0.0, IL_max=0.05, Iz_min=0.005)
@@ -1049,9 +1117,13 @@ $$
 - **Assumes:** $Vs > n$ Vf; $If > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![R (series resistance) against If (LED forward current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-led-series-resistor-curve)
+![Series resistance as Vs runs from 3 to 7 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-led-series-resistor-live-1)
 
-*R (series resistance) against If (LED forward current) from 0.01 A to 0.03 A. One curve for each value of Vs (supply voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: Vf = 2.0 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, If = 0.02 A, R = 150 ohm.*
+*Series resistance as Vs runs from 3 to 7 V, every other input as you entered it (41 solutions). Marked: your Vs = 5 V gives R = 150. Your inputs: Vs = 5 V, Vf = 2 V, If = 20 mA.*
+
+![Series resistance as Vf runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-led-series-resistor-live-2)
+
+*Series resistance as Vf runs from 1.2 to 2.8 V, every other input as you entered it (29 solutions). Marked: your Vf = 2 V gives R = 150. Your inputs: Vs = 5 V, Vf = 2 V, If = 20 mA.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_led_series_resistor', Vs=5.0, Vf=2.0, If=0.02)
@@ -1097,13 +1169,17 @@ $$
 - **Assumes:** $IB > 0$, $\beta > 0$; active region
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![IC (collector current) against IB (base current) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-current-relations-curve)
+![Collector current (IC) over IB from 10 µA to 30 µA and beta from 50 to 150: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-current-relations-field)
 
-*IC (collector current) against IB (base current) from 1.0000e-05 A to 3.0000e-05 A. One curve for each value of beta (common-emitter current gain (hFE)): 100, 50, 200. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IB = 2.0000e-05 A, IC = 0.002 A.*
+*Collector current (IC) over IB from 10 µA to 30 µA and beta from 50 to 150: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, IC = 2 mA. In SI units: IC = 0.002 A. Your inputs: IB = 20 uA, beta = 100.*
 
-![IC (collector current) over IB (base current) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-current-relations-field)
+![Collector current and emitter current as IB runs from 12 to 28 uA, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-current-relations-live-1)
 
-*IC (collector current) over IB (base current) from 1.0000e-05 A to 3.0000e-05 A and beta (common-emitter current gain (hFE)) from 50 to 150: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 0.0005 A to dark 0.0045 A); iso-lines at IC = 0.001, 0.002, 0.003, 0.004 A. Marked: the worked example, IB = 2.0000e-05 A, beta = 100, IC = 0.002 A.*
+*Collector current and emitter current as IB runs from 12 to 28 uA, every other input as you entered it (41 solutions). Marked: your IB = 20 uA gives IC = 2 mA. Your inputs: IB = 20 uA, beta = 100.*
+
+![Collector current and emitter current as β runs from 25 to 175, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-current-relations-live-2)
+
+*Collector current and emitter current as β runs from 25 to 175, every other input as you entered it (29 solutions). Marked: your β = 100 gives IC = 2 mA. Your inputs: IB = 20 uA, beta = 100.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_current_relations', IB=2e-05, beta=100.0)
@@ -1153,9 +1229,13 @@ $$
 - **Assumes:** active region: VCE >= 0.2 V (otherwise refused as saturated)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![IC (collector current) against RB (base resistor) from 235000 ohm to 705000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-fixed-bias-curve)
+![Collector current and emitter current as RB runs from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-fixed-bias-live-1)
 
-*IC (collector current) against RB (base resistor) from 235000 ohm to 705000 ohm. One curve for each value of VCC (supply voltage): 12 V, 6 V, 24 V. Other inputs as in the worked example: RC = 2200.0 ohm, beta = 100.0, VBE = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RB = 470000 ohm, IC = 0.00240426 A.*
+*Collector current and emitter current as RB runs from 2.82e+05 to 6.58e+05 ohm, every other input as you entered it (41 solutions). Marked: your RB = 4.7e+05 ohm gives IC = 2.404 mA. Your inputs: VCC = 12 V, RB = 470000 ohm, RC = 2200 ohm, beta = 100, VBE = 0.7 V.*
+
+![Collector current and emitter current as VCC runs from 7](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-fixed-bias-live-2)
+
+*Collector current and emitter current as VCC runs from 7.2 to 16.8 V, every other input as you entered it (29 solutions). Marked: your VCC = 12 V gives IC = 2.404 mA. Your inputs: VCC = 12 V, RB = 470000 ohm, RC = 2200 ohm, beta = 100, VBE = 0.7 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_fixed_bias', VCC=12.0, RB=470000.0, RC=2200.0, beta=100.0, VBE=0.7)
@@ -1213,9 +1293,13 @@ $$
 - **Assumes:** VTH > VBE; active region: VCE >= 0.2 V
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![IC (collector current) against RE (emitter resistor) from 235 ohm to 705 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-voltage-divider-bias-curve)
+![Collector current and emitter current as RE runs from 282 to 658 ohm, every other input as you entered it (41 solutions)](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-bjt-voltage-divider-bias-live-1.svg)
 
-*IC (collector current) against RE (emitter resistor) from 235 ohm to 705 ohm. One curve for each value of VCC (supply voltage): 12 V, 6 V, 24 V. Other inputs as in the worked example: R1 = 47000.0 ohm, R2 = 10000.0 ohm, RC = 2200.0 ohm, beta = 150.0, VBE = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RE = 470 ohm, IC = 0.00266096 A.*
+*Collector current and emitter current as RE runs from 282 to 658 ohm, every other input as you entered it (41 solutions). Marked: your RE = 470 ohm gives IC = 2.661 mA. Your inputs: VCC = 12 V, R1 = 47000 ohm, R2 = 10000 ohm, RC = 2200 ohm, RE = 470 ohm, beta = 150, VBE = 0.7 V.*
+
+![Collector current and emitter current as R2 runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-voltage-divider-bias-live-2)
+
+*Collector current and emitter current as R2 runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your R2 = 1e+04 ohm gives IC = 2.661 mA. Your inputs: VCC = 12 V, R1 = 47000 ohm, R2 = 10000 ohm, RC = 2200 ohm, RE = 470 ohm, beta = 150, VBE = 0.7 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_voltage_divider_bias', VCC=12.0, R1=47000.0, R2=10000.0, RC=2200.0, RE=470.0, beta=150.0, VBE=0.7)
@@ -1270,9 +1354,13 @@ $$
 - **Assumes:** VEE > VBE; active region: VCE >= 0.2 V
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![IE (emitter current) against RE (emitter resistor to -VEE) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-emitter-bias-curve)
+![Collector voltage as VCC runs from 6 to 14 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-emitter-bias-live-1)
 
-*IE (emitter current) against RE (emitter resistor to -VEE) from 5000 ohm to 15000 ohm. One curve for each value of VEE (magnitude of the negative supply): 10 V, 5 V, 20 V. Other inputs as in the worked example: VCC = 10.0 V, RB = 10000.0 ohm, RC = 4700.0 ohm, beta = 100.0, VBE = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RE = 10000 ohm, IE = 0.000920882 A.*
+*Collector voltage as VCC runs from 6 to 14 V, every other input as you entered it (41 solutions). Marked: your VCC = 10 V gives VC = 5.715. Your inputs: VCC = 10 V, VEE = 10 V, RB = 10000 ohm, RC = 4700 ohm, RE = 10000 ohm, beta = 100, VBE = 0.7 V.*
+
+![Emitter current and collector current as RE runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-emitter-bias-live-2)
+
+*Emitter current and collector current as RE runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your RE = 1e+04 ohm gives IE = 0.9209 mA. Your inputs: VCC = 10 V, VEE = 10 V, RB = 10000 ohm, RC = 4700 ohm, RE = 10000 ohm, beta = 100, VBE = 0.7 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_emitter_bias', VCC=10.0, VEE=10.0, RB=10000.0, RC=4700.0, RE=10000.0, beta=100.0, VBE=0.7)
@@ -1324,9 +1412,13 @@ $$
 - **Assumes:** active region: VCE >= 0.2 V
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![IC (collector current) against RC (collector resistor (carries IC + IB)) from 470 ohm to 47000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-collector-feedback-bias-curve)
+![Collector current and emitter current as VCC runs from 6 to 14 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-collector-feedback-bias-live-1)
 
-*IC (collector current) against RC (collector resistor (carries IC + IB)) from 470 ohm to 47000 ohm on a logarithmic axis. One curve for each value of VCC (supply voltage): 10 V, 5 V, 20 V. Other inputs as in the worked example: RF = 250000.0 ohm, beta = 90.0, VBE = 0.7 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RC = 4700 ohm, IC = 0.00123506 A.*
+*Collector current and emitter current as VCC runs from 6 to 14 V, every other input as you entered it (41 solutions). Marked: your VCC = 10 V gives IC = 1.235 mA. Your inputs: VCC = 10 V, RC = 4700 ohm, RF = 250000 ohm, beta = 90, VBE = 0.7 V.*
+
+![Collector current and emitter current as RC runs from 2820 to 6580 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-collector-feedback-bias-live-2)
+
+*Collector current and emitter current as RC runs from 2820 to 6580 ohm, every other input as you entered it (29 solutions). Marked: your RC = 4700 ohm gives IC = 1.235 mA. Your inputs: VCC = 10 V, RC = 4700 ohm, RF = 250000 ohm, beta = 90, VBE = 0.7 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_collector_feedback_bias', VCC=10.0, RC=4700.0, RF=250000.0, beta=90.0, VBE=0.7)
@@ -1376,9 +1468,13 @@ $$
 - **Assumes:** IC, beta, VT, $VA > 0$; active region
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![gm (transconductance) against VT (thermal voltage (25 or 26 mV)) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-small-signal-parameters-curve)
+![Transconductance as IC runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-small-signal-parameters-live-1)
 
-*gm (transconductance) against VT (thermal voltage (25 or 26 mV)) from 0.0125 V to 0.0375 V. One curve for each value of IC (collector bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, VA = 100.0 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, gm = 0.04 S.*
+*Transconductance as IC runs from 0.6 to 1.4 mA, every other input as you entered it (41 solutions). Marked: your IC = 1 mA gives gm = 0.04. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, VA = 100 V.*
+
+![Transconductance as VT runs from 15 to 35 mV, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-small-signal-parameters-live-2)
+
+*Transconductance as VT runs from 15 to 35 mV, every other input as you entered it (29 solutions). Marked: your VT = 25 mV gives gm = 0.04. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, VA = 100 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_small_signal_parameters', IC=0.001, beta=100.0, VT=0.025, VA=100.0)
@@ -1433,9 +1529,13 @@ $$
 - **Assumes:** r_o neglected; coupling and bypass capacitors short at signal frequency
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Av (voltage gain base to output) against VT (thermal voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-emitter-amplifier-curve)
+![Voltage gain base to output as VT runs from 15 to 35 mV, every other input as you entered it (41 solutions)](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-common-emitter-amplifier-live-1.svg)
 
-*Av (voltage gain base to output) against VT (thermal voltage) from 0.0025 V to 0.25 V on a logarithmic axis. One curve for each value of IC (collector bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, RC = 5000.0 ohm, RL = 10000.0 ohm, RE1 = 0.0 ohm, RB = 20000.0 ohm, Rsig = 1000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, Av = -133.333.*
+*Voltage gain base to output as VT runs from 15 to 35 mV, every other input as you entered it (41 solutions). Marked: your VT = 25 mV gives Av = -133.3. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, RC = 5000 ohm, RL = 10000 ohm, RE1 = 0 ohm, RB = 20000 ohm, Rsig = 1000 ohm.*
+
+![Voltage gain base to output as IC runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-emitter-amplifier-live-2)
+
+*Voltage gain base to output as IC runs from 0.6 to 1.4 mA, every other input as you entered it (29 solutions). Marked: your IC = 1 mA gives Av = -133.3. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, RC = 5000 ohm, RL = 10000 ohm, RE1 = 0 ohm, RB = 20000 ohm, Rsig = 1000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_common_emitter_amplifier', IC=0.001, beta=100.0, VT=0.025, RC=5000.0, RL=10000.0, RE1=0.0, RB=20000.0, Rsig=1000.0)
@@ -1487,9 +1587,13 @@ $$
 - **Assumes:** r_o neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Av (voltage gain base to output) against IC (collector bias current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-collector-amplifier-curve)
+![Voltage gain base to output as β runs from 25 to 175, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-collector-amplifier-live-1)
 
-*Av (voltage gain base to output) against IC (collector bias current) from 0.0005 A to 0.05 A on a logarithmic axis. One curve for each value of VT (thermal voltage): 0.025 V, 0.0125 V, 0.05 V. Other inputs as in the worked example: beta = 100.0, RE = 1000.0 ohm, RL = 1000.0 ohm, RB = 100000.0 ohm, Rsig = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IC = 0.005 A, Av = 0.990196.*
+*Voltage gain base to output as β runs from 25 to 175, every other input as you entered it (41 solutions). Marked: your β = 100 gives Av = 0.9902. Your inputs: IC = 5 mA, beta = 100, VT = 25 mV, RE = 1000 ohm, RL = 1000 ohm, RB = 100000 ohm, Rsig = 10000 ohm.*
+
+![Output resistance as Rsig runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-collector-amplifier-live-2)
+
+*Output resistance as Rsig runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your Rsig = 1e+04 ohm gives Rout = 86.72. Your inputs: IC = 5 mA, beta = 100, VT = 25 mV, RE = 1000 ohm, RL = 1000 ohm, RB = 100000 ohm, Rsig = 10000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_common_collector_amplifier', IC=0.005, beta=100.0, VT=0.025, RE=1000.0, RL=1000.0, RB=100000.0, Rsig=10000.0)
@@ -1541,9 +1645,13 @@ $$
 - **Assumes:** r_o neglected; base at signal ground
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Av (voltage gain emitter to output) against VT (thermal voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-base-amplifier-curve)
+![Voltage gain emitter to output as VT runs from 15 to 35 mV, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-base-amplifier-live-1)
 
-*Av (voltage gain emitter to output) against VT (thermal voltage) from 0.0125 V to 0.0375 V. One curve for each value of IC (collector bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, RC = 5000.0 ohm, RL = 5000.0 ohm, RE = 10000.0 ohm, Rsig = 50.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, Av = 100.*
+*Voltage gain emitter to output as VT runs from 15 to 35 mV, every other input as you entered it (41 solutions). Marked: your VT = 25 mV gives Av = 100. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, RC = 5000 ohm, RL = 5000 ohm, RE = 10000 ohm, Rsig = 50 ohm.*
+
+![Voltage gain emitter to output as IC runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-base-amplifier-live-2)
+
+*Voltage gain emitter to output as IC runs from 0.6 to 1.4 mA, every other input as you entered it (29 solutions). Marked: your IC = 1 mA gives Av = 100. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, RC = 5000 ohm, RL = 5000 ohm, RE = 10000 ohm, Rsig = 50 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_common_base_amplifier', IC=0.001, beta=100.0, VT=0.025, RC=5000.0, RL=5000.0, RE=10000.0, Rsig=50.0)
@@ -1591,9 +1699,13 @@ $$
 - **Assumes:** single-pole h_fe (the feed-forward zero through Cmu neglected)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f_T (transition frequency) against Cpi (base-emitter capacitance) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-transition-frequency-curve)
+![Transition frequency as gm runs from 24 to 56 mS, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-transition-frequency-live-1)
 
-*f_T (transition frequency) against Cpi (base-emitter capacitance) from 1.0000e-12 F to 1.0000e-10 F on a logarithmic axis. One curve for each value of gm (transconductance): 0.04 S, 0.02 S, 0.08 S. Other inputs as in the worked example: beta = 100.0, Cmu = 2e-12 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Cpi = 1.0000e-11 F, f_T = 5.3052e+08 Hz.*
+*Transition frequency as gm runs from 24 to 56 mS, every other input as you entered it (41 solutions). Marked: your gm = 40 mS gives f_T = 530.5 MHz. Your inputs: gm = 40 mS, beta = 100, Cpi = 10 pF, Cmu = 2 pF.*
+
+![R pi as β runs from 25 to 175, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-transition-frequency-live-2)
+
+*R pi as β runs from 25 to 175, every other input as you entered it (29 solutions). Marked: your β = 100 gives r_pi = 2500. Your inputs: gm = 40 mS, beta = 100, Cpi = 10 pF, Cmu = 2 pF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_transition_frequency', gm=0.04, beta=100.0, Cpi=1e-11, Cmu=2e-12)
@@ -1646,9 +1758,13 @@ $$
 - **Assumes:** mid-band gain unchanged by the capacitors; dominant-pole estimate
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f_H_octc (upper cutoff, open-circuit time constants) against r_pi (r_pi (use a very large value for a MOSFET)) from 250 ohm to 25000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-miller-high-cutoff-curve)
+![Upper cutoff, open-circuit time constants as gm runs from 24 to 56 mS, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-miller-high-cutoff-live-1)
 
-*f_H_octc (upper cutoff, open-circuit time constants) against r_pi (r_pi (use a very large value for a MOSFET)) from 250 ohm to 25000 ohm on a logarithmic axis. One curve for each value of Cmu (feedback capacitance Cmu (Cgd)): 2.0000e-12 F, 1.0000e-12 F, 4.0000e-12 F. Other inputs as in the worked example: gm = 0.04 S, Cpi = 1e-11 F, RLp = 2500.0 ohm, Rsigp = 1000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, r_pi = 2500 ohm, f_H_octc = 1.01743e+06 Hz.*
+*Upper cutoff, open-circuit time constants as gm runs from 24 to 56 mS, every other input as you entered it (41 solutions). Marked: your gm = 40 mS gives f_H_octc = 1017 kHz. Your inputs: gm = 40 mS, r_pi = 2500 ohm, Cpi = 10 pF, Cmu = 2 pF, RLp = 2500 ohm, Rsigp = 1000 ohm.*
+
+![Upper cutoff, open-circuit time constants as Cmu runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-miller-high-cutoff-live-2)
+
+*Upper cutoff, open-circuit time constants as Cmu runs from 1.2 to 2.8 pF, every other input as you entered it (29 solutions). Marked: your Cmu = 2 pF gives f_H_octc = 1017 kHz. Your inputs: gm = 40 mS, r_pi = 2500 ohm, Cpi = 10 pF, Cmu = 2 pF, RLp = 2500 ohm, Rsigp = 1000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_miller_high_cutoff', gm=0.04, r_pi=2500.0, Cpi=1e-11, Cmu=2e-12, RLp=2500.0, Rsigp=1000.0)
@@ -1706,9 +1822,13 @@ $$
 - **Assumes:** short-circuit time-constant estimate; r_o neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f_L (estimated lower cutoff) against CE (emitter bypass capacitor) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-low-frequency-cutoff-curve)
+![Estimated lower cutoff and pole of CE as CE runs from 60 to 140 uF, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-low-frequency-cutoff-live-1)
 
-*f_L (estimated lower cutoff) against CE (emitter bypass capacitor) from 1.0000e-05 F to 0.001 F on a logarithmic axis. One curve for each value of beta (current gain): 100, 50, 200. Other inputs as in the worked example: Rsig = 1000.0 ohm, RB = 20000.0 ohm, r_pi = 2500.0 ohm, RE = 1000.0 ohm, RC = 5000.0 ohm, RL = 10000.0 ohm, C1 = 9.999999999999999e-06 F, C2 = 9.999999999999999e-06 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, CE = 1.0000e-04 F, f_L = 54.1529 Hz.*
+*Estimated lower cutoff and pole of CE as CE runs from 60 to 140 uF, every other input as you entered it (41 solutions). Marked: your CE = 100 uF gives f_L = 54.15. Your inputs: Rsig = 1000 ohm, RB = 20000 ohm, r_pi = 2500 ohm, beta = 100, RE = 1000 ohm, RC = 5000 ohm, RL = 10000 ohm, C1 = 10 uF.*
+
+![Estimated lower cutoff and pole of C1 as C1 runs from 6 to 14 uF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-low-frequency-cutoff-live-2)
+
+*Estimated lower cutoff and pole of C1 as C1 runs from 6 to 14 uF, every other input as you entered it (29 solutions). Marked: your C1 = 10 uF gives f_L = 54.15. Your inputs: Rsig = 1000 ohm, RB = 20000 ohm, r_pi = 2500 ohm, beta = 100, RE = 1000 ohm, RC = 5000 ohm, RL = 10000 ohm, C1 = 10 uF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_low_frequency_cutoff', Rsig=1000.0, RB=20000.0, r_pi=2500.0, beta=100.0, RE=1000.0, RC=5000.0, RL=10000.0, C1=1e-05, C2=1e-05, CE=0.0001)
@@ -1756,9 +1876,13 @@ $$
 - **Assumes:** matched transistors, Early effect neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Iout (output (mirrored) current) against R (reference resistor) from 4650 ohm to 13950 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-current-mirror-curve)
+![Output (mirrored) current as VCC runs from 6 to 14 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-current-mirror-live-1)
 
-*Iout (output (mirrored) current) against R (reference resistor) from 4650 ohm to 13950 ohm. One curve for each value of VCC (supply voltage): 10 V, 5 V, 20 V. Other inputs as in the worked example: VBE = 0.7 V, beta = 100.0. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 9300 ohm, Iout = 0.000980392 A.*
+*Output (mirrored) current as VCC runs from 6 to 14 V, every other input as you entered it (41 solutions). Marked: your VCC = 10 V gives Iout = 0.9804 mA. Your inputs: VCC = 10 V, R = 9300 ohm, VBE = 0.7 V, beta = 100.*
+
+![Output (mirrored) current as R runs from 5580 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-current-mirror-live-2)
+
+*Output (mirrored) current as R runs from 5580 to 1.302e+04 ohm, every other input as you entered it (29 solutions). Marked: your R = 9300 ohm gives Iout = 0.9804 mA. Your inputs: VCC = 10 V, R = 9300 ohm, VBE = 0.7 V, beta = 100.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_current_mirror', VCC=10.0, R=9300.0, VBE=0.7, beta=100.0)
@@ -1804,13 +1928,17 @@ $$
 - **Assumes:** matched transistors, Early effect neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Iout (output current) against beta (current gain of each matched transistor) from 10 to 1000 on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wilson-current-mirror-curve)
+![Output current (Iout) over Iref from 500 µA to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wilson-current-mirror-field)
 
-*Iout (output current) against beta (current gain of each matched transistor) from 10 to 1000 on a logarithmic axis. One curve for each value of Iref (reference current): 0.001 A, 0.0005 A, 0.002 A. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, beta = 100, Iout = 0.000999804 A.*
+*Output current (Iout) over Iref from 500 µA to 1.5 mA and beta from 10 to 1000 (logarithmic axes): each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, Iout = 999.8 µA. In SI units: Iout = 0.0009998 A. Your inputs: Iref = 1 mA, beta = 100.*
 
-![Iout (output current) over Iref (reference current) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wilson-current-mirror-field)
+![Output current as β runs from 25 to 175, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wilson-current-mirror-live-1)
 
-*Iout (output current) over Iref (reference current) from 0.0005 A to 0.0015 A and beta (current gain of each matched transistor) from 10 to 1000 (logarithmic vertical axis): each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 0.000491803 A to dark 0.0015 A); iso-lines at Iout = 6.00e-4, 8.00e-4, 0.001, 0.0012, 0.0014 A. Marked: the worked example, Iref = 0.001 A, beta = 100, Iout = 0.000999804 A.*
+*Output current as β runs from 25 to 175, every other input as you entered it (41 solutions). Marked: your β = 100 gives Iout = 0.9998 mA. Your inputs: Iref = 1 mA, beta = 100.*
+
+![Output current as Iref runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wilson-current-mirror-live-2)
+
+*Output current as Iref runs from 0.6 to 1.4 mA, every other input as you entered it (29 solutions). Marked: your Iref = 1 mA gives Iout = 0.9998 mA. Your inputs: Iref = 1 mA, beta = 100.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_wilson_current_mirror', Iref=0.001, beta=100.0)
@@ -1863,9 +1991,13 @@ $$
 - **Assumes:** matched transistors, r_o neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![CMRR (|Ad_se/Acm|) against VT (thermal voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-differential-pair-curve)
+![Common-mode gain, single-ended output as RC runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-differential-pair-live-1)
 
-*CMRR (|Ad_se/Acm|) against VT (thermal voltage) from 0.0125 V to 0.0375 V. One curve for each value of I_tail (tail (bias) current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: beta = 100.0, RC = 10000.0 ohm, REE = 100000.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VT = 0.025 V, CMRR = 2000.5.*
+*Common-mode gain, single-ended output as RC runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your RC = 1e+04 ohm gives Acm = -0.04949. Your inputs: I_tail = 1 mA, beta = 100, VT = 25 mV, RC = 10000 ohm, REE = 100000 ohm.*
+
+![CMRR as I_tail runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-differential-pair-live-2)
+
+*CMRR as I_tail runs from 0.6 to 1.4 mA, every other input as you entered it (29 solutions). Marked: your I_tail = 1 mA gives CMRR = 2000. Your inputs: I_tail = 1 mA, beta = 100, VT = 25 mV, RC = 10000 ohm, REE = 100000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_differential_pair', I_tail=0.001, beta=100.0, VT=0.025, RC=10000.0, REE=100000.0)
@@ -1916,9 +2048,13 @@ $$
 - **Assumes:** identical transistors, base of the upper one at signal ground
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rout (output resistance of the cascode) against IC (bias current of both transistors) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-cascode-curve)
+![Output resistance of the cascode as VA runs from 60 to 140 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-cascode-live-1)
 
-*Rout (output resistance of the cascode) against IC (bias current of both transistors) from 0.0005 A to 0.0015 A. One curve for each value of VA (Early voltage): 100 V, 50 V, 200 V. Other inputs as in the worked example: beta = 100.0, VT = 0.025 V, RL = 1000000.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, IC = 0.001 A, Rout = 9.85854e+06 ohm.*
+*Output resistance of the cascode as VA runs from 60 to 140 V, every other input as you entered it (41 solutions). Marked: your VA = 100 V gives Rout = 9.859e+06. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, VA = 100 V, RL = 1000000 ohm.*
+
+![Output resistance of the cascode as VT runs from 15 to 35 mV, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-bjt-cascode-live-2)
+
+*Output resistance of the cascode as VT runs from 15 to 35 mV, every other input as you entered it (29 solutions). Marked: your VT = 25 mV gives Rout = 9.859e+06. Your inputs: IC = 1 mA, beta = 100, VT = 25 mV, VA = 100 V, RL = 1000000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_bjt_cascode', IC=0.001, beta=100.0, VT=0.025, VA=100.0, RL=1000000.0)
@@ -1968,13 +2104,13 @@ $$
 - **Assumes:** kn, $Vt > 0$; VDS >= 0; long-channel square law
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![cutoff, triode or saturation (region) over VGS (gate-source voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-drain-current-decision)
+![Cutoff, triode or saturation for 25 5 x 5 combinations of VDS and VGS around your inputs (the other inputs as entered); the ring marks your inputs, which give saturation](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-drain-current-live-1)
 
-*cutoff, triode or saturation (region) over VGS (gate-source voltage) from 0.3 V to 30 V and Vt (threshold voltage) from 0.1 V to 10 V (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, cutoff: 192 cells, saturation: 246 cells, triode: 213 cells. Other inputs as in the worked example: kn = 0.002 A/V^2, VDS = 5.0 V. Marked: the worked example, VGS = 3 V, Vt = 1 V → saturation.*
+*Cutoff, triode or saturation for 25 5 x 5 combinations of VDS and VGS around your inputs (the other inputs as entered); the ring marks your inputs, which give saturation. Blank cells admit no answer. Your inputs: kn = 2 mA/V^2, Vt = 1 V, VGS = 3 V, VDS = 5 V.*
 
-![ID (drain current) against VDS (drain-source voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-drain-current-curve)
+![Drain current as VGS runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-drain-current-live-2)
 
-*ID (drain current) against VDS (drain-source voltage) from 0.5 V to 50 V on a logarithmic axis. One curve for each value of VGS (gate-source voltage): 3 V, 1.5 V, 6 V. Other inputs as in the worked example: kn = 0.002 A/V^2, Vt = 1.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VDS = 5 V, ID = 0.004 A.*
+*Drain current as VGS runs from 1.8 to 4.2 V, every other input as you entered it (9 solutions). Marked: your VGS = 3 V gives ID = 4 mA. Your inputs: kn = 2 mA/V^2, Vt = 1 V, VGS = 3 V, VDS = 5 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_drain_current', kn=0.002, Vt=1.0, VGS=3.0, VDS=5.0)
@@ -2024,9 +2160,13 @@ $$
 - **Assumes:** saturation; ID taken without the (1 + lambda VDS) factor
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![gm (transconductance) against kn (mu Cox W/L) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-gm-ro-curve)
+![Transconductance as ID runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-gm-ro-live-1)
 
-*gm (transconductance) against kn (mu Cox W/L) from 0.001 A/V^2 to 0.003 A/V^2. One curve for each value of ID (drain bias current): 0.001 A, 0.0005 A, 0.002 A. Other inputs as in the worked example: lam = 0.01 1/V, Vt = 0.7 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, kn = 0.002 A/V^2, gm = 0.002 S.*
+*Transconductance as ID runs from 0.6 to 1.4 mA, every other input as you entered it (41 solutions). Marked: your ID = 1 mA gives gm = 0.002. Your inputs: kn = 2 mA/V^2, ID = 1 mA, lam = 0.01 1/V, Vt = 0.7 V.*
+
+![Output resistance as λ runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-gm-ro-live-2)
+
+*Output resistance as λ runs from 0.006 to 0.014 1/V, every other input as you entered it (29 solutions). Marked: your λ = 0.01 1/V gives r_o = 1e+05. Your inputs: kn = 2 mA/V^2, ID = 1 mA, lam = 0.01 1/V, Vt = 0.7 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_gm_ro', kn=0.002, ID=0.001, lam=0.01, Vt=0.7)
@@ -2081,9 +2221,13 @@ $$
 - **Assumes:** $VG > Vt$; saturation: VDS >= VOV (otherwise refused); lambda neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![ID (drain current) against RS (source resistor (0 allowed)) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-divider-bias-curve)
+![Drain current as VDD runs from 9 to 21 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-divider-bias-live-1)
 
-*ID (drain current) against RS (source resistor (0 allowed)) from 500 ohm to 1500 ohm. One curve for each value of VDD (supply voltage): 15 V, 7.5 V, 30 V. Other inputs as in the worked example: R1 = 1000000.0 ohm, R2 = 500000.0 ohm, RD = 3300.0 ohm, kn = 0.002 A/V^2, Vt = 1.5 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RS = 1000 ohm, ID = 0.00206351 A.*
+*Drain current as VDD runs from 9 to 21 V, every other input as you entered it (41 solutions). Marked: your VDD = 15 V gives ID = 2.064 mA. Your inputs: VDD = 15 V, R1 = 1000000 ohm, R2 = 500000 ohm, RD = 3300 ohm, RS = 1000 ohm, kn = 2 mA/V^2, Vt = 1.5 V.*
+
+![Drain current as R2 runs from 3e+05 to 7e+05 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-divider-bias-live-2)
+
+*Drain current as R2 runs from 3e+05 to 7e+05 ohm, every other input as you entered it (29 solutions). Marked: your R2 = 5e+05 ohm gives ID = 2.064 mA. Your inputs: VDD = 15 V, R1 = 1000000 ohm, R2 = 500000 ohm, RD = 3300 ohm, RS = 1000 ohm, kn = 2 mA/V^2, Vt = 1.5 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_divider_bias', VDD=15.0, R1=1000000.0, R2=500000.0, RD=3300.0, RS=1000.0, kn=0.002, Vt=1.5)
@@ -2135,9 +2279,13 @@ $$
 - **Assumes:** gm, ro, RD, RL, RG, Rsig > 0; $RS  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Av (voltage gain gate to output) against ro (transistor output resistance) from 10000 ohm to 1e+06 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-source-amplifier-curve)
+![Input resistance as RG runs from 6e+05 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-source-amplifier-live-1)
 
-*Av (voltage gain gate to output) against ro (transistor output resistance) from 10000 ohm to 1e+06 ohm on a logarithmic axis. One curve for each value of gm (transconductance): 0.002 S, 0.001 S, 0.004 S. Other inputs as in the worked example: RD = 10000.0 ohm, RL = 10000.0 ohm, RS = 0.0 ohm, RG = 1000000.0 ohm, Rsig = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ro = 100000 ohm, Av = -9.52381.*
+*Input resistance as RG runs from 6e+05 to 1.4e+06 ohm, every other input as you entered it (41 solutions). Marked: your RG = 1e+06 ohm gives Rin = 1e+06. Your inputs: gm = 2 mS, ro = 100000 ohm, RD = 10000 ohm, RL = 10000 ohm, RS = 0 ohm, RG = 1000000 ohm, Rsig = 10000 ohm.*
+
+![Voltage gain gate to output as gm runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-common-source-amplifier-live-2)
+
+*Voltage gain gate to output as gm runs from 1.2 to 2.8 mS, every other input as you entered it (29 solutions). Marked: your gm = 2 mS gives Av = -9.524. Your inputs: gm = 2 mS, ro = 100000 ohm, RD = 10000 ohm, RL = 10000 ohm, RS = 0 ohm, RG = 1000000 ohm, Rsig = 10000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_common_source_amplifier', gm=0.002, ro=100000.0, RD=10000.0, RL=10000.0, RS=0.0, RG=1000000.0, Rsig=10000.0)
@@ -2188,9 +2336,13 @@ $$
 - **Assumes:** drain at signal ground
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Av (voltage gain gate to output) against ro (transistor output resistance) from 5000 ohm to 500000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-source-follower-curve)
+![Input resistance as RG runs from 6e+05 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-source-follower-live-1)
 
-*Av (voltage gain gate to output) against ro (transistor output resistance) from 5000 ohm to 500000 ohm on a logarithmic axis. One curve for each value of gm (transconductance): 0.002 S, 0.001 S, 0.004 S. Other inputs as in the worked example: RS = 2000.0 ohm, RL = 2000.0 ohm, RG = 1000000.0 ohm, Rsig = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ro = 50000 ohm, Av = 0.662252.*
+*Input resistance as RG runs from 6e+05 to 1.4e+06 ohm, every other input as you entered it (41 solutions). Marked: your RG = 1e+06 ohm gives Rin = 1e+06. Your inputs: gm = 2 mS, ro = 50000 ohm, RS = 2000 ohm, RL = 2000 ohm, RG = 1000000 ohm, Rsig = 10000 ohm.*
+
+![Voltage gain gate to output as gm runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-source-follower-live-2)
+
+*Voltage gain gate to output as gm runs from 1.2 to 2.8 mS, every other input as you entered it (29 solutions). Marked: your gm = 2 mS gives Av = 0.6623. Your inputs: gm = 2 mS, ro = 50000 ohm, RS = 2000 ohm, RL = 2000 ohm, RG = 1000000 ohm, Rsig = 10000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_source_follower', gm=0.002, ro=50000.0, RS=2000.0, RL=2000.0, RG=1000000.0, Rsig=10000.0)
@@ -2237,9 +2389,13 @@ $$
 - **Assumes:** VSB >= 0; uniform substrate doping
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vt (threshold voltage) against VSB (source-body voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-body-effect-curve)
+![Threshold voltage and threshold increase as γ runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-body-effect-live-1)
 
-*Vt (threshold voltage) against VSB (source-body voltage) from 0.3 V to 30 V on a logarithmic axis. One curve for each value of Vt0 (zero-bias threshold voltage): 0.7 V, 0.35 V, 1.4 V. Other inputs as in the worked example: gamma = 0.4, phi2F = 0.7 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VSB = 3 V, Vt = 1.13475 V.*
+*Threshold voltage and threshold increase as γ runs from 0.1 to 0.7, every other input as you entered it (41 solutions). Marked: your γ = 0.4 gives Vt = 1.135. Your inputs: Vt0 = 0.7 V, gamma = 0.4, phi2F = 0.7 V, VSB = 3 V.*
+
+![Threshold voltage and threshold increase as VSB runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mosfet-body-effect-live-2)
+
+*Threshold voltage and threshold increase as VSB runs from 1.8 to 4.2 V, every other input as you entered it (29 solutions). Marked: your VSB = 3 V gives Vt = 1.135. Your inputs: Vt0 = 0.7 V, gamma = 0.4, phi2F = 0.7 V, VSB = 3 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_mosfet_body_effect', Vt0=0.7, gamma=0.4, phi2F=0.7, VSB=3.0)
@@ -2288,9 +2444,13 @@ $$
 - **Assumes:** Vtn + |Vtp| < VDD; lambda neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![VM (switching threshold) against VDD (supply voltage) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-switching-threshold-curve)
+![Switching threshold as VDD runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-switching-threshold-live-1)
 
-*VM (switching threshold) against VDD (supply voltage) from 1.25 V to 3.75 V. One curve for each value of kn (NMOS mu_n Cox W/L): 0.0001 A/V^2, 5.0000e-05 A/V^2, 0.0002 A/V^2. Other inputs as in the worked example: Vtn = 0.4 V, Vtp = 0.4 V, kp = 0.0001 A/V^2. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VDD = 2.5 V, VM = 1.25 V.*
+*Switching threshold as VDD runs from 1.5 to 3.5 V, every other input as you entered it (41 solutions). Marked: your VDD = 2.5 V gives VM = 1.25. Your inputs: VDD = 2.5 V, Vtn = 0.4 V, Vtp = 0.4 V, kn = 0.1 mA/V^2, kp = 0.1 mA/V^2.*
+
+![Switching threshold as kn runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-switching-threshold-live-2)
+
+*Switching threshold as kn runs from 0.06 to 0.14 mA/V^2, every other input as you entered it (29 solutions). Marked: your kn = 0.1 mA/V^2 gives VM = 1.25. Your inputs: VDD = 2.5 V, Vtn = 0.4 V, Vtp = 0.4 V, kn = 0.1 mA/V^2, kp = 0.1 mA/V^2.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_cmos_switching_threshold', VDD=2.5, Vtn=0.4, Vtp=0.4, kn=0.0001, kp=0.0001)
@@ -2337,9 +2497,13 @@ $$
 - **Assumes:** step input, RC switch model
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![tp (average propagation delay) against Rn (equivalent on-resistance of the pull-down network) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-propagation-delay-curve)
+![Average propagation delay and high-to-low delay as Rn runs from 6000 to 1](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-cmos-propagation-delay-live-1.svg)
 
-*tp (average propagation delay) against Rn (equivalent on-resistance of the pull-down network) from 5000 ohm to 15000 ohm. One curve for each value of CL (load capacitance): 1.0000e-13 F, 5.0000e-14 F, 2.0000e-13 F. Other inputs as in the worked example: Rp = 20000.0 ohm. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rn = 10000 ohm, tp = 1.0397e-09 s.*
+*Average propagation delay and high-to-low delay as Rn runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your Rn = 1e+04 ohm gives tp = 1.04e-09. Your inputs: Rn = 10000 ohm, Rp = 20000 ohm, CL = 100 fF.*
+
+![Average propagation delay and low-to-high delay as Rp runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-propagation-delay-live-2)
+
+*Average propagation delay and low-to-high delay as Rp runs from 1.2e+04 to 2.8e+04 ohm, every other input as you entered it (29 solutions). Marked: your Rp = 2e+04 ohm gives tp = 1.04e-09. Your inputs: Rn = 10000 ohm, Rp = 20000 ohm, CL = 100 fF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_cmos_propagation_delay', Rn=10000.0, Rp=20000.0, CL=1e-13)
@@ -2386,9 +2550,13 @@ $$
 - **Assumes:** ideal op-amp, output not saturated
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against Rin (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-curve)
+![Output voltage as Rin runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-live-1)
 
-*Vout (output voltage) against Rin (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Rf (feedback resistor): 100000 ohm, 50000 ohm, 200000 ohm. Other inputs as in the worked example: Vin = 0.5 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rin = 10000 ohm, Vout = -5 V.*
+*Output voltage as Rin runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your Rin = 1e+04 ohm gives Vout = -5. Your inputs: Rf = 100000 ohm, Rin = 10000 ohm, Vin = 0.5 V.*
+
+![Output voltage as Rf runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-live-2)
+
+*Output voltage as Rf runs from 6e+04 to 1.4e+05 ohm, every other input as you entered it (29 solutions). Marked: your Rf = 1e+05 ohm gives Vout = -5. Your inputs: Rf = 100000 ohm, Rin = 10000 ohm, Vin = 0.5 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_inverting_amplifier', Rf=100000.0, Rin=10000.0, Vin=0.5)
@@ -2434,9 +2602,13 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against Rg (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-noninverting-amplifier-curve)
+![Output voltage as Vin runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-noninverting-amplifier-live-1)
 
-*Vout (output voltage) against Rg (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Vin (input voltage): 0.3 V, 0.15 V, 0.6 V. Other inputs as in the worked example: Rf = 90000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rg = 10000 ohm, Vout = 3 V.*
+*Output voltage as Vin runs from 0.18 to 0.42 V, every other input as you entered it (41 solutions). Marked: your Vin = 0.3 V gives Vout = 3. Your inputs: Rf = 90000 ohm, Rg = 10000 ohm, Vin = 0.3 V.*
+
+![Output voltage as Rg runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-noninverting-amplifier-live-2)
+
+*Output voltage as Rg runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your Rg = 1e+04 ohm gives Vout = 3. Your inputs: Rf = 90000 ohm, Rg = 10000 ohm, Vin = 0.3 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_noninverting_amplifier', Rf=90000.0, Rg=10000.0, Vin=0.3)
@@ -2482,9 +2654,9 @@ $$
 - **Assumes:** one resistor per input; ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against Rf (feedback resistor) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-summing-amplifier-curve)
+![Output voltage as Rf runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-summing-amplifier-live-1)
 
-*Vout (output voltage) against Rf (feedback resistor) from 5000 ohm to 15000 ohm. Other inputs as in the worked example: V = [1.0, 2.0, -0.5], R = [10.0, 20.0, 5.0]. 31 points computed by electronics-engineering-ai999x; marked: the worked example, Rf = 10000 ohm, Vout = -1 V.*
+*Output voltage as Rf runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your Rf = 1e+04 ohm gives Vout = -1. Your inputs: V = 1, 2, -0.5, R = 10, 20, 5, Rf = 10000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_summing_amplifier', V=[1.0, 2.0, -0.5], R=[10.0, 20.0, 5.0], Rf=10000.0)
@@ -2534,9 +2706,13 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against R1 (resistor from V1 to the inverting input) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-difference-amplifier-curve)
+![Output voltage as R1 runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-difference-amplifier-live-1)
 
-*Vout (output voltage) against R1 (resistor from V1 to the inverting input) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of V2 (voltage at the non-inverting side): 1.2 V, 0.6 V, 2.4 V. Other inputs as in the worked example: R2 = 100000.0 ohm, R3 = 10000.0 ohm, R4 = 100000.0 ohm, V1 = 1.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Vout = 2 V.*
+*Output voltage as R1 runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your R1 = 1e+04 ohm gives Vout = 2. Your inputs: R1 = 10000 ohm, R2 = 100000 ohm, R3 = 10000 ohm, R4 = 100000 ohm, V1 = 1 V, V2 = 1.2 V.*
+
+![Output voltage as R2 runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-difference-amplifier-live-2)
+
+*Output voltage as R2 runs from 6e+04 to 1.4e+05 ohm, every other input as you entered it (29 solutions). Marked: your R2 = 1e+05 ohm gives Vout = 2. Your inputs: R1 = 10000 ohm, R2 = 100000 ohm, R3 = 10000 ohm, R4 = 100000 ohm, V1 = 1 V, V2 = 1.2 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_difference_amplifier', R1=10000.0, R2=100000.0, R3=10000.0, R4=100000.0, V1=1.0, V2=1.2)
@@ -2586,9 +2762,13 @@ $$
 - **Assumes:** ideal op-amps, matched resistors
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against RG (gain-setting resistor between the buffers) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-instrumentation-amplifier-curve)
+![Output voltage as V1 runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-instrumentation-amplifier-live-1)
 
-*Vout (output voltage) against RG (gain-setting resistor between the buffers) from 500 ohm to 1500 ohm. One curve for each value of V2 (input at the non-inverting side): 1.01 V, 0.505 V, 2.02 V. Other inputs as in the worked example: R1 = 25000.0 ohm, R2 = 10000.0 ohm, R3 = 10000.0 ohm, V1 = 1.0 V. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RG = 1000 ohm, Vout = 0.51 V.*
+*Output voltage as V1 runs from 0.6 to 1.4 V, every other input as you entered it (41 solutions). Marked: your V1 = 1 V gives Vout = 0.51. Your inputs: R1 = 25000 ohm, RG = 1000 ohm, R2 = 10000 ohm, R3 = 10000 ohm, V1 = 1 V, V2 = 1.01 V.*
+
+![Output voltage as V2 runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-instrumentation-amplifier-live-2)
+
+*Output voltage as V2 runs from 0.606 to 1.414 V, every other input as you entered it (29 solutions). Marked: your V2 = 1.01 V gives Vout = 0.51. Your inputs: R1 = 25000 ohm, RG = 1000 ohm, R2 = 10000 ohm, R3 = 10000 ohm, V1 = 1 V, V2 = 1.01 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_instrumentation_amplifier', R1=25000.0, RG=1000.0, R2=10000.0, R3=10000.0, V1=1.0, V2=1.01)
@@ -2637,9 +2817,13 @@ $$
 - **Assumes:** $A_{0} > 0$ (ratio); infinite input resistance, zero output resistance
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![G (closed-loop gain) against Rf (feedback resistor) from 10000 ohm to 1e+06 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-finite-gain-curve)
+![Closed-loop gain as R1 runs from 600 to 1400 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-finite-gain-live-1)
 
-*G (closed-loop gain) against Rf (feedback resistor) from 10000 ohm to 1e+06 ohm on a logarithmic axis. One curve for each value of R1 (input resistor): 1000 ohm, 500 ohm, 2000 ohm. Other inputs as in the worked example: A0 = 10000.0, Vin = 0.01 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 100000 ohm, G = -99.0001.*
+*Closed-loop gain as R1 runs from 600 to 1400 ohm, every other input as you entered it (41 solutions). Marked: your R1 = 1000 ohm gives G = -99. Your inputs: Rf = 100000 ohm, R1 = 1000 ohm, A0 = 10000, Vin = 0.01 V.*
+
+![Closed-loop gain as Rf runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-inverting-amplifier-finite-gain-live-2)
+
+*Closed-loop gain as Rf runs from 6e+04 to 1.4e+05 ohm, every other input as you entered it (29 solutions). Marked: your Rf = 1e+05 ohm gives G = -99. Your inputs: Rf = 100000 ohm, R1 = 1000 ohm, A0 = 10000, Vin = 0.01 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_inverting_amplifier_finite_gain', Rf=100000.0, R1=1000.0, A0=10000.0, Vin=0.01)
@@ -2688,9 +2872,13 @@ $$
 - **Assumes:** ideal op-amp, output not saturated
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage at t) against R (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-integrator-curve)
+![Output voltage at t as R runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-integrator-live-1)
 
-*Vout (output voltage at t) against R (input resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of C (feedback capacitor): 1.0000e-06 F, 5.0000e-07 F, 2.0000e-06 F. Other inputs as in the worked example: Vin = 0.5 V, t = 0.002 s. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, Vout = -0.1 V.*
+*Output voltage at t as R runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your R = 1e+04 ohm gives Vout = -0.1. Your inputs: R = 10000 ohm, C = 1 uF, Vin = 0.5 V, t = 2 ms.*
+
+![Output voltage at t as C runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-integrator-live-2)
+
+*Output voltage at t as C runs from 0.6 to 1.4 uF, every other input as you entered it (29 solutions). Marked: your C = 1 uF gives Vout = -0.1. Your inputs: R = 10000 ohm, C = 1 uF, Vin = 0.5 V, t = 2 ms.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_integrator', R=10000.0, C=1e-06, Vin=0.5, t=0.002)
@@ -2738,9 +2926,13 @@ $$
 - **Assumes:** ideal op-amp (no high-frequency limiting)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout_peak (peak output voltage) against R (feedback resistor) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-differentiator-curve)
+![Peak output voltage as R runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-differentiator-live-1)
 
-*Vout_peak (peak output voltage) against R (feedback resistor) from 5000 ohm to 15000 ohm. One curve for each value of C (input capacitor): 1.0000e-08 F, 5.0000e-09 F, 2.0000e-08 F. Other inputs as in the worked example: A = 1.0 V, f = 1000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, Vout_peak = 0.628319 V.*
+*Peak output voltage as R runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your R = 1e+04 ohm gives Vout_peak = 0.6283. Your inputs: R = 10000 ohm, C = 10 nF, A = 1 V, f = 1000 Hz.*
+
+![Peak output voltage as C runs from 6 to 14 nF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-differentiator-live-2)
+
+*Peak output voltage as C runs from 6 to 14 nF, every other input as you entered it (29 solutions). Marked: your C = 10 nF gives Vout_peak = 0.6283. Your inputs: R = 10000 ohm, C = 10 nF, A = 1 V, f = 1000 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_differentiator', R=10000.0, C=1e-08, A=1.0, f=1000.0)
@@ -2788,9 +2980,13 @@ $$
 - **Assumes:** single-pole op-amp with open-loop gain much larger than the closed-loop gain
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f_3dB (closed-loop -3 dB bandwidth) against Rf (feedback resistor) from 9000 ohm to 900000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-closed-loop-bandwidth-curve)
+![Closed-loop -3 dB bandwidth as GBW runs from 6e+05 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-closed-loop-bandwidth-live-1)
 
-*f_3dB (closed-loop -3 dB bandwidth) against Rf (feedback resistor) from 9000 ohm to 900000 ohm on a logarithmic axis. One curve for each value of GBW (gain-bandwidth product (unity-gain frequency)): 1e+06 Hz, 500000 Hz, 2e+06 Hz. Other inputs as in the worked example: config = non-inverting, R1 = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 90000 ohm, f_3dB = 100000 Hz.*
+*Closed-loop -3 dB bandwidth as GBW runs from 6e+05 to 1.4e+06 Hz, every other input as you entered it (41 solutions). Marked: your GBW = 1e+06 Hz gives f_3dB = 100 kHz. Your inputs: GBW = 1000000 Hz, config = non-inverting, Rf = 90000 ohm, R1 = 10000 ohm.*
+
+![Closed-loop -3 dB bandwidth as R1 runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-closed-loop-bandwidth-live-2)
+
+*Closed-loop -3 dB bandwidth as R1 runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your R1 = 1e+04 ohm gives f_3dB = 100 kHz. Your inputs: GBW = 1000000 Hz, config = non-inverting, Rf = 90000 ohm, R1 = 10000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_closed_loop_bandwidth', GBW=1000000.0, config='non-inverting', Rf=90000.0, R1=10000.0)
@@ -2839,13 +3035,17 @@ $$
 - **Assumes:** sinusoidal output
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![slew-limited or not slew-limited (limited) over SR (slew rate) from 50000 V/s to 5e+06 V/s and Vp (peak output amplitude) from 1 V to 100 V (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, not slew-limited: 208 cells, slew-limited: 443 cells](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-slew-rate-limit-decision)
+![Full-power bandwidth at Vp as Vp runs from 6 to 14 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-slew-rate-limit-live-1)
 
-*slew-limited or not slew-limited (limited) over SR (slew rate) from 50000 V/s to 5e+06 V/s and Vp (peak output amplitude) from 1 V to 100 V (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, not slew-limited: 208 cells, slew-limited: 443 cells. Other inputs as in the worked example: f = 20000.0 Hz. Marked: the worked example, SR = 500000 V/s, Vp = 10 V → slew-limited.*
+*Full-power bandwidth at Vp as Vp runs from 6 to 14 V, every other input as you entered it (41 solutions). Marked: your Vp = 10 V gives f_max = 7958. Your inputs: SR = 0.5 V/us, Vp = 10 V, f = 20000 Hz.*
 
-![f_max (full-power bandwidth at Vp) against Vp (peak output amplitude) from 5 V to 15 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-slew-rate-limit-curve)
+![Slew-limited or not slew-limited for 25 5 x 5 combinations of Vp and f around your inputs (the other inputs as entered); the ring marks your inputs, which give slew-limited](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-slew-rate-limit-live-2)
 
-*f_max (full-power bandwidth at Vp) against Vp (peak output amplitude) from 5 V to 15 V. One curve for each value of SR (slew rate): 500000 V/s, 250000 V/s, 1e+06 V/s. Other inputs as in the worked example: f = 20000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vp = 10 V, f_max = 7957.75 Hz.*
+*Slew-limited or not slew-limited for 25 5 x 5 combinations of Vp and f around your inputs (the other inputs as entered); the ring marks your inputs, which give slew-limited. Blank cells admit no answer. Your inputs: SR = 0.5 V/us, Vp = 10 V, f = 20000 Hz.*
+
+![Slope needed as f runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-slew-rate-limit-live-3)
+
+*Slope needed as f runs from 1.2e+04 to 2.8e+04 Hz, every other input as you entered it (27 solutions). Marked: your f = 2e+04 Hz gives slope_needed = 1.257e+06. Your inputs: SR = 0.5 V/us, Vp = 10 V, f = 20000 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_slew_rate_limit', SR=500000.0, Vp=10.0, f=20000.0)
@@ -2896,9 +3096,13 @@ $$
 - **Assumes:** currents flow into the inputs; IB- = IB + Ios/2, IB+ = IB - Ios/2
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout_total (total output error) against R1 (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-dc-offset-curve)
+![Total output error and output error from Vos as Vos runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-dc-offset-live-1)
 
-*Vout_total (total output error) against R1 (resistor from the inverting input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Rf (feedback resistor): 100000 ohm, 50000 ohm, 200000 ohm. Other inputs as in the worked example: Vos = 0.002 V, IB = 1.0000000000000001e-07 A, Ios = 1e-08 A, Rp = 0.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Vout_total = 0.0325 V.*
+*Total output error and output error from Vos as Vos runs from 1.2 to 2.8 mV, every other input as you entered it (41 solutions). Marked: your Vos = 2 mV gives Vout_total = 32.5 mV. Your inputs: Vos = 2 mV, IB = 100 nA, Ios = 10 nA, Rf = 100000 ohm, R1 = 10000 ohm, Rp = 0 ohm.*
+
+![Total output error as Rf runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-dc-offset-live-2)
+
+*Total output error as Rf runs from 6e+04 to 1.4e+05 ohm, every other input as you entered it (29 solutions). Marked: your Rf = 1e+05 ohm gives Vout_total = 32.5 mV. Your inputs: Vos = 2 mV, IB = 100 nA, Ios = 10 nA, Rf = 100000 ohm, R1 = 10000 ohm, Rp = 0 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_dc_offset', Vos=0.002, IB=1e-07, Ios=1e-08, Rf=100000.0, R1=10000.0, Rp=0.0)
@@ -2948,9 +3152,13 @@ $$
 - **Assumes:** VsatH > VsatL; input on the inverting terminal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![hysteresis (hysteresis width) against Rf (resistor from the output to the + input) from 9000 ohm to 900000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-schmitt-trigger-curve)
+![Hysteresis width and upper threshold as VsatH runs from 7](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-schmitt-trigger-live-1)
 
-*hysteresis (hysteresis width) against Rf (resistor from the output to the + input) from 9000 ohm to 900000 ohm on a logarithmic axis. One curve for each value of R1 (resistor from the + input to Vref): 10000 ohm, 5000 ohm, 20000 ohm. Other inputs as in the worked example: VsatH = 12.0 V, VsatL = -12.0 V, Vref = 0.0 V. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 90000 ohm, hysteresis = 2.4 V.*
+*Hysteresis width and upper threshold as VsatH runs from 7.2 to 16.8 V, every other input as you entered it (41 solutions). Marked: your VsatH = 12 V gives hysteresis = 2.4. Your inputs: Rf = 90000 ohm, R1 = 10000 ohm, VsatH = 12 V, VsatL = -12 V, Vref = 0 V.*
+
+![Hysteresis width and lower threshold as VsatL runs from -16](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-schmitt-trigger-live-2)
+
+*Hysteresis width and lower threshold as VsatL runs from -16.8 to -7.2 V, every other input as you entered it (29 solutions). Marked: your VsatL = -12 V gives hysteresis = 2.4. Your inputs: Rf = 90000 ohm, R1 = 10000 ohm, VsatH = 12 V, VsatL = -12 V, Vref = 0 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_schmitt_trigger', Rf=90000.0, R1=10000.0, VsatH=12.0, VsatL=-12.0, Vref=0.0)
@@ -2999,9 +3207,13 @@ $$
 - **Assumes:** single-pole open-loop response; frequency-independent beta
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Af (closed-loop gain) against beta (feedback factor (a ratio)) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-negative-feedback-curve)
+![Closed-loop gain as A runs from 2500 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-negative-feedback-live-1)
 
-*Af (closed-loop gain) against beta (feedback factor (a ratio)) from 0.02 to 0.98. Other inputs as in the worked example: A = 10000.0, fH = 1000.0 Hz. 41 points computed by electronics-engineering-ai999x; marked: the worked example, beta = 0.01, Af = 99.0099.*
+*Closed-loop gain as A runs from 2500 to 1.75e+04, every other input as you entered it (41 solutions). Marked: your A = 1e+04 gives Af = 99.01. Your inputs: A = 10000, beta = 0.01, fH = 1000 Hz.*
+
+![Closed-loop gain as β runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-negative-feedback-live-2)
+
+*Closed-loop gain as β runs from 0.0025 to 0.0175, every other input as you entered it (29 solutions). Marked: your β = 0.01 gives Af = 99.01. Your inputs: A = 10000, beta = 0.01, fH = 1000 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_negative_feedback', A=10000.0, beta=0.01, fH=1000.0)
@@ -3049,9 +3261,13 @@ $$
 - **Assumes:** A0 $\beta > 1$; two real left-half-plane poles
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![PM_deg (phase margin in degrees) against A0 (DC open-loop gain (a ratio)) from 10000 to 1e+06 on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-two-pole-phase-margin-curve)
+![Phase margin in degrees as β runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-two-pole-phase-margin-live-1)
 
-*PM_deg (phase margin in degrees) against A0 (DC open-loop gain (a ratio)) from 10000 to 1e+06 on a logarithmic axis. One curve for each value of f1 (first pole frequency): 10 Hz, 5 Hz, 20 Hz. Other inputs as in the worked example: f2 = 1000000.0 Hz, beta = 0.1. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, A0 = 100000, PM_deg = 84.323.*
+*Phase margin in degrees as β runs from 0.025 to 0.175, every other input as you entered it (41 solutions). Marked: your β = 0.1 gives PM_deg = 84.32. Your inputs: A0 = 100000, f1 = 10 Hz, f2 = 1000000 Hz, beta = 0.1.*
+
+![Phase margin in degrees as A0 runs from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-two-pole-phase-margin-live-2)
+
+*Phase margin in degrees as A0 runs from 2.5e+04 to 1.75e+05, every other input as you entered it (29 solutions). Marked: your A0 = 1e+05 gives PM_deg = 84.32. Your inputs: A0 = 100000, f1 = 10 Hz, f2 = 1000000 Hz, beta = 0.1.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_two_pole_phase_margin', A0=100000.0, f1=10.0, f2=1000000.0, beta=0.1)
@@ -3100,9 +3316,13 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![fc (cutoff frequency) against Rf (feedback resistor) from 50000 ohm to 150000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-first-order-active-lowpass-curve)
+![Cutoff frequency as Rf runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-first-order-active-lowpass-live-1)
 
-*fc (cutoff frequency) against Rf (feedback resistor) from 50000 ohm to 150000 ohm. One curve for each value of C (capacitor across Rf): 1.5900e-09 F, 7.9500e-10 F, 3.1800e-09 F. Other inputs as in the worked example: R1 = 10000.0 ohm, f = 1000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Rf = 100000 ohm, fc = 1000.97 Hz.*
+*Cutoff frequency as Rf runs from 6e+04 to 1.4e+05 ohm, every other input as you entered it (41 solutions). Marked: your Rf = 1e+05 ohm gives fc = 1001. Your inputs: R1 = 10000 ohm, Rf = 100000 ohm, C = 1.59 nF, f = 1000 Hz.*
+
+![Cutoff frequency as C runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-first-order-active-lowpass-live-2)
+
+*Cutoff frequency as C runs from 0.954 to 2.226 nF, every other input as you entered it (29 solutions). Marked: your C = 1.59 nF gives fc = 1001. Your inputs: R1 = 10000 ohm, Rf = 100000 ohm, C = 1.59 nF, f = 1000 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_first_order_active_lowpass', R1=10000.0, Rf=100000.0, C=1.59e-09, f=1000.0)
@@ -3152,13 +3372,17 @@ $$
 - **Assumes:** stable: R1 $C_{2} + R_{2}$ $C_{2} + R_{1}$ C1 $(1 - K) > 0$; ideal amplifier
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (quality factor) against R1 (first series resistor), with C1 = 2](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-sallen-key-lowpass-q-vs-r1.svg)
+![Quality factor (Q) against first series resistor (R1) from 5 kΩ to 15 kΩ, the other inputs as given: 31 points, each computed by the model](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-sallen-key-lowpass-q-vs-r1.svg)
 
-*Q (quality factor) against R1 (first series resistor), with C1 = 2.00e-8 F, C2 = 1.00e-8 F, K = 1, R2 = 10000 ohm. 31 points computed by electronics-engineering-ai999x; marked: R1 = 10000, Q = 0.707107.*
+*Quality factor (Q) against first series resistor (R1) from 5 kΩ to 15 kΩ, the other inputs as given: 31 points, each computed by the model. Marked: the inputs given, R1 = 10 kΩ, Q = 0.7071. Your inputs: R1 = 10000 ohm, R2 = 10000 ohm, C1 = 20 nF, C2 = 10 nF, K = 1.*
 
-![Q (quality factor) against R1 (first series resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-lowpass-curve)
+![Quality factor as K runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-lowpass-live-1)
 
-*Q (quality factor) against R1 (first series resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of K (amplifier gain (1 for a unity-gain buffer)): 1, 0.5, 2. Other inputs as in the worked example: R2 = 10000.0 ohm, C1 = 2e-08 F, C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, Q = 0.707107.*
+*Quality factor as K runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your K = 1 gives Q = 0.7071. Your inputs: R1 = 10000 ohm, R2 = 10000 ohm, C1 = 20 nF, C2 = 10 nF, K = 1.*
+
+![Quality factor as C1 runs from 12 to 28 nF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-lowpass-live-2)
+
+*Quality factor as C1 runs from 12 to 28 nF, every other input as you entered it (29 solutions). Marked: your C1 = 20 nF gives Q = 0.7071. Your inputs: R1 = 10000 ohm, R2 = 10000 ohm, C1 = 20 nF, C2 = 10 nF, K = 1.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_sallen_key_lowpass', R1=10000.0, R2=10000.0, C1=2e-08, C2=1e-08, K=1.0)
@@ -3207,9 +3431,13 @@ $$
 - **Assumes:** stable: R1 $(C_{1} + C_{2}) + R_{2}$ C2 $(1 - K) > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (quality factor) against C1 (first series capacitor) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-highpass-curve)
+![Quality factor as K runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-highpass-live-1)
 
-*Q (quality factor) against C1 (first series capacitor) from 1.0000e-09 F to 1.0000e-07 F on a logarithmic axis. One curve for each value of K (amplifier gain): 1, 0.5, 2. Other inputs as in the worked example: C2 = 1e-08 F, R1 = 11250.0 ohm, R2 = 22500.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C1 = 1.0000e-08 F, Q = 0.707107.*
+*Quality factor as K runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your K = 1 gives Q = 0.7071. Your inputs: C1 = 10 nF, C2 = 10 nF, R1 = 11250 ohm, R2 = 22500 ohm, K = 1.*
+
+![Quality factor as R2 runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-highpass-live-2)
+
+*Quality factor as R2 runs from 1.35e+04 to 3.15e+04 ohm, every other input as you entered it (29 solutions). Marked: your R2 = 2.25e+04 ohm gives Q = 0.7071. Your inputs: C1 = 10 nF, C2 = 10 nF, R1 = 11250 ohm, R2 = 22500 ohm, K = 1.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_sallen_key_highpass', C1=1e-08, C2=1e-08, R1=11250.0, R2=22500.0, K=1.0)
@@ -3258,9 +3486,13 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q (quality factor) against R3 (resistor from the middle node to the inverting input) from 500 ohm to 50000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-lowpass-curve)
+![Quality factor as R1 runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-lowpass-live-1)
 
-*Q (quality factor) against R3 (resistor from the middle node to the inverting input) from 500 ohm to 50000 ohm on a logarithmic axis. One curve for each value of C1 (capacitor from the middle node to ground): 4.7000e-08 F, 2.3500e-08 F, 9.4000e-08 F. Other inputs as in the worked example: R1 = 10000.0 ohm, R2 = 10000.0 ohm, C2 = 4.700000000000001e-09 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R3 = 5000 ohm, Q = 1.11803.*
+*Quality factor as R1 runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your R1 = 1e+04 ohm gives Q = 1.118. Your inputs: R1 = 10000 ohm, R2 = 10000 ohm, R3 = 5000 ohm, C1 = 47 nF, C2 = 4.7 nF.*
+
+![Quality factor as R2 runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-lowpass-live-2)
+
+*Quality factor as R2 runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your R2 = 1e+04 ohm gives Q = 1.118. Your inputs: R1 = 10000 ohm, R2 = 10000 ohm, R3 = 5000 ohm, C1 = 47 nF, C2 = 4.7 nF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_mfb_lowpass', R1=10000.0, R2=10000.0, R3=5000.0, C1=4.7e-08, C2=4.7e-09)
@@ -3310,9 +3542,13 @@ $$
 - **Assumes:** ideal op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f0 (centre frequency) against R2 (resistor from the middle node to ground) from 133 ohm to 13300 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-bandpass-curve)
+![Centre frequency and -3 dB bandwidth as R3 runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-bandpass-live-1)
 
-*f0 (centre frequency) against R2 (resistor from the middle node to ground) from 133 ohm to 13300 ohm on a logarithmic axis. One curve for each value of R3 (feedback resistor (inverting input to output)): 31800 ohm, 15900 ohm, 63600 ohm. Other inputs as in the worked example: R1 = 15900.0 ohm, C1 = 1e-08 F, C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R2 = 1330 ohm, f0 = 2547.56 Hz.*
+*Centre frequency and -3 dB bandwidth as R3 runs from 1.908e+04 to 4.452e+04 ohm, every other input as you entered it (41 solutions). Marked: your R3 = 3.18e+04 ohm gives f0 = 2548. Your inputs: R1 = 15900 ohm, R2 = 1330 ohm, R3 = 31800 ohm, C1 = 10 nF, C2 = 10 nF.*
+
+![Centre frequency as R1 runs from 9540 to 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-mfb-bandpass-live-2)
+
+*Centre frequency as R1 runs from 9540 to 2.226e+04 ohm, every other input as you entered it (29 solutions). Marked: your R1 = 1.59e+04 ohm gives f0 = 2548. Your inputs: R1 = 15900 ohm, R2 = 1330 ohm, R3 = 31800 ohm, C1 = 10 nF, C2 = 10 nF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_mfb_bandpass', R1=15900.0, R2=1330.0, R3=31800.0, C1=1e-08, C2=1e-08)
@@ -3359,9 +3595,13 @@ $$
 - **Assumes:** $0.5  \leq  Q  \leq  20$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![R (resistor value) against fc (natural (cutoff) frequency) from 500 Hz to 1500 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-equal-component-design-curve)
+![Gain resistor ratio Rf/Rg as Q runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-equal-component-design-live-1)
 
-*R (resistor value) against fc (natural (cutoff) frequency) from 500 Hz to 1500 Hz. One curve for each value of C (chosen capacitor value): 1.0000e-08 F, 5.0000e-09 F, 2.0000e-08 F. Other inputs as in the worked example: Q = 0.7071. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, fc = 1000 Hz, R = 15915.5 ohm.*
+*Gain resistor ratio Rf/Rg as Q runs from 0.5215 to 1.237, every other input as you entered it (28 solutions). Marked: your Q = 0.7071 gives Rf_over_Rg = 0.5858. Your inputs: fc = 1000 Hz, Q = 0.7071, C = 10 nF.*
+
+![Resistor value as fc runs from 600 to 1400 Hz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sallen-key-equal-component-design-live-2)
+
+*Resistor value as fc runs from 600 to 1400 Hz, every other input as you entered it (29 solutions). Marked: your fc = 1000 Hz gives R = 1.592e+04. Your inputs: fc = 1000 Hz, Q = 0.7071, C = 10 nF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_sallen_key_equal_component_design', fc=1000.0, Q=0.7071, C=1e-08)
@@ -3408,9 +3648,17 @@ $$
 - **Assumes:** $fs > fp$; $As > Ap > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![n (minimum filter order) against fs (stopband edge) from 1250 Hz to 3750 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-filter-order-curve)
+![Minimum filter order as fs runs from 1500 to 3500 Hz, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-filter-order-live-1)
 
-*n (minimum filter order) against fs (stopband edge) from 1250 Hz to 3750 Hz. One curve for each value of As (minimum stopband attenuation in dB): 40, 20, 80. Other inputs as in the worked example: ftype = Butterworth, fp = 1000.0 Hz, Ap = 1.0. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, fs = 2500 Hz, n = 6.*
+*Minimum filter order as fs runs from 1500 to 3500 Hz, every other input as you entered it (41 solutions). Marked: your fs = 2500 Hz gives n = 6. Your inputs: ftype = Butterworth, fp = 1000 Hz, fs = 2500 Hz, Ap = 1, As = 40.*
+
+![Minimum filter order for every choice of ftype, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-filter-order-live-2)
+
+*Minimum filter order for every choice of ftype, every other input as you entered it (highlighted: your choice). Butterworth: 6; Chebyshev: 4. Your inputs: ftype = Butterworth, fp = 1000 Hz, fs = 2500 Hz, Ap = 1, As = 40.*
+
+![Minimum filter order as fp runs from 600 to 1400 Hz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-filter-order-live-3)
+
+*Minimum filter order as fp runs from 600 to 1400 Hz, every other input as you entered it (29 solutions). Marked: your fp = 1000 Hz gives n = 6. Your inputs: ftype = Butterworth, fp = 1000 Hz, fs = 2500 Hz, Ap = 1, As = 40.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_filter_order', ftype='Butterworth', fp=1000.0, fs=2500.0, Ap=1.0, As=40.0)
@@ -3458,9 +3706,13 @@ $$
 - **Assumes:** $2  \leq  n  \leq  20$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Q_max (largest section Q) against n (filter order) from 1 to 12](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-butterworth-section-q-curve)
+![Largest section Q as n runs from 2 to 8, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-butterworth-section-q-live-1)
 
-*Q_max (largest section Q) against n (filter order) from 1 to 12. 11 points computed by electronics-engineering-ai999x; marked: the worked example, n = 4, Q_max = 1.30656.*
+*Largest section Q as n runs from 2 to 8, every other input as you entered it (7 solutions). Marked: your n = 4 gives Q_max = 1.307. Your inputs: n = 4.*
+
+![Every entry of Q as computed for your inputs (2 entries: 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-butterworth-section-q-live-2)
+
+*Every entry of Q as computed for your inputs (2 entries: 0.5412, 1.307). Your inputs: n = 4.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_butterworth_section_q', n=4)
@@ -3508,13 +3760,17 @@ $$
 - **Assumes:** $2  \leq  n  \leq  16$; 0.001 dB <= ripple <= 6 dB
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![section natural frequencies / passband edge, in the same order (f0_ratio) at each section Q values, ascending (Q), both returned by electronics-engineering-ai999x for the worked example (n = 4, ripple = 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-chebyshev-sections-series)
+![Largest section Q as n runs from 2 to 8, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-chebyshev-sections-live-1)
 
-*section natural frequencies / passband edge, in the same order (f0_ratio) at each section Q values, ascending (Q), both returned by electronics-engineering-ai999x for the worked example (n = 4, ripple = 0.5): 0.70511 → 0.597002; 2.94055 → 1.03127.*
+*Largest section Q as n runs from 2 to 8, every other input as you entered it (7 solutions). Marked: your n = 4 gives Q_max = 2.941. Your inputs: n = 4, ripple = 0.5.*
 
-![Q_max (largest section Q) against ripple (passband ripple in dB) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-chebyshev-sections-curve)
+![Every entry of Q as computed for your inputs (2 entries: 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-chebyshev-sections-live-2)
 
-*Q_max (largest section Q) against ripple (passband ripple in dB) from 0.05 to 5 on a logarithmic axis. One curve for each value of n (filter order): 4, 2, 8. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, ripple = 0.5, Q_max = 2.94055.*
+*Every entry of Q as computed for your inputs (2 entries: 0.7051, 2.941). Your inputs: n = 4, ripple = 0.5.*
+
+![Largest section Q as ripple runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-chebyshev-sections-live-3)
+
+*Largest section Q as ripple runs from 0.125 to 0.875, every other input as you entered it (29 solutions). Marked: your ripple = 0.5 gives Q_max = 2.941. Your inputs: n = 4, ripple = 0.5.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_chebyshev_sections', n=4, ripple=0.5)
@@ -3561,13 +3817,21 @@ $$
 - **Assumes:** unloaded ladder (driven by a voltage source, feeding a high impedance)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f0 (oscillation frequency) against R (resistor of each section) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-curve)
+![Oscillation frequency (f0) over R from 5 kΩ to 15 kΩ and C from 5 nF to 15 nF: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-field)
 
-*f0 (oscillation frequency) against R (resistor of each section) from 5000 ohm to 15000 ohm. One curve for each value of C (capacitor of each section): 1.0000e-08 F, 5.0000e-09 F, 2.0000e-08 F. Other inputs as in the worked example: ladder = high-pass. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, f0 = 649.747 Hz.*
+*Oscillation frequency (f0) over R from 5 kΩ to 15 kΩ and C from 5 nF to 15 nF: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, f0 = 649.7 Hz. Your inputs: R = 10000 ohm, C = 1e-08 F, ladder = high-pass.*
 
-![f0 (oscillation frequency) over R (resistor of each section) from 5000 ohm to 15000 ohm and C (capacitor of each section) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-field)
+![Oscillation frequency as R runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-live-1)
 
-*f0 (oscillation frequency) over R (resistor of each section) from 5000 ohm to 15000 ohm and C (capacitor of each section) from 5.0000e-09 F to 1.5000e-08 F: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 288.777 Hz to dark 2598.99 Hz); iso-lines at f0 = 500, 1000, 1500, 2000 Hz. Other inputs as in the worked example: ladder = high-pass. Marked: the worked example, R = 10000 ohm, C = 1.0000e-08 F, f0 = 649.747 Hz.*
+*Oscillation frequency as R runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your R = 1e+04 ohm gives f0 = 649.7. Your inputs: R = 10000 ohm, C = 1e-08 F, ladder = high-pass.*
+
+![Oscillation frequency for every choice of ladder, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-live-2)
+
+*Oscillation frequency for every choice of ladder, every other input as you entered it (highlighted: your choice). high-pass: 649.7; low-pass: 3898. Your inputs: R = 10000 ohm, C = 1e-08 F, ladder = high-pass.*
+
+![Oscillation frequency as C runs from 6e-09 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-phase-shift-oscillator-live-3)
+
+*Oscillation frequency as C runs from 6e-09 to 1.4e-08 F, every other input as you entered it (29 solutions). Marked: your C = 1e-08 F gives f0 = 649.7. Your inputs: R = 10000 ohm, C = 1e-08 F, ladder = high-pass.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_rc_phase_shift_oscillator', R=10000.0, C=1e-08, ladder='high-pass')
@@ -3616,9 +3880,13 @@ $$
 - **Assumes:** ideal amplifier
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f0 (oscillation frequency) against R1 (series-arm resistor) from 5000 ohm to 15000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wien-bridge-oscillator-curve)
+![Oscillation frequency as C1 runs from 9](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wien-bridge-oscillator-live-1)
 
-*f0 (oscillation frequency) against R1 (series-arm resistor) from 5000 ohm to 15000 ohm. One curve for each value of C1 (series-arm capacitor): 1.6000e-08 F, 8.0000e-09 F, 3.2000e-08 F. Other inputs as in the worked example: R2 = 10000.0 ohm, C2 = 1.6e-08 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, f0 = 994.718 Hz.*
+*Oscillation frequency as C1 runs from 9.6 to 22.4 nF, every other input as you entered it (41 solutions). Marked: your C1 = 16 nF gives f0 = 994.7. Your inputs: R1 = 10000 ohm, C1 = 16 nF, R2 = 10000 ohm, C2 = 16 nF.*
+
+![Oscillation frequency as R2 runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-wien-bridge-oscillator-live-2)
+
+*Oscillation frequency as R2 runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your R2 = 1e+04 ohm gives f0 = 994.7. Your inputs: R1 = 10000 ohm, C1 = 16 nF, R2 = 10000 ohm, C2 = 16 nF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_wien_bridge_oscillator', R1=10000.0, C1=1.6e-08, R2=10000.0, C2=1.6e-08)
@@ -3666,9 +3934,13 @@ $$
 - **Assumes:** lossless tank, amplifier does not load the tank
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f0 (oscillation frequency) against C1 (capacitor across the amplifier output) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-colpitts-oscillator-curve)
+![Oscillation frequency as C1 runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-colpitts-oscillator-live-1)
 
-*f0 (oscillation frequency) against C1 (capacitor across the amplifier output) from 1.0000e-10 F to 1.0000e-08 F on a logarithmic axis. One curve for each value of L (tank inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: C2 = 1e-08 F. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C1 = 1.0000e-09 F, f0 = 527857 Hz.*
+*Oscillation frequency as C1 runs from 0.6 to 1.4 nF, every other input as you entered it (41 solutions). Marked: your C1 = 1 nF gives f0 = 527.9 kHz. Your inputs: L = 100 uH, C1 = 1 nF, C2 = 10 nF.*
+
+![Oscillation frequency as C2 runs from 6 to 14 nF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-colpitts-oscillator-live-2)
+
+*Oscillation frequency as C2 runs from 6 to 14 nF, every other input as you entered it (29 solutions). Marked: your C2 = 10 nF gives f0 = 527.9 kHz. Your inputs: L = 100 uH, C1 = 1 nF, C2 = 10 nF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_colpitts_oscillator', L=0.0001, C1=1e-09, C2=1e-08)
@@ -3716,9 +3988,13 @@ $$
 - **Assumes:** series-aiding coils, lossless tank; $M  \leq  sqrt$(L1 L2)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f0 (oscillation frequency) against C (tank capacitance) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-hartley-oscillator-curve)
+![Oscillation frequency as L1 runs from 60 to 140 uH, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-hartley-oscillator-live-1)
 
-*f0 (oscillation frequency) against C (tank capacitance) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of L1 (inductance of the output-side coil): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: L2 = 1.9999999999999998e-05 H, M = 0.0 H. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, f0 = 459441 Hz.*
+*Oscillation frequency as L1 runs from 60 to 140 uH, every other input as you entered it (41 solutions). Marked: your L1 = 100 uH gives f0 = 459.4 kHz. Your inputs: L1 = 100 uH, L2 = 20 uH, M = 0 uH, C = 1 nF.*
+
+![Oscillation frequency as L2 runs from 12 to 28 uH, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-hartley-oscillator-live-2)
+
+*Oscillation frequency as L2 runs from 12 to 28 uH, every other input as you entered it (29 solutions). Marked: your L2 = 20 uH gives f0 = 459.4 kHz. Your inputs: L1 = 100 uH, L2 = 20 uH, M = 0 uH, C = 1 nF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_hartley_oscillator', L1=0.0001, L2=2e-05, M=0.0, C=1e-09)
@@ -3767,9 +4043,13 @@ $$
 - **Assumes:** resonances of the lossless circuit; Q from Rm
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![fs (series resonance) against Lm (motional inductance) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-crystal-oscillator-curve)
+![Quality factor as Rm runs from 12 to 28 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-crystal-oscillator-live-1)
 
-*fs (series resonance) against Lm (motional inductance) from 0.025 H to 0.075 H. One curve for each value of Cm (motional capacitance): 2.0000e-14 F, 1.0000e-14 F, 4.0000e-14 F. Other inputs as in the worked example: Rm = 20.0 ohm, C0 = 5e-12 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Lm = 0.05 H, fs = 5.03292e+06 Hz.*
+*Quality factor as Rm runs from 12 to 28 ohm, every other input as you entered it (41 solutions). Marked: your Rm = 20 ohm gives Q = 7.906e+04. Your inputs: Lm = 0.05 H, Cm = 20 fF, Rm = 20 ohm, C0 = 5 pF.*
+
+![Fp - fs as C0 runs from 3 to 7 pF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-crystal-oscillator-live-2)
+
+*Fp - fs as C0 runs from 3 to 7 pF, every other input as you entered it (29 solutions). Marked: your C0 = 5 pF gives δ_f = 10.06 kHz. Your inputs: Lm = 0.05 H, Cm = 20 fF, Rm = 20 ohm, C0 = 5 pF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_crystal_oscillator', Lm=0.05, Cm=2e-14, Rm=20.0, C0=5e-12)
@@ -3817,9 +4097,13 @@ $$
 - **Assumes:** symmetric output levels; ideal comparator action
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f (frequency) against R1 (resistor from the + input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-relaxation-oscillator-curve)
+![Frequency as R runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-relaxation-oscillator-live-1)
 
-*f (frequency) against R1 (resistor from the + input to ground) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of R (timing resistor (output to inverting input)): 10000 ohm, 5000 ohm, 20000 ohm. Other inputs as in the worked example: C = 1.0000000000000001e-07 F, R2 = 10000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 10000 ohm, f = 455.12 Hz.*
+*Frequency as R runs from 6000 to 1.4e+04 ohm, every other input as you entered it (41 solutions). Marked: your R = 1e+04 ohm gives f = 455.1. Your inputs: R = 10000 ohm, C = 100 nF, R1 = 10000 ohm, R2 = 10000 ohm.*
+
+![Frequency as C runs from 60 to 140 nF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-opamp-relaxation-oscillator-live-2)
+
+*Frequency as C runs from 60 to 140 nF, every other input as you entered it (29 solutions). Marked: your C = 100 nF gives f = 455.1. Your inputs: R = 10000 ohm, C = 100 nF, R1 = 10000 ohm, R2 = 10000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_opamp_relaxation_oscillator', R=10000.0, C=1e-07, R1=10000.0, R2=10000.0)
@@ -3868,13 +4152,17 @@ $$
 - **Assumes:** thresholds Vcc/3 and 2Vcc/3
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f (frequency) against RA (resistor from Vcc to the discharge pin), with C = 1](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-555-astable-f-vs-ra.svg)
+![Frequency (f) against resistor from Vcc to the discharge pin (RA) from 500 Ω to 1](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-555-astable-f-vs-ra.svg)
 
-*f (frequency) against RA (resistor from Vcc to the discharge pin), with C = 1.00e-5 F, RB = 10000 ohm. 31 points computed by electronics-engineering-ai999x; marked: RA = 1000, f = 6.86998 Hz.*
+*Frequency (f) against resistor from Vcc to the discharge pin (RA) from 500 Ω to 1.5 kΩ, the other inputs as given: 31 points, each computed by the model. Marked: the inputs given, RA = 1 kΩ, f = 6.87 Hz. Your inputs: RA = 1000 ohm, RB = 10000 ohm, C = 10 uF.*
 
-![f (frequency) against RB (resistor from discharge to threshold/trigger) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-astable-curve)
+![Frequency as C runs from 6 to 14 uF, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-astable-live-1)
 
-*f (frequency) against RB (resistor from discharge to threshold/trigger) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of C (timing capacitor): 1.0000e-05 F, 5.0000e-06 F, 2.0000e-05 F. Other inputs as in the worked example: RA = 1000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, RB = 10000 ohm, f = 6.86998 Hz.*
+*Frequency as C runs from 6 to 14 uF, every other input as you entered it (41 solutions). Marked: your C = 10 uF gives f = 6.87. Your inputs: RA = 1000 ohm, RB = 10000 ohm, C = 10 uF.*
+
+![Frequency as RB runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-astable-live-2)
+
+*Frequency as RB runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your RB = 1e+04 ohm gives f = 6.87. Your inputs: RA = 1000 ohm, RB = 10000 ohm, C = 10 uF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_555_astable', RA=1000.0, RB=10000.0, C=1e-05)
@@ -3918,13 +4206,17 @@ $$
 - **Assumes:** threshold at 2Vcc/3; trigger pulse shorter than T
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![T (pulse width) against R (timing resistor) from 50000 ohm to 150000 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-monostable-curve)
+![Pulse width (T) over R from 50 kΩ to 150 kΩ and C from 5 µF to 15 µF: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-monostable-field)
 
-*T (pulse width) against R (timing resistor) from 50000 ohm to 150000 ohm. One curve for each value of C (timing capacitor): 1.0000e-05 F, 5.0000e-06 F, 2.0000e-05 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 100000 ohm, T = 1.09861 s.*
+*Pulse width (T) over R from 50 kΩ to 150 kΩ and C from 5 µF to 15 µF: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, T = 1.099 s. Your inputs: R = 100000 ohm, C = 10 uF.*
 
-![T (pulse width) over R (timing resistor) from 50000 ohm to 150000 ohm and C (timing capacitor) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-monostable-field)
+![Pulse width as R runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-monostable-live-1)
 
-*T (pulse width) over R (timing resistor) from 50000 ohm to 150000 ohm and C (timing capacitor) from 5.0000e-06 F to 1.5000e-05 F: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 0.274653 s to dark 2.47188 s); iso-lines at T = 0.5, 1, 1.5, 2 s. Marked: the worked example, R = 100000 ohm, C = 1.0000e-05 F, T = 1.09861 s.*
+*Pulse width as R runs from 6e+04 to 1.4e+05 ohm, every other input as you entered it (41 solutions). Marked: your R = 1e+05 ohm gives T = 1.099. Your inputs: R = 100000 ohm, C = 10 uF.*
+
+![Pulse width as C runs from 6 to 14 uF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-555-monostable-live-2)
+
+*Pulse width as C runs from 6 to 14 uF, every other input as you entered it (29 solutions). Marked: your C = 10 uF gives T = 1.099. Your inputs: R = 100000 ohm, C = 10 uF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_555_monostable', R=100000.0, C=1e-05)
@@ -3972,9 +4264,13 @@ $$
 - **Assumes:** linear phase model, ideal integrator
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![zeta (damping factor) against tau1 (integrator time constant R1 C) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-pll-loop-dynamics-curve)
+![Damping factor as τ2 runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-pll-loop-dynamics-live-1)
 
-*zeta (damping factor) against tau1 (integrator time constant R1 C) from 0.005 s to 0.015 s. One curve for each value of tau2 (zero time constant R2 C): 0.001 s, 0.0005 s, 0.002 s. Other inputs as in the worked example: Kd = 0.5, Ko = 20000.0. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, tau1 = 0.01 s, zeta = 0.5.*
+*Damping factor as τ2 runs from 0.6 to 1.4 ms, every other input as you entered it (41 solutions). Marked: your τ2 = 1 ms gives ζ = 0.5. Your inputs: Kd = 0.5, Ko = 20000, tau1 = 10 ms, tau2 = 1 ms.*
+
+![Damping factor as τ1 runs from 6 to 14 ms, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-pll-loop-dynamics-live-2)
+
+*Damping factor as τ1 runs from 6 to 14 ms, every other input as you entered it (29 solutions). Marked: your τ1 = 10 ms gives ζ = 0.5. Your inputs: Kd = 0.5, Ko = 20000, tau1 = 10 ms, tau2 = 1 ms.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_pll_loop_dynamics', Kd=0.5, Ko=20000.0, tau1=0.01, tau2=0.001)
@@ -4023,13 +4319,17 @@ $$
 - **Assumes:** 0 <= Vin <= Vref; $1  \leq  n  \leq  16$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![code (output code (decimal)) against Vin (analog input), with Vref = 5 V, n = 8](https://huggingface.co/AI999X/electronics-engineering-ai999x/resolve/main/figures/elx-adc-code-code-vs-vin.svg)
+![Output code (decimal) (code) against analog input (Vin) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-code-code-vs-vin)
 
-*code (output code (decimal)) against Vin (analog input), with Vref = 5 V, n = 8. 31 points computed by electronics-engineering-ai999x; marked: Vin = 3.2, code = 163.*
+*Output code (decimal) (code) against analog input (Vin) from 1.6 V to 4.8 V, the other inputs as given: 31 points, each computed by the model. Marked: the inputs given, Vin = 3.2 V, code = 163. Your inputs: Vin = 3.2 V, Vref = 5 V, n = 8.*
 
-![code (output code (decimal)) against n (resolution in bits) from 1 to 16, logarithmic output axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-code-curve)
+![Output code as Vref runs from 3](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-code-live-1)
 
-*code (output code (decimal)) against n (resolution in bits) from 1 to 16, logarithmic output axis. Other inputs as in the worked example: Vin = 3.2 V, Vref = 5.0 V. 16 points computed by electronics-engineering-ai999x; marked: the worked example, n = 8, code = 163.*
+*Output code as Vref runs from 3.2 to 7 V, every other input as you entered it (39 solutions). Marked: your Vref = 5 V gives code = 163. Your inputs: Vin = 3.2 V, Vref = 5 V, n = 8.*
+
+![Output code as n runs from 2 to 14, every other input as you entered it (13 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-code-live-2)
+
+*Output code as n runs from 2 to 14, every other input as you entered it (13 solutions). Marked: your n = 8 gives code = 163. Your inputs: Vin = 3.2 V, Vref = 5 V, n = 8.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_adc_code', Vin=3.2, Vref=5.0, n=8)
@@ -4076,9 +4376,9 @@ $$
 - **Assumes:** uniform quantisation noise, white over Nyquist; OSR >= 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![SNR_dB (signal-to-quantisation-noise ratio, dB) against n (resolution in bits) from 1 to 24](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-quantization-snr-curve)
+![Signal-to-quantisation-noise ratio, dB as n runs from 1 to 32, every other input as you entered it (32 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-quantization-snr-live-1)
 
-*SNR_dB (signal-to-quantisation-noise ratio, dB) against n (resolution in bits) from 1 to 24. 24 points computed by electronics-engineering-ai999x; marked: the worked example, n = 12, SNR_dB = 74.0081.*
+*Signal-to-quantisation-noise ratio, dB as n runs from 1 to 32, every other input as you entered it (32 solutions). Marked: your n = 12 gives SNR_dB = 74.01. Your inputs: n = 12.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_adc_quantization_snr', n=12)
@@ -4123,9 +4423,13 @@ $$
 - **Assumes:** full-scale sine test
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![ENOB (effective number of bits) against SINAD (signal to noise and distortion ratio in dB) from 37 to 111](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-enob-curve)
+![Effective number of bits as SINAD runs from 18](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-enob-live-1)
 
-*ENOB (effective number of bits) against SINAD (signal to noise and distortion ratio in dB) from 37 to 111. Other inputs as in the worked example: n = 14. 31 points computed by electronics-engineering-ai999x; marked: the worked example, SINAD = 74, ENOB = 12.*
+*Effective number of bits as SINAD runs from 18.5 to 129.5, every other input as you entered it (41 solutions). Marked: your SINAD = 74 gives ENOB = 12. Your inputs: SINAD = 74, n = 14.*
+
+![N - ENOB as n runs from 1 to 31, every other input as you entered it (17 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adc-enob-live-2)
+
+*N - ENOB as n runs from 1 to 31, every other input as you entered it (17 solutions). Marked: your n = 14 gives bits_lost = 2. Your inputs: SINAD = 74, n = 14.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_adc_enob', SINAD=74.0, n=14)
@@ -4173,9 +4477,13 @@ $$
 - **Assumes:** full-scale sine; jitter and quantisation noise uncorrelated
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![SNR_jitter_dB (jitter-limited SNR, dB) against f (input frequency) from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-aperture-jitter-snr-curve)
+![Quantisation SNR, dB as n runs from 1 to 32, every other input as you entered it (32 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-aperture-jitter-snr-live-1)
 
-*SNR_jitter_dB (jitter-limited SNR, dB) against f (input frequency) from 1.0000e+07 Hz to 1.0000e+09 Hz on a logarithmic axis. One curve for each value of tj (rms clock jitter): 1.0000e-12 s, 5.0000e-13 s, 2.0000e-12 s. Other inputs as in the worked example: n = 14. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, f = 1.0000e+08 Hz, SNR_jitter_dB = 64.0364.*
+*Quantisation SNR, dB as n runs from 1 to 32, every other input as you entered it (32 solutions). Marked: your n = 14 gives SNR_quant_dB = 86.05. Your inputs: f = 100000000 Hz, tj = 1 ps, n = 14.*
+
+![Jitter-limited SNR, dB as f runs from 6e+07 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-aperture-jitter-snr-live-2)
+
+*Jitter-limited SNR, dB as f runs from 6e+07 to 1.4e+08 Hz, every other input as you entered it (29 solutions). Marked: your f = 1e+08 Hz gives SNR_jitter_dB = 64.04. Your inputs: f = 100000000 Hz, tj = 1 ps, n = 14.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_aperture_jitter_snr', f=100000000.0, tj=1e-12, n=14)
@@ -4222,9 +4530,13 @@ $$
 - **Assumes:** 0 <= code <= 2^n - 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against code (input code (decimal)) from 1 to 400 on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-output-curve)
+![Output voltage and output for the all-ones code as n runs from 8 to 14, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-output-live-1)
 
-*Vout (output voltage) against code (input code (decimal)) from 1 to 400 on a logarithmic axis. One curve for each value of Vref (reference voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: n = 8. 32 points per curve computed by electronics-engineering-ai999x; marked: the worked example, code = 200, Vout = 3.90625 V.*
+*Output voltage and output for the all-ones code as n runs from 8 to 14, every other input as you entered it (7 solutions). Marked: your n = 8 gives Vout = 3.906. Your inputs: n = 8, code = 200, Vref = 5 V.*
+
+![Output voltage and output for the all-ones code as Vref runs from 3 to 7 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-output-live-2)
+
+*Output voltage and output for the all-ones code as Vref runs from 3 to 7 V, every other input as you entered it (29 solutions). Marked: your Vref = 5 V gives Vout = 3.906. Your inputs: n = 8, code = 200, Vref = 5 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_dac_output', n=8, code=200, Vref=5.0)
@@ -4273,9 +4585,13 @@ $$
 - **Assumes:** ideal switches and op-amp
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against R (MSB resistor) from 1000 ohm to 100000 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-binary-weighted-curve)
+![Output voltage as n runs from 4 to 8, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-binary-weighted-live-1)
 
-*Vout (output voltage) against R (MSB resistor) from 1000 ohm to 100000 ohm on a logarithmic axis. One curve for each value of Vref (reference voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: n = 4, code = 10, Rf = 5000.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 10000 ohm, Vout = -3.125 V.*
+*Output voltage as n runs from 4 to 8, every other input as you entered it (5 solutions). Marked: your n = 4 gives Vout = -3.125. Your inputs: n = 4, code = 10, Vref = 5 V, R = 10000 ohm, Rf = 5000 ohm.*
+
+![Output voltage as R runs from 6000 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dac-binary-weighted-live-2)
+
+*Output voltage as R runs from 6000 to 1.4e+04 ohm, every other input as you entered it (29 solutions). Marked: your R = 1e+04 ohm gives Vout = -3.125. Your inputs: n = 4, code = 10, Vref = 5 V, R = 10000 ohm, Rf = 5000 ohm.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_dac_binary_weighted', n=4, code=10, Vref=5.0, R=10000.0, Rf=5000.0)
@@ -4324,13 +4640,17 @@ $$
 - **Assumes:** 0 <= Vin < Vref
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![trial DAC voltages, MSB first (V) (trials) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (4 values, first 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sar-conversion-series)
+![Final code as n runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sar-conversion-live-1)
 
-*trial DAC voltages, MSB first (V) (trials) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (4 values, first 2.5, last 3.4375, largest 3.75). Inputs: Vin = 3.2 V, Vref = 5.0 V, n = 4.*
+*Final code as n runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your n = 4 gives code = 10. Your inputs: Vin = 3.2 V, Vref = 5 V, n = 4.*
 
-![code (final code) against Vref (reference voltage) from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sar-conversion-curve)
+![Every entry of trials as computed for your inputs (4 entries: 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sar-conversion-live-2)
 
-*code (final code) against Vref (reference voltage) from 2.5 V to 7.5 V. One curve for each value of n (resolution in bits): 4, 2, 8. Other inputs as in the worked example: Vin = 3.2 V. 26 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vref = 5 V, code = 10.*
+*Every entry of trials as computed for your inputs (4 entries: 2.5, 3.75, 3.125, 3.438). Your inputs: Vin = 3.2 V, Vref = 5 V, n = 4.*
+
+![Final code as Vin runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sar-conversion-live-3)
+
+*Final code as Vin runs from 1.92 to 4.48 V, every other input as you entered it (29 solutions). Marked: your Vin = 3.2 V gives code = 10. Your inputs: Vin = 3.2 V, Vref = 5 V, n = 4.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_sar_conversion', Vin=3.2, Vref=5.0, n=4)
@@ -4381,9 +4701,13 @@ $$
 - **Assumes:** 0 < Vin <= Vref
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![T2 (de-integration time) against fclk (clock frequency) from 50000 Hz to 150000 Hz](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dual-slope-adc-curve)
+![De-integration time and integration time N1/fclk as fclk runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dual-slope-adc-live-1)
 
-*T2 (de-integration time) against fclk (clock frequency) from 50000 Hz to 150000 Hz. One curve for each value of N1 (fixed count of the integration phase): 1000, 500, 2000. Other inputs as in the worked example: Vin = 0.5 V, Vref = 1.0 V, R = 100000.0 ohm, C = 1e-07 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, fclk = 100000 Hz, T2 = 0.005 s.*
+*De-integration time and integration time N1/fclk as fclk runs from 6e+04 to 1.4e+05 Hz, every other input as you entered it (41 solutions). Marked: your fclk = 1e+05 Hz gives T2 = 5 ms. Your inputs: Vin = 0.5 V, Vref = 1 V, N1 = 1000, fclk = 100000 Hz, R = 100000 ohm, C = 0.1 uF.*
+
+![De-integration time as Vin runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-dual-slope-adc-live-2)
+
+*De-integration time as Vin runs from 0.3 to 0.7 V, every other input as you entered it (29 solutions). Marked: your Vin = 0.5 V gives T2 = 5 ms. Your inputs: Vin = 0.5 V, Vref = 1 V, N1 = 1000, fclk = 100000 Hz, R = 100000 ohm, C = 0.1 uF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_dual_slope_adc', Vin=0.5, Vref=1.0, N1=1000, fclk=100000.0, R=100000.0, C=1e-07)
@@ -4433,9 +4757,13 @@ $$
 - **Assumes:** constant leakage current
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![droop (droop over the hold time) against C (hold capacitor) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sample-hold-droop-curve)
+![Longest hold for half an LSB as n runs from 1 to 24, every other input as you entered it (24 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sample-hold-droop-live-1)
 
-*droop (droop over the hold time) against C (hold capacitor) from 5.0000e-10 F to 1.5000e-09 F. One curve for each value of I_leak (leakage (bias) current): 1.0000e-09 A, 5.0000e-10 A, 2.0000e-09 A. Other inputs as in the worked example: t_hold = 9.999999999999999e-06 s, Vref = 5.0 V, n = 12. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, C = 1.0000e-09 F, droop = 1.0000e-05 V.*
+*Longest hold for half an LSB as n runs from 1 to 24, every other input as you entered it (24 solutions). Marked: your n = 12 gives t_max_half_lsb = 0.6104 ms. Your inputs: I_leak = 1 nA, C = 1 nF, t_hold = 10 us, Vref = 5 V, n = 12.*
+
+![Droop over the hold time as I_leak runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-sample-hold-droop-live-2)
+
+*Droop over the hold time as I_leak runs from 0.6 to 1.4 nA, every other input as you entered it (29 solutions). Marked: your I_leak = 1 nA gives droop = 10 uV. Your inputs: I_leak = 1 nA, C = 1 nF, t_hold = 10 us, Vref = 5 V, n = 12.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_sample_hold_droop', I_leak=1e-09, C=1e-09, t_hold=1e-05, Vref=5.0, n=12)
@@ -4483,13 +4811,17 @@ $$
 - **Assumes:** step input, first-order RC
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![t_rise (10-90 % rise time) against R (resistance) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-delay-rise-time-curve)
+![10-90 % rise time (t_rise) over R from 500 Ω to 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-delay-rise-time-field)
 
-*t_rise (10-90 % rise time) against R (resistance) from 500 ohm to 1500 ohm. One curve for each value of C (capacitance): 1.0000e-11 F, 5.0000e-12 F, 2.0000e-11 F. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R = 1000 ohm, t_rise = 2.1972e-08 s.*
+*10-90 % rise time (t_rise) over R from 500 Ω to 1.5 kΩ and C from 5 pF to 15 pF: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, t_rise = 21.97 ns. In SI units: t_rise = 2.197e-08 s. Your inputs: R = 1000 ohm, C = 10 pF.*
 
-![t_rise (10-90 % rise time) over R (resistance) from 500 ohm to 1500 ohm and C (capacitance) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-delay-rise-time-field)
+![10-90 % rise time, time constant RC and 50 % delay as R runs from 600 to 1400 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-delay-rise-time-live-1)
 
-*t_rise (10-90 % rise time) over R (resistance) from 500 ohm to 1500 ohm and C (capacitance) from 5.0000e-12 F to 1.5000e-11 F: each of the 21 × 15 cells is one run of electronics-engineering-ai999x, shaded by its value (light 5.4931e-09 s to dark 4.9438e-08 s); iso-lines at t_rise = 1.00e-8, 2.00e-8, 3.00e-8, 4.00e-8 s. Marked: the worked example, R = 1000 ohm, C = 1.0000e-11 F, t_rise = 2.1972e-08 s.*
+*10-90 % rise time, time constant RC and 50 % delay as R runs from 600 to 1400 ohm, every other input as you entered it (41 solutions). Marked: your R = 1000 ohm gives t_rise = 2.197e-08. Your inputs: R = 1000 ohm, C = 10 pF.*
+
+![10-90 % rise time, time constant RC and 50 % delay as C runs from 6 to 14 pF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-rc-delay-rise-time-live-2)
+
+*10-90 % rise time, time constant RC and 50 % delay as C runs from 6 to 14 pF, every other input as you entered it (29 solutions). Marked: your C = 10 pF gives t_rise = 2.197e-08. Your inputs: R = 1000 ohm, C = 10 pF.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_rc_delay_rise_time', R=1000.0, C=1e-11)
@@ -4535,9 +4867,13 @@ $$
 - **Assumes:** one capacitance per resistor; step input
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Elmore delay at each node, seconds (delays) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (3 values, first 4](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-elmore-delay-series)
+![Every entry of delays as computed for your inputs (3 entries: 4e-11, 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-elmore-delay-live-1)
 
-*Elmore delay at each node, seconds (delays) returned by electronics-engineering-ai999x for the worked example, one value for each position in the list (3 values, first 4.0000e-11, last 6.5000e-11, largest 6.5000e-11). Inputs: R = [100.0, 50.0, 50.0], C = [0.1, 0.1, 0.2].*
+*Every entry of delays as computed for your inputs (3 entries: 4e-11, 5.5e-11, 6.5e-11). Your inputs: R = 100, 50, 50, C = 0.1, 0.1, 0.2.*
+
+![Every answer of one unit for your inputs: tau_D (Elmore delay at the far end) = 6](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-elmore-delay-live-2)
+
+*Every answer of one unit for your inputs: tau_D (Elmore delay at the far end) = 6.5e-11; t50 (50 % delay estimate ln 2 tau_D) = 4.505e-11. Your inputs: R = 100, 50, 50, C = 0.1, 0.1, 0.2.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_elmore_delay', R=[100.0, 50.0, 50.0], C=[0.1, 0.1, 0.2])
@@ -4586,9 +4922,13 @@ $$
 - **Assumes:** $0  \leq  \alpha  \leq  1$; full-swing switching, short-circuit and leakage power not included
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![P (dynamic power) against VDD (supply voltage) from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-dynamic-power-curve)
+![Dynamic power as VDD runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-dynamic-power-live-1)
 
-*P (dynamic power) against VDD (supply voltage) from 0.5 V to 1.5 V. One curve for each value of C (switched capacitance): 1.0000e-09 F, 5.0000e-10 F, 2.0000e-09 F. Other inputs as in the worked example: alpha = 0.1, f = 1000000000.0 Hz. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, VDD = 1 V, P = 0.1 W.*
+*Dynamic power as VDD runs from 0.6 to 1.4 V, every other input as you entered it (41 solutions). Marked: your VDD = 1 V gives P = 0.1. Your inputs: alpha = 0.1, C = 1000 pF, VDD = 1 V, f = 1000000000 Hz.*
+
+![Dynamic power as α runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-cmos-dynamic-power-live-2)
+
+*Dynamic power as α runs from 0.025 to 0.175, every other input as you entered it (29 solutions). Marked: your α = 0.1 gives P = 0.1. Your inputs: alpha = 0.1, C = 1000 pF, VDD = 1 V, f = 1000000000 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_cmos_dynamic_power', alpha=0.1, C=1e-09, VDD=1.0, f=1000000000.0)
@@ -4641,13 +4981,17 @@ $$
 - **Assumes:** edge-triggered registers, single clock
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![meets timing, setup violation, hold violation or both (verdict) over T (clock period) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-decision)
+![Setup slack as T runs from 3 to 7 ns, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-live-1)
 
-*meets timing, setup violation, hold violation or both (verdict) over T (clock period) from 5.0000e-10 s to 5.0000e-08 s and tcq (maximum clock-to-Q delay) from 3.0000e-11 s to 3.0000e-09 s (logarithmic axes): each of the 31 × 21 cells is one run of electronics-engineering-ai999x, coloured by the verdict it returned, meets timing: 349 cells, setup violation: 302 cells. Other inputs as in the worked example: tpd = 3.5000000000000003e-09 s, tsu = 2.0000000000000003e-10 s, tskew = 1.0000000000000002e-10 s, tccq = 1.0000000000000002e-10 s, tcd = 2.0000000000000003e-10 s, th = 1.0000000000000002e-10 s. Marked: the worked example, T = 5.0000e-09 s, tcq = 3.0000e-10 s → meets timing.*
+*Setup slack as T runs from 3 to 7 ns, every other input as you entered it (41 solutions). Marked: your T = 5 ns gives setup_slack = 1.1e-09. Shaded by meets timing, setup violation, hold violation or both: setup violation, meets timing. Your inputs: T = 5 ns, tcq = 0.3 ns, tpd = 3.5 ns, tsu = 0.2 ns, tskew = 0.1 ns, tccq = 0.1 ns, tcd = 0.2 ns, th = 0.1 ns.*
 
-![setup_slack (setup slack) against T (clock period) from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-curve)
+![Meets timing, setup violation, hold violation or both for 25 5 x 5 combinations of T and tpd around your inputs (the other inputs as entered); the ring marks your inputs, which give meets timing](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-live-2)
 
-*setup_slack (setup slack) against T (clock period) from 2.5000e-09 s to 7.5000e-09 s. One curve for each value of tpd (maximum logic delay): 3.5000e-09 s, 1.7500e-09 s, 7.0000e-09 s. Other inputs as in the worked example: tcq = 3e-10 s, tsu = 2.0000000000000003e-10 s, tskew = 1.0000000000000002e-10 s, tccq = 1.0000000000000002e-10 s, tcd = 2.0000000000000003e-10 s, th = 1.0000000000000002e-10 s. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, T = 5.0000e-09 s, setup_slack = 1.1000e-09 s.*
+*Meets timing, setup violation, hold violation or both for 25 5 x 5 combinations of T and tpd around your inputs (the other inputs as entered); the ring marks your inputs, which give meets timing. Blank cells admit no answer. Your inputs: T = 5 ns, tcq = 0.3 ns, tpd = 3.5 ns, tsu = 0.2 ns, tskew = 0.1 ns, tccq = 0.1 ns, tcd = 0.2 ns, th = 0.1 ns.*
+
+![Setup slack as tpd runs from 2](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-setup-hold-timing-live-3)
+
+*Setup slack as tpd runs from 2.1 to 4.9 ns, every other input as you entered it (21 solutions). Marked: your tpd = 3.5 ns gives setup_slack = 1.1e-09. Shaded by meets timing, setup violation, hold violation or both: meets timing, setup violation. Your inputs: T = 5 ns, tcq = 0.3 ns, tpd = 3.5 ns, tsu = 0.2 ns, tskew = 0.1 ns, tccq = 0.1 ns, tcd = 0.2 ns, th = 0.1 ns.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_setup_hold_timing', T=5e-09, tcq=3e-10, tpd=3.5e-09, tsu=2e-10, tskew=1e-10, tccq=1e-10, tcd=2e-10, th=1e-10)
@@ -4696,9 +5040,13 @@ $$
 - **Assumes:** $tr/\tau  \leq  700$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![log10_MTBF_s (log10 of MTBF in seconds) against tau (metastability time constant) from 5](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-metastability-mtbf-curve)
+![Log10 of MTBF in seconds as τ runs from 30 to 70 ps, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-metastability-mtbf-live-1)
 
-*log10_MTBF_s (log10 of MTBF in seconds) against tau (metastability time constant) from 5.0000e-12 s to 5.0000e-10 s on a logarithmic axis. One curve for each value of tr (resolution time available): 2.0000e-09 s, 1.0000e-09 s, 4.0000e-09 s. Other inputs as in the worked example: T0 = 1e-10 s, fclk = 500000000.0 Hz, fdata = 10000000.0 Hz. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, tau = 5.0000e-11 s, log10_MTBF_s = 11.6728.*
+*Log10 of MTBF in seconds as τ runs from 30 to 70 ps, every other input as you entered it (41 solutions). Marked: your τ = 50 ps gives log10_MTBF_s = 11.67. Your inputs: tr = 2 ns, tau = 50 ps, T0 = 100 ps, fclk = 500000000 Hz, fdata = 10000000 Hz.*
+
+![Log10 of MTBF in seconds as tr runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-metastability-mtbf-live-2)
+
+*Log10 of MTBF in seconds as tr runs from 1.2 to 2.8 ns, every other input as you entered it (29 solutions). Marked: your tr = 2 ns gives log10_MTBF_s = 11.67. Your inputs: tr = 2 ns, tau = 50 ps, T0 = 100 ps, fclk = 500000000 Hz, fdata = 10000000 Hz.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_metastability_mtbf', tr=2e-09, tau=5e-11, T0=1e-10, fclk=500000000.0, fdata=10000000.0)
@@ -4748,9 +5096,13 @@ $$
 - **Assumes:** Vin > Vout
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![P_diss (dissipation in the regulator) against Vin (input voltage) from 6 V to 18 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-linear-regulator-efficiency-curve)
+![Dissipation in the regulator and input power as Vin runs from 7](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-linear-regulator-efficiency-live-1)
 
-*P_diss (dissipation in the regulator) against Vin (input voltage) from 6 V to 18 V. One curve for each value of Iload (load current): 0.5 A, 0.25 A, 1 A. Other inputs as in the worked example: Vout = 5.0 V, Iq = 0.005 A. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vin = 12 V, P_diss = 3.56 W.*
+*Dissipation in the regulator and input power as Vin runs from 7.2 to 16.8 V, every other input as you entered it (41 solutions). Marked: your Vin = 12 V gives P_diss = 3.56. Your inputs: Vin = 12 V, Vout = 5 V, Iload = 500 mA, Iq = 5 mA.*
+
+![Dissipation in the regulator and output power as Vout runs from 3 to 7 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-linear-regulator-efficiency-live-2)
+
+*Dissipation in the regulator and output power as Vout runs from 3 to 7 V, every other input as you entered it (29 solutions). Marked: your Vout = 5 V gives P_diss = 3.56. Your inputs: Vin = 12 V, Vout = 5 V, Iload = 500 mA, Iq = 5 mA.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_linear_regulator_efficiency', Vin=12.0, Vout=5.0, Iload=0.5, Iq=0.005)
@@ -4797,9 +5149,13 @@ $$
 - **Assumes:** regulator in regulation (input high enough)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage) against R1 (resistor from OUT to ADJ) from 24 ohm to 2400 ohm on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adjustable-regulator-output-curve)
+![Output voltage as R1 runs from 144 to 336 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adjustable-regulator-output-live-1)
 
-*Vout (output voltage) against R1 (resistor from OUT to ADJ) from 24 ohm to 2400 ohm on a logarithmic axis. One curve for each value of Vref (internal reference (1.25 V for the LM317 type)): 1.25 V, 0.625 V, 2.5 V. Other inputs as in the worked example: R2 = 720.0 ohm. 41 points per curve computed by electronics-engineering-ai999x; marked: the worked example, R1 = 240 ohm, Vout = 5 V.*
+*Output voltage as R1 runs from 144 to 336 ohm, every other input as you entered it (41 solutions). Marked: your R1 = 240 ohm gives Vout = 5. Your inputs: R1 = 240 ohm, R2 = 720 ohm, Vref = 1.25 V.*
+
+![Output voltage as Vref runs from 0](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-adjustable-regulator-output-live-2)
+
+*Output voltage as Vref runs from 0.75 to 1.75 V, every other input as you entered it (29 solutions). Marked: your Vref = 1.25 V gives Vout = 5. Your inputs: R1 = 240 ohm, R2 = 720 ohm, Vref = 1.25 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_adjustable_regulator_output', R1=240.0, R2=720.0, Vref=1.25)
@@ -4852,9 +5208,13 @@ $$
 - **Assumes:** Vin > Vz > VBE; the Zener stays in breakdown $(Iz > 0)$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Vout (output voltage Vz - VBE) against Vz (Zener voltage) from 5 V to 15 V](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-series-pass-regulator-curve)
+![Zener current as Vin runs from 11](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-series-pass-regulator-live-1)
 
-*Vout (output voltage Vz - VBE) against Vz (Zener voltage) from 5 V to 15 V. One curve for each value of VBE (base-emitter voltage): 0.7 V, 0.35 V, 1.4 V. Other inputs as in the worked example: Vin = 15.0 V, Rs = 1000.0 ohm, RL = 100.0 ohm, beta = 100.0. 27 points per curve computed by electronics-engineering-ai999x; marked: the worked example, Vz = 10 V, Vout = 9.3 V.*
+*Zener current as Vin runs from 11.1 to 21 V, every other input as you entered it (34 solutions). Marked: your Vin = 15 V gives I_z = 4.079 mA. Your inputs: Vin = 15 V, Vz = 10 V, Rs = 1000 ohm, RL = 100 ohm, beta = 100, VBE = 0.7 V.*
+
+![Output voltage Vz - VBE as Vz runs from 6 to 13](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-series-pass-regulator-live-2)
+
+*Output voltage Vz - VBE as Vz runs from 6 to 13.43 V, every other input as you entered it (27 solutions). Marked: your Vz = 10 V gives Vout = 9.3. Your inputs: Vin = 15 V, Vz = 10 V, Rs = 1000 ohm, RL = 100 ohm, beta = 100, VBE = 0.7 V.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_series_pass_regulator', Vin=15.0, Vz=10.0, Rs=1000.0, RL=100.0, beta=100.0, VBE=0.7)
@@ -4905,9 +5265,13 @@ $$
 - **Assumes:** steady state, series thermal path
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Tj (junction temperature) against P (power dissipated) from 7](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-temperatures-curve)
+![Junction temperature, case temperature and sink temperature as P runs from 9 to 21 W, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-temperatures-live-1)
 
-*Tj (junction temperature) against P (power dissipated) from 7.5 W to 22.5 W. One curve for each value of Ta (ambient temperature): 298.15 K, 149.075 K, 596.3 K. Other inputs as in the worked example: theta_jc = 1.5 K/W, theta_cs = 0.5 K/W, theta_sa = 3.0 K/W. 31 points per curve computed by electronics-engineering-ai999x; marked: the worked example, P = 15 W, Tj = 373.15 K.*
+*Junction temperature, case temperature and sink temperature as P runs from 9 to 21 W, every other input as you entered it (41 solutions). Marked: your P = 15 W gives Tj = 373.1. Your inputs: P = 15 W, Ta = 25 degC, theta_jc = 1.5 K/W, theta_cs = 0.5 K/W, theta_sa = 3 K/W.*
+
+![Junction temperature, case temperature and sink temperature as θ_sa runs from 1](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-temperatures-live-2)
+
+*Junction temperature, case temperature and sink temperature as θ_sa runs from 1.8 to 4.2 K/W, every other input as you entered it (29 solutions). Marked: your θ_sa = 3 K/W gives Tj = 373.1. Your inputs: P = 15 W, Ta = 25 degC, theta_jc = 1.5 K/W, theta_cs = 0.5 K/W, theta_sa = 3 K/W.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_heat_sink_temperatures', P=15.0, Ta=298.15, theta_jc=1.5, theta_cs=0.5, theta_sa=3.0)
@@ -4956,9 +5320,13 @@ $$
 - **Assumes:** a positive result (otherwise no heat sink suffices)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![theta_sa_max (largest sink-to-ambient resistance) against P (power dissipated) from 2 W to 200 W on a logarithmic axis](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-required-curve)
+![Largest sink-to-ambient resistance as Tj_max runs from 110 to 190 degC, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-required-live-1)
 
-*theta_sa_max (largest sink-to-ambient resistance) against P (power dissipated) from 2 W to 200 W on a logarithmic axis. One curve for each value of Tj_max (maximum junction temperature): 423.15 K, 846.3 K. Other inputs as in the worked example: Ta = 313.15 K, theta_jc = 1.0 K/W, theta_cs = 0.5 K/W. 32 points per curve computed by electronics-engineering-ai999x; marked: the worked example, P = 20 W, theta_sa_max = 4 K/W.*
+*Largest sink-to-ambient resistance as Tj_max runs from 110 to 190 degC, every other input as you entered it (41 solutions). Marked: your Tj_max = 150 degC gives θ_sa_max = 4. Your inputs: P = 20 W, Ta = 40 degC, Tj_max = 150 degC, theta_jc = 1 K/W, theta_cs = 0.5 K/W.*
+
+![Largest sink-to-ambient resistance as P runs from 12 to 28 W, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=electronics-engineering-ai999x/elx-heat-sink-required-live-2)
+
+*Largest sink-to-ambient resistance as P runs from 12 to 28 W, every other input as you entered it (29 solutions). Marked: your P = 20 W gives θ_sa_max = 4. Your inputs: P = 20 W, Ta = 40 degC, Tj_max = 150 degC, theta_jc = 1 K/W, theta_cs = 0.5 K/W.*
 
 ```python
 electronics_engineering_ai999x.solve('elx_heat_sink_required', P=20.0, Ta=313.15, Tj_max=423.15, theta_jc=1.0, theta_cs=0.5)
