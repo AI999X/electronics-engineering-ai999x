@@ -10,8 +10,8 @@ Electronics Engineering covers semiconductors and pn junctions, diode circuits a
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-electronics-engineering-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-electronics-engineering-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `electronics-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-electronics-engineering-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-electronics-engineering-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `electronics-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/electronics-engineering-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install electronics-engineering-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -232,119 +232,6 @@ noise_rms_lsb = 0.2886751346
 SNR_full_scale_dB = 74.00811155
 ```
 
-## Rust library: 15 examples
-
-The crate `electronics-engineering-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `electronics_engineering_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/electronics-engineering/examples/readme.rs`: `cd rust && cargo run --release --example readme -p electronics-engineering-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&electronics_engineering_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "elx_butterworth_section_q", "inputs": {"n": "4"}}));
-// SOLVED
-// Q_max = 1.30656296488
-// Q = [0.541196100146,1.30656296488]
-// sections = 2
-// first_order = 0
-
-show(json!({"key": "elx_transition_frequency", "inputs": {"gm": "40 mS", "beta": "100", "Cpi": "10 pF", "Cmu": "2 pF"}}));
-// SOLVED
-// r_pi = 2500.0 ohm
-// f_beta = 5305164.76973 Hz
-// f_T = 530516476.973 Hz
-
-show(json!({"key": "elx_cmos_propagation_delay", "inputs": {"Rn": "10000 ohm", "Rp": "20000 ohm", "CL": "100 fF"}}));
-// SOLVED
-// tpHL = 6.9314718056e-10 s
-// tpLH = 1.38629436112e-9 s
-// tp = 1.03972077084e-9 s
-
-show(json!({"key": "elx_adc_code", "inputs": {"Vin": "3.2 V", "Vref": "5 V", "n": "8"}}));
-// SOLVED
-// code = 163
-// bits = "10100011"
-// LSB = 0.01953125 V
-// V_code = 3.18359375 V
-// error = 0.01640625 V
-
-show(json!({"key": "elx_capacitor_filter_ripple", "inputs": {"Vp": "16.3 V", "f": "60 Hz", "RL": "500 ohm", "C": "1000 uF", "circuit": "full-wave"}}));
-// SOLVED
-// f_ripple = 120.0 Hz
-// Vr = 0.271666666667 V
-// Vdc = 16.1641666667 V
-// Vr_rms = 0.0784234115649 V
-// ripple_factor = 0.00485168293437
-
-show(json!({"key": "elx_common_source_amplifier", "inputs": {"gm": "2 mS", "ro": "100000 ohm", "RD": "10000 ohm", "RL": "10000 ohm", "RS": "0 ohm", "RG": "1000000 ohm", "Rsig": "10000 ohm"}}));
-// SOLVED
-// Av = -9.52380952381
-// Rin = 1000000.0 ohm
-// Rout = 9090.90909091 ohm
-// Gv = -9.42951438001
-
-show(json!({"key": "elx_closed_loop_bandwidth", "inputs": {"GBW": "1000000 Hz", "config": "non-inverting", "Rf": "90000 ohm", "R1": "10000 ohm"}}));
-// SOLVED
-// G0 = 10.0
-// noise_gain = 10.0
-// f_3dB = 100000.0 Hz
-
-show(json!({"key": "elx_555_astable", "inputs": {"RA": "1000 ohm", "RB": "10000 ohm", "C": "10 uF"}}));
-// SOLVED
-// t_high = 0.0762461898616 s
-// t_low = 0.069314718056 s
-// T = 0.145560907918 s
-// f = 6.86997638519 Hz
-// duty = 0.52380952381
-
-show(json!({"key": "elx_adjustable_regulator_output", "inputs": {"R1": "240 ohm", "R2": "720 ohm", "Vref": "1.25 V"}}));
-// SOLVED
-// Vout = 5.0 V
-// I_R1 = 0.00520833333333 A
-
-show(json!({"key": "elx_builtin_potential", "inputs": {"NA": "1e+17 cm^-3", "ND": "1e+16 cm^-3", "ni": "1.5e+10 cm^-3", "T": "300 K"}}));
-// SOLVED
-// Vbi = 0.752879413544 V
-
-show(json!({"key": "elx_cmos_dynamic_power", "inputs": {"alpha": "0.1", "C": "1000 pF", "VDD": "1 V", "f": "1000000000 Hz"}}));
-// SOLVED
-// P = 0.1 W
-// E_supply = 1e-9 J
-// E_stored = 5e-10 J
-// I_avg = 0.1 A
-
-show(json!({"key": "elx_filter_order", "inputs": {"ftype": "Butterworth", "fp": "1000 Hz", "fs": "2500 Hz", "Ap": "1", "As": "40"}}));
-// SOLVED
-// n = 6
-
-show(json!({"key": "elx_bjt_cascode", "inputs": {"IC": "1 mA", "beta": "100", "VT": "25 mV", "VA": "100 V", "RL": "1000000 ohm"}}));
-// SOLVED
-// gm = 0.04 S
-// r_o = 100000.0 ohm
-// Rout = 9858536.58537 ohm
-// Gm = 0.0395942602672 S
-// Av = -35947.8885894
-
-show(json!({"key": "elx_cmos_switching_threshold", "inputs": {"VDD": "2.5 V", "Vtn": "0.4 V", "Vtp": "0.4 V", "kn": "0.1 mA/V^2", "kp": "0.1 mA/V^2"}}));
-// SOLVED
-// r = 1.0
-// VM = 1.25 V
-
-show(json!({"key": "elx_adc_quantization_snr", "inputs": {"n": "12"}}));
-// SOLVED
-// SNR_dB = 74.0081115499
-// noise_rms_lsb = 0.288675134595
-// SNR_full_scale_dB = 74.0081115499
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/electronics-engineering-ai999x/blob/main/docs/electronics_engineering_ai999x_desktop_guide.md)
@@ -353,7 +240,7 @@ show(json!({"key": "elx_adc_quantization_snr", "inputs": {"n": "12"}}));
 
 Every calculation, with its formula, a worked example and its figures: **[Electronics Engineering on ai999x.com](https://www.ai999x.com/models/electronics-engineering-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
